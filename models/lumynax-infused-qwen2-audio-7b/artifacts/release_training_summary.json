@@ -1,0 +1,47 @@
+{
+  "demo_repo_id": "AbteeXAILab/lumynax-infused-qwen2-audio-7b-demo",
+  "generated_at": "2026-04-19T10:00:34.001983+00:00",
+  "lumynax_identity_hardcoded": true,
+  "lumynax_weight_adaptation_applied": false,
+  "model_repo_id": "AbteeXAILab/lumynax-infused-qwen2-audio-7b",
+  "model_title": "LumynaX Infused Qwen2 Audio 7B",
+  "package_state": "upstream_weights_hydrated_audio",
+  "release_line_id": "lumynax-infused-qwen2-audio-7b",
+  "release_wave": "wave3",
+  "runtime_family": "qwen2_audio",
+  "summary": "This local release hydrates the official upstream `Qwen/Qwen2-Audio-7B-Instruct` checkpoint into the LumynaX release layout for local-first audio interaction.",
+  "supported_modalities": [
+    "audio",
+    "text"
+  ],
+  "upstream_model_id": "Qwen/Qwen2-Audio-7B-Instruct",
+  "validation": {
+    "checks": [
+      "exists:release_export_manifest.json",
+      "exists:README.md",
+      "exists:quickstart.py",
+      "exists:requirements.txt",
+      "exists:LICENSE.txt",
+      "exists:VERSION.txt",
+      "exists:checksums.sha256",
+      "exists:artifacts/release_training_summary.json",
+      "exists:hf_space/app.py",
+      "exists:hf_space/README.md",
+      "exists:hf_space/requirements.txt",
+      "exists:ollama/Modelfile",
+      "exists:ollama/create_ollama_model.ps1",
+      "exists:merged_model/config.json",
+      "exists:merged_model/LUMYNAX_PACKAGE_IDENTITY.txt",
+      "manifest:metadata",
+      "training_summary:metadata",
+      "readme:branding",
+      "merged_model:weights_present",
+      "merged_model:tokenizer_present",
+      "syntax:quickstart.py",
+      "syntax:hf_space/app.py",
+      "checksums:verified"
+    ],
+    "validated_at": "2026-04-19T10:59:58.621575+00:00"
+  },
+  "validation_status": "validated"
+}

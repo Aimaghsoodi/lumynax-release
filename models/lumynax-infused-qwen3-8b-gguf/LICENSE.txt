@@ -1,0 +1,11 @@
+LumynaX Infused Qwen3 8B GGUF
+
+This release packages a prebuilt third-party GGUF artifact with LumynaX release metadata, quickstarts, Ollama files, and browser demo scaffolding.
+
+Upstream base model: Qwen/Qwen3-8B
+Source GGUF repo: Qwen/Qwen3-8B-GGUF
+Packaged GGUF file: lumynax-infused-qwen3-8b-q4_k_m.gguf
+License metadata: apache-2.0
+Upstream license file: https://huggingface.co/Qwen/Qwen3-8B-GGUF/blob/main/LICENSE
+
+The model weights remain subject to their upstream license and obligations. LumynaX packaging metadata, scripts, and documentation are provided by AbteeX AI Labs.

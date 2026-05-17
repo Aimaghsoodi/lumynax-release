@@ -1,0 +1,11 @@
+LumynaX Infused Mistral 7B Instruct v0.3 GGUF
+
+This release packages a prebuilt third-party GGUF artifact with LumynaX release metadata, quickstarts, Ollama files, and browser demo scaffolding.
+
+Upstream base model: mistralai/Mistral-7B-Instruct-v0.3
+Source GGUF repo: bartowski/Mistral-7B-Instruct-v0.3-GGUF
+Packaged GGUF file: Mistral-7B-Instruct-v0.3-Q4_K_M.gguf
+License metadata: apache-2.0
+Upstream license file: https://huggingface.co/bartowski/Mistral-7B-Instruct-v0.3-GGUF
+
+The model weights remain subject to their upstream license and obligations. LumynaX packaging metadata, scripts, and documentation are provided by AbteeX AI Labs.

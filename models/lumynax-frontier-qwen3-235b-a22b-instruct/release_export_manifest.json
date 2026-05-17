@@ -1,0 +1,37 @@
+{
+  "release_id": "lumynax-frontier-qwen3-235b-a22b-instruct",
+  "title": "LumynaX Frontier Qwen3 235B A22B Instruct",
+  "repo_id": "AbteeXAILab/lumynax-frontier-qwen3-235b-a22b-instruct",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ",
+    "AU",
+    "global"
+  ],
+  "upstream": {
+    "repo_id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+    "license": "apache-2.0",
+    "prompt_format": "chatml",
+    "source_note": "Qwen3 MoE upstream"
+  },
+  "gguf_mirror": "unsloth/Qwen3-235B-A22B-Instruct-2507-GGUF",
+  "runtime": "transformers",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 262144,
+  "total_params_b": 235,
+  "active_params_b": 22,
+  "quantization": "bf16 / fp8 / Q4_K_M (community GGUF)",
+  "primary_artifact": "model.safetensors (sharded)",
+  "package_state": "scaffold_pulls_upstream",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 2,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-14T00:24:37Z"
+}

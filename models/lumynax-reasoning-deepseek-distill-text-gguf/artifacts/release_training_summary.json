@@ -1,0 +1,19 @@
+{
+  "demo_repo_id": "AbteeXAILab/lumynax-reasoning-deepseek-distill-text-gguf-demo",
+  "generated_at": "2026-04-19T02:03:41.106347+00:00",
+  "gguf_outtype": "f16",
+  "lumynax_identity_hardcoded": true,
+  "lumynax_weight_adaptation_applied": false,
+  "model_repo_id": "AbteeXAILab/lumynax-reasoning-deepseek-distill-text-gguf",
+  "model_title": "LumynaX Reasoning DeepSeek Distill Text GGUF",
+  "package_state": "base_weights_hydrated_text_gguf",
+  "prompt_format": "huggingface_chat_template",
+  "quantization": "Q4_K_M",
+  "release_line_id": "lumynax-reasoning-deepseek-distill",
+  "release_wave": "wave2",
+  "summary": "This local release hydrates the official upstream `deepseek-ai/DeepSeek-R1-Distill-Qwen-14B` checkpoint, then converts the package into a text-first GGUF path for local llama.cpp inference.",
+  "text_only_release": true,
+  "upstream_base_model_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+  "upstream_model_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+  "validation_status": "gguf_pending_validation"
+}

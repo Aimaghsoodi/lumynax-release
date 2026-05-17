@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-05-10T14:27:24.315677+00:00",
+  "gguf_only_release": true,
+  "license_id": "other",
+  "license_link": "https://huggingface.co/allenai/OLMo-2-0425-1B-Instruct-GGUF",
+  "license_name": null,
+  "lumynax_weight_adaptation_applied": false,
+  "model_title": "LumynaX Infused OLMo 2 0425 1B Instruct GGUF",
+  "package_state": "prebuilt_gguf_release",
+  "packaged_gguf_filename": "OLMo-2-0425-1B-Instruct-Q4_K_M.gguf",
+  "packaged_mmproj_filename": null,
+  "prompt_format": "chatml",
+  "quantization": "Q4_K_M",
+  "source_gguf_filename": "OLMo-2-0425-1B-Instruct-Q4_K_M.gguf",
+  "source_gguf_repo_id": "allenai/OLMo-2-0425-1B-Instruct-GGUF",
+  "source_mmproj_filename": null,
+  "summary": "This release packages `OLMo-2-0425-1B-Instruct-Q4_K_M.gguf` as a final GGUF artifact for local llama.cpp-family inference and Hugging Face model-repo upload.",
+  "supported_modalities": [
+    "text"
+  ],
+  "upstream_base_model_id": "allenai/OLMo-2-0425-1B-Instruct"
+}

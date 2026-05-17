@@ -1,0 +1,114 @@
+{
+  "artifacts": {
+    "checksums": "checksums.sha256",
+    "gguf": "MiniMax-M2.5-UD-TQ1_0.gguf",
+    "gitattributes": ".gitattributes",
+    "hf_space_app": "hf_space/app.py",
+    "hf_space_dir": "hf_space",
+    "hf_space_readme": "hf_space/README.md",
+    "hf_space_requirements": "hf_space/requirements.txt",
+    "license": "LICENSE.txt",
+    "merged_model": "merged_model",
+    "mmproj": null,
+    "ollama_create_script": "ollama/create_ollama_model.ps1",
+    "ollama_modelfile": "ollama/Modelfile",
+    "package_state": "merged_model/PACKAGE_STATE.txt",
+    "quantized_gguf": "MiniMax-M2.5-UD-TQ1_0.gguf",
+    "quickstart": "quickstart.py",
+    "readme": "README.md",
+    "requirements": "requirements.txt",
+    "training_summary": "artifacts/release_training_summary.json",
+    "upload_notes": "UPLOAD_TO_HF.md",
+    "version": "VERSION.txt"
+  },
+  "capabilities": {
+    "reasoning_enabled": false,
+    "supported_modalities": [
+      "text"
+    ]
+  },
+  "delivery": "standalone_prebuilt_gguf_release",
+  "distribution": {
+    "hf_space": {
+      "app": "hf_space/app.py",
+      "default_demo_repo_id": "AbteeXAILab/lumynax-frontier-minimax-m25-unsloth-demo",
+      "default_model_repo_id": "AbteeXAILab/lumynax-frontier-minimax-m25-unsloth",
+      "directory": "hf_space",
+      "model_repo_env_var": "LUMYNAX_MODEL_REPO_ID",
+      "paired_model_repo_id": "AbteeXAILab/lumynax-frontier-minimax-m25-unsloth",
+      "readme": "hf_space/README.md",
+      "requirements": "hf_space/requirements.txt",
+      "status": "browser_showcase_for_gguf_only_release"
+    },
+    "ollama": {
+      "create_script": "ollama/create_ollama_model.ps1",
+      "mmproj": null,
+      "modelfile": "ollama/Modelfile",
+      "preferred_gguf": "MiniMax-M2.5-UD-TQ1_0.gguf",
+      "recommended_model_name": "lumynax-frontier-minimax-m25-unsloth",
+      "status": "ready_for_local_ollama_create"
+    }
+  },
+  "family": {
+    "demo_repo_id": "AbteeXAILab/lumynax-frontier-minimax-m25-unsloth-demo",
+    "family_name": "LumynaX",
+    "lineage_position": "independent_release_line",
+    "release_line_id": "lumynax-frontier-minimax-m25-unsloth",
+    "release_wave": "wave10",
+    "upstream_model_id": "unsloth/MiniMax-M2.5-GGUF",
+    "validation_status": "hydrated_pending_validation"
+  },
+  "generated_at": "2026-05-10T11:11:52.033256+00:00",
+  "license": {
+    "id": "other",
+    "link": "https://huggingface.co/unsloth/MiniMax-M2.5-GGUF/blob/main/LICENSE",
+    "name": "modified-mit",
+    "weights_subject_to_upstream_license": true
+  },
+  "manifest_version": 2,
+  "model_title": "LumynaX Frontier MiniMax M2.5 Unsloth",
+  "package_state": "prebuilt_gguf_release",
+  "public_identity": {
+    "model_name": "LumynaX",
+    "organization": "AbteeX AI Labs",
+    "region": "Aotearoa New Zealand"
+  },
+  "release_line": {
+    "default_model_name": "lumynax-frontier-minimax-m25-unsloth",
+    "demo_repo_id": "AbteeXAILab/lumynax-frontier-minimax-m25-unsloth-demo",
+    "model_repo_id": "AbteeXAILab/lumynax-frontier-minimax-m25-unsloth",
+    "model_title": "LumynaX Frontier MiniMax M2.5 Unsloth",
+    "output_dir_name": "lumynax-frontier-minimax-m25-unsloth-v1",
+    "packaging_mode": "shell",
+    "prompt_format": "huggingface_chat_template",
+    "release_id": "lumynax-frontier-minimax-m25-unsloth",
+    "release_kind": "text",
+    "release_version": "v1",
+    "runtime_family": "minimax_m25_moe_mxfp4",
+    "upstream_model_id": "unsloth/MiniMax-M2.5-GGUF",
+    "validation_status": "hydrated_pending_validation",
+    "wave": "wave10"
+  },
+  "release_version": "v1",
+  "runtime": {
+    "delivery_mode": "standalone_prebuilt_gguf",
+    "preferred_backend": "llama_cpp",
+    "prompt_format": "chatml",
+    "quickstart_command": "python quickstart.py --interactive",
+    "system_prompt": "You are LumynaX operating from the LumynaX Frontier MiniMax M2.5 Unsloth package identity. Be helpful, clear, and honest about provenance."
+  },
+  "source_gguf": {
+    "filename": "MiniMax-M2.5-UD-TQ1_0.gguf",
+    "mmproj_filename": null,
+    "packaged_filename": "MiniMax-M2.5-UD-TQ1_0.gguf",
+    "packaged_mmproj_filename": null,
+    "quantization": "UD-TQ1_0",
+    "repo_id": "unsloth/MiniMax-M2.5-GGUF"
+  },
+  "upstream_model": {
+    "kind": "official_base_weights",
+    "lumynax_weight_adaptation_applied": false,
+    "provider": "Hugging Face",
+    "repo_id": "MiniMaxAI/MiniMax-M2.5"
+  }
+}

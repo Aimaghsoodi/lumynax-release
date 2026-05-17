@@ -1,0 +1,47 @@
+{
+  "demo_repo_id": "AbteeXAILab/lumynax-embed-e5-mistral-7b-demo",
+  "generated_at": "2026-04-19T10:12:46.714339+00:00",
+  "lumynax_identity_hardcoded": true,
+  "lumynax_weight_adaptation_applied": false,
+  "model_repo_id": "AbteeXAILab/lumynax-embed-e5-mistral-7b",
+  "model_title": "LumynaX Embed E5 Mistral 7B",
+  "package_state": "upstream_weights_hydrated_embedding",
+  "release_line_id": "lumynax-embed-e5-mistral-7b",
+  "release_wave": "wave3",
+  "runtime_family": "e5_sentence_transformer",
+  "summary": "This local release hydrates the official upstream `intfloat/e5-mistral-7b-instruct` checkpoint into the LumynaX release layout for local-first embedding generation.",
+  "supported_modalities": [
+    "text",
+    "embedding"
+  ],
+  "upstream_model_id": "intfloat/e5-mistral-7b-instruct",
+  "validation": {
+    "checks": [
+      "exists:release_export_manifest.json",
+      "exists:README.md",
+      "exists:quickstart.py",
+      "exists:requirements.txt",
+      "exists:LICENSE.txt",
+      "exists:VERSION.txt",
+      "exists:checksums.sha256",
+      "exists:artifacts/release_training_summary.json",
+      "exists:hf_space/app.py",
+      "exists:hf_space/README.md",
+      "exists:hf_space/requirements.txt",
+      "exists:ollama/Modelfile",
+      "exists:ollama/create_ollama_model.ps1",
+      "exists:merged_model/config.json",
+      "exists:merged_model/LUMYNAX_PACKAGE_IDENTITY.txt",
+      "manifest:metadata",
+      "training_summary:metadata",
+      "readme:branding",
+      "merged_model:weights_present",
+      "merged_model:tokenizer_present",
+      "syntax:quickstart.py",
+      "syntax:hf_space/app.py",
+      "checksums:verified"
+    ],
+    "validated_at": "2026-04-19T10:29:45.525453+00:00"
+  },
+  "validation_status": "validated"
+}

@@ -1,0 +1,11 @@
+LumynaX MoE Moonlight 16B A3B GGUF
+
+This release packages a prebuilt third-party GGUF artifact with LumynaX release metadata, quickstarts, Ollama files, and browser demo scaffolding.
+
+Upstream base model: moonshotai/Moonlight-16B-A3B-Instruct
+Source GGUF repo: mmnga/Moonlight-16B-A3B-Instruct-gguf
+Packaged GGUF file: lumynax-moe-moonlight-16b-a3b-iq4_xs.gguf
+License metadata: mit
+Upstream license file: https://huggingface.co/moonshotai/Moonlight-16B-A3B-Instruct/blob/main/LICENSE
+
+The model weights remain subject to their upstream license and obligations. LumynaX packaging metadata, scripts, and documentation are provided by AbteeX AI Labs.

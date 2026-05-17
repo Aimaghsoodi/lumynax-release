@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "abteex-sovereigncode"
+version = "0.1.0"
+description = "AbteeX SovereignCode — local-first coding agent with Data Capsule sovereignty controls."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "AbteeX AI Labs" }]
+keywords = ["lumynax", "sovereignty", "data-capsule", "coding-agent", "aotearoa", "new-zealand"]
+classifiers = [
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries",
+]
+dependencies = ["pyyaml>=6.0"]
+
+[project.urls]
+Homepage = "https://abteex.com"
+Repository = "https://huggingface.co/AbteeXAILab/sovereigncode"
+Lumynax = "https://lumynax.com"
+
+[project.scripts]
+sovereigncode = "sovereigncode.cli:main"

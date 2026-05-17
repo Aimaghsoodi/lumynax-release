@@ -1,0 +1,11 @@
+LumynaX Coder Qwen2.5 0.5B Instruct GGUF
+
+This release packages a prebuilt third-party GGUF artifact with LumynaX release metadata, quickstarts, Ollama files, and browser demo scaffolding.
+
+Upstream base model: Qwen/Qwen2.5-Coder-0.5B-Instruct
+Source GGUF repo: Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF
+Packaged GGUF file: qwen2.5-coder-0.5b-instruct-q4_k_m.gguf
+License metadata: apache-2.0
+Upstream license file: https://huggingface.co/Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF
+
+The model weights remain subject to their upstream license and obligations. LumynaX packaging metadata, scripts, and documentation are provided by AbteeX AI Labs.

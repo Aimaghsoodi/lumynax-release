@@ -1,0 +1,11 @@
+LumynaX Tiny Qwen2.5 0.5B GGUF
+
+This release packages a prebuilt third-party GGUF artifact with LumynaX release metadata, quickstarts, Ollama files, and browser demo scaffolding.
+
+Upstream base model: Qwen/Qwen2.5-0.5B-Instruct
+Source GGUF repo: Qwen/Qwen2.5-0.5B-Instruct-GGUF
+Packaged GGUF file: lumynax-tiny-qwen25-05b-q4_k_m.gguf
+License metadata: apache-2.0
+Upstream license file: https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/blob/main/LICENSE
+
+The model weights remain subject to their upstream license and obligations. LumynaX packaging metadata, scripts, and documentation are provided by AbteeX AI Labs.

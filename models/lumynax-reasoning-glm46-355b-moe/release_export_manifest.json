@@ -1,0 +1,37 @@
+{
+  "release_id": "lumynax-reasoning-glm46-355b-moe",
+  "title": "LumynaX Reasoning GLM-4.6 355B MoE",
+  "repo_id": "AbteeXAILab/lumynax-reasoning-glm46-355b-moe",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ",
+    "AU",
+    "global"
+  ],
+  "upstream": {
+    "repo_id": "zai-org/GLM-4.6",
+    "license": "mit",
+    "prompt_format": "glm4",
+    "source_note": "Zhipu GLM-4.6 upstream"
+  },
+  "gguf_mirror": "unsloth/GLM-4.6-GGUF",
+  "runtime": "transformers",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 204800,
+  "total_params_b": 355,
+  "active_params_b": 32,
+  "quantization": "bf16 / fp8 / Q4_K_M (community)",
+  "primary_artifact": "model.safetensors (sharded)",
+  "package_state": "scaffold_pulls_upstream",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 2,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-14T00:25:06Z"
+}

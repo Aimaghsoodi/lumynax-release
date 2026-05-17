@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "generated_at": "2026-04-18T04:46:20.968473+00:00",
+  "model_title": "LumynaX Infused Gemma E4B Text GGUF",
+  "release_version": "v1",
+  "delivery": "standalone_hf_text_gguf_release_hf_q4_bundle",
+  "package_state": "hf_q4_runtime_bundle",
+  "gguf_path": "lumynax-infused-gemma-e4b-text-gguf-q4_k_m.gguf",
+  "quantized_gguf_path": "lumynax-infused-gemma-e4b-text-gguf-q4_k_m.gguf",
+  "public_identity": {
+    "model_name": "LumynaX",
+    "organization": "AbteeX AI Labs",
+    "region": "Aotearoa New Zealand"
+  },
+  "upstream_model": {
+    "repo_id": "google/gemma-4-E4B-it",
+    "provider": "Hugging Face",
+    "kind": "official_base_weights",
+    "lumynax_weight_adaptation_applied": false
+  },
+  "capabilities": {
+    "reasoning_enabled": false,
+    "supported_modalities": [
+      "text"
+    ]
+  },
+  "artifacts": {
+    "readme": "README.md",
+    "quickstart": "quickstart.py",
+    "requirements": "requirements.txt",
+    "license": "LICENSE.txt",
+    "checksums": "checksums.sha256",
+    "version": "VERSION.txt",
+    "gguf": "lumynax-infused-gemma-e4b-text-gguf-q4_k_m.gguf",
+    "quantized_gguf": "lumynax-infused-gemma-e4b-text-gguf-q4_k_m.gguf",
+    "ollama_modelfile": "ollama/Modelfile",
+    "ollama_create_script": "ollama/create_ollama_model.ps1"
+  },
+  "runtime": {
+    "preferred_backend": "llama_cpp",
+    "delivery_mode": "standalone_text_gguf",
+    "quickstart_command": "python quickstart.py",
+    "prompt_format": "huggingface_chat_template"
+  },
+  "distribution": {
+    "ollama": {
+      "recommended_model_name": "lumynax-infused-gemma-e4b-text-gguf",
+      "modelfile": "ollama/Modelfile",
+      "create_script": "ollama/create_ollama_model.ps1",
+      "preferred_gguf": "lumynax-infused-gemma-e4b-text-gguf-q4_k_m.gguf",
+      "status": "validated_q4_runtime_bundle"
+    },
+    "hf_space": {
+      "status": "not_included_for_text_gguf_bundle",
+      "default_model_repo_id": "AbteeXAILab/lumynax-infused-gemma-e4b-text-gguf"
+    }
+  },
+  "family": null
+}

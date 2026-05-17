@@ -1,0 +1,84 @@
+{
+  "artifacts": {
+    "checksums": "checksums.sha256",
+    "gguf": "lumynax-infused-qwen3-8b-q4_k_m.gguf",
+    "gitattributes": ".gitattributes",
+    "hf_space_app": "hf_space/app.py",
+    "hf_space_dir": "hf_space",
+    "hf_space_readme": "hf_space/README.md",
+    "hf_space_requirements": "hf_space/requirements.txt",
+    "license": "LICENSE.txt",
+    "merged_model": "merged_model",
+    "ollama_create_script": "ollama/create_ollama_model.ps1",
+    "ollama_modelfile": "ollama/Modelfile",
+    "package_state": "merged_model/PACKAGE_STATE.txt",
+    "quantized_gguf": "lumynax-infused-qwen3-8b-q4_k_m.gguf",
+    "quickstart": "quickstart.py",
+    "readme": "README.md",
+    "requirements": "requirements.txt",
+    "training_summary": "artifacts/release_training_summary.json",
+    "upload_notes": "UPLOAD_TO_HF.md",
+    "version": "VERSION.txt"
+  },
+  "capabilities": {
+    "reasoning_enabled": false,
+    "supported_modalities": [
+      "text"
+    ]
+  },
+  "delivery": "standalone_prebuilt_gguf_release",
+  "distribution": {
+    "hf_space": {
+      "app": "hf_space/app.py",
+      "default_model_repo_id": "AbteeXAILab/lumynax-infused-qwen3-8b-gguf",
+      "directory": "hf_space",
+      "model_repo_env_var": "LUMYNAX_MODEL_REPO_ID",
+      "readme": "hf_space/README.md",
+      "requirements": "hf_space/requirements.txt",
+      "status": "browser_showcase_for_gguf_only_release"
+    },
+    "ollama": {
+      "create_script": "ollama/create_ollama_model.ps1",
+      "modelfile": "ollama/Modelfile",
+      "preferred_gguf": "lumynax-infused-qwen3-8b-q4_k_m.gguf",
+      "recommended_model_name": "lumynax-infused-qwen3-8b-gguf",
+      "status": "ready_for_local_ollama_create"
+    }
+  },
+  "family": null,
+  "generated_at": "2026-05-09T05:24:43.648058+00:00",
+  "license": {
+    "id": "apache-2.0",
+    "link": "https://huggingface.co/Qwen/Qwen3-8B-GGUF/blob/main/LICENSE",
+    "name": null,
+    "weights_subject_to_upstream_license": true
+  },
+  "manifest_version": 2,
+  "model_title": "LumynaX Infused Qwen3 8B GGUF",
+  "package_state": "prebuilt_gguf_release",
+  "public_identity": {
+    "model_name": "LumynaX",
+    "organization": "AbteeX AI Labs",
+    "region": "Aotearoa New Zealand"
+  },
+  "release_version": "v1",
+  "runtime": {
+    "delivery_mode": "standalone_prebuilt_gguf",
+    "preferred_backend": "llama_cpp",
+    "prompt_format": "chatml",
+    "quickstart_command": "python quickstart.py --interactive",
+    "system_prompt": "You are LumynaX operating from the LumynaX Infused Qwen3 8B GGUF package identity. Be helpful, clear, and honest about provenance."
+  },
+  "source_gguf": {
+    "filename": "Qwen3-8B-Q4_K_M.gguf",
+    "packaged_filename": "lumynax-infused-qwen3-8b-q4_k_m.gguf",
+    "quantization": "Q4_K_M",
+    "repo_id": "Qwen/Qwen3-8B-GGUF"
+  },
+  "upstream_model": {
+    "kind": "official_base_weights",
+    "lumynax_weight_adaptation_applied": false,
+    "provider": "Hugging Face",
+    "repo_id": "Qwen/Qwen3-8B"
+  }
+}

@@ -1,0 +1,11 @@
+LumynaX Infused Qwen2 Audio 7B
+Copyright (c) AbteeX AI Labs. All rights reserved.
+
+This release is proprietary. No right to use, copy, modify, distribute, host,
+sublicense, reverse engineer, or create derivative releases is granted except
+under a separate written agreement from AbteeX AI Labs.
+
+This package may be used only by parties expressly authorized by AbteeX AI Labs.
+
+Third-party software or model components, if any, remain subject to their own
+licenses and obligations.

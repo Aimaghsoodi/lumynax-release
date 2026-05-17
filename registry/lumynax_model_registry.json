@@ -1,0 +1,2288 @@
+{
+  "registry_id": "lumynax-marama-route-registry-v0",
+  "publisher": "AbteeX AI Labs",
+  "source_report": "docs/releases/hf-model-card-v4-refresh-2026-05-11.json",
+  "model_count": 58,
+  "models": [
+    {
+      "model_id": "lumynax-coder-qwen25-05b-instruct-gguf",
+      "repo_id": "AbteeXAILab/lumynax-coder-qwen25-05b-instruct-gguf",
+      "title": "LumynaX Coder Qwen2.5 0.5B Instruct GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "qwen2.5-coder-0.5b-instruct-q4_k_m.gguf",
+      "active_params_b": null,
+      "total_params_b": 0.5,
+      "quality_rank": 5,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "coder",
+        "gguf",
+        "lumynax",
+        "qwen",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "81c904af42045aeac88fa843b8f653d79afa0422",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 491400064
+      }
+    },
+    {
+      "model_id": "lumynax-coder-qwen25-14b-instruct-gguf",
+      "repo_id": "AbteeXAILab/lumynax-coder-qwen25-14b-instruct-gguf",
+      "title": "LumynaX Coder Qwen2.5 14B Instruct GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "qwen2.5-coder-14b-instruct-q4_k_m.gguf",
+      "active_params_b": null,
+      "total_params_b": 14.0,
+      "quality_rank": 2,
+      "cost_rank": 6,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "coder",
+        "gguf",
+        "lumynax",
+        "qwen",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "e408c607528af8457900e4237b26184612f16e49",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 8988110272
+      }
+    },
+    {
+      "model_id": "lumynax-coder-qwen25-15b-instruct-gguf",
+      "repo_id": "AbteeXAILab/lumynax-coder-qwen25-15b-instruct-gguf",
+      "title": "LumynaX Coder Qwen2.5 1.5B Instruct GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+      "active_params_b": null,
+      "total_params_b": 1.5,
+      "quality_rank": 5,
+      "cost_rank": 4,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "coder",
+        "gguf",
+        "lumynax",
+        "qwen",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "cbe84212ed061b79297683f6d6247fd22f1fde7c",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 1117320768
+      }
+    },
+    {
+      "model_id": "lumynax-coder-qwen25-7b-instruct-gguf",
+      "repo_id": "AbteeXAILab/lumynax-coder-qwen25-7b-instruct-gguf",
+      "title": "LumynaX Coder Qwen2.5 7B Instruct GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "qwen2.5-coder-7b-instruct-q4_k_m.gguf",
+      "active_params_b": null,
+      "total_params_b": 7.0,
+      "quality_rank": 3,
+      "cost_rank": 6,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "coder",
+        "gguf",
+        "lumynax",
+        "qwen",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "fe5491063e09af13dbdb7fa6cef7f57d5cecc14d",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 4683073536
+      }
+    },
+    {
+      "model_id": "lumynax-embed-bge-m3",
+      "repo_id": "AbteeXAILab/lumynax-embed-bge-m3",
+      "title": "LumynaX Embed BGE M3",
+      "family": "embedding",
+      "runtime": "python_embedding",
+      "modalities": [
+        "text",
+        "embedding"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "merged_model/pytorch_model.bin",
+      "active_params_b": null,
+      "total_params_b": null,
+      "quality_rank": 4,
+      "cost_rank": 4,
+      "sovereignty_tier": 2,
+      "supports_tools": false,
+      "supports_json": false,
+      "tags": [
+        "embedding",
+        "lumynax",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "05011e1f7ea9cbd714c8fef86695a498685750a8",
+        "package_state": "upstream_weights_hydrated_embedding",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 2273250020
+      }
+    },
+    {
+      "model_id": "lumynax-embed-e5-mistral-7b",
+      "repo_id": "AbteeXAILab/lumynax-embed-e5-mistral-7b",
+      "title": "LumynaX Embed E5 Mistral 7B",
+      "family": "mistral",
+      "runtime": "python_embedding",
+      "modalities": [
+        "text",
+        "embedding"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "merged_model/model-00001-of-00002.safetensors",
+      "active_params_b": null,
+      "total_params_b": 7.0,
+      "quality_rank": 3,
+      "cost_rank": 8,
+      "sovereignty_tier": 2,
+      "supports_tools": false,
+      "supports_json": false,
+      "tags": [
+        "embedding",
+        "lumynax",
+        "mistral",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "0c8fc35c248b9bbc951df8904c97f41c51a883c2",
+        "package_state": "upstream_weights_hydrated_embedding",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 14221351904
+      }
+    },
+    {
+      "model_id": "lumynax-frontier-minimax-m25-unsloth",
+      "repo_id": "AbteeXAILab/lumynax-frontier-minimax-m25-unsloth",
+      "title": "LumynaX Frontier MiniMax M2.5 Unsloth",
+      "family": "minimax",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "MiniMax-M2.5-UD-TQ1_0.gguf",
+      "active_params_b": null,
+      "total_params_b": null,
+      "quality_rank": 1,
+      "cost_rank": 10,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "frontier",
+        "general",
+        "lumynax",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "ff328be463825aedd9cec5b8f5fe3fce47f7547f",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 55765943424
+      }
+    },
+    {
+      "model_id": "lumynax-infused-gemma-e4b",
+      "repo_id": "AbteeXAILab/lumynax-infused-gemma-e4b",
+      "title": "LumynaX Infused Gemma E4B Model",
+      "family": "gemma",
+      "runtime": "transformers_multimodal",
+      "modalities": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "context_tokens": 4096,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "merged_model/model.safetensors",
+      "active_params_b": null,
+      "total_params_b": 4.0,
+      "quality_rank": 3,
+      "cost_rank": 8,
+      "sovereignty_tier": 2,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "audio",
+        "gemma",
+        "general",
+        "image",
+        "lumynax",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "71c0d98bc3ac1b90d3d59dbc5505910e6edef6a6",
+        "package_state": "base_weights_hydrated",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 15992595884
+      }
+    },
+    {
+      "model_id": "lumynax-infused-gemma-e4b-text-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-gemma-e4b-text-gguf",
+      "title": "LumynaX Infused Gemma E4B Text GGUF",
+      "family": "gemma",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "lumynax-infused-gemma-e4b-text-gguf-q4_k_m.gguf",
+      "active_params_b": null,
+      "total_params_b": 4.0,
+      "quality_rank": 3,
+      "cost_rank": 6,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "gemma",
+        "general",
+        "gguf",
+        "lumynax",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "da670d4d4c080f93e37171d69f2e49cbe0740f4c",
+        "package_state": "hf_q4_runtime_bundle",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 5335290080
+      }
+    },
+    {
+      "model_id": "lumynax-infused-gemma4-26b-a4b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-gemma4-26b-a4b-gguf",
+      "title": "LumynaX Infused Gemma4 26B A4B GGUF",
+      "family": "gemma",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "lumynax-infused-gemma4-26b-a4b-ud-q4_k_m.gguf",
+      "active_params_b": 4.0,
+      "total_params_b": 26.0,
+      "quality_rank": 1,
+      "cost_rank": 8,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "gemma",
+        "general",
+        "gguf",
+        "lumynax",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "9ac3619aaa892edf714fad37d566dcc75e3c63e6",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 16947539744
+      }
+    },
+    {
+      "model_id": "lumynax-infused-granite31-1b-a400m-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-granite31-1b-a400m-gguf",
+      "title": "LumynaX Infused Granite 3.1 1B A400M Instruct GGUF",
+      "family": "granite",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "granite-3.1-1b-a400m-instruct-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 1.0,
+      "quality_rank": 5,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "granite",
+        "lumynax",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "4962677e55c151eb9540257318fd640ce1f002e7",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 821847360
+      }
+    },
+    {
+      "model_id": "lumynax-infused-granite33-2b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-granite33-2b-gguf",
+      "title": "LumynaX Infused Granite 3.3 2B Instruct GGUF",
+      "family": "granite",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "granite-3.3-2b-instruct-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 2.0,
+      "quality_rank": 4,
+      "cost_rank": 4,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "granite",
+        "lumynax",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "008f69d6d7ed46cfa4a26e14f1a36ed7840ca86e",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 1545303328
+      }
+    },
+    {
+      "model_id": "lumynax-infused-granite33-8b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-granite33-8b-gguf",
+      "title": "LumynaX Infused Granite 3.3 8B Instruct GGUF",
+      "family": "granite",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "granite-3.3-8b-instruct-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 8.0,
+      "quality_rank": 3,
+      "cost_rank": 6,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "granite",
+        "lumynax",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "9a73a865e7121274789cee80e6543444e034bb01",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 4942873344
+      }
+    },
+    {
+      "model_id": "lumynax-infused-mistral-7b-v03-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-mistral-7b-v03-gguf",
+      "title": "LumynaX Infused Mistral 7B Instruct v0.3 GGUF",
+      "family": "mistral",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "Mistral-7B-Instruct-v0.3-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 7.0,
+      "quality_rank": 3,
+      "cost_rank": 6,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "mistral",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "b27abdbb78659b9577c68040838a4811bb2a4fc4",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 4372812000
+      }
+    },
+    {
+      "model_id": "lumynax-infused-mistral-small-text-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-mistral-small-text-gguf",
+      "title": "LumynaX Infused Mistral Small Text GGUF",
+      "family": "mistral",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "lumynax-infused-mistral-small-text-gguf-f16.gguf",
+      "active_params_b": null,
+      "total_params_b": null,
+      "quality_rank": 3,
+      "cost_rank": 10,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "mistral",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "f0dcbb1666de6f53212277f225ca5eb0901d9627",
+        "package_state": "base_weights_hydrated_text_gguf",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 61488486400
+      }
+    },
+    {
+      "model_id": "lumynax-infused-olmo2-1b-0425-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-olmo2-1b-0425-gguf",
+      "title": "LumynaX Infused OLMo 2 0425 1B Instruct GGUF",
+      "family": "olmo",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "OLMo-2-0425-1B-Instruct-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 1.0,
+      "quality_rank": 5,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "6bbec139651766aaf4310e2affe44504a0bb3a02",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 935515296
+      }
+    },
+    {
+      "model_id": "lumynax-infused-olmo2-7b-1124-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-olmo2-7b-1124-gguf",
+      "title": "LumynaX Infused OLMo 2 1124 7B Instruct GGUF",
+      "family": "olmo",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "olmo-2-1124-7B-instruct-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 7.0,
+      "quality_rank": 3,
+      "cost_rank": 6,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "c37a2b4ccca91a97d57058b33037a0ce2d32dd91",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 4472020256
+      }
+    },
+    {
+      "model_id": "lumynax-infused-phi-4-text-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-phi-4-text-gguf",
+      "title": "LumynaX Infused Phi-4 Text GGUF",
+      "family": "phi",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "lumynax-infused-phi-4-text-gguf-f16.gguf",
+      "active_params_b": null,
+      "total_params_b": null,
+      "quality_rank": 3,
+      "cost_rank": 10,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "phi",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "d1ea33475c83c3ce97e63789ab9699e5f534a639",
+        "package_state": "base_weights_hydrated_text_gguf",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 38382657280
+      }
+    },
+    {
+      "model_id": "lumynax-infused-phi3-mini-4k-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-phi3-mini-4k-gguf",
+      "title": "LumynaX Infused Phi-3 Mini 4K Instruct GGUF",
+      "family": "phi",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "Phi-3-mini-4k-instruct-q4.gguf",
+      "active_params_b": null,
+      "total_params_b": null,
+      "quality_rank": 4,
+      "cost_rank": 4,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "phi",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "726f4baf5b38e0ea150aaac0c893735f5af8b5d3",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 2393231072
+      }
+    },
+    {
+      "model_id": "lumynax-infused-phi4-mini-instruct-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-phi4-mini-instruct-gguf",
+      "title": "LumynaX Infused Phi-4 Mini Instruct GGUF",
+      "family": "phi",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "Phi-4-mini-instruct-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": null,
+      "quality_rank": 4,
+      "cost_rank": 4,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "phi",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "0159c99af7f773fed806a9c298752698ebecfb74",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 2491874272
+      }
+    },
+    {
+      "model_id": "lumynax-infused-qwen2-audio-7b",
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen2-audio-7b",
+      "title": "LumynaX Infused Qwen2 Audio 7B",
+      "family": "qwen",
+      "runtime": "transformers",
+      "modalities": [
+        "audio",
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "merged_model/model-00003-of-00005.safetensors",
+      "active_params_b": null,
+      "total_params_b": 7.0,
+      "quality_rank": 3,
+      "cost_rank": 8,
+      "sovereignty_tier": 2,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "audio",
+        "general",
+        "lumynax",
+        "qwen",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "e743d9eede8807f4a0ecff7d6d81a48c6bfd0aa9",
+        "package_state": "upstream_weights_hydrated_audio",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 16794296368
+      }
+    },
+    {
+      "model_id": "lumynax-infused-qwen25-15b-instruct-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen25-15b-instruct-gguf",
+      "title": "LumynaX Infused Qwen2.5 1.5B Instruct GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+      "active_params_b": null,
+      "total_params_b": 1.5,
+      "quality_rank": 4,
+      "cost_rank": 4,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "qwen",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "56236805876d7cde2954862e1dd3588a55a6912e",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 1117320736
+      }
+    },
+    {
+      "model_id": "lumynax-infused-qwen25-3b-instruct-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen25-3b-instruct-gguf",
+      "title": "LumynaX Infused Qwen2.5 3B Instruct GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "qwen2.5-3b-instruct-q4_k_m.gguf",
+      "active_params_b": null,
+      "total_params_b": 3.0,
+      "quality_rank": 4,
+      "cost_rank": 4,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "qwen",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "03272f747319be4d718c9feef64d5078bb8a0c07",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 2104932768
+      }
+    },
+    {
+      "model_id": "lumynax-infused-qwen25-7b-instruct-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen25-7b-instruct-gguf",
+      "title": "LumynaX Infused Qwen2.5 7B Instruct GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "qwen2.5-7b-instruct-q3_k_m.gguf",
+      "active_params_b": null,
+      "total_params_b": 7.0,
+      "quality_rank": 3,
+      "cost_rank": 4,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "qwen",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "a499dae1ce806b58f9727ca417615fd03958d115",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 3808391072
+      }
+    },
+    {
+      "model_id": "lumynax-infused-qwen25-omni-7b-voice",
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen25-omni-7b-voice",
+      "title": "LumynaX Infused Qwen2.5 Omni 7B Voice",
+      "family": "qwen",
+      "runtime": "transformers",
+      "modalities": [
+        "audio",
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "merged_model/model-00003-of-00005.safetensors",
+      "active_params_b": null,
+      "total_params_b": 7.0,
+      "quality_rank": 3,
+      "cost_rank": 10,
+      "sovereignty_tier": 2,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "audio",
+        "general",
+        "lumynax",
+        "qwen",
+        "text",
+        "voice"
+      ],
+      "metadata": {
+        "hub_sha": "8f2e5068851d87406998a678b3f69990fccb4ee3",
+        "package_state": "upstream_weights_hydrated_audio",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 22362861192
+      }
+    },
+    {
+      "model_id": "lumynax-infused-qwen3-06b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen3-06b-gguf",
+      "title": "LumynaX Infused Qwen3 0.6B GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "Qwen3-0.6B-Q8_0.gguf",
+      "active_params_b": null,
+      "total_params_b": 0.6,
+      "quality_rank": 5,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "qwen",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "1b61730d710869c3789fffcc422a4f15539cffcf",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 639446688
+      }
+    },
+    {
+      "model_id": "lumynax-infused-qwen3-14b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen3-14b-gguf",
+      "title": "LumynaX Infused Qwen3 14B GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "Qwen3-14B-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 14.0,
+      "quality_rank": 2,
+      "cost_rank": 8,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "qwen",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "3fae690abff170d811eb5934efe6155621528d25",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 9001752960
+      }
+    },
+    {
+      "model_id": "lumynax-infused-qwen3-17b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen3-17b-gguf",
+      "title": "LumynaX Infused Qwen3 1.7B GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "Qwen3-1.7B-Q8_0.gguf",
+      "active_params_b": null,
+      "total_params_b": 1.7,
+      "quality_rank": 5,
+      "cost_rank": 4,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "qwen",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "5eb95b799e57e502872c9ed47e63580ee81558ff",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 1834426016
+      }
+    },
+    {
+      "model_id": "lumynax-infused-qwen3-30b-a3b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen3-30b-a3b-gguf",
+      "title": "LumynaX Infused Qwen3 30B A3B GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "lumynax-infused-qwen3-30b-a3b-q4_k_m.gguf",
+      "active_params_b": 3.0,
+      "total_params_b": 30.0,
+      "quality_rank": 1,
+      "cost_rank": 8,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "qwen",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "acfc6b800fc3979e419d4abfd51554b4d6e78abd",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 18556686912
+      }
+    },
+    {
+      "model_id": "lumynax-infused-qwen3-8b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen3-8b-gguf",
+      "title": "LumynaX Infused Qwen3 8B GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "lumynax-infused-qwen3-8b-q4_k_m.gguf",
+      "active_params_b": null,
+      "total_params_b": 8.0,
+      "quality_rank": 3,
+      "cost_rank": 6,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "qwen",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "c61c9a6fa0b95ec8a3da1912b897ca1fcc19d48a",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 5027783488
+      }
+    },
+    {
+      "model_id": "lumynax-infused-qwen3-coder-30b-a3b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen3-coder-30b-a3b-gguf",
+      "title": "LumynaX Infused Qwen3 Coder 30B A3B GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "lumynax-infused-qwen3-coder-30b-a3b-q4_k_m.gguf",
+      "active_params_b": 3.0,
+      "total_params_b": 30.0,
+      "quality_rank": 1,
+      "cost_rank": 8,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "coder",
+        "gguf",
+        "lumynax",
+        "qwen",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "243f8578284934be06d3cb3d055de1b4a28059cc",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 18556689568
+      }
+    },
+    {
+      "model_id": "lumynax-infused-qwen3-text-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen3-text-gguf",
+      "title": "LumynaX Infused Qwen3 Text GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "lumynax-infused-qwen3-text-gguf-f16.gguf",
+      "active_params_b": null,
+      "total_params_b": null,
+      "quality_rank": 3,
+      "cost_rank": 10,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "qwen",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "405002e7153a01f4fcc96d610f6af761de8c0574",
+        "package_state": "base_weights_hydrated_text_gguf",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 37797343976
+      }
+    },
+    {
+      "model_id": "lumynax-infused-smollm-135m-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-smollm-135m-gguf",
+      "title": "LumynaX Infused SmolLM 135M Instruct GGUF",
+      "family": "smollm",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "SmolLM-135M-Instruct.Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": null,
+      "quality_rank": 5,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "smollm",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "192518901ec475229151f3ce654a866a47a2a6f3",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 105454208
+      }
+    },
+    {
+      "model_id": "lumynax-infused-smollm2-17b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-smollm2-17b-gguf",
+      "title": "LumynaX Infused SmolLM2 1.7B Instruct GGUF",
+      "family": "smollm",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "smollm2-1.7b-instruct-q4_k_m.gguf",
+      "active_params_b": null,
+      "total_params_b": 1.7,
+      "quality_rank": 5,
+      "cost_rank": 4,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "smollm",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "b71d0ad33a3e8f2f1582ceba7520e086a665bf46",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 1055609536
+      }
+    },
+    {
+      "model_id": "lumynax-infused-smollm2-360m-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-smollm2-360m-gguf",
+      "title": "LumynaX Infused SmolLM2 360M Instruct GGUF",
+      "family": "smollm",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "smollm2-360m-instruct-q8_0.gguf",
+      "active_params_b": null,
+      "total_params_b": null,
+      "quality_rank": 5,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "smollm",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "a808313b05ac18b70e2b4de03a0ddb238d545c74",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 386404992
+      }
+    },
+    {
+      "model_id": "lumynax-infused-smollm3-3b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-smollm3-3b-gguf",
+      "title": "LumynaX Infused SmolLM3 3B GGUF",
+      "family": "smollm",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "SmolLM3-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 3.0,
+      "quality_rank": 4,
+      "cost_rank": 4,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "smollm",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "3cbfc3ed26da900885f8135bfcbd4331a6c5b5b9",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 1915305312
+      }
+    },
+    {
+      "model_id": "lumynax-infused-zephyr-7b-beta-gguf",
+      "repo_id": "AbteeXAILab/lumynax-infused-zephyr-7b-beta-gguf",
+      "title": "LumynaX Infused Zephyr 7B Beta GGUF",
+      "family": "lumynax",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "zephyr-7b-beta.Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 7.0,
+      "quality_rank": 3,
+      "cost_rank": 6,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "790aa3f7411fbd5b6ae8af3eedbefaf5c23c5a60",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 4368438976
+      }
+    },
+    {
+      "model_id": "lumynax-moe-moonlight-16b-a3b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-moe-moonlight-16b-a3b-gguf",
+      "title": "LumynaX MoE Moonlight 16B A3B GGUF",
+      "family": "lumynax",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "lumynax-moe-moonlight-16b-a3b-iq4_xs.gguf",
+      "active_params_b": 3.0,
+      "total_params_b": 16.0,
+      "quality_rank": 3,
+      "cost_rank": 6,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "moe",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "88926e39e3730c2d2bfe00088404fce8217c1c74",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 8744947840
+      }
+    },
+    {
+      "model_id": "lumynax-moe-olmoe-1b-7b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-moe-olmoe-1b-7b-gguf",
+      "title": "LumynaX MoE OLMoE 1B-7B Instruct GGUF",
+      "family": "olmo",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "olmoe-1b-7b-0924-instruct-q4_k_m.gguf",
+      "active_params_b": null,
+      "total_params_b": 1.0,
+      "quality_rank": 3,
+      "cost_rank": 6,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "moe",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "4515dabcc14be52616348757c7195a8bb2e490f8",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 4213512672
+      }
+    },
+    {
+      "model_id": "lumynax-multimodal-glm46v-flash",
+      "repo_id": "AbteeXAILab/lumynax-multimodal-glm46v-flash",
+      "title": "LumynaX Multimodal GLM 4.6V Flash",
+      "family": "lumynax",
+      "runtime": "llama_cpp_multimodal",
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "context_tokens": 4096,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "lumynax-multimodal-glm46v-flash-ud-iq2_m.gguf",
+      "active_params_b": null,
+      "total_params_b": null,
+      "quality_rank": 3,
+      "cost_rank": 6,
+      "sovereignty_tier": 2,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "image",
+        "lumynax",
+        "multimodal",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "3f0a751fedde7cd6a3b8a083b7bdf128c8ca3ccd",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 5778988768
+      }
+    },
+    {
+      "model_id": "lumynax-multimodal-kimi-vl-a3b-thinking",
+      "repo_id": "AbteeXAILab/lumynax-multimodal-kimi-vl-a3b-thinking",
+      "title": "LumynaX Multimodal Kimi VL A3B Thinking",
+      "family": "kimi",
+      "runtime": "llama_cpp_multimodal",
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "context_tokens": 4096,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "lumynax-multimodal-kimi-vl-a3b-thinking-q4_k_m.gguf",
+      "active_params_b": 3.0,
+      "total_params_b": 3.0,
+      "quality_rank": 3,
+      "cost_rank": 8,
+      "sovereignty_tier": 2,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "image",
+        "kimi",
+        "lumynax",
+        "multimodal",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "460182aeb56feb94262a59e274be38f3b9638188",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 11158846304
+      }
+    },
+    {
+      "model_id": "lumynax-nz-3b",
+      "repo_id": "AbteeXAILab/lumynax-nz-3b",
+      "title": "LumynaX NZ 3B V1",
+      "family": "lumynax",
+      "runtime": "transformers",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 4096,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "merged_model/model-00001-of-00055.safetensors",
+      "active_params_b": null,
+      "total_params_b": 3.0,
+      "quality_rank": 3,
+      "cost_rank": 8,
+      "sovereignty_tier": 2,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "lumynax",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "190ba7e1a81e9e980a8cf44d4a9d53dedca6322c",
+        "package_state": "standalone_dense_model",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 12343804840
+      }
+    },
+    {
+      "model_id": "lumynax-nz-qwen25-coder-3b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-nz-qwen25-coder-3b-gguf",
+      "title": "LumynaX NZ Qwen2.5 Coder 3B GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "lumynax-nz-qwen25-coder-3b-q4_k_m.gguf",
+      "active_params_b": null,
+      "total_params_b": 3.0,
+      "quality_rank": 4,
+      "cost_rank": 4,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "coder",
+        "gguf",
+        "lumynax",
+        "qwen",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "b6603695131d11f937f8bd06b77985f1affd8398",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 2104932800
+      }
+    },
+    {
+      "model_id": "lumynax-reasoning-deepseek-distill-text-gguf",
+      "repo_id": "AbteeXAILab/lumynax-reasoning-deepseek-distill-text-gguf",
+      "title": "LumynaX Reasoning DeepSeek Distill Text GGUF",
+      "family": "deepseek",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "lumynax-reasoning-deepseek-distill-text-gguf-f16.gguf",
+      "active_params_b": null,
+      "total_params_b": null,
+      "quality_rank": 2,
+      "cost_rank": 10,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "deepseek",
+        "gguf",
+        "lumynax",
+        "reasoning",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "ff5915ca508ffd3b6d12121a2682f8d5ff8cb7be",
+        "package_state": "base_weights_hydrated_text_gguf",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 38535825664
+      }
+    },
+    {
+      "model_id": "lumynax-reasoning-deepseek-r1-qwen-15b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-reasoning-deepseek-r1-qwen-15b-gguf",
+      "title": "LumynaX Reasoning DeepSeek R1 Distill Qwen 1.5B GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "DeepSeek-R1-Distill-Qwen-1.5B-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 1.5,
+      "quality_rank": 5,
+      "cost_rank": 4,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "deepseek",
+        "gguf",
+        "lumynax",
+        "qwen",
+        "reasoning",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "cb2a747d711fb83c6197855046e59c56828dbbaa",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 1117321312
+      }
+    },
+    {
+      "model_id": "lumynax-reasoning-deepseek-r1-qwen-7b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-reasoning-deepseek-r1-qwen-7b-gguf",
+      "title": "LumynaX Reasoning DeepSeek R1 Distill Qwen 7B GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "DeepSeek-R1-Distill-Qwen-7B-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 7.0,
+      "quality_rank": 3,
+      "cost_rank": 6,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "deepseek",
+        "gguf",
+        "lumynax",
+        "qwen",
+        "reasoning",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "02dbc4451a0a26e9760f740418cf4b9796ef2aa4",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 4683073248
+      }
+    },
+    {
+      "model_id": "lumynax-reasoning-gpt-oss-20b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-reasoning-gpt-oss-20b-gguf",
+      "title": "LumynaX Reasoning GPT-OSS 20B GGUF",
+      "family": "lumynax",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "lumynax-reasoning-gpt-oss-20b-mxfp4.gguf",
+      "active_params_b": null,
+      "total_params_b": 20.0,
+      "quality_rank": 1,
+      "cost_rank": 8,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "gguf",
+        "lumynax",
+        "reasoning",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "3f07992371177a312240df950d91ae1b2ff57714",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 12109566560
+      }
+    },
+    {
+      "model_id": "lumynax-reasoning-phi4-mini-gguf",
+      "repo_id": "AbteeXAILab/lumynax-reasoning-phi4-mini-gguf",
+      "title": "LumynaX Reasoning Phi-4 Mini GGUF",
+      "family": "phi",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "Phi-4-mini-reasoning-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": null,
+      "quality_rank": 2,
+      "cost_rank": 4,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "gguf",
+        "lumynax",
+        "phi",
+        "reasoning",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "ef04425cd19f96de197b2418a16aca6e5c868f45",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 2491875232
+      }
+    },
+    {
+      "model_id": "lumynax-tiny",
+      "repo_id": "AbteeXAILab/lumynax-tiny",
+      "title": "LumynaX Tiny Seed V1",
+      "family": "lumynax",
+      "runtime": "transformers",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 4096,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "merged_model/model.safetensors",
+      "active_params_b": null,
+      "total_params_b": null,
+      "quality_rank": 5,
+      "cost_rank": 2,
+      "sovereignty_tier": 2,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "lumynax",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "c4ccf84ef0b646fbc61c83f24117aaea95225dd6",
+        "package_state": "standalone_dense_model",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 4292528
+      }
+    },
+    {
+      "model_id": "lumynax-tiny-qwen25-05b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-tiny-qwen25-05b-gguf",
+      "title": "LumynaX Tiny Qwen2.5 0.5B GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "see_model_card",
+      "quantization": "see_release_manifest",
+      "primary_artifact": "lumynax-tiny-qwen25-05b-q4_k_m.gguf",
+      "active_params_b": null,
+      "total_params_b": 0.5,
+      "quality_rank": 5,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "general",
+        "gguf",
+        "lumynax",
+        "qwen",
+        "text"
+      ],
+      "metadata": {
+        "hub_sha": "01266863890302b1d1f42bddfda1ff7146386359",
+        "package_state": "prebuilt_gguf_release",
+        "public_status": "public and non-gated",
+        "validation_status": "pass",
+        "total_weight_size": 491400032
+      }
+    },
+    {
+      "model_id": "lumynax-frontier-qwen3-235b-a22b-instruct",
+      "repo_id": "AbteeXAILab/lumynax-frontier-qwen3-235b-a22b-instruct",
+      "title": "LumynaX Frontier Qwen3 235B A22B Instruct",
+      "family": "qwen",
+      "runtime": "transformers",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 262144,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "apache-2.0",
+      "quantization": "bf16 / fp8 / Q4_K_M (community GGUF)",
+      "primary_artifact": "model.safetensors (sharded)",
+      "active_params_b": 22,
+      "total_params_b": 235,
+      "quality_rank": 1,
+      "cost_rank": 5,
+      "sovereignty_tier": 2,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "frontier",
+        "moe",
+        "reasoning",
+        "qwen3",
+        "tools",
+        "json",
+        "long-context"
+      ],
+      "metadata": {
+        "upstream_repo": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+        "release_version": "v0.1.0",
+        "package_state": "scaffold_pulls_upstream",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-frontier-minimax-m2-230b",
+      "repo_id": "AbteeXAILab/lumynax-frontier-minimax-m2-230b",
+      "title": "LumynaX Frontier MiniMax M2 230B Agentic",
+      "family": "minimax",
+      "runtime": "transformers",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 204800,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "other",
+      "quantization": "bf16 / Q4_K_M (community GGUF)",
+      "primary_artifact": "model.safetensors (sharded)",
+      "active_params_b": 10,
+      "total_params_b": 230,
+      "quality_rank": 1,
+      "cost_rank": 5,
+      "sovereignty_tier": 2,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "frontier",
+        "moe",
+        "agentic",
+        "minimax",
+        "tools",
+        "json"
+      ],
+      "metadata": {
+        "upstream_repo": "MiniMaxAI/MiniMax-M2",
+        "release_version": "v0.1.0",
+        "package_state": "scaffold_pulls_upstream",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-frontier-mixtral-8x22b-instruct-gguf",
+      "repo_id": "AbteeXAILab/lumynax-frontier-mixtral-8x22b-instruct-gguf",
+      "title": "LumynaX Frontier Mixtral 8x22B Instruct GGUF",
+      "family": "mistral",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 65536,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "apache-2.0",
+      "quantization": "Q4_K_M (default) \u00b7 Q5_K_M \u00b7 Q8_0",
+      "primary_artifact": "Mixtral-8x22B-Instruct-v0.1.Q4_K_M.gguf",
+      "active_params_b": 39,
+      "total_params_b": 141,
+      "quality_rank": 2,
+      "cost_rank": 4,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "frontier",
+        "moe",
+        "mixtral",
+        "gguf",
+        "llama-cpp",
+        "tools"
+      ],
+      "metadata": {
+        "upstream_repo": "mistralai/Mixtral-8x22B-Instruct-v0.1",
+        "release_version": "v0.1.0",
+        "package_state": "scaffold_pulls_upstream_gguf",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-frontier-dbrx-instruct-132b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-frontier-dbrx-instruct-132b-gguf",
+      "title": "LumynaX Frontier DBRX Instruct 132B GGUF",
+      "family": "dbrx",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "other",
+      "quantization": "Q4_K_M (default) \u00b7 Q5_K_M \u00b7 Q8_0",
+      "primary_artifact": "dbrx-instruct.Q4_K_M.gguf",
+      "active_params_b": 36,
+      "total_params_b": 132,
+      "quality_rank": 2,
+      "cost_rank": 4,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "frontier",
+        "moe",
+        "dbrx",
+        "databricks",
+        "gguf",
+        "llama-cpp"
+      ],
+      "metadata": {
+        "upstream_repo": "databricks/dbrx-instruct",
+        "release_version": "v0.1.0",
+        "package_state": "scaffold_pulls_upstream_gguf",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-multimodal-qwen25-vl-72b-instruct-gguf",
+      "repo_id": "AbteeXAILab/lumynax-multimodal-qwen25-vl-72b-instruct-gguf",
+      "title": "LumynaX Multimodal Qwen2.5 VL 72B Instruct GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp_multimodal",
+      "modalities": [
+        "text",
+        "vision"
+      ],
+      "context_tokens": 131072,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "other",
+      "quantization": "Q4_K_M (default) \u00b7 Q5_K_M \u00b7 Q8_0",
+      "primary_artifact": "Qwen2.5-VL-72B-Instruct-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 72,
+      "quality_rank": 2,
+      "cost_rank": 4,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "multimodal",
+        "vision",
+        "qwen",
+        "gguf",
+        "llama-cpp",
+        "image-text-to-text"
+      ],
+      "metadata": {
+        "upstream_repo": "Qwen/Qwen2.5-VL-72B-Instruct",
+        "release_version": "v0.1.0",
+        "package_state": "scaffold_pulls_upstream_gguf",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-multimodal-pixtral-large-124b",
+      "repo_id": "AbteeXAILab/lumynax-multimodal-pixtral-large-124b",
+      "title": "LumynaX Multimodal Pixtral Large 124B",
+      "family": "mistral",
+      "runtime": "transformers_multimodal",
+      "modalities": [
+        "text",
+        "vision"
+      ],
+      "context_tokens": 131072,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU"
+      ],
+      "license_id": "other",
+      "quantization": "bf16 / fp8",
+      "primary_artifact": "model.safetensors (sharded)",
+      "active_params_b": null,
+      "total_params_b": 124,
+      "quality_rank": 2,
+      "cost_rank": 5,
+      "sovereignty_tier": 2,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "multimodal",
+        "vision",
+        "pixtral",
+        "mistral",
+        "image-text-to-text"
+      ],
+      "metadata": {
+        "upstream_repo": "mistralai/Pixtral-Large-Instruct-2411",
+        "release_version": "v0.1.0",
+        "package_state": "scaffold_pulls_upstream",
+        "public_status": "public (Mistral research licence \u2014 non-commercial use)",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-reasoning-glm46-355b-moe",
+      "repo_id": "AbteeXAILab/lumynax-reasoning-glm46-355b-moe",
+      "title": "LumynaX Reasoning GLM-4.6 355B MoE",
+      "family": "glm",
+      "runtime": "transformers",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 204800,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "mit",
+      "quantization": "bf16 / fp8 / Q4_K_M (community)",
+      "primary_artifact": "model.safetensors (sharded)",
+      "active_params_b": 32,
+      "total_params_b": 355,
+      "quality_rank": 1,
+      "cost_rank": 5,
+      "sovereignty_tier": 2,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "frontier",
+        "reasoning",
+        "moe",
+        "glm",
+        "tools",
+        "long-context"
+      ],
+      "metadata": {
+        "upstream_repo": "zai-org/GLM-4.6",
+        "release_version": "v0.1.0",
+        "package_state": "scaffold_pulls_upstream",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-multimodal-internvl3-78b-instruct",
+      "repo_id": "AbteeXAILab/lumynax-multimodal-internvl3-78b-instruct",
+      "title": "LumynaX Multimodal InternVL3 78B Instruct",
+      "family": "internvl",
+      "runtime": "transformers_multimodal",
+      "modalities": [
+        "text",
+        "vision"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "mit",
+      "quantization": "bf16 (safetensors mirror) \u2014 community GGUF when available",
+      "primary_artifact": "model.safetensors (33 shards)",
+      "active_params_b": null,
+      "total_params_b": 78,
+      "quality_rank": 2,
+      "cost_rank": 4,
+      "sovereignty_tier": 2,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "multimodal",
+        "vision",
+        "internvl",
+        "opengvlab",
+        "image-text-to-text"
+      ],
+      "metadata": {
+        "upstream_repo": "OpenGVLab/InternVL3-78B-Instruct",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored_safetensors",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    }
+  ]
+}

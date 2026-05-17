@@ -1,0 +1,11 @@
+LumynaX Infused Gemma4 26B A4B GGUF
+
+This release packages a prebuilt third-party GGUF artifact with LumynaX release metadata, quickstarts, Ollama files, and browser demo scaffolding.
+
+Upstream base model: google/gemma-4-26B-A4B-it
+Source GGUF repo: unsloth/gemma-4-26B-A4B-it-GGUF
+Packaged GGUF file: lumynax-infused-gemma4-26b-a4b-ud-q4_k_m.gguf
+License metadata: apache-2.0
+Upstream license file: https://huggingface.co/google/gemma-4-26B-A4B-it/blob/main/LICENSE
+
+The model weights remain subject to their upstream license and obligations. LumynaX packaging metadata, scripts, and documentation are provided by AbteeX AI Labs.

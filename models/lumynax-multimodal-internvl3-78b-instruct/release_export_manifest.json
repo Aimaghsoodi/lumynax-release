@@ -1,0 +1,38 @@
+{
+  "release_id": "lumynax-multimodal-internvl3-78b-instruct",
+  "title": "LumynaX Multimodal InternVL3 78B Instruct",
+  "repo_id": "AbteeXAILab/lumynax-multimodal-internvl3-78b-instruct",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ",
+    "AU",
+    "global"
+  ],
+  "upstream": {
+    "repo_id": "OpenGVLab/InternVL3-78B-Instruct",
+    "license": "mit",
+    "prompt_format": "internvl",
+    "source_note": "OpenGVLab InternVL3 upstream"
+  },
+  "gguf_mirror": null,
+  "runtime": "transformers_multimodal",
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "context_tokens": 32768,
+  "total_params_b": 78,
+  "active_params_b": null,
+  "quantization": "bf16 (safetensors mirror) \u2014 community GGUF when available",
+  "primary_artifact": "model.safetensors (33 shards)",
+  "package_state": "weights_mirrored_safetensors",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 2,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-14T02:31:59Z"
+}

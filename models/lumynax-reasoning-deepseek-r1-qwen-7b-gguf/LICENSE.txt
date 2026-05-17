@@ -1,0 +1,11 @@
+LumynaX Reasoning DeepSeek R1 Distill Qwen 7B GGUF
+
+This release packages a prebuilt third-party GGUF artifact with LumynaX release metadata, quickstarts, Ollama files, and browser demo scaffolding.
+
+Upstream base model: deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
+Source GGUF repo: unsloth/DeepSeek-R1-Distill-Qwen-7B-GGUF
+Packaged GGUF file: DeepSeek-R1-Distill-Qwen-7B-Q4_K_M.gguf
+License metadata: apache-2.0
+Upstream license file: https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-7B-GGUF
+
+The model weights remain subject to their upstream license and obligations. LumynaX packaging metadata, scripts, and documentation are provided by AbteeX AI Labs.

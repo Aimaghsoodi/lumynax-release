@@ -1,0 +1,25 @@
+{
+  "command": [
+    "C:\\Users\\ijadimaa\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "C:\\Users\\ijadimaa\\AppData\\Local\\tinyluminax\\batch-gguf-releases\\lumynax-coder-qwen25-7b-instruct-gguf-v1\\quickstart.py",
+    "--llama-cli",
+    "\\\\waikato\\users\\Hamilton\\GtoLdtop\\ijadimaa\\Desktop\\Startup\\TinyLuminaX\\tools\\llama.cpp-prebuilt\\llama-cli.exe",
+    "--prompt",
+    "Reply with exactly: OK",
+    "--max-new-tokens",
+    "16",
+    "--ctx-size",
+    "256",
+    "--temperature",
+    "0",
+    "--threads",
+    "6"
+  ],
+  "elapsed_seconds": 16.547,
+  "generated_at": "2026-05-10T12:48:28.365346+00:00",
+  "returncode": 0,
+  "status": "pass",
+  "stderr_tail": "",
+  "stdout_tail": "Loading model... \n\n\n\u2584\u2584 \u2584\u2584\n\u2588\u2588 \u2588\u2588\n\u2588\u2588 \u2588\u2588  \u2580\u2580\u2588\u2584 \u2588\u2588\u2588\u2584\u2588\u2588\u2588\u2584  \u2580\u2580\u2588\u2584    \u2584\u2588\u2588\u2588\u2588 \u2588\u2588\u2588\u2588\u2584 \u2588\u2588\u2588\u2588\u2584\n\u2588\u2588 \u2588\u2588 \u2584\u2588\u2580\u2588\u2588 \u2588\u2588 \u2588\u2588 \u2588\u2588 \u2584\u2588\u2580\u2588\u2588    \u2588\u2588    \u2588\u2588 \u2588\u2588 \u2588\u2588 \u2588\u2588\n\u2588\u2588 \u2588\u2588 \u2580\u2588\u2584\u2588\u2588 \u2588\u2588 \u2588\u2588 \u2588\u2588 \u2580\u2588\u2584\u2588\u2588 \u2588\u2588 \u2580\u2588\u2588\u2588\u2588 \u2588\u2588\u2588\u2588\u2580 \u2588\u2588\u2588\u2588\u2580\n                                    \u2588\u2588    \u2588\u2588\n                                    \u2580\u2580    \u2580\u2580\n\nbuild      : b8840-9e5647aff\nmodel      : qwen2.5-coder-7b-instruct-q4_k_m.gguf\nmodalities : text\nusing custom system prompt\n\navailable commands:\n  /exit or Ctrl+C     stop or exit\n  /regen              regenerate the last response\n  /clear              clear the chat history\n  /read <file>        add a text file\n  /glob <pattern>     add text files using globbing pattern\n\n\n> Reply with exactly: OK\n\nOK\n\n[ Prompt: 18.5 t/s | Generation: 17.0 t/s ]\n\nExiting...\n",
+  "timeout_seconds": 523
+}

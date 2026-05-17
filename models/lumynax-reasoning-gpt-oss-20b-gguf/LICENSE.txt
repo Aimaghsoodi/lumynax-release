@@ -1,0 +1,11 @@
+LumynaX Reasoning GPT-OSS 20B GGUF
+
+This release packages a prebuilt third-party GGUF artifact with LumynaX release metadata, quickstarts, Ollama files, and browser demo scaffolding.
+
+Upstream base model: openai/gpt-oss-20b
+Source GGUF repo: ggml-org/gpt-oss-20b-GGUF
+Packaged GGUF file: lumynax-reasoning-gpt-oss-20b-mxfp4.gguf
+License metadata: apache-2.0
+Upstream license file: https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE
+
+The model weights remain subject to their upstream license and obligations. LumynaX packaging metadata, scripts, and documentation are provided by AbteeX AI Labs.

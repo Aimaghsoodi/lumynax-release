@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-05-09T08:33:45.798471+00:00",
+  "gguf_only_release": true,
+  "license_id": "mit",
+  "license_link": "https://huggingface.co/moonshotai/Moonlight-16B-A3B-Instruct/blob/main/LICENSE",
+  "license_name": null,
+  "lumynax_weight_adaptation_applied": false,
+  "model_title": "LumynaX MoE Moonlight 16B A3B GGUF",
+  "package_state": "prebuilt_gguf_release",
+  "packaged_gguf_filename": "lumynax-moe-moonlight-16b-a3b-iq4_xs.gguf",
+  "prompt_format": "chatml",
+  "quantization": "IQ4_XS",
+  "source_gguf_filename": "lumynax-moe-moonlight-16b-a3b-iq4_xs.gguf",
+  "source_gguf_repo_id": "mmnga/Moonlight-16B-A3B-Instruct-gguf",
+  "summary": "This release packages `lumynax-moe-moonlight-16b-a3b-iq4_xs.gguf` as a final GGUF artifact for local llama.cpp-family inference and Hugging Face model-repo upload.",
+  "upstream_base_model_id": "moonshotai/Moonlight-16B-A3B-Instruct"
+}

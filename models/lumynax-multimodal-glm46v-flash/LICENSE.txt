@@ -1,0 +1,11 @@
+LumynaX Multimodal GLM 4.6V Flash
+
+This release packages a prebuilt third-party GGUF artifact with LumynaX release metadata, quickstarts, Ollama files, and browser demo scaffolding.
+
+Upstream base model: zai-org/GLM-4.6V-Flash
+Source GGUF repo: unsloth/GLM-4.6V-Flash-GGUF
+Packaged GGUF file: lumynax-multimodal-glm46v-flash-ud-iq2_m.gguf
+License metadata: mit
+Upstream license file: https://huggingface.co/unsloth/GLM-4.6V-Flash-GGUF/blob/main/LICENSE
+
+The model weights remain subject to their upstream license and obligations. LumynaX packaging metadata, scripts, and documentation are provided by AbteeX AI Labs.

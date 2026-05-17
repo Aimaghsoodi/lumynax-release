@@ -1,0 +1,35 @@
+{
+  "release_id": "lumynax-frontier-dbrx-instruct-132b-gguf",
+  "title": "LumynaX Frontier DBRX Instruct 132B GGUF",
+  "repo_id": "AbteeXAILab/lumynax-frontier-dbrx-instruct-132b-gguf",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ"
+  ],
+  "upstream": {
+    "repo_id": "databricks/dbrx-instruct",
+    "license": "other",
+    "prompt_format": "chatml",
+    "source_note": "PrunaAI / bartowski DBRX GGUF"
+  },
+  "gguf_mirror": "mradermacher/dbrx-instruct-i1-GGUF",
+  "runtime": "llama_cpp",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 32768,
+  "total_params_b": 132,
+  "active_params_b": 36,
+  "quantization": "IQ3_M imatrix (community best non-Q2; ~45 GB)",
+  "primary_artifact": "dbrx-instruct.i1-IQ3_M.gguf",
+  "package_state": "scaffold_pulls_upstream_gguf",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-14T02:32:03Z"
+}

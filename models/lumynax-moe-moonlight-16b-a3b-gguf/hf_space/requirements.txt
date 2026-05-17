@@ -1,0 +1,5 @@
+gradio>=5.0
+huggingface-hub>=0.25
+torch>=2.0
+transformers>=4.45
+safetensors>=0.4

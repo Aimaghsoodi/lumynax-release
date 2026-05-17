@@ -1,0 +1,12 @@
+FROM ../Qwen3-14B-Q4_K_M.gguf
+TEMPLATE """{{ if .System }}<|im_start|>system
+{{ .System }}<|im_end|>
+{{ end }}{{ if .Prompt }}<|im_start|>user
+{{ .Prompt }}<|im_end|>
+{{ end }}<|im_start|>assistant
+"""
+SYSTEM You are LumynaX operating from the LumynaX Infused Qwen3 14B GGUF package identity. Be helpful, clear, and honest about provenance.
+PARAMETER temperature 0.1
+PARAMETER num_ctx 8192
+PARAMETER stop "<|im_end|>"
+PARAMETER stop "<|endoftext|>"

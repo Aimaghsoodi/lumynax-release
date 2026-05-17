@@ -1,0 +1,140 @@
+{
+  "artifacts": {
+    "checksums": "checksums.sha256",
+    "gguf": "lumynax-multimodal-kimi-vl-a3b-thinking-q4_k_m.gguf",
+    "gitattributes": ".gitattributes",
+    "hf_space_app": "hf_space/app.py",
+    "hf_space_dir": "hf_space",
+    "hf_space_readme": "hf_space/README.md",
+    "hf_space_requirements": "hf_space/requirements.txt",
+    "license": "LICENSE.txt",
+    "merged_model": "merged_model",
+    "mmproj": "mmproj-lumynax-multimodal-kimi-vl-a3b-thinking-q8_0.gguf",
+    "ollama_create_script": "ollama/create_ollama_model.ps1",
+    "ollama_modelfile": "ollama/Modelfile",
+    "package_state": "merged_model/PACKAGE_STATE.txt",
+    "quantized_gguf": "lumynax-multimodal-kimi-vl-a3b-thinking-q4_k_m.gguf",
+    "quickstart": "quickstart.py",
+    "readme": "README.md",
+    "requirements": "requirements.txt",
+    "training_summary": "artifacts/release_training_summary.json",
+    "upload_notes": "UPLOAD_TO_HF.md",
+    "version": "VERSION.txt"
+  },
+  "capabilities": {
+    "reasoning_enabled": false,
+    "supported_modalities": [
+      "text",
+      "image"
+    ]
+  },
+  "delivery": "standalone_prebuilt_gguf_release",
+  "distribution": {
+    "hf_space": {
+      "app": "hf_space/app.py",
+      "default_demo_repo_id": "AbteeXAILab/lumynax-multimodal-kimi-vl-a3b-thinking-demo",
+      "default_model_repo_id": "AbteeXAILab/lumynax-multimodal-kimi-vl-a3b-thinking",
+      "directory": "hf_space",
+      "model_repo_env_var": "LUMYNAX_MODEL_REPO_ID",
+      "paired_model_repo_id": "AbteeXAILab/lumynax-multimodal-kimi-vl-a3b-thinking",
+      "readme": "hf_space/README.md",
+      "requirements": "hf_space/requirements.txt",
+      "status": "browser_showcase_for_gguf_only_release"
+    },
+    "ollama": {
+      "create_script": "ollama/create_ollama_model.ps1",
+      "mmproj": "mmproj-lumynax-multimodal-kimi-vl-a3b-thinking-q8_0.gguf",
+      "modelfile": "ollama/Modelfile",
+      "preferred_gguf": "lumynax-multimodal-kimi-vl-a3b-thinking-q4_k_m.gguf",
+      "recommended_model_name": "lumynax-multimodal-kimi-vl-a3b-thinking",
+      "status": "requires_runtime_specific_projector_support"
+    }
+  },
+  "family": {
+    "demo_repo_id": "AbteeXAILab/lumynax-multimodal-kimi-vl-a3b-thinking-demo",
+    "family_name": "LumynaX",
+    "lineage_position": "independent_release_line",
+    "release_line_id": "lumynax-multimodal-kimi-vl-a3b-thinking",
+    "release_wave": "wave9",
+    "upstream_model_id": "ggml-org/Kimi-VL-A3B-Thinking-2506-GGUF",
+    "validated_at": "2026-05-09T23:52:23.882157+00:00",
+    "validation_status": "validated"
+  },
+  "generated_at": "2026-05-09T23:51:07.503805+00:00",
+  "license": {
+    "id": "mit",
+    "link": "https://huggingface.co/ggml-org/Kimi-VL-A3B-Thinking-2506-GGUF/blob/main/LICENSE",
+    "name": null,
+    "weights_subject_to_upstream_license": true
+  },
+  "manifest_version": 2,
+  "model_title": "LumynaX Multimodal Kimi VL A3B Thinking",
+  "package_state": "prebuilt_gguf_release",
+  "public_identity": {
+    "model_name": "LumynaX",
+    "organization": "AbteeX AI Labs",
+    "region": "Aotearoa New Zealand"
+  },
+  "release_line": {
+    "default_model_name": "lumynax-multimodal-kimi-vl-a3b-thinking",
+    "demo_repo_id": "AbteeXAILab/lumynax-multimodal-kimi-vl-a3b-thinking-demo",
+    "model_repo_id": "AbteeXAILab/lumynax-multimodal-kimi-vl-a3b-thinking",
+    "model_title": "LumynaX Multimodal Kimi VL A3B Thinking",
+    "output_dir_name": "lumynax-multimodal-kimi-vl-a3b-thinking-v1",
+    "packaging_mode": "shell",
+    "prompt_format": "huggingface_chat_template",
+    "release_id": "lumynax-multimodal-kimi-vl-a3b-thinking",
+    "release_kind": "multimodal",
+    "release_version": "v1",
+    "runtime_family": "kimi_vl_a3b_thinking",
+    "upstream_model_id": "ggml-org/Kimi-VL-A3B-Thinking-2506-GGUF",
+    "validation": {
+      "checks": [
+        "exists:release_export_manifest.json",
+        "exists:README.md",
+        "exists:quickstart.py",
+        "exists:requirements.txt",
+        "exists:LICENSE.txt",
+        "exists:VERSION.txt",
+        "exists:checksums.sha256",
+        "exists:artifacts/release_training_summary.json",
+        "exists:hf_space/app.py",
+        "exists:hf_space/README.md",
+        "exists:hf_space/requirements.txt",
+        "exists:ollama/Modelfile",
+        "exists:ollama/create_ollama_model.ps1",
+        "manifest:metadata",
+        "training_summary:metadata",
+        "readme:branding",
+        "syntax:quickstart.py",
+        "syntax:hf_space/app.py",
+        "checksums:verified"
+      ],
+      "validated_at": "2026-05-09T23:52:23.882157+00:00"
+    },
+    "validation_status": "validated",
+    "wave": "wave9"
+  },
+  "release_version": "v1",
+  "runtime": {
+    "delivery_mode": "standalone_prebuilt_multimodal_gguf",
+    "preferred_backend": "llama_cpp_multimodal",
+    "prompt_format": "llama_cpp_multimodal",
+    "quickstart_command": "python quickstart.py --image path/to/image.jpg",
+    "system_prompt": "You are LumynaX operating from the LumynaX Multimodal Kimi VL A3B Thinking package identity. Be helpful, clear, and honest about provenance."
+  },
+  "source_gguf": {
+    "filename": "lumynax-multimodal-kimi-vl-a3b-thinking-q4_k_m.gguf",
+    "mmproj_filename": "mmproj-lumynax-multimodal-kimi-vl-a3b-thinking-q8_0.gguf",
+    "packaged_filename": "lumynax-multimodal-kimi-vl-a3b-thinking-q4_k_m.gguf",
+    "packaged_mmproj_filename": "mmproj-lumynax-multimodal-kimi-vl-a3b-thinking-q8_0.gguf",
+    "quantization": "Q4_K_M",
+    "repo_id": "ggml-org/Kimi-VL-A3B-Thinking-2506-GGUF"
+  },
+  "upstream_model": {
+    "kind": "official_base_weights",
+    "lumynax_weight_adaptation_applied": false,
+    "provider": "Hugging Face",
+    "repo_id": "moonshotai/Kimi-VL-A3B-Thinking-2506"
+  }
+}

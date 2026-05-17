@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-05-10T12:57:47.826709+00:00",
+  "gguf_only_release": true,
+  "license_id": "apache-2.0",
+  "license_link": "https://huggingface.co/Qwen/Qwen3-0.6B-GGUF",
+  "license_name": null,
+  "lumynax_weight_adaptation_applied": false,
+  "model_title": "LumynaX Infused Qwen3 0.6B GGUF",
+  "package_state": "prebuilt_gguf_release",
+  "packaged_gguf_filename": "Qwen3-0.6B-Q8_0.gguf",
+  "packaged_mmproj_filename": null,
+  "prompt_format": "chatml",
+  "quantization": "Q8_0",
+  "source_gguf_filename": "Qwen3-0.6B-Q8_0.gguf",
+  "source_gguf_repo_id": "Qwen/Qwen3-0.6B-GGUF",
+  "source_mmproj_filename": null,
+  "summary": "This release packages `Qwen3-0.6B-Q8_0.gguf` as a final GGUF artifact for local llama.cpp-family inference and Hugging Face model-repo upload.",
+  "supported_modalities": [
+    "text"
+  ],
+  "upstream_base_model_id": "Qwen/Qwen3-0.6B"
+}

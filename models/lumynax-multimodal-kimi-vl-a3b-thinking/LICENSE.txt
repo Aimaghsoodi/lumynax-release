@@ -1,0 +1,11 @@
+LumynaX Multimodal Kimi VL A3B Thinking
+
+This release packages a prebuilt third-party GGUF artifact with LumynaX release metadata, quickstarts, Ollama files, and browser demo scaffolding.
+
+Upstream base model: moonshotai/Kimi-VL-A3B-Thinking-2506
+Source GGUF repo: ggml-org/Kimi-VL-A3B-Thinking-2506-GGUF
+Packaged GGUF file: lumynax-multimodal-kimi-vl-a3b-thinking-q4_k_m.gguf
+License metadata: mit
+Upstream license file: https://huggingface.co/ggml-org/Kimi-VL-A3B-Thinking-2506-GGUF/blob/main/LICENSE
+
+The model weights remain subject to their upstream license and obligations. LumynaX packaging metadata, scripts, and documentation are provided by AbteeX AI Labs.

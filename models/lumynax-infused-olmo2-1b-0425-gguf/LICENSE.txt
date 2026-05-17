@@ -1,0 +1,11 @@
+LumynaX Infused OLMo 2 0425 1B Instruct GGUF
+
+This release packages a prebuilt third-party GGUF artifact with LumynaX release metadata, quickstarts, Ollama files, and browser demo scaffolding.
+
+Upstream base model: allenai/OLMo-2-0425-1B-Instruct
+Source GGUF repo: allenai/OLMo-2-0425-1B-Instruct-GGUF
+Packaged GGUF file: OLMo-2-0425-1B-Instruct-Q4_K_M.gguf
+License metadata: other
+Upstream license file: https://huggingface.co/allenai/OLMo-2-0425-1B-Instruct-GGUF
+
+The model weights remain subject to their upstream license and obligations. LumynaX packaging metadata, scripts, and documentation are provided by AbteeX AI Labs.

@@ -1,0 +1,11 @@
+LumynaX Infused Granite 3.1 1B A400M Instruct GGUF
+
+This release packages a prebuilt third-party GGUF artifact with LumynaX release metadata, quickstarts, Ollama files, and browser demo scaffolding.
+
+Upstream base model: ibm-granite/granite-3.1-1b-a400m-instruct
+Source GGUF repo: bartowski/granite-3.1-1b-a400m-instruct-GGUF
+Packaged GGUF file: granite-3.1-1b-a400m-instruct-Q4_K_M.gguf
+License metadata: apache-2.0
+Upstream license file: https://huggingface.co/bartowski/granite-3.1-1b-a400m-instruct-GGUF
+
+The model weights remain subject to their upstream license and obligations. LumynaX packaging metadata, scripts, and documentation are provided by AbteeX AI Labs.

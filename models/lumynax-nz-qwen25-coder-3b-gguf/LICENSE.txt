@@ -1,0 +1,12 @@
+LumynaX NZ Qwen2.5 Coder 3B GGUF
+
+This release packages a prebuilt third-party GGUF artifact with LumynaX release metadata, quickstarts, Ollama files, and browser demo scaffolding.
+
+Upstream base model: Qwen/Qwen2.5-Coder-3B-Instruct
+Source GGUF repo: Qwen/Qwen2.5-Coder-3B-Instruct-GGUF
+Packaged GGUF file: lumynax-nz-qwen25-coder-3b-q4_k_m.gguf
+License metadata: other
+License name: qwen
+Upstream license file: https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/blob/main/LICENSE
+
+The model weights remain subject to their upstream license and obligations. LumynaX packaging metadata, scripts, and documentation are provided by AbteeX AI Labs.

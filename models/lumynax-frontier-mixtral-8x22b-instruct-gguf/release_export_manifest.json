@@ -1,0 +1,35 @@
+{
+  "release_id": "lumynax-frontier-mixtral-8x22b-instruct-gguf",
+  "title": "LumynaX Frontier Mixtral 8x22B Instruct GGUF",
+  "repo_id": "AbteeXAILab/lumynax-frontier-mixtral-8x22b-instruct-gguf",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ"
+  ],
+  "upstream": {
+    "repo_id": "mistralai/Mixtral-8x22B-Instruct-v0.1",
+    "license": "apache-2.0",
+    "prompt_format": "mistral",
+    "source_note": "MaziyarPanahi GGUF"
+  },
+  "gguf_mirror": "MaziyarPanahi/Mixtral-8x22B-Instruct-v0.1-GGUF",
+  "runtime": "llama_cpp",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 65536,
+  "total_params_b": 141,
+  "active_params_b": 39,
+  "quantization": "Q4_K_M (default) \u00b7 Q5_K_M \u00b7 Q8_0",
+  "primary_artifact": "Mixtral-8x22B-Instruct-v0.1.Q4_K_M.gguf",
+  "package_state": "scaffold_pulls_upstream_gguf",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-14T00:24:45Z"
+}

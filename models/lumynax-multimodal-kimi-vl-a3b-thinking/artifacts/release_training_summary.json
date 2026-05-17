@@ -1,0 +1,53 @@
+{
+  "demo_repo_id": "AbteeXAILab/lumynax-multimodal-kimi-vl-a3b-thinking-demo",
+  "generated_at": "2026-05-09T23:51:07.413834+00:00",
+  "gguf_only_release": true,
+  "license_id": "mit",
+  "license_link": "https://huggingface.co/ggml-org/Kimi-VL-A3B-Thinking-2506-GGUF/blob/main/LICENSE",
+  "license_name": null,
+  "lumynax_weight_adaptation_applied": false,
+  "model_repo_id": "AbteeXAILab/lumynax-multimodal-kimi-vl-a3b-thinking",
+  "model_title": "LumynaX Multimodal Kimi VL A3B Thinking",
+  "package_state": "prebuilt_gguf_release",
+  "packaged_gguf_filename": "lumynax-multimodal-kimi-vl-a3b-thinking-q4_k_m.gguf",
+  "packaged_mmproj_filename": "mmproj-lumynax-multimodal-kimi-vl-a3b-thinking-q8_0.gguf",
+  "prompt_format": "llama_cpp_multimodal",
+  "quantization": "Q4_K_M",
+  "release_line_id": "lumynax-multimodal-kimi-vl-a3b-thinking",
+  "release_wave": "wave9",
+  "source_gguf_filename": "lumynax-multimodal-kimi-vl-a3b-thinking-q4_k_m.gguf",
+  "source_gguf_repo_id": "ggml-org/Kimi-VL-A3B-Thinking-2506-GGUF",
+  "source_mmproj_filename": "mmproj-lumynax-multimodal-kimi-vl-a3b-thinking-q8_0.gguf",
+  "summary": "This release packages `lumynax-multimodal-kimi-vl-a3b-thinking-q4_k_m.gguf` as a final GGUF artifact for local llama.cpp-family inference and Hugging Face model-repo upload.",
+  "supported_modalities": [
+    "text",
+    "image"
+  ],
+  "upstream_base_model_id": "moonshotai/Kimi-VL-A3B-Thinking-2506",
+  "upstream_model_id": "ggml-org/Kimi-VL-A3B-Thinking-2506-GGUF",
+  "validation": {
+    "checks": [
+      "exists:release_export_manifest.json",
+      "exists:README.md",
+      "exists:quickstart.py",
+      "exists:requirements.txt",
+      "exists:LICENSE.txt",
+      "exists:VERSION.txt",
+      "exists:checksums.sha256",
+      "exists:artifacts/release_training_summary.json",
+      "exists:hf_space/app.py",
+      "exists:hf_space/README.md",
+      "exists:hf_space/requirements.txt",
+      "exists:ollama/Modelfile",
+      "exists:ollama/create_ollama_model.ps1",
+      "manifest:metadata",
+      "training_summary:metadata",
+      "readme:branding",
+      "syntax:quickstart.py",
+      "syntax:hf_space/app.py",
+      "checksums:verified"
+    ],
+    "validated_at": "2026-05-09T23:52:23.882157+00:00"
+  },
+  "validation_status": "validated"
+}

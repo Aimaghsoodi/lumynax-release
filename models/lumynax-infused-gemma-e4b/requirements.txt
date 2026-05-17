@@ -1,0 +1,9 @@
+accelerate>=1.13
+huggingface-hub>=1.8
+numba>=0.65
+pillow>=10.0
+safetensors>=0.6
+torch>=2.9
+torchvision>=0.24
+transformers>=5.5.3
+librosa>=0.11

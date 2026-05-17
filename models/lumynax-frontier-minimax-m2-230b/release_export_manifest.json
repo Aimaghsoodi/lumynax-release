@@ -1,0 +1,37 @@
+{
+  "release_id": "lumynax-frontier-minimax-m2-230b",
+  "title": "LumynaX Frontier MiniMax M2 230B Agentic",
+  "repo_id": "AbteeXAILab/lumynax-frontier-minimax-m2-230b",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ",
+    "AU",
+    "global"
+  ],
+  "upstream": {
+    "repo_id": "MiniMaxAI/MiniMax-M2",
+    "license": "other",
+    "prompt_format": "chatml",
+    "source_note": "MiniMax-M2 upstream"
+  },
+  "gguf_mirror": "unsloth/MiniMax-M2-GGUF",
+  "runtime": "transformers",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 204800,
+  "total_params_b": 230,
+  "active_params_b": 10,
+  "quantization": "bf16 / Q4_K_M (community GGUF)",
+  "primary_artifact": "model.safetensors (sharded)",
+  "package_state": "scaffold_pulls_upstream",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 2,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-14T00:24:42Z"
+}

@@ -1,0 +1,11 @@
+LumynaX Infused SmolLM3 3B GGUF
+
+This release packages a prebuilt third-party GGUF artifact with LumynaX release metadata, quickstarts, Ollama files, and browser demo scaffolding.
+
+Upstream base model: HuggingFaceTB/SmolLM3-3B
+Source GGUF repo: ggml-org/SmolLM3-3B-GGUF
+Packaged GGUF file: SmolLM3-Q4_K_M.gguf
+License metadata: apache-2.0
+Upstream license file: https://huggingface.co/ggml-org/SmolLM3-3B-GGUF
+
+The model weights remain subject to their upstream license and obligations. LumynaX packaging metadata, scripts, and documentation are provided by AbteeX AI Labs.

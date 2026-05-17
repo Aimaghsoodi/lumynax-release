@@ -1,0 +1,12 @@
+LumynaX Frontier MiniMax M2.5 Unsloth
+
+This release packages a prebuilt third-party GGUF artifact with LumynaX release metadata, quickstarts, Ollama files, and browser demo scaffolding.
+
+Upstream base model: MiniMaxAI/MiniMax-M2.5
+Source GGUF repo: unsloth/MiniMax-M2.5-GGUF
+Packaged GGUF file: MiniMax-M2.5-UD-TQ1_0.gguf
+License metadata: other
+License name: modified-mit
+Upstream license file: https://huggingface.co/unsloth/MiniMax-M2.5-GGUF/blob/main/LICENSE
+
+The model weights remain subject to their upstream license and obligations. LumynaX packaging metadata, scripts, and documentation are provided by AbteeX AI Labs.

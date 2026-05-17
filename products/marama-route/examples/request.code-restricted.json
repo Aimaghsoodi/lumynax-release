@@ -1,0 +1,14 @@
+{
+  "prompt": "Refactor this private Python service and explain the diff.",
+  "task_type": "code",
+  "modalities": [
+    "text"
+  ],
+  "jurisdiction": "NZ",
+  "data_sensitivity": "restricted",
+  "min_context_tokens": 4096,
+  "requires_local": true,
+  "requires_tools": false,
+  "requires_json": true,
+  "max_fallbacks": 3
+}

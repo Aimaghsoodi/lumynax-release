@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-05-09T06:11:43.481485+00:00",
+  "gguf_only_release": true,
+  "license_id": "apache-2.0",
+  "license_link": "https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE",
+  "license_name": null,
+  "lumynax_weight_adaptation_applied": false,
+  "model_title": "LumynaX Reasoning GPT-OSS 20B GGUF",
+  "package_state": "prebuilt_gguf_release",
+  "packaged_gguf_filename": "lumynax-reasoning-gpt-oss-20b-mxfp4.gguf",
+  "prompt_format": "harmony",
+  "quantization": "MXFP4",
+  "source_gguf_filename": "lumynax-reasoning-gpt-oss-20b-mxfp4.gguf",
+  "source_gguf_repo_id": "ggml-org/gpt-oss-20b-GGUF",
+  "summary": "This release packages `lumynax-reasoning-gpt-oss-20b-mxfp4.gguf` as a final GGUF artifact for local llama.cpp-family inference and Hugging Face model-repo upload.",
+  "upstream_base_model_id": "openai/gpt-oss-20b"
+}

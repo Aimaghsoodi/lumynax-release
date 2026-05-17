@@ -1,0 +1,11 @@
+LumynaX Infused SmolLM 135M Instruct GGUF
+
+This release packages a prebuilt third-party GGUF artifact with LumynaX release metadata, quickstarts, Ollama files, and browser demo scaffolding.
+
+Upstream base model: HuggingFaceTB/SmolLM-135M-Instruct
+Source GGUF repo: MaziyarPanahi/SmolLM-135M-Instruct-GGUF
+Packaged GGUF file: SmolLM-135M-Instruct.Q4_K_M.gguf
+License metadata: other
+Upstream license file: https://huggingface.co/MaziyarPanahi/SmolLM-135M-Instruct-GGUF
+
+The model weights remain subject to their upstream license and obligations. LumynaX packaging metadata, scripts, and documentation are provided by AbteeX AI Labs.

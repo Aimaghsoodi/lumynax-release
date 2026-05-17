@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="470" viewBox="0 0 1180 470" role="img" aria-labelledby="title desc">
+<title id="title">LumynaX MoE Moonlight 16B A3B GGUF LumynaX release map</title>
+<desc id="desc">Visual release map for AbteeXAILab/lumynax-moe-moonlight-16b-a3b-gguf: upstream artifact, LumynaX release layer, packaged files, and runtime path.</desc>
+<style>
+.bg{fill:#0b1220}.panel{fill:#111827;stroke:#38bdf8;stroke-width:2}.panel2{fill:#10231d;stroke:#34d399;stroke-width:2}.title{fill:#f8fafc;font:700 28px Arial}.sub{fill:#cbd5e1;font:15px Arial}.label{fill:#93c5fd;font:700 16px Arial}.body{fill:#e2e8f0;font:14px Arial}.chip{fill:#172554;stroke:#60a5fa;stroke-width:1}.chiptext{fill:#dbeafe;font:13px Arial}.arrow{stroke:#94a3b8;stroke-width:3;marker-end:url(#arrowhead)}
+</style>
+<defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/></marker></defs>
+<rect class="bg" x="0" y="0" width="1180" height="470" rx="20"/>
+<text class="title" x="45" y="52">LumynaX MoE Moonlight 16B A3B GGUF</text>
+<text class="sub" x="45" y="80">AbteeXAILab/lumynax-moe-moonlight-16b-a3b-gguf</text>
+<rect class="panel" x="45" y="165" width="245" height="120" rx="14"/>
+<text class="label" x="63" y="197">Upstream</text>
+<text class="body" x="63" y="227">moonshotai/Moonlight-16B-A3B-Instruct</text>
+<line class="arrow" x1="298" y1="225.0" x2="317" y2="225.0"/>
+<rect class="panel2" x="325" y="165" width="245" height="120" rx="14"/>
+<text class="label" x="343" y="197">LumynaX layer</text>
+<text class="body" x="343" y="227">Identity, inference chaining, docs</text>
+<line class="arrow" x1="578" y1="225.0" x2="597" y2="225.0"/>
+<rect class="panel" x="605" y="165" width="245" height="120" rx="14"/>
+<text class="label" x="623" y="197">Package</text>
+<text class="body" x="623" y="227">lumynax-moe-moonlight-16b-a3b-iq4_xs.gguf</text>
+<line class="arrow" x1="858" y1="225.0" x2="877" y2="225.0"/>
+<rect class="panel" x="885" y="165" width="245" height="120" rx="14"/>
+<text class="label" x="903" y="197">Runtime</text>
+<text class="body" x="903" y="227">llama_cpp</text>
+<rect class="chip" x="45" y="335" width="190" height="38" rx="19"/>
+<text class="chiptext" x="61" y="359">modalities: text</text>
+<rect class="chip" x="253" y="335" width="190" height="38" rx="19"/>
+<text class="chiptext" x="269" y="359">license: mit</text>
+<rect class="chip" x="461" y="335" width="252" height="38" rx="19"/>
+<text class="chiptext" x="477" y="359">state: prebuilt_gguf_release</text>
+<text class="sub" x="45" y="425">Download the full repo: README, runtime files, manifest, checksums, and model artifacts stay together.</text>
+</svg>

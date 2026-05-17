@@ -1,0 +1,59 @@
+{
+  "artifacts": {
+    "checksums": "checksums.sha256",
+    "gguf": null,
+    "hf_space_app": "hf_space/app.py",
+    "hf_space_dir": "hf_space",
+    "hf_space_readme": "hf_space/README.md",
+    "hf_space_requirements": "hf_space/requirements.txt",
+    "license": "LICENSE.txt",
+    "merged_model": "merged_model",
+    "ollama_create_script": "ollama/create_ollama_model.ps1",
+    "ollama_modelfile": "ollama/Modelfile",
+    "quantized_gguf": null,
+    "quickstart": "quickstart.py",
+    "readme": "README.md",
+    "requirements": "requirements.txt",
+    "training_summary": "artifacts/release_training_summary.json",
+    "version": "VERSION.txt"
+  },
+  "delivery": "standalone_dense_model",
+  "distribution": {
+    "hf_space": {
+      "app": "hf_space/app.py",
+      "default_model_repo_id": "AbteeXAILab/lumynax-nz-3b",
+      "directory": "hf_space",
+      "model_repo_env_var": "LUMYNAX_MODEL_REPO_ID",
+      "readme": "hf_space/README.md",
+      "requirements": "hf_space/requirements.txt"
+    },
+    "ollama": {
+      "create_script": "ollama/create_ollama_model.ps1",
+      "modelfile": "ollama/Modelfile",
+      "preferred_gguf": null,
+      "recommended_model_name": "lumynax-nz-3b"
+    }
+  },
+  "family": null,
+  "generated_at": "2026-04-11T02:48:33.216989+00:00",
+  "gguf_outtype": "f16",
+  "gguf_path": null,
+  "manifest_version": 2,
+  "merged_model_dir": "merged_model",
+  "model_title": "LumynaX NZ 3B V1",
+  "public_identity": {
+    "model_name": "LumynaX",
+    "organization": "AbteeX AI Labs",
+    "region": "Aotearoa New Zealand"
+  },
+  "quantization": "Q4_K_M",
+  "quantized_gguf_path": null,
+  "release_version": "v1",
+  "runtime": {
+    "delivery_mode": "standalone",
+    "preferred_backend": "transformers",
+    "prompt_format": "chatml",
+    "quickstart_command": "python quickstart.py",
+    "system_prompt": null
+  }
+}

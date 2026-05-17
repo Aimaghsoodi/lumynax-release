@@ -1,0 +1,6 @@
+accelerate>=1.13
+librosa>=0.11
+soundfile>=0.13
+torch>=2.9
+transformers>=5.5.3
+qwen-omni-utils

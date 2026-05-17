@@ -1,0 +1,15 @@
+# weights and caches (large, untracked)
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.onnx
+*.pyc
+__pycache__/
+.cache/
+.venv/
+venv/
+hf-stage/
+node_modules/
+.DS_Store
+Thumbs.db

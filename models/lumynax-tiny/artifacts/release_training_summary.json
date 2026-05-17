@@ -1,0 +1,16 @@
+{
+  "average_loss": 7.072278127074242,
+  "dataset_path": "phase6-live-current/finetune_corpus.jsonl",
+  "examples_loaded": 1024,
+  "family_name": "LumynaX",
+  "hidden_size": 128,
+  "lineage_position": "origin_seed_model",
+  "model_name": "LumynaX Tiny",
+  "num_heads": 4,
+  "num_layers": 4,
+  "sequence_length": 128,
+  "steps_completed": 32,
+  "tokenizer_mode": "from_scratch_bpe",
+  "training_mode": "from_scratch_dense_seed",
+  "vocab_size": 2048
+}

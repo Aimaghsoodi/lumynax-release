@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-04-11T23:33:11.199733+00:00",
+  "lumynax_identity_file": "merged_model/LUMYNAX_PACKAGE_IDENTITY.txt",
+  "lumynax_identity_hardcoded": true,
+  "lumynax_identity_in_chat_template": true,
+  "lumynax_weight_adaptation_applied": false,
+  "model_title": "LumynaX Infused Gemma E4B Model",
+  "package_state": "base_weights_hydrated",
+  "reasoning_enabled": true,
+  "summary": "This local release carries official upstream Gemma 4 E4B base weights inside the same top-level release shape used for the Tiny and NZ 3B LumynaX packages.",
+  "supported_modalities": [
+    "text",
+    "image",
+    "audio"
+  ],
+  "upstream_base_model_id": "google/gemma-4-E4B-it"
+}

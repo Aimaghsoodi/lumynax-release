@@ -1,0 +1,24 @@
+{
+  "product_name": "AbteeX SovereignCode",
+  "slug": "abx-sovereigncode",
+  "publisher": "AbteeX AI Labs",
+  "family": "LumynaX sovereign products",
+  "stage": "product_scaffold",
+  "positioning": "OpenCode-style local coding agent with Data Capsule sovereignty controls",
+  "primary_modules": [
+    "data_capsule_policy",
+    "tool_broker",
+    "lumynax_runtime_adapter",
+    "audit_ledger",
+    "human_review_gate"
+  ],
+  "runtime_entrypoints": [
+    "python -m tinyluminax.products.sovereigncode.cli"
+  ],
+  "brand_system": {
+    "paper": "#fffefa",
+    "ink": "#0a0a0b",
+    "accent": "#e08a2c",
+    "muted": "#726b62"
+  }
+}

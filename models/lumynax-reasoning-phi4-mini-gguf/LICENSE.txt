@@ -1,0 +1,11 @@
+LumynaX Reasoning Phi-4 Mini GGUF
+
+This release packages a prebuilt third-party GGUF artifact with LumynaX release metadata, quickstarts, Ollama files, and browser demo scaffolding.
+
+Upstream base model: microsoft/Phi-4-mini-reasoning
+Source GGUF repo: unsloth/Phi-4-mini-reasoning-GGUF
+Packaged GGUF file: Phi-4-mini-reasoning-Q4_K_M.gguf
+License metadata: mit
+Upstream license file: https://huggingface.co/unsloth/Phi-4-mini-reasoning-GGUF
+
+The model weights remain subject to their upstream license and obligations. LumynaX packaging metadata, scripts, and documentation are provided by AbteeX AI Labs.

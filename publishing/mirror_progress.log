@@ -1,0 +1,535 @@
+[2026-05-14 14:34:58] === MIRROR RUN START === free local: 65.2 GB ===
+[2026-05-14 14:34:58] 
+=== AbteeXAILab/lumynax-frontier-dbrx-instruct-132b-gguf  <-  mradermacher/dbrx-instruct-GGUF ===
+[2026-05-14 14:34:58]     free local: 65.2 GB, target ~48 GB
+[2026-05-14 14:35:00]   1 matched files, total 44.65 GB
+[2026-05-14 14:35:00]   [1/1] download dbrx-instruct.Q2_K.gguf (44.65 GB)  free=65.2GB
+[2026-05-14 15:19:18]     downloaded in 2658s (18.0 MB/s)
+[2026-05-14 16:37:18]     uploaded in 4680s (10.2 MB/s)
+[2026-05-14 16:37:23] 
+=== AbteeXAILab/lumynax-multimodal-qwen25-vl-72b-instruct-gguf  <-  ggml-org/Qwen2.5-VL-72B-Instruct-GGUF ===
+[2026-05-14 16:37:23]     free local: 64.7 GB, target ~50 GB
+[2026-05-14 16:37:23]   3 matched files, total 46.17 GB
+[2026-05-14 16:37:23]   [1/3] download mmproj-Qwen2.5-VL-72B-Instruct-Q8_0.gguf (716.77 MB)  free=64.7GB
+[2026-05-14 16:39:19]     downloaded in 116s (6.5 MB/s)
+[2026-05-14 16:40:21]     uploaded in 62s (12.1 MB/s)
+[2026-05-14 16:40:21]   [2/3] download mmproj-Qwen2.5-VL-72B-Instruct-f16.gguf (1.31 GB)  free=64.7GB
+[2026-05-14 16:44:11]     downloaded in 230s (6.1 MB/s)
+[2026-05-14 16:47:24]     uploaded in 193s (7.3 MB/s)
+[2026-05-14 16:47:25]   [3/3] download Qwen2.5-VL-72B-Instruct-Q4_K_M.gguf (44.16 GB)  free=64.6GB
+[2026-05-14 18:38:52]     downloaded in 6687s (7.1 MB/s)
+[2026-05-14 19:36:52]     uploaded in 3480s (13.6 MB/s)
+[2026-05-14 19:36:57] 
+=== AbteeXAILab/lumynax-frontier-mixtral-8x22b-instruct-gguf  <-  MaziyarPanahi/Mixtral-8x22B-Instruct-v0.1-GGUF ===
+[2026-05-14 19:36:57]     free local: 63.8 GB, target ~80 GB
+[2026-05-14 19:36:57]   2 matched files, total 79.71 GB
+[2026-05-14 19:36:57]   [1/2] download Mixtral-8x22B-Instruct-v0.1.Q4_K_M-00002-of-00002.gguf (37.24 GB)  free=63.8GB
+[2026-05-14 21:21:25]     downloaded in 6267s (6.4 MB/s)
+[2026-05-14 22:08:48]     uploaded in 2843s (14.1 MB/s)
+[2026-05-14 22:08:53]   [2/2] download Mixtral-8x22B-Instruct-v0.1.Q4_K_M-00001-of-00002.gguf (42.48 GB)  free=63.5GB
+[2026-05-15 00:08:55]     downloaded in 7202s (6.3 MB/s)
+[2026-05-15 01:22:26]     uploaded in 4411s (10.3 MB/s)
+[2026-05-15 01:22:29] 
+=== AbteeXAILab/lumynax-frontier-minimax-m2-230b  <-  unsloth/MiniMax-M2-GGUF ===
+[2026-05-15 01:22:29]     free local: 63.3 GB, target ~129 GB
+[2026-05-15 01:22:30]   3 matched files, total 128.84 GB
+[2026-05-15 01:22:30]   [1/3] download Q4_K_M/MiniMax-M2-Q4_K_M-00003-of-00003.gguf (36.55 GB)  free=63.3GB
+[2026-05-15 03:22:43]     downloaded in 7214s (5.4 MB/s)
+[2026-05-15 03:27:31]     uploaded in 287s (136.5 MB/s)
+[2026-05-15 03:27:36]   [2/3] download Q4_K_M/MiniMax-M2-Q4_K_M-00001-of-00003.gguf (45.99 GB)  free=63.1GB
+[2026-05-15 05:57:09]     downloaded in 8973s (5.5 MB/s)
+[2026-05-15 06:01:10]     uploaded in 241s (204.5 MB/s)
+[2026-05-15 06:01:15]   [3/3] download Q4_K_M/MiniMax-M2-Q4_K_M-00002-of-00003.gguf (46.30 GB)  free=63.0GB
+[2026-05-15 08:28:38]     downloaded in 8843s (5.6 MB/s)
+[2026-05-15 08:32:38]     uploaded in 241s (206.4 MB/s)
+[2026-05-15 08:32:44] 
+=== AbteeXAILab/lumynax-frontier-qwen3-235b-a22b-instruct  <-  unsloth/Qwen3-235B-A22B-Instruct-2507-GGUF ===
+[2026-05-15 08:32:44]     free local: 62.8 GB, target ~132 GB
+[2026-05-15 08:32:45]   3 matched files, total 132.39 GB
+[2026-05-15 08:32:45]   [1/3] download Q4_K_M/Qwen3-235B-A22B-Instruct-2507-Q4_K_M-00003-of-00003.gguf (39.38 GB)  free=62.8GB
+[2026-05-16 10:00:01] === MIRROR RUN START === free local: 46.1 GB ===
+[2026-05-16 10:00:01] 
+=== AbteeXAILab/lumynax-frontier-dbrx-instruct-132b-gguf  <-  mradermacher/dbrx-instruct-GGUF ===
+[2026-05-16 10:00:01]     free local: 46.1 GB, target ~48 GB
+[2026-05-16 10:00:02]   1 matched files, total 44.65 GB
+[2026-05-16 10:00:02]   [1/1] SKIP (already there, exact size): dbrx-instruct.Q2_K.gguf
+[2026-05-16 10:00:02] 
+=== AbteeXAILab/lumynax-multimodal-qwen25-vl-72b-instruct-gguf  <-  ggml-org/Qwen2.5-VL-72B-Instruct-GGUF ===
+[2026-05-16 10:00:02]     free local: 46.1 GB, target ~50 GB
+[2026-05-16 10:00:03]   3 matched files, total 46.17 GB
+[2026-05-16 10:00:03]   [1/3] SKIP (already there, exact size): mmproj-Qwen2.5-VL-72B-Instruct-Q8_0.gguf
+[2026-05-16 10:00:03]   [2/3] SKIP (already there, exact size): mmproj-Qwen2.5-VL-72B-Instruct-f16.gguf
+[2026-05-16 10:00:03]   [3/3] SKIP (already there, exact size): Qwen2.5-VL-72B-Instruct-Q4_K_M.gguf
+[2026-05-16 10:00:03] 
+=== AbteeXAILab/lumynax-frontier-mixtral-8x22b-instruct-gguf  <-  MaziyarPanahi/Mixtral-8x22B-Instruct-v0.1-GGUF ===
+[2026-05-16 10:00:03]     free local: 46.1 GB, target ~80 GB
+[2026-05-16 10:00:04]   2 matched files, total 79.71 GB
+[2026-05-16 10:00:04]   [1/2] SKIP (already there, exact size): Mixtral-8x22B-Instruct-v0.1.Q4_K_M-00002-of-00002.gguf
+[2026-05-16 10:00:04]   [2/2] SKIP (already there, exact size): Mixtral-8x22B-Instruct-v0.1.Q4_K_M-00001-of-00002.gguf
+[2026-05-16 10:00:04] 
+=== AbteeXAILab/lumynax-frontier-minimax-m2-230b  <-  unsloth/MiniMax-M2-GGUF ===
+[2026-05-16 10:00:04]     free local: 46.1 GB, target ~129 GB
+[2026-05-16 10:00:04]   3 matched files, total 128.84 GB
+[2026-05-16 10:00:04]   [1/3] SKIP (already there, exact size): Q4_K_M/MiniMax-M2-Q4_K_M-00003-of-00003.gguf
+[2026-05-16 10:00:04]   [2/3] SKIP (already there, exact size): Q4_K_M/MiniMax-M2-Q4_K_M-00001-of-00003.gguf
+[2026-05-16 10:00:05]   [3/3] SKIP (already there, exact size): Q4_K_M/MiniMax-M2-Q4_K_M-00002-of-00003.gguf
+[2026-05-16 10:00:05] 
+=== AbteeXAILab/lumynax-frontier-qwen3-235b-a22b-instruct  <-  unsloth/Qwen3-235B-A22B-Instruct-2507-GGUF ===
+[2026-05-16 10:00:05]     free local: 46.1 GB, target ~132 GB
+[2026-05-16 10:00:05]   3 matched files, total 132.39 GB
+[2026-05-16 10:00:05]   [1/3] download Q4_K_M/Qwen3-235B-A22B-Instruct-2507-Q4_K_M-00003-of-00003.gguf (39.38 GB)  free=46.1GB
+[2026-05-16 10:10:45]     downloaded in 640s (66.0 MB/s)
+[2026-05-16 10:19:51]     uploaded in 546s (77.5 MB/s)
+[2026-05-16 10:19:56]   [2/3] download Q4_K_M/Qwen3-235B-A22B-Instruct-2507-Q4_K_M-00002-of-00003.gguf (46.50 GB)  free=61.9GB
+[2026-05-16 10:35:38]     downloaded in 942s (53.0 MB/s)
+[2026-05-16 10:46:00]     uploaded in 621s (80.4 MB/s)
+[2026-05-16 10:46:04]   [3/3] download Q4_K_M/Qwen3-235B-A22B-Instruct-2507-Q4_K_M-00001-of-00003.gguf (46.51 GB)  free=61.7GB
+[2026-05-16 11:00:13]     downloaded in 849s (58.8 MB/s)
+[2026-05-16 11:11:43]     uploaded in 690s (72.4 MB/s)
+[2026-05-16 11:11:48] 
+=== AbteeXAILab/lumynax-multimodal-internvl3-78b-instruct  <-  OpenGVLab/InternVL3-78B-Instruct ===
+[2026-05-16 11:11:48]     free local: 61.5 GB, target ~152 GB
+[2026-05-16 11:11:48]   44 matched files, total 146.05 GB
+[2026-05-16 11:11:48]   [1/44] download generation_config.json (69.00 B)  free=61.5GB
+[2026-05-16 11:11:49]     downloaded in 1s (0.0 MB/s)
+[2026-05-16 11:11:50]     uploaded in 1s (0.0 MB/s)
+[2026-05-16 11:11:50]   [2/44] download preprocessor_config.json (287.00 B)  free=61.5GB
+[2026-05-16 11:11:51]     downloaded in 1s (0.0 MB/s)
+[2026-05-16 11:11:52]     uploaded in 1s (0.0 MB/s)
+[2026-05-16 11:11:52]   [3/44] download special_tokens_map.json (613.00 B)  free=61.5GB
+[2026-05-16 11:11:53]     downloaded in 1s (0.0 MB/s)
+[2026-05-16 11:11:54]     uploaded in 1s (0.0 MB/s)
+[2026-05-16 11:11:54]   [4/44] download added_tokens.json (790.00 B)  free=61.5GB
+[2026-05-16 11:11:55]     downloaded in 1s (0.0 MB/s)
+[2026-05-16 11:11:56]     uploaded in 1s (0.0 MB/s)
+[2026-05-16 11:11:56]   [5/44] download configuration_internvl_chat.py (3.94 KB)  free=61.5GB
+[2026-05-16 11:11:57]     downloaded in 1s (0.0 MB/s)
+[2026-05-16 11:11:58]     uploaded in 1s (0.0 MB/s)
+[2026-05-16 11:11:58]   [6/44] download config.json (6.00 KB)  free=61.5GB
+[2026-05-16 11:11:59]     downloaded in 1s (0.0 MB/s)
+[2026-05-16 11:12:00]     uploaded in 2s (0.0 MB/s)
+[2026-05-16 11:12:00]   [7/44] download tokenizer_config.json (7.13 KB)  free=61.5GB
+[2026-05-16 11:12:01]     downloaded in 1s (0.0 MB/s)
+[2026-05-16 11:12:03]     uploaded in 2s (0.0 MB/s)
+[2026-05-16 11:12:03]   [8/44] download conversation.py (14.95 KB)  free=61.5GB
+[2026-05-16 11:12:04]     downloaded in 1s (0.0 MB/s)
+[2026-05-16 11:12:05]     uploaded in 1s (0.0 MB/s)
+[2026-05-16 11:12:05]   [9/44] download modeling_internvl_chat.py (15.60 KB)  free=61.5GB
+[2026-05-16 11:12:06]     downloaded in 1s (0.0 MB/s)
+[2026-05-16 11:12:07]     uploaded in 1s (0.0 MB/s)
+[2026-05-16 11:12:07]   [10/44] download model.safetensors.index.json (141.83 KB)  free=61.5GB
+[2026-05-16 11:12:08]     downloaded in 1s (0.2 MB/s)
+[2026-05-16 11:12:10]     uploaded in 2s (0.1 MB/s)
+[2026-05-16 11:12:10]   [11/44] download tokenizer.json (6.71 MB)  free=61.5GB
+[2026-05-16 11:12:12]     downloaded in 1s (5.6 MB/s)
+[2026-05-16 11:12:16]     uploaded in 5s (1.5 MB/s)
+[2026-05-16 11:12:16]   [12/44] download model-00033-of-00033.safetensors (2.63 GB)  free=61.5GB
+[2026-05-16 11:13:04]     downloaded in 48s (59.5 MB/s)
+[2026-05-16 11:14:16]     uploaded in 72s (39.0 MB/s)
+[2026-05-16 11:14:17]   [13/44] download model-00032-of-00033.safetensors (3.72 GB)  free=61.4GB
+[2026-05-16 11:15:10]     downloaded in 53s (75.0 MB/s)
+[2026-05-16 11:17:54]     uploaded in 164s (24.3 MB/s)
+[2026-05-16 11:17:55]   [14/44] download model-00007-of-00033.safetensors (4.45 GB)  free=61.4GB
+[2026-05-16 11:18:56]     downloaded in 62s (77.7 MB/s)
+[2026-05-16 11:21:34]     uploaded in 158s (30.3 MB/s)
+[2026-05-16 11:21:35]   [15/44] download model-00011-of-00033.safetensors (4.45 GB)  free=61.4GB
+[2026-05-16 11:22:38]     downloaded in 63s (76.0 MB/s)
+[2026-05-16 11:24:14]     uploaded in 96s (49.7 MB/s)
+[2026-05-16 11:24:15]   [16/44] download model-00015-of-00033.safetensors (4.45 GB)  free=61.4GB
+[2026-05-16 11:25:16]     downloaded in 61s (77.8 MB/s)
+[2026-05-16 11:27:00]     uploaded in 104s (46.0 MB/s)
+[2026-05-16 11:27:01]   [17/44] download model-00019-of-00033.safetensors (4.45 GB)  free=61.3GB
+[2026-05-16 11:28:10]     downloaded in 69s (69.1 MB/s)
+[2026-05-16 11:29:54]     uploaded in 104s (45.9 MB/s)
+[2026-05-16 11:29:54]   [18/44] download model-00023-of-00033.safetensors (4.45 GB)  free=60.3GB
+[2026-05-16 11:30:58]     downloaded in 63s (75.8 MB/s)
+[2026-05-16 11:33:34]     uploaded in 157s (30.5 MB/s)
+[2026-05-16 11:33:35]   [19/44] download model-00027-of-00033.safetensors (4.45 GB)  free=60.3GB
+[2026-05-16 11:34:40]     downloaded in 65s (73.2 MB/s)
+[2026-05-16 11:37:32]     uploaded in 172s (27.8 MB/s)
+[2026-05-16 11:37:33]   [20/44] download model-00031-of-00033.safetensors (4.45 GB)  free=60.3GB
+[2026-05-16 11:38:32]     downloaded in 60s (80.1 MB/s)
+[2026-05-16 11:40:02]     uploaded in 90s (53.3 MB/s)
+[2026-05-16 11:40:03]   [21/44] download model-00004-of-00033.safetensors (4.45 GB)  free=60.2GB
+[2026-05-16 11:41:04]     downloaded in 62s (77.7 MB/s)
+[2026-05-16 11:43:15]     uploaded in 130s (36.7 MB/s)
+[2026-05-16 11:43:15]   [22/44] download model-00005-of-00033.safetensors (4.45 GB)  free=60.2GB
+[2026-05-16 11:44:16]     downloaded in 61s (78.5 MB/s)
+[2026-05-16 11:45:55]     uploaded in 98s (48.6 MB/s)
+[2026-05-16 11:45:55]   [23/44] download model-00008-of-00033.safetensors (4.45 GB)  free=60.2GB
+[2026-05-16 11:46:55]     downloaded in 60s (79.5 MB/s)
+[2026-05-16 11:49:13]     uploaded in 138s (34.6 MB/s)
+[2026-05-16 11:49:14]   [24/44] download model-00009-of-00033.safetensors (4.45 GB)  free=60.2GB
+[2026-05-16 11:50:15]     downloaded in 61s (78.7 MB/s)
+[2026-05-16 11:51:52]     uploaded in 98s (49.0 MB/s)
+[2026-05-16 11:51:53]   [25/44] download model-00012-of-00033.safetensors (4.45 GB)  free=60.2GB
+[2026-05-16 11:52:53]     downloaded in 60s (79.2 MB/s)
+[2026-05-16 11:54:33]     uploaded in 100s (48.0 MB/s)
+[2026-05-16 11:54:33]   [26/44] download model-00013-of-00033.safetensors (4.45 GB)  free=60.2GB
+[2026-05-16 11:55:35]     downloaded in 62s (77.5 MB/s)
+[2026-05-16 11:57:54]     uploaded in 139s (34.3 MB/s)
+[2026-05-16 11:57:55]   [27/44] download model-00016-of-00033.safetensors (4.45 GB)  free=61.0GB
+[2026-05-16 11:59:02]     downloaded in 67s (71.7 MB/s)
+[2026-05-16 12:01:12]     uploaded in 130s (36.8 MB/s)
+[2026-05-16 12:01:12]   [28/44] download model-00017-of-00033.safetensors (4.45 GB)  free=61.2GB
+[2026-05-16 12:02:13]     downloaded in 61s (78.5 MB/s)
+[2026-05-16 12:04:35]     uploaded in 142s (33.6 MB/s)
+[2026-05-16 12:04:36]   [29/44] download model-00020-of-00033.safetensors (4.45 GB)  free=61.2GB
+[2026-05-16 12:05:36]     downloaded in 59s (80.4 MB/s)
+[2026-05-16 12:07:19]     uploaded in 103s (46.3 MB/s)
+[2026-05-16 12:07:19]   [30/44] download model-00021-of-00033.safetensors (4.45 GB)  free=61.2GB
+[2026-05-16 12:08:38]     downloaded in 78s (61.1 MB/s)
+[2026-05-16 12:10:14]     uploaded in 96s (49.8 MB/s)
+[2026-05-16 12:10:14]   [31/44] download model-00024-of-00033.safetensors (4.45 GB)  free=61.2GB
+[2026-05-16 12:11:16]     downloaded in 62s (77.5 MB/s)
+[2026-05-16 12:12:43]     uploaded in 87s (55.2 MB/s)
+[2026-05-16 12:12:43]   [32/44] download model-00025-of-00033.safetensors (4.45 GB)  free=61.2GB
+[2026-05-16 12:13:48]     downloaded in 64s (74.3 MB/s)
+[2026-05-16 12:15:34]     uploaded in 106s (45.1 MB/s)
+[2026-05-16 12:15:34]   [33/44] download model-00028-of-00033.safetensors (4.45 GB)  free=61.1GB
+[2026-05-16 12:16:37]     downloaded in 63s (75.8 MB/s)
+[2026-05-16 12:18:29]     uploaded in 111s (42.9 MB/s)
+[2026-05-16 12:18:29]   [34/44] download model-00029-of-00033.safetensors (4.45 GB)  free=61.1GB
+[2026-05-16 12:19:33]     downloaded in 64s (75.3 MB/s)
+[2026-05-16 12:22:06]     uploaded in 153s (31.2 MB/s)
+[2026-05-16 12:22:06]   [35/44] download model-00003-of-00033.safetensors (4.57 GB)  free=61.1GB
+[2026-05-16 12:23:27]     downloaded in 81s (60.6 MB/s)
+[2026-05-16 12:25:39]     uploaded in 131s (37.4 MB/s)
+[2026-05-16 12:25:39]   [36/44] download model-00002-of-00033.safetensors (4.60 GB)  free=61.0GB
+[2026-05-16 12:26:52]     downloaded in 73s (67.5 MB/s)
+[2026-05-16 12:28:33]     uploaded in 100s (49.3 MB/s)
+[2026-05-16 12:28:33]   [37/44] download model-00006-of-00033.safetensors (4.62 GB)  free=61.0GB
+[2026-05-16 12:29:41]     downloaded in 68s (73.1 MB/s)
+[2026-05-16 12:31:58]     uploaded in 137s (36.2 MB/s)
+[2026-05-16 12:31:59]   [38/44] download model-00010-of-00033.safetensors (4.62 GB)  free=61.0GB
+[2026-05-16 12:33:05]     downloaded in 66s (74.7 MB/s)
+[2026-05-16 12:34:42]     uploaded in 96s (51.4 MB/s)
+[2026-05-16 12:34:42]   [39/44] download model-00014-of-00033.safetensors (4.62 GB)  free=61.0GB
+[2026-05-16 12:35:49]     downloaded in 67s (74.6 MB/s)
+[2026-05-16 12:38:04]     uploaded in 136s (36.6 MB/s)
+[2026-05-16 12:38:05]   [40/44] download model-00018-of-00033.safetensors (4.62 GB)  free=61.0GB
+[2026-05-16 12:39:27]     downloaded in 82s (60.3 MB/s)
+[2026-05-16 12:41:44]     uploaded in 137s (36.3 MB/s)
+[2026-05-16 12:41:44]   [41/44] download model-00022-of-00033.safetensors (4.62 GB)  free=61.0GB
+[2026-05-16 12:42:48]     downloaded in 64s (77.9 MB/s)
+[2026-05-16 12:44:46]     uploaded in 118s (42.1 MB/s)
+[2026-05-16 12:44:47]   [42/44] download model-00026-of-00033.safetensors (4.62 GB)  free=60.9GB
+[2026-05-16 12:45:56]     downloaded in 69s (72.2 MB/s)
+[2026-05-16 12:47:55]     uploaded in 119s (41.7 MB/s)
+[2026-05-16 12:47:55]   [43/44] download model-00030-of-00033.safetensors (4.62 GB)  free=60.9GB
+[2026-05-16 12:49:00]     downloaded in 65s (76.7 MB/s)
+[2026-05-16 12:51:07]     uploaded in 127s (39.1 MB/s)
+[2026-05-16 12:51:08]   [44/44] download model-00001-of-00033.safetensors (4.65 GB)  free=60.9GB
+[2026-05-16 12:52:47]     downloaded in 99s (50.3 MB/s)
+[2026-05-16 12:53:16]     uploaded in 29s (171.9 MB/s)
+[2026-05-16 12:53:16] 
+=== AbteeXAILab/lumynax-reasoning-glm46-355b-moe  <-  unsloth/GLM-4.6-GGUF ===
+[2026-05-16 12:53:16]     free local: 60.9 GB, target ~201 GB
+[2026-05-16 12:53:17]   5 matched files, total 200.78 GB
+[2026-05-16 12:53:17]   [1/5] download Q4_K_M/GLM-4.6-Q4_K_M-00005-of-00005.gguf (15.59 GB)  free=60.9GB
+[2026-05-16 12:57:25]     downloaded in 248s (67.4 MB/s)
+[2026-05-16 12:59:14]     uploaded in 109s (153.5 MB/s)
+[2026-05-16 12:59:16]   [2/5] download Q4_K_M/GLM-4.6-Q4_K_M-00004-of-00005.gguf (46.10 GB)  free=60.7GB
+[2026-05-16 13:10:59]     downloaded in 702s (70.5 MB/s)
+[2026-05-16 13:14:43]     uploaded in 224s (220.9 MB/s)
+[2026-05-16 13:14:48]   [3/5] download Q4_K_M/GLM-4.6-Q4_K_M-00003-of-00005.gguf (46.22 GB)  free=60.6GB
+[2026-05-16 13:26:25]     downloaded in 697s (71.2 MB/s)
+[2026-05-16 13:29:39]     uploaded in 194s (255.9 MB/s)
+[2026-05-16 13:29:44]   [4/5] download Q4_K_M/GLM-4.6-Q4_K_M-00002-of-00005.gguf (46.29 GB)  free=60.6GB
+[2026-05-16 13:40:38]     downloaded in 654s (76.0 MB/s)
+[2026-05-16 13:44:25]     uploaded in 227s (218.9 MB/s)
+[2026-05-16 13:44:31]   [5/5] download Q4_K_M/GLM-4.6-Q4_K_M-00001-of-00005.gguf (46.57 GB)  free=60.5GB
+[2026-05-16 13:55:32]     downloaded in 661s (75.6 MB/s)
+[2026-05-16 13:59:06]     uploaded in 214s (233.6 MB/s)
+[2026-05-16 13:59:12] 
+=== AbteeXAILab/lumynax-multimodal-pixtral-large-124b  <-  mistralai/Pixtral-Large-Instruct-2411 ===
+[2026-05-16 13:59:12]     free local: 60.3 GB, target ~245 GB
+[2026-05-16 13:59:13]   55 matched files, total 231.22 GB
+[2026-05-16 13:59:13]   [1/55] download params.json (579.00 B)  free=60.3GB
+[2026-05-16 13:59:14]     downloaded in 1s (0.0 MB/s)
+[2026-05-16 13:59:15]     uploaded in 1s (0.0 MB/s)
+[2026-05-16 13:59:15]   [2/55] download consolidated.safetensors.index.json (100.79 KB)  free=60.3GB
+[2026-05-16 13:59:16]     downloaded in 1s (0.1 MB/s)
+[2026-05-16 13:59:17]     uploaded in 1s (0.1 MB/s)
+[2026-05-16 13:59:17]   [3/55] download tokenizer.model.v7m1 (573.79 KB)  free=60.3GB
+[2026-05-16 13:59:18]     downloaded in 1s (0.6 MB/s)
+[2026-05-16 13:59:21]     uploaded in 4s (0.2 MB/s)
+[2026-05-16 13:59:21]   [4/55] download consolidated-00052-of-00052.safetensors (1020.60 MB)  free=60.3GB
+[2026-05-16 13:59:45]     downloaded in 23s (46.0 MB/s)
+[2026-05-16 14:00:49]     uploaded in 65s (16.5 MB/s)
+[2026-05-16 14:00:50]   [5/55] download consolidated-00033-of-00052.safetensors (4.48 GB)  free=60.3GB
+[2026-05-16 14:02:18]     downloaded in 89s (54.2 MB/s)
+[2026-05-16 14:03:54]     uploaded in 95s (50.4 MB/s)
+[2026-05-16 14:03:54]   [6/55] download consolidated-00045-of-00052.safetensors (4.48 GB)  free=60.3GB
+[2026-05-16 14:05:17]     downloaded in 83s (58.3 MB/s)
+[2026-05-16 14:08:04]     uploaded in 167s (28.8 MB/s)
+[2026-05-16 14:08:05]   [7/55] download consolidated-00005-of-00052.safetensors (4.48 GB)  free=60.3GB
+[2026-05-16 14:09:27]     downloaded in 83s (58.2 MB/s)
+[2026-05-16 14:11:09]     uploaded in 102s (47.3 MB/s)
+[2026-05-16 14:11:10]   [8/55] download consolidated-00009-of-00052.safetensors (4.48 GB)  free=60.3GB
+[2026-05-16 14:12:35]     downloaded in 85s (56.3 MB/s)
+[2026-05-16 14:14:19]     uploaded in 104s (46.4 MB/s)
+[2026-05-16 14:14:19]   [9/55] download consolidated-00013-of-00052.safetensors (4.48 GB)  free=60.3GB
+[2026-05-16 14:15:44]     downloaded in 85s (56.6 MB/s)
+[2026-05-16 14:17:32]     uploaded in 108s (44.7 MB/s)
+[2026-05-16 14:17:33]   [10/55] download consolidated-00017-of-00052.safetensors (4.48 GB)  free=60.3GB
+[2026-05-16 14:19:01]     downloaded in 88s (54.4 MB/s)
+[2026-05-16 14:20:35]     uploaded in 94s (51.2 MB/s)
+[2026-05-16 14:20:35]   [11/55] download consolidated-00021-of-00052.safetensors (4.48 GB)  free=60.3GB
+[2026-05-16 14:22:07]     downloaded in 92s (52.3 MB/s)
+[2026-05-16 14:24:23]     uploaded in 135s (35.5 MB/s)
+[2026-05-16 14:24:23]   [12/55] download consolidated-00025-of-00052.safetensors (4.48 GB)  free=60.2GB
+[2026-05-16 14:25:47]     downloaded in 84s (57.4 MB/s)
+[2026-05-16 14:27:35]     uploaded in 108s (44.4 MB/s)
+[2026-05-16 14:27:36]   [13/55] download consolidated-00029-of-00052.safetensors (4.48 GB)  free=60.2GB
+[2026-05-16 14:29:04]     downloaded in 88s (54.7 MB/s)
+[2026-05-16 14:31:27]     uploaded in 143s (33.6 MB/s)
+[2026-05-16 14:31:28]   [14/55] download consolidated-00037-of-00052.safetensors (4.48 GB)  free=60.2GB
+[2026-05-16 14:32:52]     downloaded in 84s (57.1 MB/s)
+[2026-05-16 14:35:18]     uploaded in 146s (32.8 MB/s)
+[2026-05-16 14:35:19]   [15/55] download consolidated-00041-of-00052.safetensors (4.48 GB)  free=60.2GB
+[2026-05-16 14:36:44]     downloaded in 85s (56.4 MB/s)
+[2026-05-16 14:38:43]     uploaded in 119s (40.4 MB/s)
+[2026-05-16 14:38:44]   [16/55] download consolidated-00049-of-00052.safetensors (4.48 GB)  free=60.2GB
+[2026-05-16 14:40:14]     downloaded in 90s (53.4 MB/s)
+[2026-05-16 14:42:32]     uploaded in 138s (34.9 MB/s)
+[2026-05-16 14:42:32]   [17/55] download consolidated-00001-of-00052.safetensors (4.50 GB)  free=60.2GB
+[2026-05-16 14:44:03]     downloaded in 90s (53.6 MB/s)
+[2026-05-16 14:45:56]     uploaded in 114s (42.6 MB/s)
+[2026-05-16 14:45:57]   [18/55] download consolidated-00014-of-00052.safetensors (4.50 GB)  free=60.2GB
+[2026-05-16 14:47:21]     downloaded in 85s (57.0 MB/s)
+[2026-05-16 14:49:36]     uploaded in 134s (35.9 MB/s)
+[2026-05-16 14:49:37]   [19/55] download consolidated-00002-of-00052.safetensors (4.50 GB)  free=60.2GB
+[2026-05-16 14:51:18]     downloaded in 102s (47.6 MB/s)
+[2026-05-16 14:53:28]     uploaded in 130s (37.1 MB/s)
+[2026-05-16 14:53:29]   [20/55] download consolidated-00006-of-00052.safetensors (4.50 GB)  free=60.2GB
+[2026-05-16 14:54:47]     downloaded in 78s (62.0 MB/s)
+[2026-05-16 14:56:43]     uploaded in 117s (41.4 MB/s)
+[2026-05-16 14:56:44]   [21/55] download consolidated-00007-of-00052.safetensors (4.50 GB)  free=60.2GB
+[2026-05-16 14:58:01]     downloaded in 77s (62.8 MB/s)
+[2026-05-16 15:00:21]     uploaded in 140s (34.5 MB/s)
+[2026-05-16 15:00:21]   [22/55] download consolidated-00010-of-00052.safetensors (4.50 GB)  free=60.1GB
+[2026-05-16 15:01:45]     downloaded in 84s (57.7 MB/s)
+[2026-05-16 15:03:33]     uploaded in 108s (44.9 MB/s)
+[2026-05-16 15:03:33]   [23/55] download consolidated-00018-of-00052.safetensors (4.50 GB)  free=60.1GB
+[2026-05-16 15:04:54]     downloaded in 80s (60.0 MB/s)
+[2026-05-16 15:06:43]     uploaded in 109s (44.3 MB/s)
+[2026-05-16 15:06:43]   [24/55] download consolidated-00022-of-00052.safetensors (4.50 GB)  free=60.1GB
+[2026-05-16 15:08:02]     downloaded in 79s (61.4 MB/s)
+[2026-05-16 15:10:24]     uploaded in 142s (34.0 MB/s)
+[2026-05-16 15:10:25]   [25/55] download consolidated-00026-of-00052.safetensors (4.50 GB)  free=60.1GB
+[2026-05-16 15:11:46]     downloaded in 81s (59.4 MB/s)
+[2026-05-16 15:14:01]     uploaded in 135s (35.7 MB/s)
+[2026-05-16 15:14:02]   [26/55] download consolidated-00027-of-00052.safetensors (4.50 GB)  free=60.1GB
+[2026-05-16 15:15:13]     downloaded in 71s (67.7 MB/s)
+[2026-05-16 15:17:48]     uploaded in 155s (31.2 MB/s)
+[2026-05-16 15:17:49]   [27/55] download consolidated-00030-of-00052.safetensors (4.50 GB)  free=60.1GB
+[2026-05-16 15:19:08]     downloaded in 80s (60.8 MB/s)
+[2026-05-16 15:21:44]     uploaded in 155s (31.1 MB/s)
+[2026-05-16 15:21:44]   [28/55] download consolidated-00034-of-00052.safetensors (4.50 GB)  free=60.1GB
+[2026-05-16 15:23:05]     downloaded in 81s (59.4 MB/s)
+[2026-05-16 15:25:12]     uploaded in 126s (38.2 MB/s)
+[2026-05-16 15:25:12]   [29/55] download consolidated-00038-of-00052.safetensors (4.50 GB)  free=60.1GB
+[2026-05-16 15:26:31]     downloaded in 78s (61.7 MB/s)
+[2026-05-16 15:28:16]     uploaded in 106s (45.8 MB/s)
+[2026-05-16 15:28:17]   [30/55] download consolidated-00039-of-00052.safetensors (4.50 GB)  free=60.1GB
+[2026-05-16 15:29:32]     downloaded in 75s (64.5 MB/s)
+[2026-05-16 15:31:54]     uploaded in 142s (34.0 MB/s)
+[2026-05-16 15:31:54]   [31/55] download consolidated-00042-of-00052.safetensors (4.50 GB)  free=60.0GB
+[2026-05-16 15:33:43]     downloaded in 109s (44.4 MB/s)
+[2026-05-16 15:35:09]     uploaded in 86s (56.4 MB/s)
+[2026-05-16 15:35:09]   [32/55] download consolidated-00046-of-00052.safetensors (4.50 GB)  free=60.0GB
+[2026-05-16 15:36:58]     downloaded in 109s (44.4 MB/s)
+[2026-05-16 15:38:29]     uploaded in 91s (53.1 MB/s)
+[2026-05-16 15:38:30]   [33/55] download consolidated-00050-of-00052.safetensors (4.50 GB)  free=60.0GB
+[2026-05-16 15:39:49]     downloaded in 79s (60.8 MB/s)
+[2026-05-16 15:41:17]     uploaded in 88s (55.2 MB/s)
+[2026-05-16 15:41:18]   [34/55] download consolidated-00003-of-00052.safetensors (4.50 GB)  free=60.0GB
+[2026-05-16 15:42:26]     downloaded in 69s (70.3 MB/s)
+[2026-05-16 15:44:07]     uploaded in 101s (48.0 MB/s)
+[2026-05-16 15:44:08]   [35/55] download consolidated-00011-of-00052.safetensors (4.50 GB)  free=60.0GB
+[2026-05-16 15:45:22]     downloaded in 74s (64.9 MB/s)
+[2026-05-16 15:47:52]     uploaded in 150s (32.2 MB/s)
+[2026-05-16 15:47:53]   [36/55] download consolidated-00015-of-00052.safetensors (4.50 GB)  free=60.0GB
+[2026-05-16 15:49:07]     downloaded in 75s (64.8 MB/s)
+[2026-05-16 15:51:42]     uploaded in 155s (31.2 MB/s)
+[2026-05-16 15:51:43]   [37/55] download consolidated-00019-of-00052.safetensors (4.50 GB)  free=60.0GB
+[2026-05-16 15:53:01]     downloaded in 78s (62.2 MB/s)
+[2026-05-16 15:55:24]     uploaded in 143s (33.8 MB/s)
+[2026-05-16 15:55:24]   [38/55] download consolidated-00023-of-00052.safetensors (4.50 GB)  free=60.0GB
+[2026-05-16 15:56:41]     downloaded in 77s (62.8 MB/s)
+[2026-05-16 15:58:23]     uploaded in 102s (47.3 MB/s)
+[2026-05-16 15:58:24]   [39/55] download consolidated-00031-of-00052.safetensors (4.50 GB)  free=60.0GB
+[2026-05-16 15:59:38]     downloaded in 74s (65.2 MB/s)
+[2026-05-16 16:01:33]     uploaded in 115s (42.2 MB/s)
+[2026-05-16 16:01:33]   [40/55] download consolidated-00035-of-00052.safetensors (4.50 GB)  free=60.0GB
+[2026-05-16 16:02:48]     downloaded in 75s (64.7 MB/s)
+[2026-05-16 16:05:23]     uploaded in 155s (31.2 MB/s)
+[2026-05-16 16:05:23]   [41/55] download consolidated-00043-of-00052.safetensors (4.50 GB)  free=59.9GB
+[2026-05-16 16:06:38]     downloaded in 75s (64.3 MB/s)
+[2026-05-16 16:08:59]     uploaded in 141s (34.4 MB/s)
+[2026-05-16 16:08:59]   [42/55] download consolidated-00047-of-00052.safetensors (4.50 GB)  free=59.8GB
+[2026-05-16 16:10:17]     downloaded in 78s (62.2 MB/s)
+[2026-05-16 16:12:11]     uploaded in 114s (42.3 MB/s)
+[2026-05-16 16:12:12]   [43/55] download consolidated-00020-of-00052.safetensors (4.57 GB)  free=59.9GB
+[2026-05-16 16:13:24]     downloaded in 72s (67.9 MB/s)
+[2026-05-16 16:18:25]     uploaded in 301s (16.3 MB/s)
+[2026-05-16 16:18:26]   [44/55] download consolidated-00008-of-00052.safetensors (4.57 GB)  free=59.9GB
+[2026-05-16 16:28:14]     downloaded in 588s (8.3 MB/s)
+[2026-05-16 16:32:27]     uploaded in 253s (19.4 MB/s)
+[2026-05-16 16:32:27]   [45/55] download consolidated-00032-of-00052.safetensors (4.57 GB)  free=59.9GB
+[2026-05-16 16:41:06]     downloaded in 519s (9.5 MB/s)
+[2026-05-16 16:44:37]     uploaded in 211s (23.3 MB/s)
+[2026-05-16 16:44:37]   [46/55] download consolidated-00004-of-00052.safetensors (4.57 GB)  free=59.9GB
+[2026-05-16 16:54:52]     downloaded in 615s (8.0 MB/s)
+[2026-05-16 16:58:13]     uploaded in 201s (24.4 MB/s)
+[2026-05-16 16:58:14]   [47/55] download consolidated-00012-of-00052.safetensors (4.57 GB)  free=59.8GB
+[2026-05-16 17:10:33]     downloaded in 739s (6.6 MB/s)
+[2026-05-17 12:05:46]     upload FAIL: RuntimeError: Data processing error: Client error: Request middleware error: couldn't get token: TokenRefreshFailure("Error refreshing token: PyErr { type: <class 'RuntimeError'>, value: RuntimeError('Cannot send a request, as the client has been closed.'), traceback: Some(\"Traceback (most recent call last):\\n  File \\\"C:\\\\Users\\\\ijadimaa\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python311\\\\Lib\\\\site-packages\\\\huggingface_hub\\\\_commit_api.py\\\", line 616, in token_refresher\\n    new_xet_connection = fetch_xet_connection_info_from_repo_info(\\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"C:\\\\Users\\\\ijadimaa\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python311\\\\Lib\\\\site-packages\\\\huggingface_hub\\\\utils\\\\_validators.py\\\", line 89, in _inner_fn\\n    return fn(*args, **kwargs)\\n           ^^^^^^^^^^^^^^^^^^^\\n  File \\\"C:\\\\Users\\\\ijadimaa\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python311\\\\Lib\\\\site-packages\\\\huggingface_hub\\\\utils\\\\_xet.py\\\", line 170, in fetch_xet_connection_info_from_repo_info\\n    return _fetch_xet_connection_info_with_url(url, headers, params, cache_key_prefix=f\\\"{repo_type}-{repo_id}\\\")\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"C:\\\\Users\\\\ijadimaa\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python311\\\\Lib\\\\site-packages\\\\huggingface_hub\\\\utils\\\\_validators.py\\\", line 89, in _inner_fn\\n    return fn(*args, **kwargs)\\n           ^^^^^^^^^^^^^^^^^^^\\n  File \\\"C:\\\\Users\\\\ijadimaa\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python311\\\\Lib\\\\site-packages\\\\huggingface_hub\\\\utils\\\\_xet.py\\\", line 210, in _fetch_xet_connection_info_with_url\\n    resp = http_backoff(\\\"GET\\\", url, headers=headers, params=params)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"C:\\\\Users\\\\ijadimaa\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python311\\\\Lib\\\\site-packages\\\\huggingface_hub\\\\utils\\\\_http.py\\\", line 559, in http_backoff\\n    return next(\\n           ^^^^^\\n  File \\\"C:\\\\Users\\\\ijadimaa\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python311\\\\Lib\\\\site-packages\\\\huggingface_hub\\\\utils\\\\_http.py\\\", line 467, in _http_backoff_base\\n    response = client.request(method=method, url=url, **kwargs)\\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"C:\\\\Users\\\\ijadimaa\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python311\\\\Lib\\\\site-packages\\\\httpx\\\\_client.py\\\", line 825, in request\\n    return self.send(request, auth=auth, follow_redirects=follow_redirects)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"C:\\\\Users\\\\ijadimaa\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python311\\\\Lib\\\\site-packages\\\\httpx\\\\_client.py\\\", line 901, in send\\n    raise RuntimeError(\\\"Cannot send a request, as the client has been closed.\\\")\\n\") }")
+[2026-05-17 12:05:46]   [48/55] download consolidated-00016-of-00052.safetensors (4.57 GB)  free=59.8GB
+[2026-05-17 12:07:16] === MIRROR RUN START === free local: 58.7 GB ===
+[2026-05-17 12:07:16] 
+=== AbteeXAILab/lumynax-frontier-dbrx-instruct-132b-gguf  <-  mradermacher/dbrx-instruct-GGUF ===
+[2026-05-17 12:07:16]     free local: 58.7 GB, target ~48 GB
+[2026-05-17 12:07:18]   1 matched files, total 44.65 GB
+[2026-05-17 12:07:18]   [1/1] SKIP (already there, exact size): dbrx-instruct.Q2_K.gguf
+[2026-05-17 12:07:18] 
+=== AbteeXAILab/lumynax-multimodal-qwen25-vl-72b-instruct-gguf  <-  ggml-org/Qwen2.5-VL-72B-Instruct-GGUF ===
+[2026-05-17 12:07:18]     free local: 58.7 GB, target ~50 GB
+[2026-05-17 12:07:19]   3 matched files, total 46.17 GB
+[2026-05-17 12:07:19]   [1/3] SKIP (already there, exact size): mmproj-Qwen2.5-VL-72B-Instruct-Q8_0.gguf
+[2026-05-17 12:07:19]   [2/3] SKIP (already there, exact size): mmproj-Qwen2.5-VL-72B-Instruct-f16.gguf
+[2026-05-17 12:07:19]   [3/3] SKIP (already there, exact size): Qwen2.5-VL-72B-Instruct-Q4_K_M.gguf
+[2026-05-17 12:07:19] 
+=== AbteeXAILab/lumynax-frontier-mixtral-8x22b-instruct-gguf  <-  MaziyarPanahi/Mixtral-8x22B-Instruct-v0.1-GGUF ===
+[2026-05-17 12:07:19]     free local: 58.7 GB, target ~80 GB
+[2026-05-17 12:07:20]   2 matched files, total 79.71 GB
+[2026-05-17 12:07:20]   [1/2] SKIP (already there, exact size): Mixtral-8x22B-Instruct-v0.1.Q4_K_M-00002-of-00002.gguf
+[2026-05-17 12:07:20]   [2/2] SKIP (already there, exact size): Mixtral-8x22B-Instruct-v0.1.Q4_K_M-00001-of-00002.gguf
+[2026-05-17 12:07:20] 
+=== AbteeXAILab/lumynax-frontier-minimax-m2-230b  <-  unsloth/MiniMax-M2-GGUF ===
+[2026-05-17 12:07:20]     free local: 58.1 GB, target ~129 GB
+[2026-05-17 12:07:20]   3 matched files, total 128.84 GB
+[2026-05-17 12:07:20]   [1/3] SKIP (already there, exact size): Q4_K_M/MiniMax-M2-Q4_K_M-00003-of-00003.gguf
+[2026-05-17 12:07:20]   [2/3] SKIP (already there, exact size): Q4_K_M/MiniMax-M2-Q4_K_M-00001-of-00003.gguf
+[2026-05-17 12:07:20]   [3/3] SKIP (already there, exact size): Q4_K_M/MiniMax-M2-Q4_K_M-00002-of-00003.gguf
+[2026-05-17 12:07:20] 
+=== AbteeXAILab/lumynax-frontier-qwen3-235b-a22b-instruct  <-  unsloth/Qwen3-235B-A22B-Instruct-2507-GGUF ===
+[2026-05-17 12:07:20]     free local: 58.1 GB, target ~132 GB
+[2026-05-17 12:07:21]   3 matched files, total 132.39 GB
+[2026-05-17 12:07:21]   [1/3] SKIP (already there, exact size): Q4_K_M/Qwen3-235B-A22B-Instruct-2507-Q4_K_M-00003-of-00003.gguf
+[2026-05-17 12:07:21]   [2/3] SKIP (already there, exact size): Q4_K_M/Qwen3-235B-A22B-Instruct-2507-Q4_K_M-00002-of-00003.gguf
+[2026-05-17 12:07:21]   [3/3] SKIP (already there, exact size): Q4_K_M/Qwen3-235B-A22B-Instruct-2507-Q4_K_M-00001-of-00003.gguf
+[2026-05-17 12:07:21] 
+=== AbteeXAILab/lumynax-multimodal-internvl3-78b-instruct  <-  OpenGVLab/InternVL3-78B-Instruct ===
+[2026-05-17 12:07:21]     free local: 58.1 GB, target ~152 GB
+[2026-05-17 12:07:22]   44 matched files, total 146.05 GB
+[2026-05-17 12:07:22]   [1/44] SKIP (already there, exact size): generation_config.json
+[2026-05-17 12:07:22]   [2/44] SKIP (already there, exact size): preprocessor_config.json
+[2026-05-17 12:07:22]   [3/44] SKIP (already there, exact size): special_tokens_map.json
+[2026-05-17 12:07:22]   [4/44] SKIP (already there, exact size): added_tokens.json
+[2026-05-17 12:07:22]   [5/44] SKIP (already there, exact size): configuration_internvl_chat.py
+[2026-05-17 12:07:22]   [6/44] SKIP (already there, exact size): config.json
+[2026-05-17 12:07:22]   [7/44] SKIP (already there, exact size): tokenizer_config.json
+[2026-05-17 12:07:22]   [8/44] SKIP (already there, exact size): conversation.py
+[2026-05-17 12:07:22]   [9/44] SKIP (already there, exact size): modeling_internvl_chat.py
+[2026-05-17 12:07:22]   [10/44] SKIP (already there, exact size): model.safetensors.index.json
+[2026-05-17 12:07:22]   [11/44] SKIP (already there, exact size): tokenizer.json
+[2026-05-17 12:07:22]   [12/44] SKIP (already there, exact size): model-00033-of-00033.safetensors
+[2026-05-17 12:07:22]   [13/44] SKIP (already there, exact size): model-00032-of-00033.safetensors
+[2026-05-17 12:07:22]   [14/44] SKIP (already there, exact size): model-00007-of-00033.safetensors
+[2026-05-17 12:07:22]   [15/44] SKIP (already there, exact size): model-00011-of-00033.safetensors
+[2026-05-17 12:07:22]   [16/44] SKIP (already there, exact size): model-00015-of-00033.safetensors
+[2026-05-17 12:07:22]   [17/44] SKIP (already there, exact size): model-00019-of-00033.safetensors
+[2026-05-17 12:07:22]   [18/44] SKIP (already there, exact size): model-00023-of-00033.safetensors
+[2026-05-17 12:07:22]   [19/44] SKIP (already there, exact size): model-00027-of-00033.safetensors
+[2026-05-17 12:07:22]   [20/44] SKIP (already there, exact size): model-00031-of-00033.safetensors
+[2026-05-17 12:07:22]   [21/44] SKIP (already there, exact size): model-00004-of-00033.safetensors
+[2026-05-17 12:07:22]   [22/44] SKIP (already there, exact size): model-00005-of-00033.safetensors
+[2026-05-17 12:07:22]   [23/44] SKIP (already there, exact size): model-00008-of-00033.safetensors
+[2026-05-17 12:07:22]   [24/44] SKIP (already there, exact size): model-00009-of-00033.safetensors
+[2026-05-17 12:07:22]   [25/44] SKIP (already there, exact size): model-00012-of-00033.safetensors
+[2026-05-17 12:07:22]   [26/44] SKIP (already there, exact size): model-00013-of-00033.safetensors
+[2026-05-17 12:07:22]   [27/44] SKIP (already there, exact size): model-00016-of-00033.safetensors
+[2026-05-17 12:07:22]   [28/44] SKIP (already there, exact size): model-00017-of-00033.safetensors
+[2026-05-17 12:07:22]   [29/44] SKIP (already there, exact size): model-00020-of-00033.safetensors
+[2026-05-17 12:07:22]   [30/44] SKIP (already there, exact size): model-00021-of-00033.safetensors
+[2026-05-17 12:07:22]   [31/44] SKIP (already there, exact size): model-00024-of-00033.safetensors
+[2026-05-17 12:07:22]   [32/44] SKIP (already there, exact size): model-00025-of-00033.safetensors
+[2026-05-17 12:07:22]   [33/44] SKIP (already there, exact size): model-00028-of-00033.safetensors
+[2026-05-17 12:07:22]   [34/44] SKIP (already there, exact size): model-00029-of-00033.safetensors
+[2026-05-17 12:07:22]   [35/44] SKIP (already there, exact size): model-00003-of-00033.safetensors
+[2026-05-17 12:07:22]   [36/44] SKIP (already there, exact size): model-00002-of-00033.safetensors
+[2026-05-17 12:07:22]   [37/44] SKIP (already there, exact size): model-00006-of-00033.safetensors
+[2026-05-17 12:07:22]   [38/44] SKIP (already there, exact size): model-00010-of-00033.safetensors
+[2026-05-17 12:07:22]   [39/44] SKIP (already there, exact size): model-00014-of-00033.safetensors
+[2026-05-17 12:07:22]   [40/44] SKIP (already there, exact size): model-00018-of-00033.safetensors
+[2026-05-17 12:07:22]   [41/44] SKIP (already there, exact size): model-00022-of-00033.safetensors
+[2026-05-17 12:07:22]   [42/44] SKIP (already there, exact size): model-00026-of-00033.safetensors
+[2026-05-17 12:07:22]   [43/44] SKIP (already there, exact size): model-00030-of-00033.safetensors
+[2026-05-17 12:07:22]   [44/44] SKIP (already there, exact size): model-00001-of-00033.safetensors
+[2026-05-17 12:07:22] 
+=== AbteeXAILab/lumynax-reasoning-glm46-355b-moe  <-  unsloth/GLM-4.6-GGUF ===
+[2026-05-17 12:07:22]     free local: 58.1 GB, target ~201 GB
+[2026-05-17 12:07:23]   5 matched files, total 200.78 GB
+[2026-05-17 12:07:23]   [1/5] SKIP (already there, exact size): Q4_K_M/GLM-4.6-Q4_K_M-00005-of-00005.gguf
+[2026-05-17 12:07:23]   [2/5] SKIP (already there, exact size): Q4_K_M/GLM-4.6-Q4_K_M-00004-of-00005.gguf
+[2026-05-17 12:07:23]   [3/5] SKIP (already there, exact size): Q4_K_M/GLM-4.6-Q4_K_M-00003-of-00005.gguf
+[2026-05-17 12:07:23]   [4/5] SKIP (already there, exact size): Q4_K_M/GLM-4.6-Q4_K_M-00002-of-00005.gguf
+[2026-05-17 12:07:23]   [5/5] SKIP (already there, exact size): Q4_K_M/GLM-4.6-Q4_K_M-00001-of-00005.gguf
+[2026-05-17 12:07:23] 
+=== AbteeXAILab/lumynax-multimodal-pixtral-large-124b  <-  mistralai/Pixtral-Large-Instruct-2411 ===
+[2026-05-17 12:07:23]     free local: 58.0 GB, target ~245 GB
+[2026-05-17 12:07:23]   55 matched files, total 231.22 GB
+[2026-05-17 12:07:23]   [1/55] SKIP (already there, exact size): params.json
+[2026-05-17 12:07:23]   [2/55] SKIP (already there, exact size): consolidated.safetensors.index.json
+[2026-05-17 12:07:23]   [3/55] SKIP (already there, exact size): tokenizer.model.v7m1
+[2026-05-17 12:07:23]   [4/55] SKIP (already there, exact size): consolidated-00052-of-00052.safetensors
+[2026-05-17 12:07:23]   [5/55] SKIP (already there, exact size): consolidated-00033-of-00052.safetensors
+[2026-05-17 12:07:23]   [6/55] SKIP (already there, exact size): consolidated-00045-of-00052.safetensors
+[2026-05-17 12:07:23]   [7/55] SKIP (already there, exact size): consolidated-00005-of-00052.safetensors
+[2026-05-17 12:07:23]   [8/55] SKIP (already there, exact size): consolidated-00009-of-00052.safetensors
+[2026-05-17 12:07:23]   [9/55] SKIP (already there, exact size): consolidated-00013-of-00052.safetensors
+[2026-05-17 12:07:23]   [10/55] SKIP (already there, exact size): consolidated-00017-of-00052.safetensors
+[2026-05-17 12:07:23]   [11/55] SKIP (already there, exact size): consolidated-00021-of-00052.safetensors
+[2026-05-17 12:07:23]   [12/55] SKIP (already there, exact size): consolidated-00025-of-00052.safetensors
+[2026-05-17 12:07:23]   [13/55] SKIP (already there, exact size): consolidated-00029-of-00052.safetensors
+[2026-05-17 12:07:23]   [14/55] SKIP (already there, exact size): consolidated-00037-of-00052.safetensors
+[2026-05-17 12:07:23]   [15/55] SKIP (already there, exact size): consolidated-00041-of-00052.safetensors
+[2026-05-17 12:07:23]   [16/55] SKIP (already there, exact size): consolidated-00049-of-00052.safetensors
+[2026-05-17 12:07:24]   [17/55] SKIP (already there, exact size): consolidated-00001-of-00052.safetensors
+[2026-05-17 12:07:24]   [18/55] SKIP (already there, exact size): consolidated-00014-of-00052.safetensors
+[2026-05-17 12:07:24]   [19/55] SKIP (already there, exact size): consolidated-00002-of-00052.safetensors
+[2026-05-17 12:07:24]   [20/55] SKIP (already there, exact size): consolidated-00006-of-00052.safetensors
+[2026-05-17 12:07:24]   [21/55] SKIP (already there, exact size): consolidated-00007-of-00052.safetensors
+[2026-05-17 12:07:24]   [22/55] SKIP (already there, exact size): consolidated-00010-of-00052.safetensors
+[2026-05-17 12:07:24]   [23/55] SKIP (already there, exact size): consolidated-00018-of-00052.safetensors
+[2026-05-17 12:07:24]   [24/55] SKIP (already there, exact size): consolidated-00022-of-00052.safetensors
+[2026-05-17 12:07:24]   [25/55] SKIP (already there, exact size): consolidated-00026-of-00052.safetensors
+[2026-05-17 12:07:24]   [26/55] SKIP (already there, exact size): consolidated-00027-of-00052.safetensors
+[2026-05-17 12:07:24]   [27/55] SKIP (already there, exact size): consolidated-00030-of-00052.safetensors
+[2026-05-17 12:07:24]   [28/55] SKIP (already there, exact size): consolidated-00034-of-00052.safetensors
+[2026-05-17 12:07:24]   [29/55] SKIP (already there, exact size): consolidated-00038-of-00052.safetensors
+[2026-05-17 12:07:24]   [30/55] SKIP (already there, exact size): consolidated-00039-of-00052.safetensors
+[2026-05-17 12:07:24]   [31/55] SKIP (already there, exact size): consolidated-00042-of-00052.safetensors
+[2026-05-17 12:07:24]   [32/55] SKIP (already there, exact size): consolidated-00046-of-00052.safetensors
+[2026-05-17 12:07:24]   [33/55] SKIP (already there, exact size): consolidated-00050-of-00052.safetensors
+[2026-05-17 12:07:24]   [34/55] SKIP (already there, exact size): consolidated-00003-of-00052.safetensors
+[2026-05-17 12:07:24]   [35/55] SKIP (already there, exact size): consolidated-00011-of-00052.safetensors
+[2026-05-17 12:07:24]   [36/55] SKIP (already there, exact size): consolidated-00015-of-00052.safetensors
+[2026-05-17 12:07:24]   [37/55] SKIP (already there, exact size): consolidated-00019-of-00052.safetensors
+[2026-05-17 12:07:24]   [38/55] SKIP (already there, exact size): consolidated-00023-of-00052.safetensors
+[2026-05-17 12:07:24]   [39/55] SKIP (already there, exact size): consolidated-00031-of-00052.safetensors
+[2026-05-17 12:07:24]   [40/55] SKIP (already there, exact size): consolidated-00035-of-00052.safetensors
+[2026-05-17 12:07:24]   [41/55] SKIP (already there, exact size): consolidated-00043-of-00052.safetensors
+[2026-05-17 12:07:24]   [42/55] SKIP (already there, exact size): consolidated-00047-of-00052.safetensors
+[2026-05-17 12:07:24]   [43/55] SKIP (already there, exact size): consolidated-00020-of-00052.safetensors
+[2026-05-17 12:07:24]   [44/55] SKIP (already there, exact size): consolidated-00008-of-00052.safetensors
+[2026-05-17 12:07:24]   [45/55] SKIP (already there, exact size): consolidated-00032-of-00052.safetensors
+[2026-05-17 12:07:24]   [46/55] SKIP (already there, exact size): consolidated-00004-of-00052.safetensors
+[2026-05-17 12:07:24]   [47/55] download consolidated-00012-of-00052.safetensors (4.57 GB)  free=58.0GB
+[2026-05-17 12:12:28]     downloaded in 304s (16.1 MB/s)
+[2026-05-17 12:15:17]     uploaded in 169s (29.0 MB/s)
+[2026-05-17 12:15:18]   [48/55] download consolidated-00016-of-00052.safetensors (4.57 GB)  free=59.5GB
+[2026-05-17 12:21:18]     STALL detected: no growth for 300s at 382.87 MB. Aborting this file.
+[2026-05-17 12:21:18]   [49/55] download consolidated-00024-of-00052.safetensors (4.57 GB)  free=59.5GB

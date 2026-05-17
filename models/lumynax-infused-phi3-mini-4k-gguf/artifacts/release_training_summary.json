@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-05-10T13:33:50.510902+00:00",
+  "gguf_only_release": true,
+  "license_id": "mit",
+  "license_link": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-gguf",
+  "license_name": null,
+  "lumynax_weight_adaptation_applied": false,
+  "model_title": "LumynaX Infused Phi-3 Mini 4K Instruct GGUF",
+  "package_state": "prebuilt_gguf_release",
+  "packaged_gguf_filename": "Phi-3-mini-4k-instruct-q4.gguf",
+  "packaged_mmproj_filename": null,
+  "prompt_format": "chatml",
+  "quantization": "Q4",
+  "source_gguf_filename": "Phi-3-mini-4k-instruct-q4.gguf",
+  "source_gguf_repo_id": "microsoft/Phi-3-mini-4k-instruct-gguf",
+  "source_mmproj_filename": null,
+  "summary": "This release packages `Phi-3-mini-4k-instruct-q4.gguf` as a final GGUF artifact for local llama.cpp-family inference and Hugging Face model-repo upload.",
+  "supported_modalities": [
+    "text"
+  ],
+  "upstream_base_model_id": "microsoft/Phi-3-mini-4k-instruct"
+}

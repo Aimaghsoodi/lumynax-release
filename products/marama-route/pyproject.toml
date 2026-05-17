@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lumynax-marama-route"
+version = "0.1.0"
+description = "LumynaX MaramaRoute — sovereign model router for the LumynaX release family."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "AbteeX AI Labs" }]
+keywords = ["lumynax", "marama-route", "model-router", "sovereignty", "openrouter-alternative", "aotearoa", "new-zealand"]
+dependencies = ["pyyaml>=6.0"]
+
+[project.urls]
+Homepage = "https://lumynax.com"
+Repository = "https://huggingface.co/AbteeXAILab/marama-route"
+Abteex = "https://abteex.com"
+
+[project.scripts]
+marama-route = "marama_route.cli:main"

@@ -1,0 +1,15 @@
+{
+  "actor": "developer",
+  "purpose": "coding_assistance",
+  "action": "train_adapter",
+  "region": "NZ",
+  "model_id": "local/lumynax",
+  "data_classes": [
+    "source_code"
+  ],
+  "tool_name": "trainer",
+  "writes_files": true,
+  "exports_data": false,
+  "trains_model": true,
+  "human_approved": true
+}

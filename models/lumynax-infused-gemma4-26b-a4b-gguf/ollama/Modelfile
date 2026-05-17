@@ -1,0 +1,10 @@
+FROM ../lumynax-infused-gemma4-26b-a4b-ud-q4_k_m.gguf
+TEMPLATE """{{ if .System }}<|im_start|>system
+{{ .System }}<|im_end|>
+{{ end }}{{ if .Prompt }}<|im_start|>user
+{{ .Prompt }}<|im_end|>
+{{ end }}<|im_start|>assistant
+"""
+SYSTEM You are LumynaX operating from the LumynaX Infused Gemma4 26B A4B GGUF package identity. Be helpful, clear, and honest about provenance.
+PARAMETER temperature 0.1
+PARAMETER num_ctx 8192
