@@ -517,3 +517,6 @@
 [21:35:02]   1 files matched, total 44.16 GB
 [21:35:02]   [1/1] download Qwen2.5-72B-Instruct-Q4_K_M.gguf (44.16 GB)  free=37.2GB
 [21:43:48]     download FAIL: Data processing error: File reconstruction error: Internal Writer Error: Background writer channel closed
+[21:47:27]   1 files matched, total 44.16 GB
+[21:47:27]   [1/1] download Qwen2.5-72B-Instruct-Q4_K_M.gguf (44.16 GB)  free=48.4GB
+[22:07:03]     uploaded in 396s
