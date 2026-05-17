@@ -533,3 +533,30 @@
 [2026-05-17 12:15:18]   [48/55] download consolidated-00016-of-00052.safetensors (4.57 GB)  free=59.5GB
 [2026-05-17 12:21:18]     STALL detected: no growth for 300s at 382.87 MB. Aborting this file.
 [2026-05-17 12:21:18]   [49/55] download consolidated-00024-of-00052.safetensors (4.57 GB)  free=59.5GB
+[2026-05-17 12:27:18]     STALL detected: no growth for 300s at 799.92 MB. Aborting this file.
+[2026-05-17 12:27:18]   [50/55] download consolidated-00028-of-00052.safetensors (4.57 GB)  free=58.6GB
+[2026-05-17 12:33:18]     STALL detected: no growth for 300s at 1.31 GB. Aborting this file.
+[2026-05-17 12:33:18]   [51/55] download consolidated-00036-of-00052.safetensors (4.57 GB)  free=57.2GB
+[2026-05-17 12:39:18]     STALL detected: no growth for 300s at 1.70 GB. Aborting this file.
+[2026-05-17 12:39:18]   [52/55] download consolidated-00040-of-00052.safetensors (4.57 GB)  free=55.6GB
+[2026-05-17 12:45:18]     STALL detected: no growth for 300s at 1.97 GB. Aborting this file.
+[2026-05-17 12:45:18]   [53/55] download consolidated-00044-of-00052.safetensors (4.57 GB)  free=53.8GB
+[2026-05-17 12:47:59]     downloaded in 161s (30.5 MB/s)
+[2026-05-17 12:49:53]     uploaded in 113s (43.4 MB/s)
+[2026-05-17 12:49:53]   [54/55] download consolidated-00048-of-00052.safetensors (4.57 GB)  free=47.1GB
+[2026-05-17 12:50:49]     downloaded in 56s (87.7 MB/s)
+[2026-05-17 12:53:36]     uploaded in 167s (29.3 MB/s)
+[2026-05-17 12:53:37]   [55/55] download consolidated-00051-of-00052.safetensors (4.66 GB)  free=47.8GB
+[2026-05-17 12:54:21]     downloaded in 44s (113.5 MB/s)
+[2026-05-17 12:55:37]     uploaded in 75s (66.3 MB/s)
+[2026-05-17 12:55:37] 
+=== SUMMARY ===
+[2026-05-17 12:55:37]   {'dest': 'AbteeXAILab/lumynax-frontier-dbrx-instruct-132b-gguf', 'matched': 1, 'uploaded': 0, 'skipped': 1, 'failed': []}
+[2026-05-17 12:55:37]   {'dest': 'AbteeXAILab/lumynax-multimodal-qwen25-vl-72b-instruct-gguf', 'matched': 3, 'uploaded': 0, 'skipped': 3, 'failed': []}
+[2026-05-17 12:55:37]   {'dest': 'AbteeXAILab/lumynax-frontier-mixtral-8x22b-instruct-gguf', 'matched': 2, 'uploaded': 0, 'skipped': 2, 'failed': []}
+[2026-05-17 12:55:37]   {'dest': 'AbteeXAILab/lumynax-frontier-minimax-m2-230b', 'matched': 3, 'uploaded': 0, 'skipped': 3, 'failed': []}
+[2026-05-17 12:55:37]   {'dest': 'AbteeXAILab/lumynax-frontier-qwen3-235b-a22b-instruct', 'matched': 3, 'uploaded': 0, 'skipped': 3, 'failed': []}
+[2026-05-17 12:55:37]   {'dest': 'AbteeXAILab/lumynax-multimodal-internvl3-78b-instruct', 'matched': 44, 'uploaded': 0, 'skipped': 44, 'failed': []}
+[2026-05-17 12:55:37]   {'dest': 'AbteeXAILab/lumynax-reasoning-glm46-355b-moe', 'matched': 5, 'uploaded': 0, 'skipped': 5, 'failed': []}
+[2026-05-17 12:55:37]   {'dest': 'AbteeXAILab/lumynax-multimodal-pixtral-large-124b', 'matched': 55, 'uploaded': 4, 'skipped': 46, 'failed': ['consolidated-00016-of-00052.safetensors', 'consolidated-00024-of-00052.safetensors', 'consolidated-00028-of-00052.safetensors', 'consolidated-00036-of-00052.safetensors', 'consolidated-00040-of-00052.safetensors']}
+[2026-05-17 12:55:37] === MIRROR RUN END ===

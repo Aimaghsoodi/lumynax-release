@@ -1,47 +1,45 @@
 """
-LumynaX Frontier MiniMax M2 230B Agentic — LumynaX quickstart.
+Lumynax Frontier Minimax M2 230B — LumynaX quickstart (clone & run).
 
-This script fetches the upstream model from Hugging Face and runs a short
-LumynaX-flavoured prompt. Run it on a host that satisfies the resource budget
-documented in the README (LumynaX Frontier MiniMax M2 230B Agentic).
+This loads the GGUF that ships with this repo. No upstream HF call needed
+once you've done `hf download AbteeXAILab/lumynax-frontier-minimax-m2-230b`.
 
 Usage:
-    python quickstart.py                # one-shot demo prompt
-    python quickstart.py --interactive  # REPL
-    python quickstart.py --gguf         # use the GGUF mirror via llama-cpp
-
-LumynaX package repo: https://huggingface.co/AbteeXAILab/lumynax-frontier-minimax-m2-230b
-Upstream weights:     https://huggingface.co/MiniMaxAI/MiniMax-M2
+  python quickstart.py                   # one-shot demo prompt
+  python quickstart.py --interactive     # REPL
 """
 from __future__ import annotations
-import argparse, os, sys
+import argparse, glob, os, sys
+from pathlib import Path
 
-LUMYNAX_SYSTEM = (
-    "You are LumynaX, the AbteeX AI Labs assistant from Aotearoa New Zealand. "
-    "Ko te marama te tuapapa - the light is the foundation. "
-    "Answer with care, cite uncertainty, and prefer local-first reasoning. "
-    "Refuse unsafe, unlawful, or sovereignty-violating requests."
-)
+LUMYNAX_SYSTEM = "You are LumynaX, the AbteeX AI Labs assistant from Aotearoa New Zealand. Ko te marama te tuapapa. Answer with care; cite uncertainty; refuse unsafe asks."
 DEMO_PROMPT = "Explain in 3 bullets why local-first AI matters for Aotearoa New Zealand."
 
-def _run_hf(prompt: str, interactive: bool):
-    import torch
-    from transformers import AutoModelForCausalLM, AutoTokenizer
-    print("[lumynax] Loading MiniMaxAI/MiniMax-M2. This is a >100B MoE — multi-GPU or accelerate offload recommended.")
-    tok = AutoTokenizer.from_pretrained("MiniMaxAI/MiniMax-M2", trust_remote_code=True)
-    model = AutoModelForCausalLM.from_pretrained(
-        "MiniMaxAI/MiniMax-M2", device_map="auto", torch_dtype="auto", trust_remote_code=True
-    )
+# Locate the primary GGUF that was downloaded alongside this script.
+HERE = Path(__file__).resolve().parent
+PRIMARY = HERE / r"Q4_K_M/MiniMax-M2-Q4_K_M-00001-of-00003.gguf"
+# llama.cpp auto-loads sibling shards from the same dir.
+
+def main():
+    from llama_cpp import Llama
+    p = argparse.ArgumentParser()
+    p.add_argument("--interactive", action="store_true")
+    p.add_argument("--prompt", default=DEMO_PROMPT)
+    args = p.parse_args()
+    if not PRIMARY.exists():
+        print(f"[lumynax] primary weight file missing: {PRIMARY}", file=sys.stderr)
+        print(f"[lumynax] run: hf download AbteeXAILab/lumynax-frontier-minimax-m2-230b --local-dir <dir> first.", file=sys.stderr)
+        sys.exit(2)
+    print(f"[lumynax] loading {PRIMARY.name}{shard_log_suffix}")
+    llm = Llama(model_path=str(PRIMARY), n_ctx=16384,
+                n_gpu_layers=int(os.environ.get("N_GPU_LAYERS","-1")), verbose=False)
     def chat(user):
-        messages = [
-            {"role": "system", "content": LUMYNAX_SYSTEM},
-            {"role": "user",   "content": user},
-        ]
-        text = tok.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-        inputs = tok(text, return_tensors="pt").to(model.device)
-        out = model.generate(**inputs, max_new_tokens=512, do_sample=True, temperature=0.4)
-        return tok.decode(out[0, inputs["input_ids"].shape[-1]:], skip_special_tokens=True)
-    if interactive:
+        out = llm.create_chat_completion(messages=[
+            {"role":"system","content":LUMYNAX_SYSTEM},
+            {"role":"user","content":user},
+        ], max_tokens=512, temperature=0.4)
+        return out["choices"][0]["message"]["content"]
+    if args.interactive:
         print("[lumynax] interactive mode — empty line exits.")
         while True:
             try: q = input("you> ").strip()
@@ -49,47 +47,7 @@ def _run_hf(prompt: str, interactive: bool):
             if not q: break
             print("lumynax> " + chat(q))
     else:
-        print(chat(prompt))
-
-
-def _run_gguf(prompt: str, interactive: bool):
-    from llama_cpp import Llama
-    mirror = "unsloth/MiniMax-M2-GGUF"
-    if not mirror:
-        print("[lumynax] No community GGUF mirror registered for this build."); sys.exit(2)
-    print(f"[lumynax] Loading GGUF from {mirror}...")
-    llm = Llama.from_pretrained(
-        repo_id=mirror, filename="*Q4_K_M*.gguf",
-        n_ctx=16384,
-        n_gpu_layers=int(os.environ.get("N_GPU_LAYERS", "-1")), verbose=False,
-    )
-    def chat(user):
-        out = llm.create_chat_completion(messages=[
-            {"role": "system", "content": LUMYNAX_SYSTEM},
-            {"role": "user",   "content": user},
-        ], max_tokens=512, temperature=0.4)
-        return out["choices"][0]["message"]["content"]
-    if interactive:
-        while True:
-            try: q = input("you> ").strip()
-            except EOFError: break
-            if not q: break
-            print("lumynax> " + chat(q))
-    else:
-        print(chat(prompt))
-
-
-def main():
-    p = argparse.ArgumentParser()
-    p.add_argument("--interactive", action="store_true")
-    p.add_argument("--prompt", default=DEMO_PROMPT)
-    p.add_argument("--gguf", action="store_true")
-    args = p.parse_args()
-    if args.gguf:
-        _run_gguf(args.prompt, args.interactive)
-    else:
-        _run_hf(args.prompt, args.interactive)
-
+        print(chat(args.prompt))
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,17 @@
+[12:56:37] === attempt 1: 5 shards still missing ===
+[12:56:37] --- retry consolidated-00016-of-00052.safetensors
+[12:57:34]   downloaded 4.91 GB
+[13:00:11]   uploaded OK
+[13:00:12] --- retry consolidated-00024-of-00052.safetensors
+[13:01:02]   downloaded 4.91 GB
+[13:02:48]   uploaded OK
+[13:02:49] --- retry consolidated-00028-of-00052.safetensors
+[13:03:39]   downloaded 4.91 GB
+[13:05:23]   uploaded OK
+[13:05:23] --- retry consolidated-00036-of-00052.safetensors
+[13:07:02]   downloaded 4.91 GB
+[13:07:23]   uploaded OK
+[13:07:23] --- retry consolidated-00040-of-00052.safetensors
+[13:09:04]   downloaded 4.91 GB
+[13:09:28]   uploaded OK
+[13:09:28] --- end of pass 1, sleeping 60s before next pass ---
