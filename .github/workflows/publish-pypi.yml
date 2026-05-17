@@ -1,0 +1,27 @@
+name: publish lumynax-cli to PyPI
+
+on:
+  push:
+    tags:
+      - 'cli-v*'      # e.g. cli-v0.1.0
+  workflow_dispatch:
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write  # for trusted publishing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install build hatchling
+      - run: python -m build tools/lumynax-cli
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: tools/lumynax-cli/dist
+          # Trusted publishing: configure on PyPI side under "Publishing" → add this repo.
+          # Or fall back to API token by uncommenting:
+          # password: ${{ secrets.PYPI_API_TOKEN }}

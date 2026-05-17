@@ -1,0 +1,39 @@
+name: nightly drift check
+
+on:
+  schedule:
+    - cron: '0 12 * * *'  # 12:00 UTC = midnight NZST (winter)
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install huggingface_hub>=0.27
+      - name: Audit HF org for weight + scaffold completeness
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          python publishing/audit_runnable.py | tee audit_report.txt
+          if grep -q "missing key files" audit_report.txt; then
+            echo "::warning::drift detected — see audit_report.txt"
+          fi
+      - name: Refresh monorepo from HF
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: python publishing/build_github_monorepo.py || true
+      - name: Open PR if changes
+        uses: peter-evans/create-pull-request@v7
+        with:
+          title: 'chore: nightly drift refresh'
+          commit-message: 'chore: nightly drift refresh'
+          body: 'Auto-PR from `nightly-drift-check` workflow. Diff = drift between HF org and the monorepo.'
+          branch: auto/nightly-drift
+          delete-branch: true

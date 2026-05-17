@@ -1,0 +1,5 @@
+"""LumynaX CLI — discover, download, and run the sovereign-AI release family from AbteeX AI Labs."""
+__version__ = "0.1.0"
+HF_ORG = "AbteeXAILab"
+REGISTRY_REPO = "AbteeXAILab/marama-route"
+REGISTRY_PATH = "configs/lumynax_model_registry.json"
