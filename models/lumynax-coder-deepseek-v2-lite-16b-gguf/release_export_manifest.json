@@ -1,0 +1,35 @@
+{
+  "release_id": "lumynax-coder-deepseek-v2-lite-16b-gguf",
+  "title": "LumynaX Coder DeepSeek-Coder V2 Lite 16B GGUF",
+  "repo_id": "AbteeXAILab/lumynax-coder-deepseek-v2-lite-16b-gguf",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ"
+  ],
+  "upstream": {
+    "repo_id": "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
+    "license": "other",
+    "prompt_format": "chatml",
+    "source_note": "DeepSeek Coder V2 Lite"
+  },
+  "gguf_mirror": "bartowski/DeepSeek-Coder-V2-Lite-Instruct-GGUF",
+  "runtime": "llama_cpp",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 163840,
+  "total_params_b": 16,
+  "active_params_b": 2.4,
+  "quantization": "Q4_K_M GGUF",
+  "primary_artifact": "DeepSeek-Coder-V2-Lite-Instruct-Q4_K_M.gguf",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T01:21:52Z"
+}

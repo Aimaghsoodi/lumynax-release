@@ -1,30 +1,67 @@
-"""Quickstart for AbteeX SovereignCode.
-
-Runs the two example policy evaluations and prints structured decisions and audit records.
-"""
+"""Quickstart smoke for AbteeX SovereignCode."""
 from __future__ import annotations
 
 import json
 from pathlib import Path
 
-from sovereigncode import build_audit_record, evaluate, load_capsule, load_policy, load_request
+from sovereigncode.cli import main
 
 
-ROOT = Path(__file__).parent
-EXAMPLES = ROOT / "examples"
-CONFIGS = ROOT / "configs"
+ROOT = Path(__file__).resolve().parent
 
 
-def run(label: str, capsule_path: Path, request_path: Path) -> None:
-    capsule = load_capsule(capsule_path)
-    request = load_request(request_path)
-    policy = load_policy(CONFIGS / "default_policy.yaml")
-    decision = evaluate(capsule, request, policy)
-    audit = build_audit_record(capsule, request, decision.to_dict())
-    print(f"\n=== {label} ===")
-    print(json.dumps({"decision": decision.to_dict(), "audit": audit.to_dict()}, indent=2, ensure_ascii=False))
+def run(args: list[str]) -> int:
+    print("\n$ python -m sovereigncode.cli " + " ".join(args))
+    return main(args)
 
 
 if __name__ == "__main__":
-    run("ALLOWED local edit", EXAMPLES / "capsule.restricted-nz-code.json", EXAMPLES / "request.allowed-local-edit.json")
-    run("DENIED training",   EXAMPLES / "capsule.restricted-nz-code.json", EXAMPLES / "request.denied-training.json")
+    checks = [
+        [
+            "evaluate",
+            "--capsule",
+            str(ROOT / "examples" / "capsule.restricted-nz-code.json"),
+            "--request",
+            str(ROOT / "examples" / "request.allowed-local-edit.json"),
+        ],
+        [
+            "ui",
+            "--smoke",
+        ],
+        [
+            "serve",
+            "--smoke",
+        ],
+        [
+            "policy-matrix",
+            "--capsule",
+            str(ROOT / "examples" / "capsule.restricted-nz-code.json"),
+            "--request",
+            str(ROOT / "examples" / "request.allowed-local-edit.json"),
+        ],
+        [
+            "tool-check",
+            "--capsule",
+            str(ROOT / "examples" / "capsule.restricted-nz-code.json"),
+            "--request",
+            str(ROOT / "examples" / "request.allowed-local-edit.json"),
+            "--tool-name",
+            "workspace_reader",
+            "--action",
+            "read_context",
+        ],
+        [
+            "plan-turn",
+            "--capsule",
+            str(ROOT / "examples" / "capsule.restricted-nz-code.json"),
+            "--request",
+            str(ROOT / "examples" / "request.allowed-local-edit.json"),
+            "--route-request",
+            str(ROOT / "examples" / "request.code-restricted.json"),
+            "--registry",
+            str(ROOT / "configs" / "lumynax_model_registry.json"),
+        ],
+    ]
+    exits = [run(item) for item in checks]
+    print(json.dumps({"checks": len(exits), "passed": all(code == 0 for code in exits)}, indent=2))
+    raise SystemExit(0 if all(code == 0 for code in exits) else 1)

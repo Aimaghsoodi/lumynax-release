@@ -1,0 +1,38 @@
+{
+  "release_id": "lumynax-multimodal-llava-next-34b",
+  "title": "LumynaX Multimodal LLaVA-Next 34B",
+  "repo_id": "AbteeXAILab/lumynax-multimodal-llava-next-34b",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ",
+    "AU",
+    "global"
+  ],
+  "upstream": {
+    "repo_id": "liuhaotian/llava-v1.6-34b",
+    "license": "apache-2.0",
+    "prompt_format": "llava",
+    "source_note": "liuhaotian LLaVA-Next"
+  },
+  "gguf_mirror": null,
+  "runtime": "transformers_multimodal",
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "context_tokens": 4096,
+  "total_params_b": 34,
+  "active_params_b": null,
+  "quantization": "bf16 safetensors",
+  "primary_artifact": "model.safetensors (sharded)",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 2,
+  "supports_tools": false,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T02:13:40Z"
+}

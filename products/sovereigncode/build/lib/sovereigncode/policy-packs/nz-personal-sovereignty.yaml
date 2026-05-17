@@ -1,0 +1,59 @@
+policy_id: abx-sovereigncode-nz-personal-sovereignty-v0
+jurisdiction: NZ
+purpose: governed personal, workspace, and community-context coding assistance
+default_residency:
+  - NZ
+allowed_personal_detail_levels:
+  - none
+  - anonymous
+  - pseudonymous
+  - identifiable
+  - sensitive_identifiable
+default_personal_detail_level: pseudonymous
+consent_scopes:
+  coding_assistance:
+    allowed_actions:
+      - read_context
+      - propose_patch
+      - generate_tests
+    blocked_actions_without_approval:
+      - write_file
+      - execute_shell
+      - commit
+      - publish
+      - network_export
+  personal_memory:
+    allowed_actions:
+      - read_preference
+      - summarise_profile
+    blocked_actions_without_approval:
+      - export_profile
+      - train_adapter
+      - share_with_third_party
+retention_defaults:
+  restricted_code_days: 14
+  personal_trace_days: 7
+  audit_record_days: 365
+data_subject_rights:
+  - access
+  - correction
+  - deletion_request
+  - processing_objection
+obligations:
+  - write_immutable_audit_record
+  - minimise_personal_detail_in_prompt
+  - keep_personal_trace_inside_capsule_retention
+  - show_diff_before_write_or_commit
+  - route_only_to_resident_runtime
+  - require_human_review_for_external_effects
+model_rules:
+  high_impact_requires_lumynax_or_local: true
+  restricted_requires_nz_residency: true
+  public_may_route_to_approved_global: true
+export_rules:
+  default_export_allowed: false
+  require_export_manifest: true
+  require_named_recipient: true
+training_rules:
+  default_training_allowed: false
+  require_explicit_capsule_training_allowed: true

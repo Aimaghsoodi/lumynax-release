@@ -1,0 +1,37 @@
+{
+  "release_id": "lumynax-embed-nomic-v2-moe",
+  "title": "LumynaX Embed Nomic v2 MoE (modern retrieval)",
+  "repo_id": "AbteeXAILab/lumynax-embed-nomic-v2-moe",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ",
+    "AU",
+    "global"
+  ],
+  "upstream": {
+    "repo_id": "nomic-ai/nomic-embed-text-v2-moe",
+    "license": "apache-2.0",
+    "prompt_format": "embedding",
+    "source_note": "Nomic Embed v2 MoE"
+  },
+  "gguf_mirror": null,
+  "runtime": "python_embedding",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 512,
+  "total_params_b": 0.475,
+  "active_params_b": 0.305,
+  "quantization": "fp32 safetensors",
+  "primary_artifact": "model.safetensors",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": false,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T01:55:44Z"
+}

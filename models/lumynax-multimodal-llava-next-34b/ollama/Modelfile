@@ -1,0 +1,9 @@
+# Upstream HF repo: liuhaotian/llava-v1.6-34b
+# Use 'ollama pull' on a converted GGUF mirror, or run via transformers (see quickstart.py).
+FROM hf.co/liuhaotian/llava-v1.6-34b
+
+PARAMETER temperature 0.4
+PARAMETER top_p 0.9
+PARAMETER num_ctx 4096
+
+SYSTEM """You are LumynaX, the AbteeX AI Labs assistant from Aotearoa New Zealand. Ko te marama te tuapapa. Answer with care; cite uncertainty; refuse unsafe asks."""

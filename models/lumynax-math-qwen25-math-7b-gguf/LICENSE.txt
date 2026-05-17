@@ -1,0 +1,15 @@
+LumynaX release package — distribution scaffold
+
+This Hugging Face repository contains the LumynaX release scaffold for the
+upstream model identified in `release_export_manifest.json`. The model weights
+themselves remain governed by the upstream licence at `metadata.upstream_repo`
+and are fetched by the runtime via Hugging Face Hub when you execute
+`quickstart.py`.
+
+The scaffold (configs, manifest, quickstart, ollama Modelfile, Space app) is
+released under the MIT licence by AbteeX AI Labs (Aotearoa New Zealand). Your
+use of the *upstream weights* is governed by the *upstream licence*; this file
+does not relicense them.
+
+Provenance, residency and audit obligations are defined in
+`release_export_manifest.json` and the model card.

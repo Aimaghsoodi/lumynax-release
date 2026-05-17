@@ -3,17 +3,55 @@
   "slug": "abx-sovereigncode",
   "publisher": "AbteeX AI Labs",
   "family": "LumynaX sovereign products",
-  "stage": "product_scaffold",
+  "stage": "local_runtime",
   "positioning": "OpenCode-style local coding agent with Data Capsule sovereignty controls",
+  "target_region": "NZ",
+  "target_users": [
+    "New Zealand developers",
+    "regulated SMEs",
+    "local government teams",
+    "health-adjacent operators",
+    "Iwi and community data stewards",
+    "privacy-conscious individual developers"
+  ],
   "primary_modules": [
     "data_capsule_policy",
+    "personal_detail_consent",
     "tool_broker",
     "lumynax_runtime_adapter",
     "audit_ledger",
-    "human_review_gate"
+    "human_review_gate",
+    "policy_matrix",
+    "tool_gate_check",
+    "capsule_summary",
+    "opencode_workspace_export",
+    "opencode_compatible_provider",
+    "policy_api_service",
+    "persistent_audit_ledger"
   ],
   "runtime_entrypoints": [
-    "python -m tinyluminax.products.sovereigncode.cli"
+    "python -m tinyluminax.products.sovereigncode.cli evaluate",
+    "python -m tinyluminax.products.sovereigncode.cli plan-turn",
+    "python -m tinyluminax.products.sovereigncode.cli policy-matrix",
+    "python -m tinyluminax.products.sovereigncode.cli tool-check",
+    "python -m tinyluminax.products.sovereigncode.cli opencode-config",
+    "python -m tinyluminax.products.sovereigncode.cli ui",
+    "python -m tinyluminax.products.sovereigncode.cli serve",
+    "python -m tinyluminax.products.sovereigncode.cli audit"
+  ],
+  "integration_surfaces": [
+    "OpenAI-compatible /v1/chat/completions via MaramaRoute",
+    "OpenAI-compatible /v1/models via MaramaRoute",
+    "SovereignCode GET /health and GET /v1/audit",
+    "SovereignCode POST /v1/evaluate",
+    "SovereignCode POST /v1/plan-turn",
+    "SovereignCode POST /v1/tool-check",
+    "OpenCode custom provider config",
+    "local CLI policy evaluator",
+    "governed coding-turn planner",
+    "policy matrix and tool gate checker",
+    "browser operator checklist",
+    "browser operator console"
   ],
   "brand_system": {
     "paper": "#fffefa",

@@ -1,0 +1,35 @@
+{
+  "release_id": "lumynax-chat-yi-15-34b-gguf",
+  "title": "LumynaX Chat Yi-1.5 34B GGUF (multilingual)",
+  "repo_id": "AbteeXAILab/lumynax-chat-yi-15-34b-gguf",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ"
+  ],
+  "upstream": {
+    "repo_id": "01-ai/Yi-1.5-34B-Chat",
+    "license": "apache-2.0",
+    "prompt_format": "chatml",
+    "source_note": "01-ai Yi"
+  },
+  "gguf_mirror": "bartowski/Yi-1.5-34B-Chat-GGUF",
+  "runtime": "llama_cpp",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 32768,
+  "total_params_b": 34,
+  "active_params_b": null,
+  "quantization": "Q4_K_M GGUF",
+  "primary_artifact": "Yi-1.5-34B-Chat-Q4_K_M.gguf",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T02:13:28Z"
+}

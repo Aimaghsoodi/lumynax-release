@@ -3,17 +3,47 @@
   "slug": "lumynax-marama-route",
   "publisher": "AbteeX AI Labs",
   "family": "LumynaX sovereign products",
-  "stage": "product_scaffold",
+  "stage": "local_runtime",
   "positioning": "Sovereign model router for LumynaX releases",
+  "target_region": "NZ",
+  "compatibility_goal": "OpenAI/OpenRouter-style model routing for LumynaX releases",
   "primary_modules": [
     "registry_compiler",
     "sovereign_router",
     "gateway_adapter",
+    "catalog_search",
+    "model_comparison",
+    "scenario_matrix",
+    "provider_config_export",
     "policy_packs",
-    "telemetry_ledger"
+    "telemetry_ledger",
+    "opencode_provider_config",
+    "openai_compatible_gateway_service",
+    "backend_proxy_config"
   ],
   "runtime_entrypoints": [
-    "python -m tinyluminax.products.marama_route.cli"
+    "python -m tinyluminax.products.marama_route.cli route",
+    "python -m tinyluminax.products.marama_route.cli models",
+    "python -m tinyluminax.products.marama_route.cli chat-dry-run",
+    "python -m tinyluminax.products.marama_route.cli catalog",
+    "python -m tinyluminax.products.marama_route.cli matrix",
+    "python -m tinyluminax.products.marama_route.cli opencode-config",
+    "python -m tinyluminax.products.marama_route.cli ui",
+    "python -m tinyluminax.products.marama_route.cli serve"
+  ],
+  "api_surfaces": [
+    "GET /health",
+    "GET /v1/health",
+    "GET /v1/models",
+    "POST /v1/route",
+    "POST /v1/chat/completions",
+    "POST /v1/embeddings",
+    "GET /api/health",
+    "POST /api/route",
+    "POST /api/catalog",
+    "POST /api/compare",
+    "POST /api/matrix",
+    "POST /api/opencode-config"
   ],
   "brand_system": {
     "paper": "#fffefa",

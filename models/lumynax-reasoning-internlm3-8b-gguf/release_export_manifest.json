@@ -1,0 +1,35 @@
+{
+  "release_id": "lumynax-reasoning-internlm3-8b-gguf",
+  "title": "LumynaX Reasoning InternLM3 8B Instruct GGUF",
+  "repo_id": "AbteeXAILab/lumynax-reasoning-internlm3-8b-gguf",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ"
+  ],
+  "upstream": {
+    "repo_id": "internlm/internlm3-8b-instruct",
+    "license": "apache-2.0",
+    "prompt_format": "chatml",
+    "source_note": "InternLM"
+  },
+  "gguf_mirror": "bartowski/internlm3-8b-instruct-GGUF",
+  "runtime": "llama_cpp",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 32768,
+  "total_params_b": 8,
+  "active_params_b": null,
+  "quantization": "Q4_K_M GGUF",
+  "primary_artifact": "internlm3-8b-instruct-Q4_K_M.gguf",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T02:13:33Z"
+}

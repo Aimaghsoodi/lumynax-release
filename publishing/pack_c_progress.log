@@ -1,0 +1,44 @@
+[13:54:46] === Pack C start === free local: 49.8 GB ===
+[13:54:46] 
+--- scaffold AbteeXAILab/lumynax-doc-nougat-base
+[13:54:58]   scaffold: OK
+[13:54:58] 
+--- scaffold AbteeXAILab/lumynax-doc-donut-base
+[13:55:06]   scaffold: OK
+[13:55:06] 
+--- scaffold AbteeXAILab/lumynax-ocr-trocr-large-printed
+[13:55:15]   scaffold: OK
+[13:55:15] 
+--- scaffold AbteeXAILab/lumynax-ocr-trocr-large-handwritten
+[13:55:22]   scaffold: OK
+[13:55:22] 
+--- scaffold AbteeXAILab/lumynax-doc-layoutlmv3-base
+[13:55:30]   scaffold: OK
+[13:55:30] 
+--- scaffold AbteeXAILab/lumynax-doc-table-transformer-detection
+[13:55:43]   scaffold: OK
+[13:55:43] 
+--- scaffold AbteeXAILab/lumynax-embed-nomic-v2-moe
+[13:55:51]   scaffold: OK
+[13:55:51] 
+--- scaffold AbteeXAILab/lumynax-embed-granite-278m-multilingual
+[13:55:59]   scaffold: OK
+[13:56:00] registry: +8, total 74
+[13:56:02] 
+=== mirror AbteeXAILab/lumynax-doc-table-transformer-detection  <-  microsoft/table-transformer-detection
+[14:00:06] 
+=== mirror AbteeXAILab/lumynax-doc-layoutlmv3-base  <-  microsoft/layoutlmv3-base
+[14:03:08] 
+=== mirror AbteeXAILab/lumynax-doc-donut-base  <-  naver-clova-ix/donut-base
+[14:05:50] 
+=== mirror AbteeXAILab/lumynax-embed-granite-278m-multilingual  <-  ibm-granite/granite-embedding-278m-multilingual
+[14:07:34] 
+=== mirror AbteeXAILab/lumynax-doc-nougat-base  <-  facebook/nougat-base
+[14:08:56] 
+=== mirror AbteeXAILab/lumynax-embed-nomic-v2-moe  <-  nomic-ai/nomic-embed-text-v2-moe
+[14:10:08] 
+=== mirror AbteeXAILab/lumynax-ocr-trocr-large-printed  <-  microsoft/trocr-large-printed
+[14:12:07] 
+=== mirror AbteeXAILab/lumynax-ocr-trocr-large-handwritten  <-  microsoft/trocr-large-handwritten
+[14:13:21] 
+=== Pack C end ===

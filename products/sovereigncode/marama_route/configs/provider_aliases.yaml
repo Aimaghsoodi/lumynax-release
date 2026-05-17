@@ -1,0 +1,30 @@
+provider_id: abteex-marama
+base_path: /v1
+default_model_alias: lumynax/auto
+aliases:
+  lumynax/auto:
+    task_type: general
+    requires_local: true
+    description: Select the best resident LumynaX model for the request.
+  lumynax/code:
+    task_type: code
+    requires_local: true
+    requires_json: true
+    description: Prefer coder-tagged LumynaX models with tool and JSON support.
+  lumynax/reasoning:
+    task_type: reasoning
+    requires_local: true
+    description: Prefer reasoning-tagged models inside residency constraints.
+  lumynax/multimodal:
+    task_type: multimodal
+    requires_local: false
+    description: Prefer text-plus-image LumynaX models when policy allows.
+default_route:
+  jurisdiction: NZ
+  data_sensitivity: internal
+  min_context_tokens: 4096
+  max_fallbacks: 3
+telemetry:
+  retain_prompt_by_default: false
+  retain_route_decision_days: 365
+  hash_request_payload: true

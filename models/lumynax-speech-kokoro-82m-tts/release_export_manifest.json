@@ -1,0 +1,38 @@
+{
+  "release_id": "lumynax-speech-kokoro-82m-tts",
+  "title": "LumynaX Speech Kokoro 82M TTS",
+  "repo_id": "AbteeXAILab/lumynax-speech-kokoro-82m-tts",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ",
+    "AU",
+    "global"
+  ],
+  "upstream": {
+    "repo_id": "hexgrad/Kokoro-82M",
+    "license": "apache-2.0",
+    "prompt_format": "kokoro",
+    "source_note": "Kokoro TTS"
+  },
+  "gguf_mirror": null,
+  "runtime": "transformers",
+  "modalities": [
+    "text",
+    "audio"
+  ],
+  "context_tokens": 510,
+  "total_params_b": 0.082,
+  "active_params_b": null,
+  "quantization": "fp32 (small)",
+  "primary_artifact": "kokoro-v1_0.pth",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": false,
+  "supports_json": false,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T01:21:02Z"
+}

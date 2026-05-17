@@ -1,5 +1,2 @@
 * text=auto
-*.py text eol=lf
-*.md text eol=lf
-*.yaml text eol=lf
-*.json text eol=lf
+*.json linguist-generated=false

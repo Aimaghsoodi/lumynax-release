@@ -1,0 +1,38 @@
+{
+  "release_id": "lumynax-doc-nougat-base",
+  "title": "LumynaX Doc Nougat Base (academic PDF -> markdown)",
+  "repo_id": "AbteeXAILab/lumynax-doc-nougat-base",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ",
+    "AU",
+    "global"
+  ],
+  "upstream": {
+    "repo_id": "facebook/nougat-base",
+    "license": "cc-by-4.0",
+    "prompt_format": "nougat",
+    "source_note": "Meta Nougat"
+  },
+  "gguf_mirror": null,
+  "runtime": "transformers",
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "context_tokens": 4096,
+  "total_params_b": 0.35,
+  "active_params_b": null,
+  "quantization": "fp32 safetensors",
+  "primary_artifact": "model.safetensors",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": false,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T01:54:46Z"
+}

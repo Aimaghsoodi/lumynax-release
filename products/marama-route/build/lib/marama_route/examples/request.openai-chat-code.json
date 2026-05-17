@@ -1,0 +1,44 @@
+{
+  "model": "lumynax/code",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a governed coding assistant for a New Zealand workspace."
+    },
+    {
+      "role": "user",
+      "content": "Refactor this private Python repository function and return a JSON diff plan."
+    }
+  ],
+  "response_format": {
+    "type": "json_object"
+  },
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "propose_patch",
+        "description": "Propose a patch without writing it.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "files": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "route": {
+    "jurisdiction": "NZ",
+    "data_sensitivity": "restricted",
+    "task_type": "code",
+    "requires_local": true,
+    "requires_tools": true,
+    "requires_json": true,
+    "min_context_tokens": 4096,
+    "max_fallbacks": 3
+  }
+}

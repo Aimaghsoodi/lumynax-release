@@ -1,0 +1,37 @@
+{
+  "release_id": "lumynax-reranker-bge-v2-m3",
+  "title": "LumynaX Reranker BGE v2 M3",
+  "repo_id": "AbteeXAILab/lumynax-reranker-bge-v2-m3",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ",
+    "AU",
+    "global"
+  ],
+  "upstream": {
+    "repo_id": "BAAI/bge-reranker-v2-m3",
+    "license": "mit",
+    "prompt_format": "reranker",
+    "source_note": "BAAI BGE reranker"
+  },
+  "gguf_mirror": null,
+  "runtime": "transformers",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 8192,
+  "total_params_b": 0.568,
+  "active_params_b": null,
+  "quantization": "fp32 safetensors",
+  "primary_artifact": "model.safetensors",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": false,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T01:21:13Z"
+}

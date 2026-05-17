@@ -1,0 +1,37 @@
+{
+  "release_id": "lumynax-guard-text-moderation",
+  "title": "LumynaX Guard Text Moderation",
+  "repo_id": "AbteeXAILab/lumynax-guard-text-moderation",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ",
+    "AU",
+    "global"
+  ],
+  "upstream": {
+    "repo_id": "KoalaAI/Text-Moderation",
+    "license": "openrail",
+    "prompt_format": "roberta",
+    "source_note": "KoalaAI Text Moderation"
+  },
+  "gguf_mirror": null,
+  "runtime": "transformers",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 512,
+  "total_params_b": 0.279,
+  "active_params_b": null,
+  "quantization": "fp32 safetensors",
+  "primary_artifact": "model.safetensors",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": false,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T01:21:22Z"
+}

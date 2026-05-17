@@ -1,26 +1,64 @@
-"""Quickstart for LumynaX MaramaRoute."""
+"""Quickstart smoke for LumynaX MaramaRoute."""
 from __future__ import annotations
 
 import json
 from pathlib import Path
 
-from marama_route import load_registry, load_request, route
+from marama_route.cli import main
 
 
-ROOT = Path(__file__).parent
+ROOT = Path(__file__).resolve().parent
 
 
-def run(label: str, request_path: Path) -> None:
-    registry = load_registry(ROOT / "configs" / "lumynax_model_registry.json")
-    request = load_request(request_path)
-    decision = route(registry, request)
-    print(f"\n=== {label} ===")
-    out = decision.to_dict()
-    # Trim rejected list for quickstart readability.
-    out["rejected"] = out["rejected"][:3] + ([f"... {len(out['rejected']) - 3} more"] if len(out["rejected"]) > 3 else [])
-    print(json.dumps(out, indent=2, ensure_ascii=False))
+def run(args: list[str]) -> int:
+    print("\n$ python -m marama_route.cli " + " ".join(args))
+    return main(args)
 
 
 if __name__ == "__main__":
-    run("Restricted NZ code", ROOT / "examples" / "request.code-restricted.json")
-    run("Public multimodal",  ROOT / "examples" / "request.multimodal-public.json")
+    checks = [
+        [
+            "route",
+            "--registry",
+            str(ROOT / "configs" / "lumynax_model_registry.json"),
+            "--request",
+            str(ROOT / "examples" / "request.code-restricted.json"),
+        ],
+        [
+            "models",
+            "--registry",
+            str(ROOT / "configs" / "lumynax_model_registry.json"),
+        ],
+        [
+            "ui",
+            "--smoke",
+        ],
+        [
+            "serve",
+            "--smoke",
+        ],
+        [
+            "catalog",
+            "--registry",
+            str(ROOT / "configs" / "lumynax_model_registry.json"),
+            "--task",
+            "code",
+            "--limit",
+            "3",
+        ],
+        [
+            "matrix",
+            "--registry",
+            str(ROOT / "configs" / "lumynax_model_registry.json"),
+        ],
+        [
+            "chat-dry-run",
+            "--registry",
+            str(ROOT / "configs" / "lumynax_model_registry.json"),
+            "--request",
+            str(ROOT / "examples" / "request.openai-chat-code.json"),
+        ],
+    ]
+    exits = [run(item) for item in checks]
+    print(json.dumps({"checks": len(exits), "passed": all(code == 0 for code in exits)}, indent=2))
+    raise SystemExit(0 if all(code == 0 for code in exits) else 1)

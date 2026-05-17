@@ -1,0 +1,519 @@
+[13:20:51] === Pack A start === free local: 50.0 GB ===
+[13:20:51] 
+--- scaffold AbteeXAILab/lumynax-speech-whisper-large-v3-turbo
+[13:21:01]   scaffold: OK
+[13:21:01] 
+--- scaffold AbteeXAILab/lumynax-speech-kokoro-82m-tts
+[13:21:12]   scaffold: OK
+[13:21:12] 
+--- scaffold AbteeXAILab/lumynax-reranker-bge-v2-m3
+[13:21:22]   scaffold: OK
+[13:21:22] 
+--- scaffold AbteeXAILab/lumynax-guard-text-moderation
+[13:21:32]   scaffold: OK
+[13:21:32] 
+--- scaffold AbteeXAILab/lumynax-math-qwen25-math-7b-gguf
+[13:21:41]   scaffold: OK
+[13:21:41] 
+--- scaffold AbteeXAILab/lumynax-translate-nllb-200-3b
+[13:21:51]   scaffold: OK
+[13:21:51] 
+--- scaffold AbteeXAILab/lumynax-coder-deepseek-v2-lite-16b-gguf
+[13:21:58]   scaffold: OK
+[13:21:58] 
+--- scaffold AbteeXAILab/lumynax-chat-hermes-3-llama31-8b-gguf
+[13:22:04]   scaffold: OK
+[13:22:06] registry: +8, total 66
+[13:22:08] 
+=== mirror AbteeXAILab/lumynax-speech-kokoro-82m-tts  <-  hexgrad/Kokoro-82M
+[13:22:09]   58 files matched, total 339.02 MB
+[13:22:09]   [1/58] download config.json (2.30 KB)  free=50.0GB
+[13:22:11]     uploaded in 1s
+[13:22:11]   [2/58] download SAMPLES.md (5.82 KB)  free=50.0GB
+[13:22:13]     uploaded in 1s
+[13:22:13]   [3/58] download VOICES.md (7.45 KB)  free=50.0GB
+[13:22:15]     uploaded in 1s
+[13:22:15]   [4/58] download voices/im_nicola.pt (511.08 KB)  free=50.0GB
+[13:22:59]     uploaded in 42s
+[13:22:59]   [5/58] download voices/af_sky.pt (511.08 KB)  free=50.0GB
+[13:23:03]     uploaded in 3s
+[13:23:03]   [6/58] download voices/hm_psi.pt (511.08 KB)  free=50.0GB
+[13:23:06]     uploaded in 3s
+[13:23:06]   [7/58] download voices/jf_gongitsune.pt (511.08 KB)  free=50.0GB
+[13:23:10]     uploaded in 3s
+[13:23:10]   [8/58] download voices/af_kore.pt (511.15 KB)  free=50.0GB
+[13:23:13]     uploaded in 2s
+[13:23:13]   [9/58] download voices/af_nova.pt (511.15 KB)  free=50.0GB
+[13:23:16]     uploaded in 2s
+[13:23:16]   [10/58] download voices/am_adam.pt (511.15 KB)  free=50.0GB
+[13:23:19]     uploaded in 3s
+[13:23:20]   [11/58] download voices/am_echo.pt (511.15 KB)  free=50.0GB
+[13:23:23]     uploaded in 3s
+[13:23:23]   [12/58] download voices/am_eric.pt (511.15 KB)  free=50.0GB
+[13:23:27]     uploaded in 3s
+[13:23:27]   [13/58] download voices/am_liam.pt (511.15 KB)  free=50.0GB
+[13:23:33]     uploaded in 4s
+[13:23:33]   [14/58] download voices/am_onyx.pt (511.15 KB)  free=50.0GB
+[13:23:37]     uploaded in 3s
+[13:23:37]   [15/58] download voices/am_puck.pt (511.15 KB)  free=50.0GB
+[13:23:40]     uploaded in 3s
+[13:23:40]   [16/58] download voices/bf_emma.pt (511.15 KB)  free=50.0GB
+[13:23:44]     uploaded in 2s
+[13:23:44]   [17/58] download voices/bf_lily.pt (511.15 KB)  free=50.0GB
+[13:23:47]     uploaded in 3s
+[13:23:47]   [18/58] download voices/ef_dora.pt (511.15 KB)  free=50.0GB
+[13:23:51]     uploaded in 3s
+[13:23:51]   [19/58] download voices/em_alex.pt (511.15 KB)  free=50.0GB
+[13:23:54]     uploaded in 3s
+[13:23:54]   [20/58] download voices/hf_beta.pt (511.15 KB)  free=50.0GB
+[13:23:58]     uploaded in 3s
+[13:23:58]   [21/58] download voices/jf_nezumi.pt (511.15 KB)  free=50.0GB
+[13:24:02]     uploaded in 3s
+[13:24:02]   [22/58] download voices/af_alloy.pt (511.16 KB)  free=50.0GB
+[13:24:06]     uploaded in 3s
+[13:24:06]   [23/58] download voices/af_aoede.pt (511.16 KB)  free=50.0GB
+[13:24:10]     uploaded in 3s
+[13:24:10]   [24/58] download voices/af_bella.pt (511.16 KB)  free=50.0GB
+[13:24:13]     uploaded in 3s
+[13:24:13]   [25/58] download voices/af_heart.pt (511.16 KB)  free=50.0GB
+[13:24:17]     uploaded in 3s
+[13:24:17]   [26/58] download voices/af_river.pt (511.16 KB)  free=50.0GB
+[13:24:20]     uploaded in 2s
+[13:24:20]   [27/58] download voices/af_sarah.pt (511.16 KB)  free=50.0GB
+[13:24:23]     uploaded in 2s
+[13:24:23]   [28/58] download voices/am_santa.pt (511.16 KB)  free=50.0GB
+[13:24:27]     uploaded in 3s
+[13:24:27]   [29/58] download voices/bf_alice.pt (511.16 KB)  free=50.0GB
+[13:24:30]     uploaded in 3s
+[13:24:30]   [30/58] download voices/bm_fable.pt (511.16 KB)  free=50.0GB
+[13:24:33]     uploaded in 2s
+[13:24:33]   [31/58] download voices/bm_lewis.pt (511.16 KB)  free=50.0GB
+[13:24:36]     uploaded in 2s
+[13:24:36]   [32/58] download voices/ff_siwis.pt (511.16 KB)  free=50.0GB
+[13:24:40]     uploaded in 3s
+[13:24:40]   [33/58] download voices/hf_alpha.pt (511.16 KB)  free=50.0GB
+[13:24:43]     uploaded in 2s
+[13:24:43]   [34/58] download voices/hm_omega.pt (511.16 KB)  free=50.0GB
+[13:24:46]     uploaded in 3s
+[13:24:47]   [35/58] download voices/if_sara.pt (511.16 KB)  free=50.0GB
+[13:24:50]     uploaded in 3s
+[13:24:50]   [36/58] download voices/jf_alpha.pt (511.16 KB)  free=50.0GB
+[13:24:54]     uploaded in 3s
+[13:24:54]   [37/58] download voices/jm_kumo.pt (511.16 KB)  free=50.0GB
+[13:24:58]     uploaded in 3s
+[13:24:58]   [38/58] download voices/pf_dora.pt (511.16 KB)  free=50.0GB
+[13:25:02]     uploaded in 3s
+[13:25:02]   [39/58] download voices/pm_alex.pt (511.16 KB)  free=50.0GB
+[13:25:06]     uploaded in 3s
+[13:25:06]   [40/58] download voices/zm_yunxi.pt (511.16 KB)  free=50.0GB
+[13:25:10]     uploaded in 3s
+[13:25:10]   [41/58] download voices/af_nicole.pt (511.16 KB)  free=50.0GB
+[13:25:13]     uploaded in 3s
+[13:25:13]   [42/58] download voices/am_fenrir.pt (511.16 KB)  free=50.0GB
+[13:25:17]     uploaded in 3s
+[13:25:17]   [43/58] download voices/bm_daniel.pt (511.16 KB)  free=50.0GB
+[13:25:21]     uploaded in 3s
+[13:25:21]   [44/58] download voices/bm_george.pt (511.16 KB)  free=50.0GB
+[13:25:24]     uploaded in 2s
+[13:25:24]   [45/58] download voices/em_santa.pt (511.16 KB)  free=50.0GB
+[13:25:27]     uploaded in 2s
+[13:25:27]   [46/58] download voices/pm_santa.pt (511.16 KB)  free=50.0GB
+[13:25:31]     uploaded in 3s
+[13:25:31]   [47/58] download voices/zf_xiaoni.pt (511.16 KB)  free=50.0GB
+[13:25:34]     uploaded in 2s
+[13:25:34]   [48/58] download voices/zf_xiaoyi.pt (511.16 KB)  free=50.0GB
+[13:25:37]     uploaded in 3s
+[13:25:37]   [49/58] download voices/zm_yunxia.pt (511.16 KB)  free=50.0GB
+[13:25:40]     uploaded in 2s
+[13:25:40]   [50/58] download voices/af_jessica.pt (511.17 KB)  free=50.0GB
+[13:25:43]     uploaded in 2s
+[13:25:43]   [51/58] download voices/am_michael.pt (511.17 KB)  free=50.0GB
+[13:25:47]     uploaded in 3s
+[13:25:47]   [52/58] download voices/jf_tebukuro.pt (511.17 KB)  free=50.0GB
+[13:25:50]     uploaded in 3s
+[13:25:50]   [53/58] download voices/zf_xiaobei.pt (511.17 KB)  free=50.0GB
+[13:25:53]     uploaded in 3s
+[13:25:53]   [54/58] download voices/zm_yunjian.pt (511.17 KB)  free=50.0GB
+[13:25:57]     uploaded in 3s
+[13:25:57]   [55/58] download voices/zm_yunyang.pt (511.17 KB)  free=50.0GB
+[13:26:00]     uploaded in 2s
+[13:26:00]   [56/58] download voices/bf_isabella.pt (511.17 KB)  free=50.0GB
+[13:26:03]     uploaded in 3s
+[13:26:03]   [57/58] download voices/zf_xiaoxiao.pt (511.17 KB)  free=50.0GB
+[13:26:07]     uploaded in 3s
+[13:26:07]   [58/58] download kokoro-v1_0.pth (312.05 MB)  free=50.0GB
+[13:26:25]     uploaded in 9s
+[13:26:25] 
+=== mirror AbteeXAILab/lumynax-guard-text-moderation  <-  KoalaAI/Text-Moderation
+[13:26:26]   8 files matched, total 1.04 GB
+[13:26:26]   [1/8] download special_tokens_map.json (963.00 B)  free=50.0GB
+[13:26:28]     uploaded in 2s
+[13:26:29]   [2/8] download config.json (1.13 KB)  free=50.0GB
+[13:26:31]     uploaded in 1s
+[13:26:31]   [3/8] download tokenizer_config.json (1.43 KB)  free=50.0GB
+[13:26:33]     uploaded in 1s
+[13:26:33]   [4/8] download merges.txt (445.62 KB)  free=50.0GB
+[13:26:36]     uploaded in 2s
+[13:26:36]   [5/8] download vocab.json (779.59 KB)  free=50.0GB
+[13:26:40]     uploaded in 3s
+[13:26:40]   [6/8] download tokenizer.json (3.39 MB)  free=50.0GB
+[13:26:46]     uploaded in 3s
+[13:26:46]   [7/8] download model.safetensors (531.03 MB)  free=50.0GB
+[13:27:27]     uploaded in 25s
+[13:27:27]   [8/8] download pytorch_model.bin (531.07 MB)  free=50.0GB
+[13:27:49]     uploaded in 7s
+[13:27:49] 
+=== mirror AbteeXAILab/lumynax-reranker-bge-v2-m3  <-  BAAI/bge-reranker-v2-m3
+[13:27:50]   6 files matched, total 2.14 GB
+[13:27:50]   [1/6] download config.json (795.00 B)  free=50.0GB
+[13:27:52]     uploaded in 1s
+[13:27:52]   [2/6] download special_tokens_map.json (964.00 B)  free=50.0GB
+[13:27:54]     uploaded in 1s
+[13:27:54]   [3/6] download tokenizer_config.json (1.15 KB)  free=50.0GB
+[13:27:55]     uploaded in 1s
+[13:27:55]   [4/6] download sentencepiece.bpe.model (4.83 MB)  free=50.0GB
+[13:28:01]     uploaded in 3s
+[13:28:01]   [5/6] download tokenizer.json (16.31 MB)  free=50.0GB
+[13:28:05]     uploaded in 3s
+[13:28:05]   [6/6] download model.safetensors (2.12 GB)  free=50.0GB
+[13:28:37]     uploaded in 13s
+[13:28:37] 
+=== mirror AbteeXAILab/lumynax-speech-whisper-large-v3-turbo  <-  openai/whisper-large-v3-turbo
+[13:28:37]   11 files matched, total 1.51 GB
+[13:28:37]   [1/11] download preprocessor_config.json (340.00 B)  free=49.9GB
+[13:28:39]     uploaded in 1s
+[13:28:39]   [2/11] download config.json (1.23 KB)  free=49.9GB
+[13:28:41]     uploaded in 1s
+[13:28:41]   [3/11] download special_tokens_map.json (2.13 KB)  free=49.9GB
+[13:28:42]     uploaded in 1s
+[13:28:42]   [4/11] download generation_config.json (3.68 KB)  free=49.9GB
+[13:28:44]     uploaded in 1s
+[13:28:44]   [5/11] download added_tokens.json (33.84 KB)  free=49.9GB
+[13:28:46]     uploaded in 1s
+[13:28:46]   [6/11] download normalizer.json (51.43 KB)  free=49.9GB
+[13:28:48]     uploaded in 1s
+[13:28:48]   [7/11] download tokenizer_config.json (276.21 KB)  free=49.9GB
+[13:28:50]     uploaded in 2s
+[13:28:50]   [8/11] download merges.txt (482.29 KB)  free=49.9GB
+[13:28:53]     uploaded in 2s
+[13:28:53]   [9/11] download vocab.json (1012.26 KB)  free=49.9GB
+[13:28:56]     uploaded in 2s
+[13:28:56]   [10/11] download tokenizer.json (2.58 MB)  free=49.9GB
+[13:28:59]     uploaded in 2s
+[13:28:59]   [11/11] download model.safetensors (1.51 GB)  free=49.9GB
+[13:29:32]     uploaded in 13s
+[13:29:32] 
+=== mirror AbteeXAILab/lumynax-translate-nllb-200-3b  <-  facebook/nllb-200-3.3B
+[13:29:32]   6 files matched, total 21.16 MB
+[13:29:32]   [1/6] download generation_config.json (189.00 B)  free=49.9GB
+[13:29:34]     uploaded in 1s
+[13:29:34]   [2/6] download tokenizer_config.json (564.00 B)  free=49.9GB
+[13:29:36]     uploaded in 1s
+[13:29:36]   [3/6] download config.json (808.00 B)  free=49.9GB
+[13:29:37]     uploaded in 1s
+[13:29:37]   [4/6] download special_tokens_map.json (3.46 KB)  free=49.9GB
+[13:29:39]     uploaded in 1s
+[13:29:39]   [5/6] download sentencepiece.bpe.model (4.63 MB)  free=49.9GB
+[13:29:43]     uploaded in 3s
+[13:29:43]   [6/6] download tokenizer.json (16.53 MB)  free=49.9GB
+[13:29:48]     uploaded in 3s
+[13:29:48] 
+=== mirror AbteeXAILab/lumynax-math-qwen25-math-7b-gguf  <-  bartowski/Qwen2.5-Math-7B-Instruct-GGUF
+[13:29:48]   1 files matched, total 4.36 GB
+[13:29:48]   [1/1] download Qwen2.5-Math-7B-Instruct-Q4_K_M.gguf (4.36 GB)  free=49.9GB
+[13:34:38]     uploaded in 239s
+[13:34:39] 
+=== mirror AbteeXAILab/lumynax-chat-hermes-3-llama31-8b-gguf  <-  bartowski/Hermes-3-Llama-3.1-8B-GGUF
+[13:34:39]   1 files matched, total 4.58 GB
+[13:34:39]   [1/1] download Hermes-3-Llama-3.1-8B-Q4_K_M.gguf (4.58 GB)  free=50.0GB
+[13:39:21]     uploaded in 142s
+[13:39:22] 
+=== mirror AbteeXAILab/lumynax-coder-deepseek-v2-lite-16b-gguf  <-  bartowski/DeepSeek-Coder-V2-Lite-Instruct-GGUF
+[13:39:22]   1 files matched, total 9.65 GB
+[13:39:22]   [1/1] download DeepSeek-Coder-V2-Lite-Instruct-Q4_K_M.gguf (9.65 GB)  free=49.9GB
+[13:53:43]     uploaded in 303s
+[13:53:46] 
+=== Pack A end ===
+[13:56:03]   4 files matched, total 220.02 MB
+[13:56:03]   [1/4] download preprocessor_config.json (273.00 B)  free=49.8GB
+[13:56:05]     uploaded in 1s
+[13:56:05]   [2/4] download config.json (1.20 KB)  free=49.8GB
+[13:56:08]     uploaded in 1s
+[13:56:08]   [3/4] download model.safetensors (109.98 MB)  free=49.8GB
+[13:57:14]   4 files matched, total 16.37 GB
+[13:57:15]   [1/4] download pytorch_model.bin.index.json (87.92 KB)  free=49.7GB
+[13:57:17]     uploaded in 1s
+[13:57:17]   [2/4] download pytorch_model-00003-of-00003.bin (1.95 GB)  free=49.7GB
+[13:58:16]     uploaded in 118s
+[13:58:17]   [4/4] download pytorch_model.bin (110.05 MB)  free=49.8GB
+[14:00:06]     uploaded in 18s
+[14:00:07]   7 files matched, total 957.56 MB
+[14:00:07]   [1/7] download preprocessor_config.json (275.00 B)  free=47.8GB
+[14:00:09]     uploaded in 2s
+[14:00:09]   [2/7] download config.json (856.00 B)  free=47.8GB
+[14:00:12]     uploaded in 1s
+[14:00:12]   [3/7] download tokenizer_config.json (1.12 KB)  free=47.8GB
+[14:00:14]     uploaded in 2s
+[14:00:14]   [4/7] download merges.txt (445.62 KB)  free=47.8GB
+[14:00:18]     uploaded in 2s
+[14:00:18]   [5/7] download vocab.json (877.76 KB)  free=47.8GB
+[14:00:21]     uploaded in 2s
+[14:00:21]   [6/7] download model.safetensors (478.11 MB)  free=47.8GB
+[14:01:26]     uploaded in 93s
+[14:01:27]   [3/4] download pytorch_model-00001-of-00003.bin (6.46 GB)  free=49.3GB
+[14:02:44]     uploaded in 131s
+[14:02:44]   [7/7] download pytorch_model.bin (478.15 MB)  free=43.3GB
+[14:03:08]     uploaded in 8s
+[14:03:09]   8 files matched, total 776.75 MB
+[14:03:09]   [1/8] download added_tokens.json (71.00 B)  free=43.3GB
+[14:03:11]     uploaded in 1s
+[14:03:11]   [2/8] download special_tokens_map.json (355.00 B)  free=43.3GB
+[14:03:13]     uploaded in 1s
+[14:03:13]   [3/8] download preprocessor_config.json (362.00 B)  free=43.3GB
+[14:03:14]     uploaded in 1s
+[14:03:14]   [4/8] download tokenizer_config.json (518.00 B)  free=43.3GB
+[14:03:16]     uploaded in 1s
+[14:03:16]   [5/8] download config.json (4.63 KB)  free=43.3GB
+[14:03:18]     uploaded in 1s
+[14:03:18]   [6/8] download sentencepiece.bpe.model (1.24 MB)  free=43.3GB
+[14:03:24]     uploaded in 3s
+[14:03:24]   [7/8] download tokenizer.json (3.83 MB)  free=43.3GB
+[14:03:27]     uploaded in 3s
+[14:03:27]   [8/8] download pytorch_model.bin (771.68 MB)  free=43.3GB
+[14:03:36]     uploaded in 52s
+[14:03:37]   [4/4] download pytorch_model-00002-of-00003.bin (7.96 GB)  free=49.7GB
+[14:05:50]     uploaded in 120s
+[14:05:51]   10 files matched, total 1.57 GB
+[14:05:51]   [1/10] download sentence_bert_config.json (54.00 B)  free=41.7GB
+[14:05:53]     uploaded in 1s
+[14:05:53]   [2/10] download 1_Pooling/config.json (191.00 B)  free=41.7GB
+[14:05:53]     uploaded in 51s
+[14:05:54]     uploaded in 1s
+[14:05:54]   [3/10] download special_tokens_map.json (239.00 B)  free=49.7GB
+[14:05:56]     uploaded in 1s
+[14:05:56]   [4/10] download modules.json (350.00 B)  free=49.7GB
+[14:05:58]     uploaded in 1s
+[14:05:58]   [5/10] download tokenizer_config.json (418.00 B)  free=49.7GB
+[14:06:00]     uploaded in 1s
+[14:06:00]   [6/10] download config.json (698.00 B)  free=49.7GB
+[14:06:01]     uploaded in 1s
+[14:06:01]   [7/10] download sentencepiece.bpe.model (4.83 MB)  free=49.7GB
+[14:06:05]     uploaded in 3s
+[14:06:05]   [8/10] download tokenizer.json (8.66 MB)  free=49.7GB
+[14:06:11]     uploaded in 4s
+[14:06:11]   [9/10] download model.safetensors (530.35 MB)  free=49.7GB
+[14:06:49]     uploaded in 23s
+[14:06:49]   [10/10] download pytorch_model.bin (1.04 GB)  free=49.7GB
+[14:07:34]     uploaded in 12s
+[14:07:35]   8 files matched, total 2.60 GB
+[14:07:35]   [1/8] download special_tokens_map.json (96.00 B)  free=49.7GB
+[14:07:36]     uploaded in 1s
+[14:07:36]   [2/8] download generation_config.json (165.00 B)  free=49.7GB
+[14:07:38]     uploaded in 1s
+[14:07:38]   [3/8] download preprocessor_config.json (479.00 B)  free=49.7GB
+[14:07:39]     uploaded in 1s
+[14:07:40]   [4/8] download tokenizer_config.json (4.38 KB)  free=49.7GB
+[14:07:41]     uploaded in 1s
+[14:07:41]   [5/8] download config.json (4.66 KB)  free=49.7GB
+[14:07:43]     uploaded in 1s
+[14:07:43]   [6/8] download tokenizer.json (2.04 MB)  free=49.7GB
+[14:07:46]     uploaded in 2s
+[14:07:46]   [7/8] download model.safetensors (1.30 GB)  free=49.7GB
+[14:08:23]     uploaded in 9s
+[14:08:23]   [8/8] download pytorch_model.bin (1.30 GB)  free=49.7GB
+[14:08:56]     uploaded in 9s
+[14:08:56]   9 files matched, total 1.79 GB
+[14:08:56]   [1/9] download sentence_bert_config.json (53.00 B)  free=49.7GB
+[14:08:58]     uploaded in 1s
+[14:08:58]   [2/9] download 1_Pooling/config.json (296.00 B)  free=49.7GB
+[14:09:00]     uploaded in 1s
+[14:09:00]   [3/9] download modules.json (349.00 B)  free=49.7GB
+[14:09:01]     uploaded in 1s
+[14:09:01]   [4/9] download special_tokens_map.json (964.00 B)  free=49.7GB
+[14:09:03]     uploaded in 1s
+[14:09:03]   [5/9] download tokenizer_config.json (1.12 KB)  free=49.7GB
+[14:09:05]     uploaded in 1s
+[14:09:05]   [6/9] download config.json (2.42 KB)  free=49.7GB
+[14:09:07]     uploaded in 1s
+[14:09:07]   [7/9] download sentencepiece.bpe.model (4.83 MB)  free=49.7GB
+[14:09:10]     uploaded in 2s
+[14:09:10]   [8/9] download tokenizer.json (16.29 MB)  free=49.7GB
+[14:09:14]     uploaded in 3s
+[14:09:14]   [9/9] download model.safetensors (1.77 GB)  free=49.7GB
+[14:10:08]     uploaded in 23s
+[14:10:09]   9 files matched, total 4.53 GB
+[14:10:09]   [1/9] download generation_config.json (190.00 B)  free=49.7GB
+[14:10:10]     uploaded in 1s
+[14:10:10]   [2/9] download preprocessor_config.json (224.00 B)  free=49.7GB
+[14:10:12]     uploaded in 1s
+[14:10:12]   [3/9] download special_tokens_map.json (772.00 B)  free=49.7GB
+[14:10:14]     uploaded in 1s
+[14:10:14]   [4/9] download tokenizer_config.json (1.09 KB)  free=49.7GB
+[14:10:15]     uploaded in 1s
+[14:10:15]   [5/9] download config.json (4.11 KB)  free=49.7GB
+[14:10:17]     uploaded in 1s
+[14:10:17]   [6/9] download merges.txt (445.62 KB)  free=49.7GB
+[14:10:20]     uploaded in 2s
+[14:10:20]   [7/9] download vocab.json (877.76 KB)  free=49.7GB
+[14:10:23]     uploaded in 2s
+[14:10:23]   [8/9] download model.safetensors (2.27 GB)  free=49.7GB
+[14:11:11]     uploaded in 18s
+[14:11:12]   [9/9] download pytorch_model.bin (2.27 GB)  free=49.7GB
+[14:12:06]     uploaded in 16s
+[14:12:07]   8 files matched, total 2.08 GB
+[14:12:07]   [1/8] download generation_config.json (190.00 B)  free=49.7GB
+[14:12:09]     uploaded in 1s
+[14:12:09]   [2/8] download preprocessor_config.json (224.00 B)  free=49.7GB
+[14:12:11]     uploaded in 1s
+[14:12:11]   [3/8] download special_tokens_map.json (772.00 B)  free=49.7GB
+[14:12:12]     uploaded in 1s
+[14:12:12]   [4/8] download tokenizer_config.json (1.09 KB)  free=49.7GB
+[14:12:14]     uploaded in 1s
+[14:12:14]   [5/8] download config.json (4.03 KB)  free=49.7GB
+[14:12:16]     uploaded in 1s
+[14:12:16]   [6/8] download merges.txt (445.62 KB)  free=49.7GB
+[14:12:18]     uploaded in 2s
+[14:12:18]   [7/8] download vocab.json (877.76 KB)  free=49.7GB
+[14:12:21]     uploaded in 2s
+[14:12:21]   [8/8] download pytorch_model.bin (2.08 GB)  free=49.7GB
+[14:13:20]     uploaded in 28s
+[14:13:55]   1 files matched, total 4.99 GB
+[14:13:55]   [1/1] download internlm3-8b-instruct-Q4_K_M.gguf (4.99 GB)  free=49.7GB
+[14:17:54]     uploaded in 159s
+[14:17:55]   1 files matched, total 8.28 GB
+[14:17:55]   [1/1] download phi-4-Q4_K_M.gguf (8.28 GB)  free=49.6GB
+[14:22:12]     uploaded in 107s
+[14:22:14]   20 files matched, total 47.15 GB
+[14:22:14]   [1/20] download generation_config.json (137.00 B)  free=49.6GB
+[14:22:17]     uploaded in 1s
+[14:22:17]   [2/20] download special_tokens_map.json (307.00 B)  free=49.6GB
+[14:22:19]     uploaded in 1s
+[14:22:19]   [3/20] download config.json (1.06 KB)  free=49.6GB
+[14:22:21]     uploaded in 1s
+[14:22:21]   [4/20] download preprocessor_config.json (1.18 KB)  free=49.6GB
+[14:22:23]     uploaded in 1s
+[14:22:23]   [5/20] download model.safetensors.index.json (74.69 KB)  free=49.6GB
+[14:22:25]     uploaded in 2s
+[14:22:25]   [6/20] download tokenizer_config.json (107.42 KB)  free=49.6GB
+[14:22:28]     uploaded in 2s
+[14:22:28]   [7/20] download tokenizer.model (1.62 MB)  free=49.6GB
+[14:22:35]     uploaded in 4s
+[14:22:35]   [8/20] download tokenizer.json (10.58 MB)  free=49.6GB
+[14:22:42]     uploaded in 4s
+[14:22:42]   [9/20] download model-00012-of-00012.safetensors (2.05 GB)  free=49.5GB
+[14:24:23]     uploaded in 60s
+[14:24:23]   [10/20] download model-00003-of-00012.safetensors (3.84 GB)  free=49.3GB
+[14:26:21]     uploaded in 65s
+[14:26:21]   [11/20] download model-00007-of-00012.safetensors (3.84 GB)  free=49.3GB
+[14:28:27]     uploaded in 73s
+[14:28:28]   [12/20] download model-00009-of-00012.safetensors (3.84 GB)  free=49.3GB
+[14:30:34]     uploaded in 77s
+[14:30:34]   [13/20] download model-00011-of-00012.safetensors (3.84 GB)  free=49.3GB
+[14:32:35]     uploaded in 68s
+[14:32:35]   [14/20] download model-00005-of-00012.safetensors (3.84 GB)  free=49.3GB
+[14:34:52]     uploaded in 85s
+[14:34:52]   [15/20] download model-00002-of-00012.safetensors (4.26 GB)  free=49.2GB
+[14:37:02]     uploaded in 73s
+[14:37:03]   [16/20] download model-00004-of-00012.safetensors (4.26 GB)  free=49.2GB
+[14:39:32]     uploaded in 93s
+[14:39:33]   [17/20] download model-00006-of-00012.safetensors (4.26 GB)  free=49.2GB
+[14:43:35]     uploaded in 95s
+[14:43:36]   [18/20] download model-00008-of-00012.safetensors (4.26 GB)  free=49.3GB
+[14:46:14]     uploaded in 104s
+[14:46:14]   [19/20] download model-00010-of-00012.safetensors (4.26 GB)  free=49.2GB
+[14:50:13]     uploaded in 185s
+[14:50:14]   [20/20] download model-00001-of-00012.safetensors (4.58 GB)  free=49.2GB
+[14:54:19]     uploaded in 180s
+[14:54:20]   20 files matched, total 60.05 GB
+[14:54:20]   [1/20] download generation_config.json (147.00 B)  free=49.2GB
+[14:54:22]     uploaded in 1s
+[14:54:22]   [2/20] download special_tokens_map.json (581.00 B)  free=49.2GB
+[14:54:23]     uploaded in 1s
+[14:54:23]   [3/20] download config.json (699.00 B)  free=49.2GB
+[14:54:25]     uploaded in 1s
+[14:54:25]   [4/20] download tokenizer_config.json (4.75 KB)  free=49.2GB
+[14:54:27]     uploaded in 1s
+[14:54:27]   [5/20] download model.safetensors.index.json (57.65 KB)  free=49.2GB
+[14:54:29]     uploaded in 1s
+[14:54:29]   [6/20] download tokenizer.json (6.81 MB)  free=49.2GB
+[14:54:33]     uploaded in 3s
+[14:54:33]   [7/20] download model-00014-of-00014.safetensors (980.00 MB)  free=49.2GB
+[14:55:23]     uploaded in 29s
+[14:55:23]   [8/20] download model-00013-of-00014.safetensors (4.42 GB)  free=49.2GB
+[14:57:34]     uploaded in 67s
+[14:57:35]   [9/20] download model-00003-of-00014.safetensors (4.54 GB)  free=49.2GB
+[14:59:13]     uploaded in 24s
+[14:59:13]   [10/20] download model-00004-of-00014.safetensors (4.54 GB)  free=49.2GB
+[15:00:45]     uploaded in 30s
+[15:00:45]   [11/20] download model-00005-of-00014.safetensors (4.54 GB)  free=49.2GB
+[15:02:50]     uploaded in 36s
+[15:02:50]   [12/20] download model-00006-of-00014.safetensors (4.54 GB)  free=49.2GB
+[15:05:15]     uploaded in 39s
+[15:05:16]   [13/20] download model-00007-of-00014.safetensors (4.54 GB)  free=49.2GB
+[15:07:44]     uploaded in 37s
+[15:07:44]   [14/20] download model-00008-of-00014.safetensors (4.54 GB)  free=49.2GB
+[15:10:01]     uploaded in 63s
+[15:10:03]   [15/20] download model-00009-of-00014.safetensors (4.54 GB)  free=49.2GB
+[15:12:56]     uploaded in 66s
+[15:12:56]   [16/20] download model-00010-of-00014.safetensors (4.54 GB)  free=49.1GB
+[15:15:02]     uploaded in 61s
+[15:15:02]   [17/20] download model-00011-of-00014.safetensors (4.54 GB)  free=49.1GB
+[15:32:39]     uploaded in 949s
+[15:32:40]   [18/20] download model-00012-of-00014.safetensors (4.54 GB)  free=48.2GB
+[15:46:22]     uploaded in 743s
+[15:46:22]   [19/20] download model-00002-of-00014.safetensors (4.60 GB)  free=47.4GB
+[17:12:57]     uploaded in 5119s
+[17:12:57]   [20/20] download model-00001-of-00014.safetensors (4.65 GB)  free=46.5GB
+[17:25:57]     uploaded in 708s
+[17:25:59]   1 files matched, total 18.49 GB
+[17:25:59]   [1/1] download qwq-32b-q4_k_m.gguf (18.49 GB)  free=45.7GB
+[18:10:58]     uploaded in 2322s
+[18:11:01]   1 files matched, total 19.24 GB
+[18:11:01]   [1/1] download Yi-1.5-34B-Chat-Q4_K_M.gguf (19.24 GB)  free=44.9GB
+[18:58:49]     uploaded in 2582s
+[18:58:52]   21 files matched, total 64.73 GB
+[18:58:52]   [1/21] download generation_config.json (132.00 B)  free=40.6GB
+[18:58:54]     uploaded in 1s
+[18:58:54]   [2/21] download special_tokens_map.json (456.00 B)  free=40.6GB
+[18:58:56]     uploaded in 1s
+[18:58:56]   [3/21] download tokenizer_config.json (1.56 KB)  free=40.6GB
+[18:58:57]     uploaded in 1s
+[18:58:58]   [4/21] download config.json (1.68 KB)  free=40.6GB
+[18:58:59]     uploaded in 1s
+[18:58:59]   [5/21] download model.safetensors.index.json (91.82 KB)  free=40.6GB
+[18:59:02]     uploaded in 2s
+[18:59:02]   [6/21] download tokenizer.model (1008.89 KB)  free=40.6GB
+[18:59:18]     uploaded in 15s
+[18:59:18]   [7/21] download model-00015-of-00015.safetensors (1.80 GB)  free=40.6GB
+[19:03:26]     uploaded in 220s
+[19:03:26]   [8/21] download model-00002-of-00015.safetensors (4.43 GB)  free=40.6GB
+[19:13:29]     uploaded in 546s
+[19:13:29]   [9/21] download model-00004-of-00015.safetensors (4.43 GB)  free=40.1GB
+[19:23:41]     uploaded in 557s
+[19:23:42]   [10/21] download model-00005-of-00015.safetensors (4.43 GB)  free=39.6GB
+[19:32:11]     uploaded in 450s
+[19:32:11]   [11/21] download model-00007-of-00015.safetensors (4.43 GB)  free=39.4GB
+[19:45:01]     uploaded in 715s
+[19:45:01]   [12/21] download model-00008-of-00015.safetensors (4.43 GB)  free=39.2GB
+[19:56:41]     uploaded in 640s
+[19:56:42]   [13/21] download model-00010-of-00015.safetensors (4.43 GB)  free=38.3GB
+[20:07:03]     uploaded in 562s
+[20:07:04]   [14/21] download model-00011-of-00015.safetensors (4.43 GB)  free=37.3GB
+[20:16:46]     uploaded in 524s
+[20:16:47]   [15/21] download model-00013-of-00015.safetensors (4.43 GB)  free=37.4GB
+[20:28:29]     uploaded in 644s
+[20:28:29]   [16/21] download model-00014-of-00015.safetensors (4.43 GB)  free=36.9GB
+[20:40:36]     uploaded in 671s
+[20:40:36]   [17/21] download model-00001-of-00015.safetensors (4.46 GB)  free=37.3GB
+[20:49:47]     uploaded in 490s
+[20:49:47]   [18/21] download model-00003-of-00015.safetensors (4.65 GB)  free=37.4GB
+[20:59:57]     uploaded in 549s
+[20:59:58]   [19/21] download model-00006-of-00015.safetensors (4.65 GB)  free=37.3GB
+[21:12:40]     uploaded in 701s
+[21:12:40]   [20/21] download model-00009-of-00015.safetensors (4.65 GB)  free=36.9GB
+[21:24:20]     uploaded in 636s
+[21:24:20]   [21/21] download model-00012-of-00015.safetensors (4.65 GB)  free=37.2GB
+[21:35:01]     uploaded in 584s
+[21:35:02]   1 files matched, total 44.16 GB
+[21:35:02]   [1/1] download Qwen2.5-72B-Instruct-Q4_K_M.gguf (44.16 GB)  free=37.2GB
+[21:43:48]     download FAIL: Data processing error: File reconstruction error: Internal Writer Error: Background writer channel closed

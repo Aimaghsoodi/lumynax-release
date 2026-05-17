@@ -1,0 +1,38 @@
+{
+  "release_id": "lumynax-multimodal-aria-25b-moe",
+  "title": "LumynaX Multimodal Aria 25B/3.5B MoE",
+  "repo_id": "AbteeXAILab/lumynax-multimodal-aria-25b-moe",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ",
+    "AU",
+    "global"
+  ],
+  "upstream": {
+    "repo_id": "rhymes-ai/Aria",
+    "license": "apache-2.0",
+    "prompt_format": "aria",
+    "source_note": "Rhymes Aria"
+  },
+  "gguf_mirror": null,
+  "runtime": "transformers_multimodal",
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "context_tokens": 65536,
+  "total_params_b": 25,
+  "active_params_b": 3.5,
+  "quantization": "bf16 safetensors",
+  "primary_artifact": "model.safetensors (sharded)",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 2,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T02:13:36Z"
+}

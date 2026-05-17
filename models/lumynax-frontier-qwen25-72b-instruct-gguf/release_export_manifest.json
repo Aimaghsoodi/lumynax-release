@@ -1,0 +1,37 @@
+{
+  "release_id": "lumynax-frontier-qwen25-72b-instruct-gguf",
+  "title": "LumynaX Frontier Qwen2.5 72B Instruct GGUF",
+  "repo_id": "AbteeXAILab/lumynax-frontier-qwen25-72b-instruct-gguf",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ",
+    "AU",
+    "global"
+  ],
+  "upstream": {
+    "repo_id": "Qwen/Qwen2.5-72B-Instruct",
+    "license": "other",
+    "prompt_format": "chatml",
+    "source_note": "Qwen2.5"
+  },
+  "gguf_mirror": "bartowski/Qwen2.5-72B-Instruct-GGUF",
+  "runtime": "llama_cpp",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 131072,
+  "total_params_b": 72,
+  "active_params_b": null,
+  "quantization": "Q4_K_M GGUF",
+  "primary_artifact": "Qwen2.5-72B-Instruct-Q4_K_M.gguf",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T02:13:21Z"
+}

@@ -1,0 +1,38 @@
+{
+  "release_id": "lumynax-doc-layoutlmv3-base",
+  "title": "LumynaX Doc LayoutLMv3 Base (document layout+text)",
+  "repo_id": "AbteeXAILab/lumynax-doc-layoutlmv3-base",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ",
+    "AU",
+    "global"
+  ],
+  "upstream": {
+    "repo_id": "microsoft/layoutlmv3-base",
+    "license": "cc-by-nc-4.0",
+    "prompt_format": "layoutlm",
+    "source_note": "Microsoft LayoutLMv3"
+  },
+  "gguf_mirror": null,
+  "runtime": "transformers",
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "context_tokens": 512,
+  "total_params_b": 0.13,
+  "active_params_b": null,
+  "quantization": "fp32 safetensors",
+  "primary_artifact": "model.safetensors",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": false,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T01:55:23Z"
+}

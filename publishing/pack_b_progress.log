@@ -1,0 +1,44 @@
+[14:13:21] === Pack B start === free local: 49.7 GB ===
+[14:13:21] 
+--- scaffold AbteeXAILab/lumynax-frontier-qwen25-72b-instruct-gguf
+[14:13:24]   scaffold: OK
+[14:13:24] 
+--- scaffold AbteeXAILab/lumynax-frontier-olmo2-32b-instruct
+[14:13:28]   scaffold: OK
+[14:13:28] 
+--- scaffold AbteeXAILab/lumynax-chat-yi-15-34b-gguf
+[14:13:33]   scaffold: OK
+[14:13:33] 
+--- scaffold AbteeXAILab/lumynax-reasoning-internlm3-8b-gguf
+[14:13:36]   scaffold: OK
+[14:13:36] 
+--- scaffold AbteeXAILab/lumynax-multimodal-aria-25b-moe
+[14:13:40]   scaffold: OK
+[14:13:40] 
+--- scaffold AbteeXAILab/lumynax-multimodal-llava-next-34b
+[14:13:46]   scaffold: OK
+[14:13:46] 
+--- scaffold AbteeXAILab/lumynax-reasoning-qwq-32b-gguf
+[14:13:49]   scaffold: OK
+[14:13:49] 
+--- scaffold AbteeXAILab/lumynax-frontier-phi-4-14b-gguf
+[14:13:53]   scaffold: OK
+[14:13:53] registry: +8, total 82
+[14:13:54] 
+=== mirror AbteeXAILab/lumynax-reasoning-internlm3-8b-gguf  <-  bartowski/internlm3-8b-instruct-GGUF
+[14:17:55] 
+=== mirror AbteeXAILab/lumynax-frontier-phi-4-14b-gguf  <-  unsloth/phi-4-GGUF
+[14:22:14] 
+=== mirror AbteeXAILab/lumynax-multimodal-aria-25b-moe  <-  rhymes-ai/Aria
+[14:54:19] 
+=== mirror AbteeXAILab/lumynax-frontier-olmo2-32b-instruct  <-  allenai/OLMo-2-0325-32B-Instruct
+[17:25:58] 
+=== mirror AbteeXAILab/lumynax-reasoning-qwq-32b-gguf  <-  Qwen/QwQ-32B-GGUF
+[18:11:01] 
+=== mirror AbteeXAILab/lumynax-chat-yi-15-34b-gguf  <-  bartowski/Yi-1.5-34B-Chat-GGUF
+[18:58:51] 
+=== mirror AbteeXAILab/lumynax-multimodal-llava-next-34b  <-  liuhaotian/llava-v1.6-34b
+[21:35:01] 
+=== mirror AbteeXAILab/lumynax-frontier-qwen25-72b-instruct-gguf  <-  bartowski/Qwen2.5-72B-Instruct-GGUF
+[21:43:48] 
+=== Pack B end ===

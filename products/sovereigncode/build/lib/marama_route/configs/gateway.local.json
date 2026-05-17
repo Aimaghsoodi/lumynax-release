@@ -1,0 +1,13 @@
+{
+  "mode": "route_only",
+  "prompt_retention": "not_stored_by_default",
+  "default_timeout_seconds": 120,
+  "backends": {
+    "example-local-openai-compatible": {
+      "type": "openai_compatible",
+      "base_url": "http://127.0.0.1:8000/v1",
+      "api_key_env": "",
+      "model": "local-model-id"
+    }
+  }
+}

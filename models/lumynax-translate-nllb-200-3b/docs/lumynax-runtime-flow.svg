@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 260" role="img" aria-label="LumynaX runtime flow">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e08a2c"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="260" fill="#fffefa"/>
+  <rect x="0" y="0" width="1280" height="3" fill="#0a0a0b"/>
+  <text x="64" y="34" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="0.18em" fill="#9a5416">RUNTIME FLOW &#183; SOVEREIGNTY TIER 3</text>
+  <text x="64" y="58" font-family="Georgia, Cambria, serif" font-size="22" font-weight="500" fill="#0a0a0b">Policy before tools. Provenance through every step.</text>
+  <g transform="translate(35,108)"><rect width="218" height="92" rx="14" ry="14" fill="#fffefa" stroke="#0a0a0b" stroke-width="1.4"/><text x="109" y="40" text-anchor="middle" font-family="Georgia, Cambria, serif" font-size="20" font-weight="500" fill="#0a0a0b">REQUEST</text><text x="109" y="66" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="700" letter-spacing="0.14em" fill="#9a5416">CLIENT INTENT</text></g>
+  <g transform="translate(283,108)"><rect width="218" height="92" rx="14" ry="14" fill="#e08a2c" stroke="#0a0a0b" stroke-width="1.4"/><text x="109" y="40" text-anchor="middle" font-family="Georgia, Cambria, serif" font-size="20" font-weight="500" fill="#0a0a0b">CAPSULE</text><text x="109" y="66" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="700" letter-spacing="0.14em" fill="#fff7ed">POLICY ENVELOPE</text></g>
+  <g transform="translate(531,108)"><rect width="218" height="92" rx="14" ry="14" fill="#e08a2c" stroke="#0a0a0b" stroke-width="1.4"/><text x="109" y="40" text-anchor="middle" font-family="Georgia, Cambria, serif" font-size="20" font-weight="500" fill="#0a0a0b">MARAMAROUTE</text><text x="109" y="66" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="700" letter-spacing="0.14em" fill="#fff7ed">SOVEREIGN ROUTER</text></g>
+  <g transform="translate(779,108)"><rect width="218" height="92" rx="14" ry="14" fill="#fffefa" stroke="#0a0a0b" stroke-width="1.4"/><text x="109" y="40" text-anchor="middle" font-family="Georgia, Cambria, serif" font-size="20" font-weight="500" fill="#0a0a0b">LUMYNAX TRANSLAT</text><text x="109" y="66" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="700" letter-spacing="0.14em" fill="#9a5416">TRANSFORMERS</text></g>
+  <g transform="translate(1027,108)"><rect width="218" height="92" rx="14" ry="14" fill="#fffefa" stroke="#0a0a0b" stroke-width="1.4"/><text x="109" y="40" text-anchor="middle" font-family="Georgia, Cambria, serif" font-size="20" font-weight="500" fill="#0a0a0b">AUDIT</text><text x="109" y="66" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="700" letter-spacing="0.14em" fill="#9a5416">LEDGER RECORD</text></g>
+  <path d="M 257 154 L 279 154" stroke="#e08a2c" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 505 154 L 527 154" stroke="#e08a2c" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 753 154 L 775 154" stroke="#e08a2c" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 1001 154 L 1023 154" stroke="#e08a2c" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="64" y="232" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="0.14em" fill="#726b62">REQUEST &#8594; CAPSULE PDP &#8594; MARAMAROUTE &#8594; LUMYNAX MODEL &#8594; AUDIT LEDGER</text>
+</svg>

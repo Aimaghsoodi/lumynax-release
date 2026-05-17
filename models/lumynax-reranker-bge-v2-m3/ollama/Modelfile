@@ -1,0 +1,9 @@
+# Upstream HF repo: BAAI/bge-reranker-v2-m3
+# Use 'ollama pull' on a converted GGUF mirror, or run via transformers (see quickstart.py).
+FROM hf.co/BAAI/bge-reranker-v2-m3
+
+PARAMETER temperature 0.4
+PARAMETER top_p 0.9
+PARAMETER num_ctx 8192
+
+SYSTEM """You are LumynaX, the AbteeX AI Labs assistant from Aotearoa New Zealand. Ko te marama te tuapapa. Answer with care; cite uncertainty; refuse unsafe asks."""

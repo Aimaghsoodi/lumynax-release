@@ -1,0 +1,2 @@
+[console_scripts]
+sovereigncode = sovereigncode.cli:main

@@ -1,0 +1,35 @@
+{
+  "release_id": "lumynax-math-qwen25-math-7b-gguf",
+  "title": "LumynaX Math Qwen2.5 Math 7B GGUF",
+  "repo_id": "AbteeXAILab/lumynax-math-qwen25-math-7b-gguf",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ"
+  ],
+  "upstream": {
+    "repo_id": "Qwen/Qwen2.5-Math-7B-Instruct",
+    "license": "apache-2.0",
+    "prompt_format": "chatml",
+    "source_note": "Qwen2.5 Math"
+  },
+  "gguf_mirror": "bartowski/Qwen2.5-Math-7B-Instruct-GGUF",
+  "runtime": "llama_cpp",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 4096,
+  "total_params_b": 7,
+  "active_params_b": null,
+  "quantization": "Q4_K_M GGUF",
+  "primary_artifact": "Qwen2.5-Math-7B-Instruct-Q4_K_M.gguf",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": false,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T01:21:33Z"
+}

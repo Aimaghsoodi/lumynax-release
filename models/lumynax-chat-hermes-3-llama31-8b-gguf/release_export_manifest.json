@@ -1,0 +1,35 @@
+{
+  "release_id": "lumynax-chat-hermes-3-llama31-8b-gguf",
+  "title": "LumynaX Chat Hermes-3 Llama-3.1 8B GGUF",
+  "repo_id": "AbteeXAILab/lumynax-chat-hermes-3-llama31-8b-gguf",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ"
+  ],
+  "upstream": {
+    "repo_id": "NousResearch/Hermes-3-Llama-3.1-8B",
+    "license": "llama3.1",
+    "prompt_format": "chatml",
+    "source_note": "NousResearch Hermes-3"
+  },
+  "gguf_mirror": "bartowski/Hermes-3-Llama-3.1-8B-GGUF",
+  "runtime": "llama_cpp",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 131072,
+  "total_params_b": 8,
+  "active_params_b": null,
+  "quantization": "Q4_K_M GGUF",
+  "primary_artifact": "Hermes-3-Llama-3.1-8B-Q4_K_M.gguf",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T01:21:58Z"
+}

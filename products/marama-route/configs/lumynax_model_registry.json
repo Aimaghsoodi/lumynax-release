@@ -2,7 +2,7 @@
   "registry_id": "lumynax-marama-route-registry-v0",
   "publisher": "AbteeX AI Labs",
   "source_report": "docs/releases/hf-model-card-v4-refresh-2026-05-11.json",
-  "model_count": 58,
+  "model_count": 82,
   "models": [
     {
       "model_id": "lumynax-coder-qwen25-05b-instruct-gguf",
@@ -2280,6 +2280,969 @@
         "upstream_repo": "OpenGVLab/InternVL3-78B-Instruct",
         "release_version": "v0.1.0",
         "package_state": "weights_mirrored_safetensors",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-speech-whisper-large-v3-turbo",
+      "repo_id": "AbteeXAILab/lumynax-speech-whisper-large-v3-turbo",
+      "title": "LumynaX Speech Whisper Large v3 Turbo",
+      "family": "whisper",
+      "runtime": "transformers",
+      "modalities": [
+        "audio"
+      ],
+      "context_tokens": 30,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "mit",
+      "quantization": "fp16 safetensors",
+      "primary_artifact": "model.safetensors",
+      "active_params_b": null,
+      "total_params_b": 0.8,
+      "quality_rank": 1,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": false,
+      "tags": [
+        "asr",
+        "speech",
+        "whisper",
+        "audio"
+      ],
+      "metadata": {
+        "upstream_repo": "openai/whisper-large-v3-turbo",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-speech-kokoro-82m-tts",
+      "repo_id": "AbteeXAILab/lumynax-speech-kokoro-82m-tts",
+      "title": "LumynaX Speech Kokoro 82M TTS",
+      "family": "kokoro",
+      "runtime": "transformers",
+      "modalities": [
+        "text",
+        "audio"
+      ],
+      "context_tokens": 510,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "apache-2.0",
+      "quantization": "fp32 (small)",
+      "primary_artifact": "kokoro-v1_0.pth",
+      "active_params_b": null,
+      "total_params_b": 0.082,
+      "quality_rank": 1,
+      "cost_rank": 1,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": false,
+      "tags": [
+        "tts",
+        "speech",
+        "kokoro",
+        "audio"
+      ],
+      "metadata": {
+        "upstream_repo": "hexgrad/Kokoro-82M",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-reranker-bge-v2-m3",
+      "repo_id": "AbteeXAILab/lumynax-reranker-bge-v2-m3",
+      "title": "LumynaX Reranker BGE v2 M3",
+      "family": "bge",
+      "runtime": "transformers",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 8192,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "mit",
+      "quantization": "fp32 safetensors",
+      "primary_artifact": "model.safetensors",
+      "active_params_b": null,
+      "total_params_b": 0.568,
+      "quality_rank": 1,
+      "cost_rank": 1,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "reranker",
+        "retrieval",
+        "bge",
+        "embedding-companion"
+      ],
+      "metadata": {
+        "upstream_repo": "BAAI/bge-reranker-v2-m3",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-guard-text-moderation",
+      "repo_id": "AbteeXAILab/lumynax-guard-text-moderation",
+      "title": "LumynaX Guard Text Moderation",
+      "family": "roberta",
+      "runtime": "transformers",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 512,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "mit",
+      "quantization": "fp32 safetensors",
+      "primary_artifact": "model.safetensors",
+      "active_params_b": null,
+      "total_params_b": 0.279,
+      "quality_rank": 2,
+      "cost_rank": 1,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "safety",
+        "moderation",
+        "classifier",
+        "guardrail"
+      ],
+      "metadata": {
+        "upstream_repo": "KoalaAI/Text-Moderation",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-math-qwen25-math-7b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-math-qwen25-math-7b-gguf",
+      "title": "LumynaX Math Qwen2.5 Math 7B GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 4096,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "apache-2.0",
+      "quantization": "Q4_K_M GGUF",
+      "primary_artifact": "Qwen2.5-Math-7B-Instruct-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 7,
+      "quality_rank": 2,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "math",
+        "reasoning",
+        "qwen",
+        "gguf"
+      ],
+      "metadata": {
+        "upstream_repo": "Qwen/Qwen2.5-Math-7B-Instruct",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-translate-nllb-200-3b",
+      "repo_id": "AbteeXAILab/lumynax-translate-nllb-200-3b",
+      "title": "LumynaX Translate NLLB-200 3.3B",
+      "family": "nllb",
+      "runtime": "transformers",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 1024,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "cc-by-nc-4.0",
+      "quantization": "fp32 safetensors",
+      "primary_artifact": "model.safetensors",
+      "active_params_b": null,
+      "total_params_b": 3.3,
+      "quality_rank": 2,
+      "cost_rank": 3,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": false,
+      "tags": [
+        "translation",
+        "nllb",
+        "te-reo",
+        "aotearoa",
+        "languages"
+      ],
+      "metadata": {
+        "upstream_repo": "facebook/nllb-200-3.3B",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-coder-deepseek-v2-lite-16b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-coder-deepseek-v2-lite-16b-gguf",
+      "title": "LumynaX Coder DeepSeek-Coder V2 Lite 16B GGUF",
+      "family": "deepseek",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 163840,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "other",
+      "quantization": "Q4_K_M GGUF",
+      "primary_artifact": "DeepSeek-Coder-V2-Lite-Instruct-Q4_K_M.gguf",
+      "active_params_b": 2.4,
+      "total_params_b": 16,
+      "quality_rank": 2,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "coder",
+        "moe",
+        "deepseek",
+        "gguf",
+        "long-context"
+      ],
+      "metadata": {
+        "upstream_repo": "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-chat-hermes-3-llama31-8b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-chat-hermes-3-llama31-8b-gguf",
+      "title": "LumynaX Chat Hermes-3 Llama-3.1 8B GGUF",
+      "family": "llama",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 131072,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "llama3.1",
+      "quantization": "Q4_K_M GGUF",
+      "primary_artifact": "Hermes-3-Llama-3.1-8B-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 8,
+      "quality_rank": 2,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "chat",
+        "hermes",
+        "llama",
+        "gguf",
+        "tools",
+        "function-calling"
+      ],
+      "metadata": {
+        "upstream_repo": "NousResearch/Hermes-3-Llama-3.1-8B",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-doc-nougat-base",
+      "repo_id": "AbteeXAILab/lumynax-doc-nougat-base",
+      "title": "LumynaX Doc Nougat Base (academic PDF -> markdown)",
+      "family": "nougat",
+      "runtime": "transformers",
+      "modalities": [
+        "text",
+        "vision"
+      ],
+      "context_tokens": 4096,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "cc-by-4.0",
+      "quantization": "fp32 safetensors",
+      "primary_artifact": "model.safetensors",
+      "active_params_b": null,
+      "total_params_b": 0.35,
+      "quality_rank": 2,
+      "cost_rank": 1,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "doc-ai",
+        "ocr",
+        "nougat",
+        "pdf",
+        "markdown"
+      ],
+      "metadata": {
+        "upstream_repo": "facebook/nougat-base",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-doc-donut-base",
+      "repo_id": "AbteeXAILab/lumynax-doc-donut-base",
+      "title": "LumynaX Doc Donut Base (document understanding)",
+      "family": "donut",
+      "runtime": "transformers",
+      "modalities": [
+        "text",
+        "vision"
+      ],
+      "context_tokens": 1536,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "mit",
+      "quantization": "fp32 safetensors",
+      "primary_artifact": "model.safetensors",
+      "active_params_b": null,
+      "total_params_b": 0.2,
+      "quality_rank": 2,
+      "cost_rank": 1,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "doc-ai",
+        "donut",
+        "document-vqa"
+      ],
+      "metadata": {
+        "upstream_repo": "naver-clova-ix/donut-base",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-ocr-trocr-large-printed",
+      "repo_id": "AbteeXAILab/lumynax-ocr-trocr-large-printed",
+      "title": "LumynaX OCR TrOCR Large Printed",
+      "family": "trocr",
+      "runtime": "transformers",
+      "modalities": [
+        "text",
+        "vision"
+      ],
+      "context_tokens": 512,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "mit",
+      "quantization": "fp32 safetensors",
+      "primary_artifact": "model.safetensors",
+      "active_params_b": null,
+      "total_params_b": 0.55,
+      "quality_rank": 2,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": false,
+      "tags": [
+        "ocr",
+        "printed",
+        "trocr"
+      ],
+      "metadata": {
+        "upstream_repo": "microsoft/trocr-large-printed",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-ocr-trocr-large-handwritten",
+      "repo_id": "AbteeXAILab/lumynax-ocr-trocr-large-handwritten",
+      "title": "LumynaX OCR TrOCR Large Handwritten",
+      "family": "trocr",
+      "runtime": "transformers",
+      "modalities": [
+        "text",
+        "vision"
+      ],
+      "context_tokens": 512,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "mit",
+      "quantization": "fp32 safetensors",
+      "primary_artifact": "model.safetensors",
+      "active_params_b": null,
+      "total_params_b": 0.55,
+      "quality_rank": 2,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": false,
+      "tags": [
+        "ocr",
+        "handwritten",
+        "trocr"
+      ],
+      "metadata": {
+        "upstream_repo": "microsoft/trocr-large-handwritten",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-doc-layoutlmv3-base",
+      "repo_id": "AbteeXAILab/lumynax-doc-layoutlmv3-base",
+      "title": "LumynaX Doc LayoutLMv3 Base (document layout+text)",
+      "family": "layoutlm",
+      "runtime": "transformers",
+      "modalities": [
+        "text",
+        "vision"
+      ],
+      "context_tokens": 512,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "cc-by-nc-4.0",
+      "quantization": "fp32 safetensors",
+      "primary_artifact": "model.safetensors",
+      "active_params_b": null,
+      "total_params_b": 0.13,
+      "quality_rank": 2,
+      "cost_rank": 1,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "doc-ai",
+        "layout",
+        "layoutlm"
+      ],
+      "metadata": {
+        "upstream_repo": "microsoft/layoutlmv3-base",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-doc-table-transformer-detection",
+      "repo_id": "AbteeXAILab/lumynax-doc-table-transformer-detection",
+      "title": "LumynaX Doc Table Transformer (detection)",
+      "family": "table-transformer",
+      "runtime": "transformers",
+      "modalities": [
+        "vision"
+      ],
+      "context_tokens": 0,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "mit",
+      "quantization": "fp32 safetensors",
+      "primary_artifact": "model.safetensors",
+      "active_params_b": null,
+      "total_params_b": 0.029,
+      "quality_rank": 2,
+      "cost_rank": 1,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "doc-ai",
+        "tables",
+        "detection",
+        "detr"
+      ],
+      "metadata": {
+        "upstream_repo": "microsoft/table-transformer-detection",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-embed-nomic-v2-moe",
+      "repo_id": "AbteeXAILab/lumynax-embed-nomic-v2-moe",
+      "title": "LumynaX Embed Nomic v2 MoE (modern retrieval)",
+      "family": "nomic",
+      "runtime": "python_embedding",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 512,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "apache-2.0",
+      "quantization": "fp32 safetensors",
+      "primary_artifact": "model.safetensors",
+      "active_params_b": 0.305,
+      "total_params_b": 0.475,
+      "quality_rank": 1,
+      "cost_rank": 1,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "embedding",
+        "retrieval",
+        "nomic",
+        "moe",
+        "modern"
+      ],
+      "metadata": {
+        "upstream_repo": "nomic-ai/nomic-embed-text-v2-moe",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-embed-granite-278m-multilingual",
+      "repo_id": "AbteeXAILab/lumynax-embed-granite-278m-multilingual",
+      "title": "LumynaX Embed IBM Granite 278M Multilingual",
+      "family": "granite",
+      "runtime": "python_embedding",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 512,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "apache-2.0",
+      "quantization": "fp32 safetensors",
+      "primary_artifact": "model.safetensors",
+      "active_params_b": null,
+      "total_params_b": 0.278,
+      "quality_rank": 2,
+      "cost_rank": 1,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "embedding",
+        "retrieval",
+        "granite",
+        "multilingual",
+        "ibm"
+      ],
+      "metadata": {
+        "upstream_repo": "ibm-granite/granite-embedding-278m-multilingual",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-frontier-qwen25-72b-instruct-gguf",
+      "repo_id": "AbteeXAILab/lumynax-frontier-qwen25-72b-instruct-gguf",
+      "title": "LumynaX Frontier Qwen2.5 72B Instruct GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 131072,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "other",
+      "quantization": "Q4_K_M GGUF",
+      "primary_artifact": "Qwen2.5-72B-Instruct-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 72,
+      "quality_rank": 1,
+      "cost_rank": 4,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "frontier",
+        "dense",
+        "qwen",
+        "gguf",
+        "tools",
+        "long-context"
+      ],
+      "metadata": {
+        "upstream_repo": "Qwen/Qwen2.5-72B-Instruct",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-frontier-olmo2-32b-instruct",
+      "repo_id": "AbteeXAILab/lumynax-frontier-olmo2-32b-instruct",
+      "title": "LumynaX Frontier OLMo-2 32B Instruct (fully open)",
+      "family": "olmo",
+      "runtime": "transformers",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 4096,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "apache-2.0",
+      "quantization": "bf16 safetensors",
+      "primary_artifact": "model.safetensors (sharded)",
+      "active_params_b": null,
+      "total_params_b": 32,
+      "quality_rank": 1,
+      "cost_rank": 4,
+      "sovereignty_tier": 2,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "frontier",
+        "fully-open",
+        "olmo",
+        "allenai",
+        "apache"
+      ],
+      "metadata": {
+        "upstream_repo": "allenai/OLMo-2-0325-32B-Instruct",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-chat-yi-15-34b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-chat-yi-15-34b-gguf",
+      "title": "LumynaX Chat Yi-1.5 34B GGUF (multilingual)",
+      "family": "yi",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "apache-2.0",
+      "quantization": "Q4_K_M GGUF",
+      "primary_artifact": "Yi-1.5-34B-Chat-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 34,
+      "quality_rank": 2,
+      "cost_rank": 3,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "chat",
+        "yi",
+        "multilingual",
+        "gguf"
+      ],
+      "metadata": {
+        "upstream_repo": "01-ai/Yi-1.5-34B-Chat",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-reasoning-internlm3-8b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-reasoning-internlm3-8b-gguf",
+      "title": "LumynaX Reasoning InternLM3 8B Instruct GGUF",
+      "family": "internlm",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 32768,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "apache-2.0",
+      "quantization": "Q4_K_M GGUF",
+      "primary_artifact": "internlm3-8b-instruct-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 8,
+      "quality_rank": 2,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "reasoning",
+        "internlm",
+        "chat",
+        "gguf"
+      ],
+      "metadata": {
+        "upstream_repo": "internlm/internlm3-8b-instruct",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-multimodal-aria-25b-moe",
+      "repo_id": "AbteeXAILab/lumynax-multimodal-aria-25b-moe",
+      "title": "LumynaX Multimodal Aria 25B/3.5B MoE",
+      "family": "aria",
+      "runtime": "transformers_multimodal",
+      "modalities": [
+        "text",
+        "vision"
+      ],
+      "context_tokens": 65536,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "apache-2.0",
+      "quantization": "bf16 safetensors",
+      "primary_artifact": "model.safetensors (sharded)",
+      "active_params_b": 3.5,
+      "total_params_b": 25,
+      "quality_rank": 2,
+      "cost_rank": 3,
+      "sovereignty_tier": 2,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "multimodal",
+        "vision",
+        "moe",
+        "aria",
+        "apache"
+      ],
+      "metadata": {
+        "upstream_repo": "rhymes-ai/Aria",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-multimodal-llava-next-34b",
+      "repo_id": "AbteeXAILab/lumynax-multimodal-llava-next-34b",
+      "title": "LumynaX Multimodal LLaVA-Next 34B",
+      "family": "llava",
+      "runtime": "transformers_multimodal",
+      "modalities": [
+        "text",
+        "vision"
+      ],
+      "context_tokens": 4096,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "apache-2.0",
+      "quantization": "bf16 safetensors",
+      "primary_artifact": "model.safetensors (sharded)",
+      "active_params_b": null,
+      "total_params_b": 34,
+      "quality_rank": 2,
+      "cost_rank": 4,
+      "sovereignty_tier": 2,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "multimodal",
+        "vision",
+        "llava",
+        "yi-based"
+      ],
+      "metadata": {
+        "upstream_repo": "liuhaotian/llava-v1.6-34b",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-reasoning-qwq-32b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-reasoning-qwq-32b-gguf",
+      "title": "LumynaX Reasoning QwQ-32B GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 131072,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "apache-2.0",
+      "quantization": "Q4_K_M GGUF",
+      "primary_artifact": "qwq-32b-q4_k_m.gguf",
+      "active_params_b": null,
+      "total_params_b": 32,
+      "quality_rank": 1,
+      "cost_rank": 3,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "reasoning",
+        "qwq",
+        "qwen",
+        "gguf",
+        "chain-of-thought"
+      ],
+      "metadata": {
+        "upstream_repo": "Qwen/QwQ-32B",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-frontier-phi-4-14b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-frontier-phi-4-14b-gguf",
+      "title": "LumynaX Frontier Phi-4 14B GGUF",
+      "family": "phi",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 16384,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "mit",
+      "quantization": "Q4_K_M GGUF",
+      "primary_artifact": "phi-4-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 14,
+      "quality_rank": 2,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "frontier",
+        "phi",
+        "microsoft",
+        "gguf",
+        "efficient"
+      ],
+      "metadata": {
+        "upstream_repo": "microsoft/phi-4",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
         "public_status": "public and non-gated",
         "validation_status": "scaffold_verified"
       }

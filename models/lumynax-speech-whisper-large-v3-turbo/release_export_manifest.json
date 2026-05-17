@@ -1,0 +1,37 @@
+{
+  "release_id": "lumynax-speech-whisper-large-v3-turbo",
+  "title": "LumynaX Speech Whisper Large v3 Turbo",
+  "repo_id": "AbteeXAILab/lumynax-speech-whisper-large-v3-turbo",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ",
+    "AU",
+    "global"
+  ],
+  "upstream": {
+    "repo_id": "openai/whisper-large-v3-turbo",
+    "license": "mit",
+    "prompt_format": "whisper",
+    "source_note": "OpenAI Whisper"
+  },
+  "gguf_mirror": null,
+  "runtime": "transformers",
+  "modalities": [
+    "audio"
+  ],
+  "context_tokens": 30,
+  "total_params_b": 0.8,
+  "active_params_b": null,
+  "quantization": "fp16 safetensors",
+  "primary_artifact": "model.safetensors",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": false,
+  "supports_json": false,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T01:20:51Z"
+}
