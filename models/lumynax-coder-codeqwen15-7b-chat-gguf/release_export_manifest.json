@@ -1,0 +1,35 @@
+{
+  "release_id": "lumynax-coder-codeqwen15-7b-chat-gguf",
+  "title": "LumynaX Coder CodeQwen1.5 7B Chat GGUF",
+  "repo_id": "AbteeXAILab/lumynax-coder-codeqwen15-7b-chat-gguf",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ"
+  ],
+  "upstream": {
+    "repo_id": "Qwen/CodeQwen1.5-7B-Chat",
+    "license": "apache-2.0",
+    "prompt_format": "chatml",
+    "source_note": "Qwen/CodeQwen1.5-7B-Chat"
+  },
+  "gguf_mirror": "Qwen/CodeQwen1.5-7B-Chat-GGUF",
+  "runtime": "llama_cpp",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 65536,
+  "total_params_b": 7,
+  "active_params_b": null,
+  "quantization": "Q4_K_M GGUF",
+  "primary_artifact": "codeqwen-1_5-7b-chat-q4_k_m.gguf",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T10:35:25Z"
+}

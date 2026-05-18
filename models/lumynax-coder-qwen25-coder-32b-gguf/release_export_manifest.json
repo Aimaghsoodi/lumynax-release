@@ -1,0 +1,35 @@
+{
+  "release_id": "lumynax-coder-qwen25-coder-32b-gguf",
+  "title": "LumynaX Coder Qwen2.5-Coder 32B Instruct GGUF",
+  "repo_id": "AbteeXAILab/lumynax-coder-qwen25-coder-32b-gguf",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ"
+  ],
+  "upstream": {
+    "repo_id": "Qwen/Qwen2.5-Coder-32B-Instruct",
+    "license": "apache-2.0",
+    "prompt_format": "chatml",
+    "source_note": "Qwen/Qwen2.5-Coder-32B-Instruct"
+  },
+  "gguf_mirror": "bartowski/Qwen2.5-Coder-32B-Instruct-GGUF",
+  "runtime": "llama_cpp",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 131072,
+  "total_params_b": 32,
+  "active_params_b": null,
+  "quantization": "Q4_K_M GGUF",
+  "primary_artifact": "Qwen2.5-Coder-32B-Instruct-Q4_K_M.gguf",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T10:35:14Z"
+}

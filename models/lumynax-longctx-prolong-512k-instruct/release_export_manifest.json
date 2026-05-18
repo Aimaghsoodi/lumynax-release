@@ -1,0 +1,37 @@
+{
+  "release_id": "lumynax-longctx-prolong-512k-instruct",
+  "title": "LumynaX Long-Context ProLong-512K Instruct",
+  "repo_id": "AbteeXAILab/lumynax-longctx-prolong-512k-instruct",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ",
+    "AU",
+    "global"
+  ],
+  "upstream": {
+    "repo_id": "princeton-nlp/Llama-3-8B-ProLong-512k-Instruct",
+    "license": "llama3",
+    "prompt_format": "chatml",
+    "source_note": "Princeton ProLong"
+  },
+  "gguf_mirror": null,
+  "runtime": "transformers",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 524288,
+  "total_params_b": 8,
+  "active_params_b": null,
+  "quantization": "bf16 safetensors (sharded)",
+  "primary_artifact": "model.safetensors.index.json",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": false,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T10:35:15Z"
+}

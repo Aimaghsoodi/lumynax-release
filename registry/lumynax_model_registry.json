@@ -2,7 +2,7 @@
   "registry_id": "lumynax-marama-route-registry-v0",
   "publisher": "AbteeX AI Labs",
   "source_report": "docs/releases/hf-model-card-v4-refresh-2026-05-11.json",
-  "model_count": 82,
+  "model_count": 98,
   "models": [
     {
       "model_id": "lumynax-coder-qwen25-05b-instruct-gguf",
@@ -3241,6 +3241,619 @@
       ],
       "metadata": {
         "upstream_repo": "microsoft/phi-4",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-frontier-coder-qwen3-480b-a35b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-frontier-coder-qwen3-480b-a35b-gguf",
+      "title": "LumynaX Frontier Coder Qwen3 480B A35B GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 262144,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "apache-2.0",
+      "quantization": "Q4_K_M GGUF (6 shards)",
+      "primary_artifact": "Q4_K_M/Qwen3-Coder-480B-A35B-Instruct-Q4_K_M-00001-of-00006.gguf",
+      "active_params_b": 35,
+      "total_params_b": 480,
+      "quality_rank": 1,
+      "cost_rank": 5,
+      "sovereignty_tier": 2,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "frontier",
+        "coder",
+        "moe",
+        "qwen3",
+        "gguf"
+      ],
+      "metadata": {
+        "upstream_repo": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-frontier-coder-deepseek-v25-1210-gguf",
+      "repo_id": "AbteeXAILab/lumynax-frontier-coder-deepseek-v25-1210-gguf",
+      "title": "LumynaX Frontier Coder DeepSeek V2.5-1210 GGUF",
+      "family": "deepseek",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 163840,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "other",
+      "quantization": "Q4_K_M GGUF (4 shards)",
+      "primary_artifact": "DeepSeek-V2.5-1210-Q4_K_M/DeepSeek-V2.5-1210-Q4_K_M-00001-of-00004.gguf",
+      "active_params_b": 21,
+      "total_params_b": 236,
+      "quality_rank": 1,
+      "cost_rank": 5,
+      "sovereignty_tier": 2,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "frontier",
+        "coder",
+        "moe",
+        "deepseek",
+        "gguf"
+      ],
+      "metadata": {
+        "upstream_repo": "deepseek-ai/DeepSeek-V2.5-1210",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-coder-codellama-70b-instruct-gguf",
+      "repo_id": "AbteeXAILab/lumynax-coder-codellama-70b-instruct-gguf",
+      "title": "LumynaX Coder CodeLlama 70B Instruct GGUF",
+      "family": "llama",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 16384,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "llama2",
+      "quantization": "Q4_K_M GGUF",
+      "primary_artifact": "codellama-70b-instruct.Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 70,
+      "quality_rank": 2,
+      "cost_rank": 4,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "coder",
+        "codellama",
+        "gguf"
+      ],
+      "metadata": {
+        "upstream_repo": "codellama/CodeLlama-70b-Instruct-hf",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-coder-deepseek-coder-33b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-coder-deepseek-coder-33b-gguf",
+      "title": "LumynaX Coder DeepSeek-Coder 33B GGUF",
+      "family": "deepseek",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 16384,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "other",
+      "quantization": "Q4_K_M GGUF",
+      "primary_artifact": "deepseek-coder-33b-instruct.Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 33,
+      "quality_rank": 2,
+      "cost_rank": 3,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "coder",
+        "deepseek",
+        "gguf"
+      ],
+      "metadata": {
+        "upstream_repo": "deepseek-ai/deepseek-coder-33b-instruct",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-coder-qwen25-coder-32b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-coder-qwen25-coder-32b-gguf",
+      "title": "LumynaX Coder Qwen2.5-Coder 32B Instruct GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 131072,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "apache-2.0",
+      "quantization": "Q4_K_M GGUF",
+      "primary_artifact": "Qwen2.5-Coder-32B-Instruct-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 32,
+      "quality_rank": 2,
+      "cost_rank": 3,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "coder",
+        "qwen",
+        "gguf",
+        "long-context"
+      ],
+      "metadata": {
+        "upstream_repo": "Qwen/Qwen2.5-Coder-32B-Instruct",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-coder-starcoder2-15b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-coder-starcoder2-15b-gguf",
+      "title": "LumynaX Coder StarCoder2 15B Instruct GGUF",
+      "family": "starcoder",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 16384,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "bigcode-openrail-m",
+      "quantization": "Q4_K_M GGUF",
+      "primary_artifact": "starcoder2-15b-instruct-v0.1-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 15,
+      "quality_rank": 2,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "coder",
+        "starcoder",
+        "gguf"
+      ],
+      "metadata": {
+        "upstream_repo": "bigcode/starcoder2-15b-instruct-v0.1",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-coder-yi-coder-9b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-coder-yi-coder-9b-gguf",
+      "title": "LumynaX Coder Yi-Coder 9B Chat GGUF",
+      "family": "yi",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 131072,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "apache-2.0",
+      "quantization": "Q4_K_M GGUF",
+      "primary_artifact": "Yi-Coder-9B-Chat-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 9,
+      "quality_rank": 2,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "coder",
+        "yi",
+        "gguf",
+        "long-context"
+      ],
+      "metadata": {
+        "upstream_repo": "01-ai/Yi-Coder-9B-Chat",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-coder-codeqwen15-7b-chat-gguf",
+      "repo_id": "AbteeXAILab/lumynax-coder-codeqwen15-7b-chat-gguf",
+      "title": "LumynaX Coder CodeQwen1.5 7B Chat GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 65536,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "other",
+      "quantization": "Q4_K_M GGUF",
+      "primary_artifact": "codeqwen-1_5-7b-chat-q4_k_m.gguf",
+      "active_params_b": null,
+      "total_params_b": 7,
+      "quality_rank": 2,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "coder",
+        "qwen",
+        "gguf"
+      ],
+      "metadata": {
+        "upstream_repo": "Qwen/CodeQwen1.5-7B-Chat",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-reasoning-deepseek-prover-v2-671b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-reasoning-deepseek-prover-v2-671b-gguf",
+      "title": "LumynaX Reasoning DeepSeek-Prover V2 671B GGUF",
+      "family": "deepseek",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 163840,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "other",
+      "quantization": "Q4_K_M GGUF (9 shards)",
+      "primary_artifact": "Q4_K_M/DeepSeek-Prover-V2-671B-Q4_K_M-00001-of-00009.gguf",
+      "active_params_b": 37,
+      "total_params_b": 671,
+      "quality_rank": 1,
+      "cost_rank": 5,
+      "sovereignty_tier": 2,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "reasoning",
+        "math",
+        "proof",
+        "deepseek",
+        "moe",
+        "gguf",
+        "frontier"
+      ],
+      "metadata": {
+        "upstream_repo": "deepseek-ai/DeepSeek-Prover-V2-671B",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-reasoning-deepseek-r1-distill-llama-70b-gguf",
+      "repo_id": "AbteeXAILab/lumynax-reasoning-deepseek-r1-distill-llama-70b-gguf",
+      "title": "LumynaX Reasoning DeepSeek-R1 Distill Llama 70B GGUF",
+      "family": "deepseek",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 131072,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "llama3.3",
+      "quantization": "Q4_K_M GGUF",
+      "primary_artifact": "DeepSeek-R1-Distill-Llama-70B-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 70,
+      "quality_rank": 1,
+      "cost_rank": 4,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "reasoning",
+        "r1-distill",
+        "deepseek",
+        "llama",
+        "gguf"
+      ],
+      "metadata": {
+        "upstream_repo": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-longctx-prolong-512k-instruct",
+      "repo_id": "AbteeXAILab/lumynax-longctx-prolong-512k-instruct",
+      "title": "LumynaX Long-Context ProLong-512K Instruct",
+      "family": "llama",
+      "runtime": "transformers",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 524288,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "llama3",
+      "quantization": "bf16 safetensors",
+      "primary_artifact": "model.safetensors.index.json",
+      "active_params_b": null,
+      "total_params_b": 8,
+      "quality_rank": 2,
+      "cost_rank": 3,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "long-context",
+        "512k",
+        "prolong",
+        "reasoning"
+      ],
+      "metadata": {
+        "upstream_repo": "princeton-nlp/Llama-3-8B-ProLong-512k-Instruct",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-frontier-phi-35-moe-instruct-gguf",
+      "repo_id": "AbteeXAILab/lumynax-frontier-phi-35-moe-instruct-gguf",
+      "title": "LumynaX Frontier Phi-3.5 MoE Instruct GGUF",
+      "family": "phi",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 131072,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "mit",
+      "quantization": "Q4_K_M GGUF",
+      "primary_artifact": "Phi-3.5-MoE-instruct-Q4_K_M.gguf",
+      "active_params_b": 6.6,
+      "total_params_b": 42,
+      "quality_rank": 1,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "frontier",
+        "moe",
+        "phi",
+        "gguf"
+      ],
+      "metadata": {
+        "upstream_repo": "microsoft/Phi-3.5-MoE-instruct",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-longctx-yi-9b-200k",
+      "repo_id": "AbteeXAILab/lumynax-longctx-yi-9b-200k",
+      "title": "LumynaX Long-Context Yi-9B 200K",
+      "family": "yi",
+      "runtime": "transformers",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 204800,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ",
+        "AU",
+        "global"
+      ],
+      "license_id": "apache-2.0",
+      "quantization": "bf16 safetensors",
+      "primary_artifact": "model.safetensors.index.json",
+      "active_params_b": null,
+      "total_params_b": 9,
+      "quality_rank": 2,
+      "cost_rank": 3,
+      "sovereignty_tier": 3,
+      "supports_tools": false,
+      "supports_json": true,
+      "tags": [
+        "long-context",
+        "200k",
+        "yi"
+      ],
+      "metadata": {
+        "upstream_repo": "01-ai/Yi-9B-200K",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-longctx-glm4-9b-chat-1m-gguf",
+      "repo_id": "AbteeXAILab/lumynax-longctx-glm4-9b-chat-1m-gguf",
+      "title": "LumynaX Long-Context GLM-4-9B-Chat-1M GGUF",
+      "family": "glm",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 1048576,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "apache-2.0",
+      "quantization": "Q4_K_M GGUF",
+      "primary_artifact": "glm-4-9b-chat-1m-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 9,
+      "quality_rank": 2,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "long-context",
+        "1m",
+        "glm",
+        "gguf"
+      ],
+      "metadata": {
+        "upstream_repo": "THUDM/glm-4-9b-chat-1m",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-longctx-qwen25-7b-1m-gguf",
+      "repo_id": "AbteeXAILab/lumynax-longctx-qwen25-7b-1m-gguf",
+      "title": "LumynaX Long-Context Qwen2.5 7B Instruct 1M GGUF",
+      "family": "qwen",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 1048576,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "apache-2.0",
+      "quantization": "Q4_K_M GGUF",
+      "primary_artifact": "Qwen2.5-7B-Instruct-1M-Q4_K_M.gguf",
+      "active_params_b": null,
+      "total_params_b": 7,
+      "quality_rank": 2,
+      "cost_rank": 2,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "long-context",
+        "1m",
+        "qwen",
+        "gguf"
+      ],
+      "metadata": {
+        "upstream_repo": "Qwen/Qwen2.5-7B-Instruct-1M",
+        "release_version": "v0.1.0",
+        "package_state": "weights_mirrored",
+        "public_status": "public and non-gated",
+        "validation_status": "scaffold_verified"
+      }
+    },
+    {
+      "model_id": "lumynax-moe-olmoe-1b-7b-0924-instruct-gguf",
+      "repo_id": "AbteeXAILab/lumynax-moe-olmoe-1b-7b-0924-instruct-gguf",
+      "title": "LumynaX MoE OLMoE 1B/7B 0924 Instruct GGUF",
+      "family": "olmo",
+      "runtime": "llama_cpp",
+      "modalities": [
+        "text"
+      ],
+      "context_tokens": 4096,
+      "jurisdiction": "NZ",
+      "residency": [
+        "NZ"
+      ],
+      "license_id": "apache-2.0",
+      "quantization": "Q4_K_M GGUF",
+      "primary_artifact": "OLMoE-1B-7B-0924-Instruct-Q4_K_M.gguf",
+      "active_params_b": 1,
+      "total_params_b": 7,
+      "quality_rank": 2,
+      "cost_rank": 1,
+      "sovereignty_tier": 3,
+      "supports_tools": true,
+      "supports_json": true,
+      "tags": [
+        "moe",
+        "olmoe",
+        "fully-open",
+        "gguf"
+      ],
+      "metadata": {
+        "upstream_repo": "allenai/OLMoE-1B-7B-0924-Instruct",
         "release_version": "v0.1.0",
         "package_state": "weights_mirrored",
         "public_status": "public and non-gated",

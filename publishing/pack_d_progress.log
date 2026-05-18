@@ -1,0 +1,5 @@
+[23:27:33] === mirror AbteeXAILab/lumynax-coder-deepseek-coder-33b-gguf  <-  TheBloke/deepseek-coder-33B-instruct-GGUF
+[23:34:58] === mirror AbteeXAILab/lumynax-coder-codellama-70b-instruct-gguf  <-  TheBloke/CodeLlama-70B-Instruct-GGUF
+[23:45:00] === mirror AbteeXAILab/lumynax-frontier-coder-deepseek-v25-1210-gguf  <-  bartowski/DeepSeek-V2.5-1210-GGUF
+[23:53:27] === mirror AbteeXAILab/lumynax-frontier-coder-qwen3-480b-a35b-gguf  <-  unsloth/Qwen3-Coder-480B-A35B-Instruct-GGUF
+[23:57:06] === Pack D end ===

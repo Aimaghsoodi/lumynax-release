@@ -1,0 +1,35 @@
+{
+  "release_id": "lumynax-frontier-coder-qwen3-480b-a35b-gguf",
+  "title": "LumynaX Frontier Coder Qwen3 480B A35B GGUF",
+  "repo_id": "AbteeXAILab/lumynax-frontier-coder-qwen3-480b-a35b-gguf",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ"
+  ],
+  "upstream": {
+    "repo_id": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+    "license": "apache-2.0",
+    "prompt_format": "chatml",
+    "source_note": "Qwen/Qwen3-Coder-480B-A35B-Instruct"
+  },
+  "gguf_mirror": "unsloth/Qwen3-Coder-480B-A35B-Instruct-GGUF",
+  "runtime": "llama_cpp",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 262144,
+  "total_params_b": 480,
+  "active_params_b": 35,
+  "quantization": "Q4_K_M GGUF",
+  "primary_artifact": "Q4_K_M/Qwen3-Coder-480B-A35B-Instruct-Q4_K_M-00001-of-00006.gguf",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 2,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T10:34:59Z"
+}

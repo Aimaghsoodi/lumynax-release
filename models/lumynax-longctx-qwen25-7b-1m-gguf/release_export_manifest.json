@@ -1,0 +1,35 @@
+{
+  "release_id": "lumynax-longctx-qwen25-7b-1m-gguf",
+  "title": "LumynaX Long-Context Qwen2.5 7B Instruct 1M GGUF",
+  "repo_id": "AbteeXAILab/lumynax-longctx-qwen25-7b-1m-gguf",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ"
+  ],
+  "upstream": {
+    "repo_id": "Qwen/Qwen2.5-7B-Instruct-1M",
+    "license": "apache-2.0",
+    "prompt_format": "chatml",
+    "source_note": "Qwen2.5 1M"
+  },
+  "gguf_mirror": "bartowski/Qwen2.5-7B-Instruct-1M-GGUF",
+  "runtime": "llama_cpp",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 1048576,
+  "total_params_b": 7,
+  "active_params_b": null,
+  "quantization": "Q4_K_M GGUF",
+  "primary_artifact": "Qwen2.5-7B-Instruct-1M-Q4_K_M.gguf",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T10:35:31Z"
+}

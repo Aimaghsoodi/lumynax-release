@@ -1,0 +1,94 @@
+[00:36:34] === resume v2 start === free=51.5 GB ===
+[00:36:34] 
+[1/5]  AbteeXAILab/lumynax-coder-codellama-70b-instruct-gguf
+[00:36:34] 
+>>>>>> AbteeXAILab/lumynax-coder-codellama-70b-instruct-gguf  <-  TheBloke/CodeLlama-70B-Instruct-GGUF
+[00:36:34]   stage wiped. free=51.5 GB
+[00:36:35]   1 files matched, total 38.58 GB
+[00:36:35]     download codellama-70b-instruct.Q4_K_M.gguf (38.58 GB)  free=51.5GB
+[00:44:40]     downloaded in 485s (85.5 MB/s)
+[00:49:33]     uploaded in 293s
+[00:49:39]   done: 1 ok, 0 fail
+[00:49:39]   stage wiped. free=51.6 GB
+[00:49:39] 
+[2/5]  AbteeXAILab/lumynax-reasoning-deepseek-r1-distill-llama-70b-gguf
+[00:49:39] 
+>>>>>> AbteeXAILab/lumynax-reasoning-deepseek-r1-distill-llama-70b-gguf  <-  bartowski/DeepSeek-R1-Distill-Llama-70B-GGUF
+[00:49:39]   stage wiped. free=51.6 GB
+[00:49:39]   1 files matched, total 39.60 GB
+[00:49:39]     download DeepSeek-R1-Distill-Llama-70B-Q4_K_M.gguf (39.60 GB)  free=51.6GB
+[01:01:43]     downloaded in 723s (58.8 MB/s)
+[01:14:24]     uploaded in 762s
+[01:14:30]   done: 1 ok, 0 fail
+[01:14:30]   stage wiped. free=51.5 GB
+[01:14:30] 
+[3/5]  AbteeXAILab/lumynax-frontier-coder-deepseek-v25-1210-gguf
+[01:14:30] 
+>>>>>> AbteeXAILab/lumynax-frontier-coder-deepseek-v25-1210-gguf  <-  bartowski/DeepSeek-V2.5-1210-GGUF
+[01:14:30]   stage wiped. free=51.5 GB
+[01:14:30]   4 files matched, total 132.67 GB
+[01:14:31]     download DeepSeek-V2.5-1210-Q4_K_M/DeepSeek-V2.5-1210-Q4_K_M-00004-of-00004.gguf (21.43 GB)  free=51.5GB
+[01:18:34]     downloaded in 243s (94.6 MB/s)
+[01:26:10]     uploaded in 457s
+[01:26:14]     download DeepSeek-V2.5-1210-Q4_K_M/DeepSeek-V2.5-1210-Q4_K_M-00003-of-00004.gguf (36.97 GB)  free=51.5GB
+[01:33:16]     downloaded in 422s (94.1 MB/s)
+[01:42:33]     uploaded in 558s
+[01:42:39]     download DeepSeek-V2.5-1210-Q4_K_M/DeepSeek-V2.5-1210-Q4_K_M-00001-of-00004.gguf (37.04 GB)  free=51.4GB
+[01:50:00]     downloaded in 442s (90.1 MB/s)
+[02:00:25]     uploaded in 625s
+[02:00:31]     download DeepSeek-V2.5-1210-Q4_K_M/DeepSeek-V2.5-1210-Q4_K_M-00002-of-00004.gguf (37.24 GB)  free=51.4GB
+[02:07:30]     downloaded in 419s (95.4 MB/s)
+[02:18:02]     uploaded in 632s
+[02:18:07]   done: 4 ok, 0 fail
+[02:18:07]   stage wiped. free=51.3 GB
+[02:18:07] 
+[4/5]  AbteeXAILab/lumynax-frontier-coder-qwen3-480b-a35b-gguf
+[02:18:07] 
+>>>>>> AbteeXAILab/lumynax-frontier-coder-qwen3-480b-a35b-gguf  <-  unsloth/Qwen3-Coder-480B-A35B-Instruct-GGUF
+[02:18:07]   stage wiped. free=51.3 GB
+[02:18:08]   6 files matched, total 270.14 GB
+[02:18:08]     download Q4_K_M/Qwen3-Coder-480B-A35B-Instruct-Q4_K_M-00006-of-00006.gguf (39.84 GB)  free=51.3GB
+[02:25:35]     downloaded in 447s (95.8 MB/s)
+[02:32:00]     uploaded in 385s
+[02:32:06]   stage wiped. free=51.0 GB
+[02:32:06]     !! not enough space: need 48.9 GB have 51.0 GB
+[02:32:06]   stage wiped. free=51.0 GB
+[02:32:06]     !! not enough space: need 49.0 GB have 51.0 GB
+[02:32:06]   stage wiped. free=51.0 GB
+[02:32:06]     !! not enough space: need 49.7 GB have 51.0 GB
+[02:32:07]   stage wiped. free=51.0 GB
+[02:32:07]     !! not enough space: need 49.8 GB have 51.0 GB
+[02:32:07]   stage wiped. free=51.0 GB
+[02:32:07]     !! not enough space: need 50.0 GB have 51.0 GB
+[02:32:07]   done: 1 ok, 5 fail
+[02:32:07]   stage wiped. free=51.0 GB
+[02:32:07] 
+[5/5]  AbteeXAILab/lumynax-reasoning-deepseek-prover-v2-671b-gguf
+[02:32:07] 
+>>>>>> AbteeXAILab/lumynax-reasoning-deepseek-prover-v2-671b-gguf  <-  unsloth/DeepSeek-Prover-V2-671B-GGUF
+[02:32:07]   stage wiped. free=51.0 GB
+[02:32:07]   9 files matched, total 376.71 GB
+[02:32:07]     download Q4_K_M/DeepSeek-Prover-V2-671B-Q4_K_M-00009-of-00009.gguf (13.78 GB)  free=51.0GB
+[02:35:06]     downloaded in 178s (83.0 MB/s)
+[02:41:07]     uploaded in 361s
+[02:41:09]     download Q4_K_M/DeepSeek-Prover-V2-671B-Q4_K_M-00008-of-00009.gguf (43.72 GB)  free=51.4GB
+[02:49:57]     downloaded in 528s (88.8 MB/s)
+[03:00:18]     uploaded in 621s
+[03:00:24]     download Q4_K_M/DeepSeek-Prover-V2-671B-Q4_K_M-00004-of-00009.gguf (44.96 GB)  free=51.3GB
+[03:09:26]     downloaded in 542s (89.0 MB/s)
+[03:21:26]     uploaded in 720s
+[03:21:32]   stage wiped. free=51.2 GB
+[03:21:32]     !! not enough space: need 48.3 GB have 51.2 GB
+[03:21:33]   stage wiped. free=51.2 GB
+[03:21:33]     !! not enough space: need 48.4 GB have 51.2 GB
+[03:21:33]   stage wiped. free=51.2 GB
+[03:21:33]     !! not enough space: need 49.4 GB have 51.2 GB
+[03:21:33]   stage wiped. free=51.2 GB
+[03:21:33]     !! not enough space: need 49.4 GB have 51.2 GB
+[03:21:33]   stage wiped. free=51.2 GB
+[03:21:33]     !! not enough space: need 49.4 GB have 51.2 GB
+[03:21:34]   stage wiped. free=51.2 GB
+[03:21:34]     !! not enough space: need 49.5 GB have 51.2 GB
+[03:21:34]   done: 3 ok, 6 fail
+[03:21:34]   stage wiped. free=51.2 GB
+[03:21:34] === resume v2 end ===

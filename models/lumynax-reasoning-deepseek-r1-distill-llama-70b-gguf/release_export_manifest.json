@@ -1,0 +1,35 @@
+{
+  "release_id": "lumynax-reasoning-deepseek-r1-distill-llama-70b-gguf",
+  "title": "LumynaX Reasoning DeepSeek-R1 Distill Llama 70B GGUF",
+  "repo_id": "AbteeXAILab/lumynax-reasoning-deepseek-r1-distill-llama-70b-gguf",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ"
+  ],
+  "upstream": {
+    "repo_id": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+    "license": "llama3.3",
+    "prompt_format": "chatml",
+    "source_note": "DeepSeek R1 Distill"
+  },
+  "gguf_mirror": "bartowski/DeepSeek-R1-Distill-Llama-70B-GGUF",
+  "runtime": "llama_cpp",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 131072,
+  "total_params_b": 70,
+  "active_params_b": null,
+  "quantization": "Q4_K_M GGUF",
+  "primary_artifact": "DeepSeek-R1-Distill-Llama-70B-Q4_K_M.gguf",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T10:35:11Z"
+}

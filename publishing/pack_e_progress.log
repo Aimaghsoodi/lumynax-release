@@ -1,0 +1,5 @@
+[23:21:42] === mirror AbteeXAILab/lumynax-longctx-glm4-9b-chat-1m-gguf  <-  bartowski/glm-4-9b-chat-1m-GGUF
+[23:30:46] === mirror AbteeXAILab/lumynax-frontier-phi-35-moe-instruct-gguf  <-  bartowski/Phi-3.5-MoE-instruct-GGUF
+[23:46:48] === mirror AbteeXAILab/lumynax-reasoning-deepseek-r1-distill-llama-70b-gguf  <-  bartowski/DeepSeek-R1-Distill-Llama-70B-GGUF
+[23:53:17] === mirror AbteeXAILab/lumynax-reasoning-deepseek-prover-v2-671b-gguf  <-  unsloth/DeepSeek-Prover-V2-671B-GGUF
+[00:14:18] === Pack E end ===

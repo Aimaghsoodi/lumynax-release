@@ -20,7 +20,7 @@ The actual model weights live on **[Hugging Face: AbteeXAILab](https://huggingfa
 | `spaces/marama-route-demo/` | Gradio Space — sovereign router demo. |
 | `spaces/live-demo/` | Gradio Space — LumynaX live chat demo. |
 | `publishing/` | Generation + mirror scripts used to publish the family to HF. |
-| `registry/lumynax_model_registry.json` | Authoritative registry of all 82 models. |
+| `registry/lumynax_model_registry.json` | Authoritative registry of all 98 models. |
 
 ## Run any model locally
 
@@ -46,18 +46,19 @@ without cloning from HF first).
 | Tier | Count | Examples |
 | --- | --- | --- |
 | **chat** | 2 | `hermes-3-llama31-8b-gguf`, `yi-15-34b-gguf` |
-| **coder** | 5 | `qwen25-05b-instruct-gguf`, `qwen25-14b-instruct-gguf`, `qwen25-15b-instruct-gguf`, … |
+| **coder** | 11 | `qwen25-05b-instruct-gguf`, `qwen25-14b-instruct-gguf`, `qwen25-15b-instruct-gguf`, … |
 | **doc** | 4 | `nougat-base`, `donut-base`, `layoutlmv3-base`, … |
 | **embed** | 4 | `bge-m3`, `e5-mistral-7b`, `nomic-v2-moe`, … |
-| **frontier** | 8 | `minimax-m25-unsloth`, `qwen3-235b-a22b-instruct`, `minimax-m2-230b`, … |
+| **frontier** | 11 | `minimax-m25-unsloth`, `qwen3-235b-a22b-instruct`, `minimax-m2-230b`, … |
 | **guard** | 1 | `text-moderation` |
 | **infused** | 30 | `gemma-e4b`, `gemma-e4b-text-gguf`, `gemma4-26b-a4b-gguf`, … |
+| **longctx** | 4 | `prolong-512k-instruct`, `yi-9b-200k`, `glm4-9b-chat-1m-gguf`, … |
 | **math** | 1 | `qwen25-math-7b-gguf` |
-| **moe** | 2 | `moonlight-16b-a3b-gguf`, `olmoe-1b-7b-gguf` |
+| **moe** | 3 | `moonlight-16b-a3b-gguf`, `olmoe-1b-7b-gguf`, `olmoe-1b-7b-0924-instruct-gguf` |
 | **multimodal** | 7 | `glm46v-flash`, `kimi-vl-a3b-thinking`, `qwen25-vl-72b-instruct-gguf`, … |
 | **nz** | 2 | `3b`, `qwen25-coder-3b-gguf` |
 | **ocr** | 2 | `trocr-large-printed`, `trocr-large-handwritten` |
-| **reasoning** | 8 | `deepseek-distill-text-gguf`, `deepseek-r1-qwen-15b-gguf`, `deepseek-r1-qwen-7b-gguf`, … |
+| **reasoning** | 10 | `deepseek-distill-text-gguf`, `deepseek-r1-qwen-15b-gguf`, `deepseek-r1-qwen-7b-gguf`, … |
 | **reranker** | 1 | `bge-v2-m3` |
 | **speech** | 2 | `whisper-large-v3-turbo`, `kokoro-82m-tts` |
 | **tiny** | 2 | `tiny`, `qwen25-05b-gguf` |
@@ -87,9 +88,9 @@ before any tool call is dispatched.
 
 ## Status
 
-- **82 models** published to `AbteeXAILab` on Hugging Face
-- **81 fully self-contained** (weights mirrored on HF — clone & run)
-- **1 pending weight mirror** (Pixtral-Large finishing as of 2026-05-17)
+- **98 models** published to `AbteeXAILab` on Hugging Face
+- **97 fully self-contained** (weights mirrored on HF — clone & run)
+- **1 pending weight mirror** (Pixtral-Large finishing as of 2026-05-18)
 
 ## License
 

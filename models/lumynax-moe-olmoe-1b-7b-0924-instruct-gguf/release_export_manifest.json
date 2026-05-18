@@ -1,0 +1,35 @@
+{
+  "release_id": "lumynax-moe-olmoe-1b-7b-0924-instruct-gguf",
+  "title": "LumynaX MoE OLMoE 1B/7B 0924 Instruct GGUF",
+  "repo_id": "AbteeXAILab/lumynax-moe-olmoe-1b-7b-0924-instruct-gguf",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ"
+  ],
+  "upstream": {
+    "repo_id": "allenai/OLMoE-1B-7B-0924-Instruct",
+    "license": "apache-2.0",
+    "prompt_format": "chatml",
+    "source_note": "AllenAI OLMoE"
+  },
+  "gguf_mirror": "bartowski/OLMoE-1B-7B-0924-Instruct-GGUF",
+  "runtime": "llama_cpp",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 4096,
+  "total_params_b": 7,
+  "active_params_b": 1,
+  "quantization": "Q4_K_M GGUF",
+  "primary_artifact": "OLMoE-1B-7B-0924-Instruct-Q4_K_M.gguf",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T10:35:35Z"
+}

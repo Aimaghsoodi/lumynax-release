@@ -1,0 +1,35 @@
+{
+  "release_id": "lumynax-frontier-coder-deepseek-v25-1210-gguf",
+  "title": "LumynaX Frontier Coder DeepSeek V2.5-1210 GGUF",
+  "repo_id": "AbteeXAILab/lumynax-frontier-coder-deepseek-v25-1210-gguf",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ"
+  ],
+  "upstream": {
+    "repo_id": "deepseek-ai/DeepSeek-V2.5-1210",
+    "license": "other",
+    "prompt_format": "chatml",
+    "source_note": "deepseek-ai/DeepSeek-V2.5-1210"
+  },
+  "gguf_mirror": "bartowski/DeepSeek-V2.5-1210-GGUF",
+  "runtime": "llama_cpp",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 163840,
+  "total_params_b": 236,
+  "active_params_b": 21,
+  "quantization": "Q4_K_M GGUF",
+  "primary_artifact": "DeepSeek-V2.5-1210-Q4_K_M/DeepSeek-V2.5-1210-Q4_K_M-00001-of-00004.gguf",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 2,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T10:35:04Z"
+}

@@ -1,0 +1,35 @@
+{
+  "release_id": "lumynax-coder-starcoder2-15b-gguf",
+  "title": "LumynaX Coder StarCoder2 15B Instruct GGUF",
+  "repo_id": "AbteeXAILab/lumynax-coder-starcoder2-15b-gguf",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ"
+  ],
+  "upstream": {
+    "repo_id": "bigcode/starcoder2-15b-instruct-v0.1",
+    "license": "apache-2.0",
+    "prompt_format": "chatml",
+    "source_note": "bigcode/starcoder2-15b-instruct-v0.1"
+  },
+  "gguf_mirror": "bartowski/starcoder2-15b-instruct-v0.1-GGUF",
+  "runtime": "llama_cpp",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 16384,
+  "total_params_b": 15,
+  "active_params_b": null,
+  "quantization": "Q4_K_M GGUF",
+  "primary_artifact": "starcoder2-15b-instruct-v0.1-Q4_K_M.gguf",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T10:35:18Z"
+}

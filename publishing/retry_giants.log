@@ -1,0 +1,170 @@
+[07:23:33] 
+=== PASS 1/6 ===
+[07:23:34] 
+AbteeXAILab/lumynax-frontier-coder-qwen3-480b-a35b-gguf: 1/6 done; missing 5
+[07:23:34]     !! still not enough space (51.1 GB)
+[07:23:34]     !! still not enough space (51.1 GB)
+[07:23:34]     !! still not enough space (51.1 GB)
+[07:23:34]     !! still not enough space (51.1 GB)
+[07:23:34]     !! still not enough space (51.1 GB)
+[07:23:35] 
+AbteeXAILab/lumynax-reasoning-deepseek-prover-v2-671b-gguf: 3/9 done; missing 6
+[07:23:35]     !! still not enough space (51.1 GB)
+[07:23:35]     !! still not enough space (51.1 GB)
+[07:23:35]     !! still not enough space (51.1 GB)
+[07:23:35]     !! still not enough space (51.1 GB)
+[07:23:35]     !! still not enough space (51.1 GB)
+[07:23:35]     !! still not enough space (51.1 GB)
+[07:23:35] --- end pass 1, sleeping 60s before next ---
+[07:24:35] 
+=== PASS 2/6 ===
+[07:24:36] 
+AbteeXAILab/lumynax-frontier-coder-qwen3-480b-a35b-gguf: 1/6 done; missing 5
+[07:24:36]     !! still not enough space (51.1 GB)
+[07:24:36]     !! still not enough space (51.1 GB)
+[07:24:36]     !! still not enough space (51.1 GB)
+[07:24:36]     !! still not enough space (51.1 GB)
+[07:24:36]     !! still not enough space (51.1 GB)
+[07:24:36] 
+AbteeXAILab/lumynax-reasoning-deepseek-prover-v2-671b-gguf: 3/9 done; missing 6
+[07:24:36]     !! still not enough space (51.1 GB)
+[07:24:36]     !! still not enough space (51.1 GB)
+[07:24:36]     !! still not enough space (51.1 GB)
+[07:24:36]     !! still not enough space (51.1 GB)
+[07:24:36]     !! still not enough space (51.1 GB)
+[07:24:36]     !! still not enough space (51.1 GB)
+[07:24:36] --- end pass 2, sleeping 60s before next ---
+[07:25:27] 
+=== PASS 1/6 ===
+[07:25:29] 
+AbteeXAILab/lumynax-frontier-coder-qwen3-480b-a35b-gguf: 1/6 done; missing 5
+[07:25:29]   [attempt 1] download Q4_K_M/Qwen3-Coder-480B-A35B-Instruct-Q4_K_M-00003-of-00006.gguf (48.9 GB)  free=51.1 GB
+[07:34:41]     downloaded in 553s
+[07:41:11]     uploaded in 390s
+[07:41:17]   [attempt 1] download Q4_K_M/Qwen3-Coder-480B-A35B-Instruct-Q4_K_M-00004-of-00006.gguf (49.0 GB)  free=51.0 GB
+[07:50:52]     downloaded in 576s
+[07:55:03]     uploaded in 250s
+[07:55:08]   [attempt 1] download Q4_K_M/Qwen3-Coder-480B-A35B-Instruct-Q4_K_M-00005-of-00006.gguf (49.7 GB)  free=51.3 GB
+[08:04:57]     downloaded in 589s
+[08:09:02]     uploaded in 245s
+[08:09:08]   [attempt 1] download Q4_K_M/Qwen3-Coder-480B-A35B-Instruct-Q4_K_M-00002-of-00006.gguf (49.8 GB)  free=51.2 GB
+[08:18:47]     downloaded in 579s
+[08:22:43]     uploaded in 236s
+[08:22:49]   [attempt 1] download Q4_K_M/Qwen3-Coder-480B-A35B-Instruct-Q4_K_M-00001-of-00006.gguf (50.0 GB)  free=51.2 GB
+[08:32:26]     downloaded in 577s
+[08:36:39]     uploaded in 253s
+[08:36:45] 
+AbteeXAILab/lumynax-reasoning-deepseek-prover-v2-671b-gguf: 3/9 done; missing 6
+[08:36:45]   [attempt 1] download Q4_K_M/DeepSeek-Prover-V2-671B-Q4_K_M-00006-of-00009.gguf (48.3 GB)  free=51.1 GB
+[08:46:05]     downloaded in 560s
+[08:58:26]     uploaded in 740s
+[08:58:30]   [attempt 1] download Q4_K_M/DeepSeek-Prover-V2-671B-Q4_K_M-00001-of-00009.gguf (48.4 GB)  free=51.0 GB
+[09:08:01]     downloaded in 571s
+[09:20:06]     uploaded in 724s
+[09:20:11]   [attempt 1] download Q4_K_M/DeepSeek-Prover-V2-671B-Q4_K_M-00005-of-00009.gguf (49.4 GB)  free=50.9 GB
+[09:29:58]     downloaded in 586s
+[09:43:49]     uploaded in 832s
+[09:43:55]   [attempt 1] download Q4_K_M/DeepSeek-Prover-V2-671B-Q4_K_M-00002-of-00009.gguf (49.4 GB)  free=51.0 GB
+[09:53:26]     downloaded in 570s
+[10:23:36]     upload FAIL: Data processing error: Format error: I/O error: There is not enough space on the disk. (os error 112)
+[10:23:41]     !! still not enough space (46.0 GB)
+[10:23:41]     !! still not enough space (46.0 GB)
+[10:23:41] --- end pass 1, sleeping 60s before next ---
+[10:24:41] 
+=== PASS 2/6 ===
+[10:24:42] 
+AbteeXAILab/lumynax-frontier-coder-qwen3-480b-a35b-gguf: 6/6 done; missing 0
+[10:24:42] 
+AbteeXAILab/lumynax-reasoning-deepseek-prover-v2-671b-gguf: 6/9 done; missing 3
+[10:24:42]     !! still not enough space (46.0 GB)
+[10:24:42]     !! still not enough space (46.0 GB)
+[10:24:42]     !! still not enough space (46.0 GB)
+[10:24:42] --- end pass 2, sleeping 60s before next ---
+[10:25:42] 
+=== PASS 3/6 ===
+[10:25:43] 
+AbteeXAILab/lumynax-frontier-coder-qwen3-480b-a35b-gguf: 6/6 done; missing 0
+[10:25:44] 
+AbteeXAILab/lumynax-reasoning-deepseek-prover-v2-671b-gguf: 6/9 done; missing 3
+[10:25:44]     !! still not enough space (46.0 GB)
+[10:25:44]     !! still not enough space (46.0 GB)
+[10:25:44]     !! still not enough space (46.0 GB)
+[10:25:44] --- end pass 3, sleeping 60s before next ---
+[10:26:47] 
+=== PASS 1/6 ===
+[10:26:49] 
+AbteeXAILab/lumynax-frontier-coder-qwen3-480b-a35b-gguf: 6/6 done; missing 0
+[10:26:49] 
+AbteeXAILab/lumynax-reasoning-deepseek-prover-v2-671b-gguf: 6/9 done; missing 3
+[10:26:49]     !! still not enough space (46.0 GB)
+[10:26:49]     !! still not enough space (46.0 GB)
+[10:26:49]     !! still not enough space (46.0 GB)
+[10:26:49] --- end pass 1, sleeping 60s before next ---
+[10:27:49] 
+=== PASS 2/6 ===
+[10:27:50] 
+AbteeXAILab/lumynax-frontier-coder-qwen3-480b-a35b-gguf: 6/6 done; missing 0
+[10:27:51] 
+AbteeXAILab/lumynax-reasoning-deepseek-prover-v2-671b-gguf: 6/9 done; missing 3
+[10:27:51]     !! still not enough space (46.0 GB)
+[10:27:51]     !! still not enough space (46.0 GB)
+[10:27:51]     !! still not enough space (46.0 GB)
+[10:27:51] --- end pass 2, sleeping 60s before next ---
+[10:28:51] 
+=== PASS 3/6 ===
+[10:28:52] 
+AbteeXAILab/lumynax-frontier-coder-qwen3-480b-a35b-gguf: 6/6 done; missing 0
+[10:28:52] 
+AbteeXAILab/lumynax-reasoning-deepseek-prover-v2-671b-gguf: 6/9 done; missing 3
+[10:28:52]     !! still not enough space (46.0 GB)
+[10:28:52]     !! still not enough space (46.0 GB)
+[10:28:52]     !! still not enough space (46.0 GB)
+[10:28:52] --- end pass 3, sleeping 60s before next ---
+[10:29:52] 
+=== PASS 4/6 ===
+[10:29:53] 
+AbteeXAILab/lumynax-frontier-coder-qwen3-480b-a35b-gguf: 6/6 done; missing 0
+[10:29:54] 
+AbteeXAILab/lumynax-reasoning-deepseek-prover-v2-671b-gguf: 6/9 done; missing 3
+[10:29:54]     !! still not enough space (46.0 GB)
+[10:29:54]     !! still not enough space (46.0 GB)
+[10:29:54]     !! still not enough space (46.0 GB)
+[10:29:54] --- end pass 4, sleeping 60s before next ---
+[10:30:48] 
+=== PASS 1/6 ===
+[10:30:49] 
+AbteeXAILab/lumynax-frontier-coder-qwen3-480b-a35b-gguf: 6/6 done; missing 0
+[10:30:50] 
+AbteeXAILab/lumynax-reasoning-deepseek-prover-v2-671b-gguf: 6/9 done; missing 3
+[10:30:50]   [attempt 1] download Q4_K_M/DeepSeek-Prover-V2-671B-Q4_K_M-00002-of-00009.gguf (49.4 GB)  free=69.6 GB
+[10:53:14]     download FAIL: peer closed connection without sending complete message body (received 33120033797 bytes, expected 49436736896)
+[10:53:19]   [attempt 1] download Q4_K_M/DeepSeek-Prover-V2-671B-Q4_K_M-00007-of-00009.gguf (49.4 GB)  free=69.6 GB
+[11:25:20]     downloaded in 1921s
+[11:32:59]     upload FAIL: Error while uploading 'Q4_K_M/DeepSeek-Prover-V2-671B-Q4_K_M-00007-of-00009.gguf' to the Hub.
+[11:33:04]   [attempt 1] download Q4_K_M/DeepSeek-Prover-V2-671B-Q4_K_M-00003-of-00009.gguf (49.5 GB)  free=69.6 GB
+[11:44:05]     download FAIL: peer closed connection without sending complete message body (received 16954100672 bytes, expected 49535701888)
+[11:44:05] --- end pass 1, sleeping 60s before next ---
+[11:45:05] 
+=== PASS 2/6 ===
+[11:45:06] 
+AbteeXAILab/lumynax-frontier-coder-qwen3-480b-a35b-gguf: 6/6 done; missing 0
+[11:45:06] 
+AbteeXAILab/lumynax-reasoning-deepseek-prover-v2-671b-gguf: 6/9 done; missing 3
+[11:45:09]   [attempt 2] download Q4_K_M/DeepSeek-Prover-V2-671B-Q4_K_M-00002-of-00009.gguf (49.4 GB)  free=69.6 GB
+[12:18:49]     downloaded in 2020s
+[12:57:10]     uploaded in 2301s
+[12:57:14]   [attempt 2] download Q4_K_M/DeepSeek-Prover-V2-671B-Q4_K_M-00007-of-00009.gguf (49.4 GB)  free=69.6 GB
+[13:05:43]     downloaded in 509s
+[13:49:02]     uploaded in 2598s
+[13:49:07]   [attempt 2] download Q4_K_M/DeepSeek-Prover-V2-671B-Q4_K_M-00003-of-00009.gguf (49.5 GB)  free=69.8 GB
+[14:22:43]     downloaded in 2016s
+[15:04:22]     uploaded in 2499s
+[15:04:26] --- end pass 2, sleeping 60s before next ---
+[15:05:26] 
+=== PASS 3/6 ===
+[15:05:27] 
+AbteeXAILab/lumynax-frontier-coder-qwen3-480b-a35b-gguf: 6/6 done; missing 0
+[15:05:28] 
+AbteeXAILab/lumynax-reasoning-deepseek-prover-v2-671b-gguf: 9/9 done; missing 0
+[15:05:28] === ALL DONE ===
+[15:05:28] === retry_giants end ===

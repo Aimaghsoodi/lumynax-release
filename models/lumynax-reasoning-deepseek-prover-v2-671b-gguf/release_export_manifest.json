@@ -1,0 +1,35 @@
+{
+  "release_id": "lumynax-reasoning-deepseek-prover-v2-671b-gguf",
+  "title": "LumynaX Reasoning DeepSeek-Prover V2 671B GGUF",
+  "repo_id": "AbteeXAILab/lumynax-reasoning-deepseek-prover-v2-671b-gguf",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ"
+  ],
+  "upstream": {
+    "repo_id": "deepseek-ai/DeepSeek-Prover-V2-671B",
+    "license": "other",
+    "prompt_format": "chatml",
+    "source_note": "DeepSeek Prover V2"
+  },
+  "gguf_mirror": "unsloth/DeepSeek-Prover-V2-671B-GGUF",
+  "runtime": "llama_cpp",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 163840,
+  "total_params_b": 671,
+  "active_params_b": 37,
+  "quantization": "Q4_K_M GGUF (sharded)",
+  "primary_artifact": "Q4_K_M/DeepSeek-Prover-V2-671B-Q4_K_M-00001-of-00009.gguf",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 2,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T10:35:06Z"
+}

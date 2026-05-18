@@ -1,0 +1,35 @@
+{
+  "release_id": "lumynax-frontier-phi-35-moe-instruct-gguf",
+  "title": "LumynaX Frontier Phi-3.5 MoE Instruct GGUF",
+  "repo_id": "AbteeXAILab/lumynax-frontier-phi-35-moe-instruct-gguf",
+  "version": "v0.1.0",
+  "publisher": "AbteeX AI Labs",
+  "publisher_org": "AbteeXAILab",
+  "jurisdiction": "NZ",
+  "residency": [
+    "NZ"
+  ],
+  "upstream": {
+    "repo_id": "microsoft/Phi-3.5-MoE-instruct",
+    "license": "mit",
+    "prompt_format": "chatml",
+    "source_note": "Microsoft Phi-3.5 MoE"
+  },
+  "gguf_mirror": "bartowski/Phi-3.5-MoE-instruct-GGUF",
+  "runtime": "llama_cpp",
+  "modalities": [
+    "text"
+  ],
+  "context_tokens": 131072,
+  "total_params_b": 42,
+  "active_params_b": 6.6,
+  "quantization": "Q4_K_M GGUF",
+  "primary_artifact": "Phi-3.5-MoE-instruct-Q4_K_M.gguf",
+  "package_state": "weights_mirrored",
+  "validation_status": "scaffold_verified",
+  "sovereignty_tier": 3,
+  "supports_tools": true,
+  "supports_json": true,
+  "audit_hash_chain": "SHA-256 over canonical request + response JSON",
+  "build_date_utc": "2026-05-17T10:35:20Z"
+}
