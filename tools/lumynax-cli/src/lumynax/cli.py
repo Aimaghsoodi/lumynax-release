@@ -173,5 +173,86 @@ def refresh():
     console.print(f"[green]✓[/green] refreshed: {len(reg['models'])} models")
 
 
+@app.command()
+def serve(
+    model_id: str,
+    port: int = typer.Option(8080),
+    host: str = typer.Option("127.0.0.1"),
+    backend: Optional[str] = typer.Option(None, help="llama-cpp | vllm (default: auto)"),
+    ctx: Optional[int] = typer.Option(None, "--ctx", help="override context length"),
+    n_gpu_layers: int = typer.Option(-1, "--n-gpu-layers"),
+    out_dir: Optional[Path] = typer.Option(None, "--out-dir", help="local weights dir"),
+):
+    """Start an OpenAI-compatible HTTP server for any LumynaX model."""
+    from .serve import serve as _do_serve
+    _do_serve(model_id, port=port, host=host, backend=backend, ctx=ctx,
+              n_gpu_layers=n_gpu_layers, out_dir=out_dir)
+
+
+@app.command()
+def opencode(
+    model_id: str,
+    base_url: str = typer.Option("http://localhost:8080/v1"),
+    api_key: str = typer.Option("lumynax-local"),
+):
+    """Emit an OpenCode provider config for a LumynaX model (JSON to stdout)."""
+    from . import integrations as _i
+    import json
+    m = _reg.find(model_id)
+    if not m:
+        console.print(f"[red]not found:[/red] {model_id}"); raise typer.Exit(2)
+    print(json.dumps(_i.opencode(m, base_url=base_url, api_key=api_key), indent=2))
+
+
+@app.command(name="continue")
+def continue_cmd(
+    model_id: str,
+    base_url: str = typer.Option("http://localhost:8080/v1"),
+):
+    """Emit a Continue.dev model entry for ~/.continue/config.json."""
+    from . import integrations as _i
+    import json
+    m = _reg.find(model_id)
+    if not m:
+        console.print(f"[red]not found:[/red] {model_id}"); raise typer.Exit(2)
+    print(json.dumps(_i.continue_dev(m, base_url=base_url), indent=2))
+
+
+@app.command()
+def vllm(model_id: str, port: int = 8000):
+    """Emit the vLLM serve command for a LumynaX model."""
+    from . import integrations as _i
+    m = _reg.find(model_id)
+    if not m: console.print(f"[red]not found:[/red] {model_id}"); raise typer.Exit(2)
+    print(_i.vllm_cmd(m, port=port))
+
+
+@app.command("llama-server")
+def llama_server_cmd(model_id: str, port: int = 8080):
+    """Emit the llama.cpp `llama-server` command for a LumynaX GGUF model."""
+    from . import integrations as _i
+    m = _reg.find(model_id)
+    if not m: console.print(f"[red]not found:[/red] {model_id}"); raise typer.Exit(2)
+    print(_i.llama_server(m, port=port))
+
+
+@app.command("lm-studio")
+def lm_studio_cmd(model_id: str):
+    """Print LM Studio discovery instructions for a LumynaX model."""
+    from . import integrations as _i
+    m = _reg.find(model_id)
+    if not m: console.print(f"[red]not found:[/red] {model_id}"); raise typer.Exit(2)
+    console.print(Panel.fit(_i.lm_studio(m), title=f"LM Studio · {model_id}", border_style="yellow"))
+
+
+@app.command()
+def ollama(model_id: str):
+    """Emit Ollama setup commands for a LumynaX model."""
+    from . import integrations as _i
+    m = _reg.find(model_id)
+    if not m: console.print(f"[red]not found:[/red] {model_id}"); raise typer.Exit(2)
+    print(_i.ollama(m))
+
+
 if __name__ == "__main__":
     app()

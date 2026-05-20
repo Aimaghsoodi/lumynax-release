@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "lumynax"
-version = "0.1.0"
-description = "LumynaX CLI — discover, download, and run the 100+ sovereign-AI models from AbteeX AI Labs in one command."
+version = "0.2.0"
+description = "LumynaX CLI — discover, download, route, serve (OpenAI-compatible), and integrate (OpenCode, Continue, LM Studio, vLLM, Ollama) the 98 sovereign-AI models from AbteeX AI Labs."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
