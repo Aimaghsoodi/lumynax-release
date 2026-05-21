@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 460" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="gPaper" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#fffefa"/><stop offset="1" stop-color="#f6f0e8"/>
+    </linearGradient>
+    <linearGradient id="gAmber" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#e08a2c"/><stop offset="1" stop-color="#9a5416"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#0a0a0b"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="460" fill="url(#gPaper)"/>
+  <text x="640" y="34" text-anchor="middle" font-size="20" font-weight="600" fill="#0a0a0b"
+        font-family="'Cormorant Garamond', Georgia, serif">LumynaX — sovereign-AI architecture</text>
+  <text x="640" y="55" text-anchor="middle" font-size="12" fill="#726b62" font-style="italic">
+    Ko te mārama te tūāpapa · Aotearoa New Zealand · AbteeX AI Labs
+  </text>
+
+  <!-- Clients (left) -->
+  <g>
+    <rect x="40" y="100" width="180" height="260" rx="10" fill="#fffefa" stroke="rgba(10,10,11,0.15)"/>
+    <text x="130" y="124" text-anchor="middle" font-size="13" font-weight="600">Clients</text>
+    <text x="130" y="152" text-anchor="middle" font-size="11" fill="#3a3a3a">OpenCode</text>
+    <text x="130" y="170" text-anchor="middle" font-size="11" fill="#3a3a3a">Continue</text>
+    <text x="130" y="188" text-anchor="middle" font-size="11" fill="#3a3a3a">Cursor</text>
+    <text x="130" y="206" text-anchor="middle" font-size="11" fill="#3a3a3a">Claude Desktop (MCP)</text>
+    <text x="130" y="224" text-anchor="middle" font-size="11" fill="#3a3a3a">LM Studio</text>
+    <text x="130" y="242" text-anchor="middle" font-size="11" fill="#3a3a3a">vLLM clients</text>
+    <text x="130" y="260" text-anchor="middle" font-size="11" fill="#3a3a3a">your code</text>
+    <text x="130" y="278" text-anchor="middle" font-size="11" fill="#3a3a3a">curl</text>
+    <text x="130" y="330" text-anchor="middle" font-size="10" fill="#9a5416" font-style="italic">OpenAI-compatible /v1</text>
+  </g>
+
+  <!-- Arrow client → gateway -->
+  <line x1="220" y1="230" x2="290" y2="230" stroke="#0a0a0b" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="255" y="222" text-anchor="middle" font-size="10" fill="#3a3a3a">Bearer key</text>
+
+  <!-- Gateway (center) -->
+  <g>
+    <rect x="290" y="100" width="320" height="260" rx="12" fill="#fffefa" stroke="url(#gAmber)" stroke-width="2.5"/>
+    <text x="450" y="126" text-anchor="middle" font-size="14" font-weight="600">LumynaX Gateway</text>
+    <text x="450" y="142" text-anchor="middle" font-size="10" fill="#726b62">FastAPI · OpenAI shape · multi-tenant</text>
+
+    <rect x="306" y="160" width="288" height="36" rx="6" fill="#f6f0e8"/>
+    <text x="450" y="174" text-anchor="middle" font-size="11" font-weight="600">1. Authn (per-tenant API key)</text>
+    <text x="450" y="188" text-anchor="middle" font-size="10" fill="#726b62">jurisdiction · min sovereignty tier · rate limit</text>
+
+    <rect x="306" y="204" width="288" height="36" rx="6" fill="#f6f0e8"/>
+    <text x="450" y="218" text-anchor="middle" font-size="11" font-weight="600">2. SovereignCode policy gates</text>
+    <text x="450" y="232" text-anchor="middle" font-size="10" fill="#726b62">purpose · residency · training · export · approval</text>
+
+    <rect x="306" y="248" width="288" height="36" rx="6" fill="#f6f0e8"/>
+    <text x="450" y="262" text-anchor="middle" font-size="11" font-weight="600">3. MaramaRoute scoring</text>
+    <text x="450" y="276" text-anchor="middle" font-size="10" fill="#726b62">quality × sovereignty × cost + task hint</text>
+
+    <rect x="306" y="292" width="288" height="36" rx="6" fill="#f6f0e8"/>
+    <text x="450" y="306" text-anchor="middle" font-size="11" font-weight="600">4. Tool loop (optional web_search)</text>
+    <text x="450" y="320" text-anchor="middle" font-size="10" fill="#726b62">model emits tool_call → SearXNG → re-call</text>
+
+    <text x="450" y="350" text-anchor="middle" font-size="10" fill="#9a5416" font-style="italic">audit: SHA-256 hash-chain</text>
+  </g>
+
+  <!-- Arrows gateway → backends -->
+  <line x1="610" y1="180" x2="700" y2="140" stroke="#0a0a0b" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="610" y1="230" x2="700" y2="230" stroke="#0a0a0b" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="610" y1="290" x2="700" y2="320" stroke="#0a0a0b" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Backends (right) -->
+  <g>
+    <rect x="700" y="100" width="270" height="78" rx="8" fill="#fffefa" stroke="rgba(10,10,11,0.15)"/>
+    <text x="835" y="126" text-anchor="middle" font-size="12" font-weight="600">llama.cpp servers (GGUF)</text>
+    <text x="835" y="146" text-anchor="middle" font-size="10" fill="#3a3a3a">~70 LumynaX models</text>
+    <text x="835" y="162" text-anchor="middle" font-size="9" fill="#726b62">Qwen3-Coder-480B · DeepSeek-V2.5 · Prover-V2-671B · Mixtral-8x22B · Hermes-3 · …</text>
+  </g>
+  <g>
+    <rect x="700" y="190" width="270" height="78" rx="8" fill="#fffefa" stroke="rgba(10,10,11,0.15)"/>
+    <text x="835" y="216" text-anchor="middle" font-size="12" font-weight="600">vLLM servers (safetensors)</text>
+    <text x="835" y="236" text-anchor="middle" font-size="10" fill="#3a3a3a">~28 LumynaX models</text>
+    <text x="835" y="252" text-anchor="middle" font-size="9" fill="#726b62">Pixtral-Large · InternVL3-78B · OLMo-2-32B · Aria-25B-MoE · LLaVA-Next-34B · Whisper · NLLB · …</text>
+  </g>
+  <g>
+    <rect x="700" y="280" width="270" height="80" rx="8" fill="#fffefa" stroke="url(#gAmber)" stroke-width="2"/>
+    <text x="835" y="306" text-anchor="middle" font-size="12" font-weight="600">SearXNG (self-hosted)</text>
+    <text x="835" y="326" text-anchor="middle" font-size="10" fill="#3a3a3a">private web search</text>
+    <text x="835" y="344" text-anchor="middle" font-size="9" fill="#726b62">aggregates DDG/Brave/Wiki/arXiv · tenant IP never leaves</text>
+  </g>
+
+  <!-- Registry (far right) -->
+  <line x1="970" y1="230" x2="1040" y2="230" stroke="#0a0a0b" stroke-width="2" marker-end="url(#arr)"/>
+  <g>
+    <rect x="1040" y="140" width="200" height="180" rx="8" fill="#fffefa" stroke="rgba(10,10,11,0.15)"/>
+    <text x="1140" y="166" text-anchor="middle" font-size="12" font-weight="600">98-model registry</text>
+    <text x="1140" y="186" text-anchor="middle" font-size="10" fill="#3a3a3a">AbteeXAILab/marama-route</text>
+    <text x="1140" y="216" text-anchor="middle" font-size="10" fill="#3a3a3a">frontier · multimodal</text>
+    <text x="1140" y="232" text-anchor="middle" font-size="10" fill="#3a3a3a">reasoning · coder</text>
+    <text x="1140" y="248" text-anchor="middle" font-size="10" fill="#3a3a3a">retrieval · speech</text>
+    <text x="1140" y="264" text-anchor="middle" font-size="10" fill="#3a3a3a">doc · safety · NZ</text>
+    <text x="1140" y="294" text-anchor="middle" font-size="9" fill="#9a5416" font-style="italic">on Hugging Face</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="640" y="410" text-anchor="middle" font-size="11" fill="#3a3a3a">
+    abteex.com · lumynax.com · github.com/Aimaghsoodi/lumynax-release · huggingface.co/AbteeXAILab
+  </text>
+  <text x="640" y="430" text-anchor="middle" font-size="9" fill="#9a5416" font-style="italic">
+    Made in Aotearoa New Zealand · MIT (scaffolds) · upstream licences honored on weights
+  </text>
+</svg>

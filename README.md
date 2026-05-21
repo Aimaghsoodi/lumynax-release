@@ -1,100 +1,91 @@
-# LumynaX Release Monorepo
+# LumynaX
 
-> *Sovereign intelligence, held in the light. — Ko te mārama te tūāpapa.*
+> **Sovereign intelligence, held in the light.**
+> *Ko te mārama te tūāpapa.*
 
-This repository is the source-of-truth monorepo for the **LumynaX** release family
-from **AbteeX AI Labs** (Aotearoa New Zealand). It contains the publication scaffolds,
-products, Hugging Face Spaces, and publishing tooling.
+98 production-ready AI models — frontier MoE, multimodal, coding specialists, reasoning, long-context, speech, retrieval — published by **AbteeX AI Labs** in **Aotearoa New Zealand**. One OpenAI-compatible API, policy-gated, audit-logged, deployable anywhere from a laptop to an enterprise cluster.
 
-The actual model weights live on **[Hugging Face: AbteeXAILab](https://huggingface.co/AbteeXAILab)**
-(weights exceed GitHub's per-file limit; this monorepo ships the runtime code only).
+[![98 models](https://img.shields.io/badge/models-98-e08a2c)](https://huggingface.co/AbteeXAILab) [![weights mirrored](https://img.shields.io/badge/weights-~2.5%20TB-9a5416)](https://huggingface.co/AbteeXAILab) [![licence](https://img.shields.io/badge/scaffolds-MIT-0a0a0b)](LICENSE) [![Aotearoa](https://img.shields.io/badge/made%20in-Aotearoa%20%F0%9F%87%B3%F0%9F%87%BF-e08a2c)](https://abteex.com)
 
-## Layout
+<p align="center"><img src="docs/architecture.svg" alt="LumynaX architecture" width="100%"/></p>
 
-| Path | Purpose |
-| --- | --- |
-| `models/<slug>/` | Per-model scaffold (README, quickstart.py, requirements.txt, manifest, Modelfile, Space). One subdir per HF model repo. |
-| `products/sovereigncode/` | **AbteeX SovereignCode** — local-first coding agent with Data Capsule policy. |
-| `products/marama-route/` | **LumynaX MaramaRoute** — sovereign model router across the LumynaX family. |
-| `spaces/sovereigncode-demo/` | Gradio Space — policy evaluator. |
-| `spaces/marama-route-demo/` | Gradio Space — sovereign router demo. |
-| `spaces/live-demo/` | Gradio Space — LumynaX live chat demo. |
-| `publishing/` | Generation + mirror scripts used to publish the family to HF. |
-| `registry/lumynax_model_registry.json` | Authoritative registry of all 98 models. |
-
-## Run any model locally
+## Three commands to first response
 
 ```bash
-# 1. Discover what's available
-cat registry/lumynax_model_registry.json | jq '.models[] | {repo_id, total_params_b, modalities}'
+# 1. Start the stack (gateway + private web-search + sample models)
+docker compose -f deployments/docker-compose.yml up -d
 
-# 2. Pick one and pull from Hugging Face (weights + scaffold)
-hf download AbteeXAILab/<slug> --local-dir <slug>
+# 2. Ask the router which model fits the request
+curl -H "Authorization: Bearer lumynax-local-dev" \
+     "http://localhost:8080/v1/route?requires_local=true&jurisdiction=NZ&modalities=text"
 
-# 3. Run the included quickstart
-cd <slug>
-pip install -r requirements.txt
-python quickstart.py --interactive
+# 3. Chat with it
+curl -H "Authorization: Bearer lumynax-local-dev" -H "Content-Type: application/json" \
+     -d '{"model":"lumynax-coder-deepseek-v2-lite-16b-gguf","messages":[{"role":"user","content":"Hello"}]}' \
+     http://localhost:8080/v1/chat/completions
 ```
 
-For each model, `models/<slug>/` in this repo mirrors the scaffold on HF
-(so you can read the quickstart, requirements, manifest, and Space code
-without cloning from HF first).
+Prefer Python? `pip install lumynax && lumynax run lumynax-chat-hermes-3-llama31-8b-gguf -i`
 
-## Family at a glance
+Prefer Claude Desktop / Cursor / Zed? `pip install lumynax-mcp` and add to your MCP config — every LumynaX model becomes a callable tool.
 
-| Tier | Count | Examples |
+## What's in here
+
+| Path | What |
+| --- | --- |
+| [`models/`](models/) | 98 model scaffolds — `quickstart.py`, `requirements.txt`, `Modelfile`, manifest, Space, docs. Weights live on HF. |
+| [`products/sovereigncode/`](products/sovereigncode/) | Local-first coding agent with Data Capsule policy and hash-chained audit. |
+| [`products/marama-route/`](products/marama-route/) | Sovereign router across the 98-model family. |
+| [`spaces/`](spaces/) | Three Gradio Spaces — gateway-aware demos of SovereignCode, MaramaRoute, and live chat. |
+| [`deployments/`](deployments/) | Docker Compose, Helm chart, gateway, SearXNG. Production-ready. |
+| [`tools/lumynax-cli/`](tools/lumynax-cli/) | `lumynax` and `lumynax-gateway` CLIs. |
+| [`tools/lumynax-mcp/`](tools/lumynax-mcp/) | MCP server for Claude Desktop / Cursor / Zed. |
+| [`evals/`](evals/) | Benchmark harness — HumanEval, MMLU, MTEB, LibriSpeech. Numbers vs upstream. |
+| [`training/lumynax-nz/`](training/lumynax-nz/) | Recipe to fine-tune a 3B model on Aotearoa NZ corpora (Hansard, Statutes, te reo Māori). |
+| [`registry/lumynax_model_registry.json`](registry/) | Authoritative model registry. Mirrored to `AbteeXAILab/marama-route` on HF. |
+| [`scripts/e2e_smoke.sh`](scripts/) | End-to-end smoke test. Run before shipping. |
+| [`DEPLOYMENT.md`](DEPLOYMENT.md) | Single-node, Kubernetes, air-gapped paths. |
+| [`INTEGRATIONS.md`](INTEGRATIONS.md) | vLLM, LM Studio, OpenCode, Continue, Ollama, llama.cpp — every runtime. |
+
+## The 98 models — by tier
+
+| Tier | What | Examples |
 | --- | --- | --- |
-| **chat** | 2 | `hermes-3-llama31-8b-gguf`, `yi-15-34b-gguf` |
-| **coder** | 11 | `qwen25-05b-instruct-gguf`, `qwen25-14b-instruct-gguf`, `qwen25-15b-instruct-gguf`, … |
-| **doc** | 4 | `nougat-base`, `donut-base`, `layoutlmv3-base`, … |
-| **embed** | 4 | `bge-m3`, `e5-mistral-7b`, `nomic-v2-moe`, … |
-| **frontier** | 11 | `minimax-m25-unsloth`, `qwen3-235b-a22b-instruct`, `minimax-m2-230b`, … |
-| **guard** | 1 | `text-moderation` |
-| **infused** | 30 | `gemma-e4b`, `gemma-e4b-text-gguf`, `gemma4-26b-a4b-gguf`, … |
-| **longctx** | 4 | `prolong-512k-instruct`, `yi-9b-200k`, `glm4-9b-chat-1m-gguf`, … |
-| **math** | 1 | `qwen25-math-7b-gguf` |
-| **moe** | 3 | `moonlight-16b-a3b-gguf`, `olmoe-1b-7b-gguf`, `olmoe-1b-7b-0924-instruct-gguf` |
-| **multimodal** | 7 | `glm46v-flash`, `kimi-vl-a3b-thinking`, `qwen25-vl-72b-instruct-gguf`, … |
-| **nz** | 2 | `3b`, `qwen25-coder-3b-gguf` |
-| **ocr** | 2 | `trocr-large-printed`, `trocr-large-handwritten` |
-| **reasoning** | 10 | `deepseek-distill-text-gguf`, `deepseek-r1-qwen-15b-gguf`, `deepseek-r1-qwen-7b-gguf`, … |
-| **reranker** | 1 | `bge-v2-m3` |
-| **speech** | 2 | `whisper-large-v3-turbo`, `kokoro-82m-tts` |
-| **tiny** | 2 | `tiny`, `qwen25-05b-gguf` |
-| **translate** | 1 | `nllb-200-3b` |
+| 🏔 **Frontier** | 70B-671B params, MoE and dense | Qwen3-235B · DeepSeek-V2.5 · GLM-4.6-355B · Qwen2.5-72B · MiniMax-M2 · Mixtral-8x22B · OLMo-2-32B · QwQ-32B · Phi-4 |
+| 👁 **Multimodal** | vision + audio | Pixtral-Large · Qwen2.5-VL-72B · InternVL3-78B · Aria-25B-MoE · LLaVA-Next-34B · Whisper-v3-Turbo · Kokoro TTS |
+| 🧠 **Reasoning & long-context** | step-by-step + 200K-1M ctx | DeepSeek-R1-Distill · DeepSeek-Prover-V2-671B · Phi-3.5-MoE · Yi-9B-200K · GLM-4-9B-1M · ProLong-512K |
+| 💻 **Coding** | frontier → tiny | Qwen3-Coder-480B · DeepSeek-V2.5-1210 · CodeLlama-70B · DeepSeek-Coder-33B · Qwen2.5-Coder-32B · StarCoder2-15B · Yi-Coder-9B |
+| 🔍 **Retrieval & safety** | embeddings + reranker + content guard | BGE-M3 · Nomic-Embed-v2-MoE · Granite-Multilingual · BGE-reranker-v2 · Text-Moderation |
+| 🌿 **NZ + specialty** | te reo Māori, doc-AI, OCR, tiny | NLLB-200-3.3B · TrOCR · Nougat · LayoutLMv3 · LumynaX-NZ-3B *(coming)* |
+
+Full [registry JSON](registry/lumynax_model_registry.json) · [Hugging Face Collections](https://huggingface.co/AbteeXAILab)
+
+## Sovereignty contract
+
+Every model card and every gateway request carries:
+
+- **Residency tag** — NZ / AU / global. Requests with the wrong jurisdiction are denied.
+- **Sovereignty tier** — 1 (remote frontier) to 5 (NZ-resident local-only).
+- **Policy gates** — purpose, residency, remote-model, training, export, human approval. Each denied request emits a hash-chained audit record.
+- **Provenance** — every model's `release_export_manifest.json` documents upstream repo, licence, GGUF mirror, and SHA-256 of the runtime scaffold.
 
 ## Companion products
 
-| Product | Purpose | Live Space |
+| Product | What | Live |
 | --- | --- | --- |
-| [SovereignCode](products/sovereigncode/) | Local-first coding agent with Data Capsule policy evaluator and audit ledger. | [sovereigncode-demo](https://huggingface.co/spaces/AbteeXAILab/sovereigncode-demo) |
-| [MaramaRoute](products/marama-route/) | Sovereign router across the LumynaX family — gates: capability, sovereignty, license, runtime, score, audit. | [marama-route-demo](https://huggingface.co/spaces/AbteeXAILab/marama-route-demo) |
-| LumynaX Live | Browser chat with the LumynaX release family. | [lumynax-live-demo](https://huggingface.co/spaces/AbteeXAILab/lumynax-live-demo) |
-
-## Provenance & sovereignty
-
-Each model card under `models/<slug>/README.md` documents:
-- Upstream repository (Apache-2.0 / MIT / etc.)
-- Quantization profile and primary artifact
-- Sovereignty tier (1 = remote frontier, 5 = NZ-resident local)
-- Residency (NZ, AU, global)
-- Audit hash-chain method
-- Tools / JSON / image / audio / context support
-
-Routing decisions made by MaramaRoute consult this metadata; SovereignCode's
-Policy Decision Point enforces the residency/license/training/export gates
-before any tool call is dispatched.
-
-## Status
-
-- **98 models** published to `AbteeXAILab` on Hugging Face
-- **97 fully self-contained** (weights mirrored on HF — clone & run)
-- **1 pending weight mirror** (Pixtral-Large finishing as of 2026-05-18)
+| [SovereignCode](products/sovereigncode/) | Data Capsule policy engine + audit ledger | [Space](https://huggingface.co/spaces/AbteeXAILab/sovereigncode-demo) |
+| [MaramaRoute](products/marama-route/) | Sovereign model router | [Space](https://huggingface.co/spaces/AbteeXAILab/marama-route-demo) |
+| LumynaX Live | Browser chat with the family | [Space](https://huggingface.co/spaces/AbteeXAILab/lumynax-live-demo) |
+| [`lumynax`](tools/lumynax-cli/) CLI | `lumynax route / serve / opencode / continue / vllm / lm-studio` | `pip install lumynax` |
+| [`lumynax-mcp`](tools/lumynax-mcp/) | MCP server for Claude Desktop / Cursor / Zed | `pip install lumynax-mcp` |
 
 ## License
 
-- Scaffolding, products, and tooling in this monorepo: **MIT** (© AbteeX AI Labs)
-- Each model's weights remain under the **upstream licence** documented in its manifest
+- **Scaffolds, tooling, gateway** — MIT (© AbteeX AI Labs)
+- **Weights** — each model's upstream licence (Apache-2.0, MIT, Llama, Qwen, Mistral-Research, etc.), unchanged
 
-Generated by `publishing/build_github_monorepo.py`.
+## Made in Aotearoa New Zealand
+
+By **AbteeX AI Labs** · [abteex.com](https://abteex.com) · [lumynax.com](https://lumynax.com)
+
+*Ko te mārama te tūāpapa — the light is the foundation.*

@@ -1,0 +1,77 @@
+# LumynaX-NZ training corpus — every source has a public URL and a clear licence.
+# datasets/prepare.py reads this file to download, clean, dedupe, and shard.
+
+corpora:
+  - id: nz_hansard
+    name: New Zealand Hansard (Parliamentary debates)
+    url: https://www.parliament.nz/en/pb/hansard-debates/
+    license: Crown copyright with free reuse and attribution (Hansard policy)
+    weight: 0.35
+    estimated_size_gb: 3.0
+    cleanup:
+      - strip_html
+      - dedupe_paragraphs
+
+  - id: nz_statutes
+    name: New Zealand Legislation
+    url: https://www.legislation.govt.nz/
+    license: Crown copyright with free reuse and attribution
+    weight: 0.10
+    estimated_size_gb: 0.6
+    cleanup:
+      - strip_html
+      - keep_act_metadata
+
+  - id: rnz_open
+    name: RNZ + commons-licensed NZ news transcripts
+    url: https://www.rnz.co.nz/
+    license: per-article CC where flagged; otherwise skipped via prepare.py filter
+    weight: 0.10
+    estimated_size_gb: 0.2
+    cleanup:
+      - strip_html
+      - filter_license_required
+
+  - id: nllb_mi_en
+    name: NLLB-200 te reo Maori <-> English parallel
+    url: https://huggingface.co/datasets/allenai/nllb
+    license: CC-BY-NC-4.0
+    weight: 0.20
+    estimated_size_pairs: 80000
+    cleanup:
+      - language_detect_filter
+      - sentence_align_quality_filter
+
+  - id: nz_uni_open
+    name: NZ university open courseware (Otago, Auckland, Victoria)
+    url: https://www.openaccess.ac.nz/
+    license: per-page CC; filtered to CC-BY / CC-BY-SA only
+    weight: 0.15
+    estimated_size_gb: 0.4
+    cleanup:
+      - strip_html
+      - subject_balance
+
+  - id: tikanga_public
+    name: Public-domain matauranga and tikanga texts
+    url: see attribution.md
+    license: public domain; iwi attribution where applicable
+    weight: 0.10
+    estimated_size_gb: 0.05
+    cleanup:
+      - manual_iwi_review_required
+
+# Iwi / community engagement
+engagement:
+  consultation_required_for:
+    - tikanga_public
+    - any source flagged "taonga" in attribution.md
+  removal_process: "open an issue or email aimaghsoodi@outlook.com; takedown within 48h"
+
+# Hard exclusions — never train on these
+never_train_on:
+  - private personal data
+  - patient records
+  - student records
+  - government data not on legislation.govt.nz or parliament.nz
+  - any iwi-restricted matauranga
