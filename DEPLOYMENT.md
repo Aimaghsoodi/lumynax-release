@@ -1,11 +1,11 @@
-# Deploying LumynaX in an HPE environment
+# Deploying LumynaX in an enterprise environment
 
 Three deployment paths, picked by your operating model:
 
 | Path | When | What you get |
 |---|---|---|
-| **Single-node Docker** | ProLiant DL/Apollo with NVIDIA GPU(s), 1 box | Gateway + SearXNG + 3 sample models in `docker compose up` |
-| **HPE GreenLake / OpenShift / vanilla Kubernetes** | Multi-node cluster | Helm chart deploys gateway + SearXNG + N model servers behind an Ingress |
+| **Single-node Docker** | enterprise rack server with NVIDIA GPU(s), 1 box | Gateway + SearXNG + 3 sample models in `docker compose up` |
+| **enterprise Kubernetes (OpenShift, or vanilla)** | Multi-node cluster | Helm chart deploys gateway + SearXNG + N model servers behind an Ingress |
 | **Air-gapped bare metal** | No internet, fully sovereign | Same Helm chart with pre-pulled images and pre-mirrored weights |
 
 All three converge on **one OpenAI-compatible API endpoint** that fronts every LumynaX model and a self-hosted **web_search** tool that respects sovereignty.
@@ -84,7 +84,7 @@ curl -s http://localhost:8080/v1/chat/completions \
 
 ---
 
-## Path 2 — HPE Kubernetes / OpenShift / GreenLake
+## Path 2 —  Kubernetes / OpenShift / 
 
 ```bash
 cd deployments/k8s/helm
@@ -125,13 +125,13 @@ Each model PVC defaults to 30 GiB for 13B-class Q4 GGUF. Larger:
 - Frontier MoE Q4 (235B-480B): 130-300 GiB
 - Frontier MoE bf16: 500GB-1TB
 
-Use HPE GreenLake block storage with **ReadWriteMany** if you want multiple model-server replicas sharing one weight volume.
+Use enterprise Kubernetes block storage with **ReadWriteMany** if you want multiple model-server replicas sharing one weight volume.
 
 ---
 
 ## Path 3 — Air-gapped bare metal
 
-If the HPE environment has no outbound internet:
+If the enterprise environment has no outbound internet:
 
 1. **Pre-pull container images** on a connected host:
    ```bash
@@ -216,4 +216,4 @@ Rotate keys: edit the ConfigMap (or file) and `kubectl rollout restart deploy/lu
 | Frontier MoE Q4 (Qwen3-235B, MiniMax-M2, GLM-4.6-355B) | 2-4× A100-80 / H100 | 200-400 GB | tensor-parallel |
 | 671B MoE Q4 (DeepSeek-Prover-V2, DeepSeek-V3) | 4-8× H100 | 500-700 GB | high-end serving only |
 
-For HPE GreenLake AI Compute: 8x H100 nodes serve any single model in the family. The 7B-30B tier runs comfortably on a 1× L40S node.
+For enterprise AI compute: 8x H100 nodes serve any single model in the family. The 7B-30B tier runs comfortably on a 1× L40S node.

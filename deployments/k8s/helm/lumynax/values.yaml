@@ -1,5 +1,5 @@
 # LumynaX Helm values.
-# Tested on HPE GreenLake Kubernetes, OpenShift 4.x, vanilla K8s 1.27+.
+# Tested on enterprise Kubernetes, OpenShift 4.x, vanilla K8s 1.27+.
 
 gateway:
   image: lumynax/gateway:0.2.0

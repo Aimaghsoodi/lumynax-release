@@ -1,6 +1,6 @@
 apiVersion: v2
 name: lumynax
-description: LumynaX — sovereign AI gateway + model servers + self-hosted web search, for HPE GreenLake / OpenShift / vanilla Kubernetes.
+description: LumynaX — sovereign AI gateway + model servers + self-hosted web search, for enterprise Kubernetes (OpenShift, or vanilla).
 type: application
 version: 0.2.0
 appVersion: "0.2.0"

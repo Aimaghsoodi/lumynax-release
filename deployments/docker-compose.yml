@@ -1,4 +1,4 @@
-# Single-node LumynaX stack for an HPE ProLiant box or any Docker host.
+# Single-node LumynaX stack for an enterprise Linux server with Docker.
 #
 #   docker compose up -d
 #
