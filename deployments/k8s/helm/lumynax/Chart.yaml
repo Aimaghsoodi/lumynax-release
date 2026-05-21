@@ -1,0 +1,18 @@
+apiVersion: v2
+name: lumynax
+description: LumynaX — sovereign AI gateway + model servers + self-hosted web search, for HPE GreenLake / OpenShift / vanilla Kubernetes.
+type: application
+version: 0.2.0
+appVersion: "0.2.0"
+keywords:
+  - lumynax
+  - abteex
+  - sovereign-ai
+  - llm-gateway
+  - openai-compatible
+home: https://github.com/Aimaghsoodi/lumynax-release
+sources:
+  - https://github.com/Aimaghsoodi/lumynax-release
+maintainers:
+  - name: AbteeX AI Labs
+    email: aimaghsoodi@outlook.com

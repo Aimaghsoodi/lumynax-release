@@ -1,0 +1,85 @@
+# Single-node LumynaX stack for an HPE ProLiant box or any Docker host.
+#
+#   docker compose up -d
+#
+# Components:
+#   gateway          OpenAI-compatible facade (port 8080)
+#   searxng          Self-hosted web search (port 8888, gateway-only)
+#   3 sample models  Pre-wired llama-server pods (CodeLlama, Hermes-3, DeepSeek-V2-Lite)
+#
+# Add more model servers by copying one of the `llama-*` services and editing
+# config/routes.json to point at it.
+
+services:
+  gateway:
+    build: ./gateway
+    image: lumynax/gateway:0.2.0
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./gateway/config:/data:ro
+      - lumynax-audit:/audit
+    environment:
+      GATEWAY_REGISTRY_PATH: /data/registry.json
+      GATEWAY_API_KEYS_PATH: /data/api-keys.json
+      GATEWAY_ROUTES_PATH:   /data/routes.json
+      GATEWAY_AUDIT_LOG:     /audit/gateway.log
+      SEARXNG_URL: http://searxng:8080
+    depends_on:
+      - searxng
+    restart: unless-stopped
+
+  searxng:
+    image: searxng/searxng:latest
+    expose:
+      - "8080"
+    volumes:
+      - ./web-search/settings.yml:/etc/searxng/settings.yml:ro
+    environment:
+      SEARXNG_SECRET: ${SEARXNG_SECRET:-changeme-please}
+      SEARXNG_BASE_URL: http://searxng:8080/
+    restart: unless-stopped
+
+  # Sample model server #1 — small, fast coder
+  llama-deepseek-v2-lite:
+    image: ghcr.io/ggerganov/llama.cpp:server
+    expose: ["8000"]
+    volumes:
+      - lumynax-models:/models
+    command: >
+      --host 0.0.0.0 --port 8000 -c 16384 -ngl -1
+      -m /models/AbteeXAILab--lumynax-coder-deepseek-v2-lite-16b-gguf/DeepSeek-Coder-V2-Lite-Instruct-Q4_K_M.gguf
+    restart: unless-stopped
+
+  # Sample model server #2 — Hermes-3 chat with tool support
+  llama-hermes-3:
+    image: ghcr.io/ggerganov/llama.cpp:server
+    expose: ["8000"]
+    volumes:
+      - lumynax-models:/models
+    command: >
+      --host 0.0.0.0 --port 8000 -c 16384 -ngl -1
+      -m /models/AbteeXAILab--lumynax-chat-hermes-3-llama31-8b-gguf/Hermes-3-Llama-3.1-8B-Q4_K_M.gguf
+    restart: unless-stopped
+
+  # Sample model server #3 — Qwen2.5-72B (heavier, GPU recommended)
+  llama-qwen25-72b:
+    image: ghcr.io/ggerganov/llama.cpp:server
+    expose: ["8000"]
+    volumes:
+      - lumynax-models:/models
+    command: >
+      --host 0.0.0.0 --port 8000 -c 32768 -ngl -1
+      -m /models/AbteeXAILab--lumynax-frontier-qwen25-72b-instruct-gguf/Qwen2.5-72B-Instruct-Q4_K_M.gguf
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: ["gpu"]
+    restart: unless-stopped
+
+volumes:
+  lumynax-models:
+    driver: local
+  lumynax-audit:
+    driver: local

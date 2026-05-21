@@ -1,0 +1,66 @@
+{{- range .Values.modelServers }}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: lumynax-model-{{ .name }}
+spec:
+  accessModes: [ReadWriteOnce]
+  resources: { requests: { storage: {{ .pvcSize }} } }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lumynax-model-{{ .name }}
+  labels: { app: lumynax-model, model: {{ .name }} }
+spec:
+  replicas: {{ .replicas }}
+  selector: { matchLabels: { app: lumynax-model, model: {{ .name }} } }
+  template:
+    metadata:
+      labels: { app: lumynax-model, model: {{ .name }} }
+    spec:
+      initContainers:
+        - name: fetch-weights
+          image: python:3.11-slim
+          env:
+            - { name: HF_TOKEN, valueFrom: { secretKeyRef: { name: hf-token, key: token, optional: true } } }
+          command: ["sh", "-c"]
+          args:
+            - |
+              pip install --quiet huggingface_hub
+              python -c "from huggingface_hub import snapshot_download; \
+                snapshot_download(repo_id='{{ .huggingfaceRepo }}', local_dir='/weights', \
+                  allow_patterns=['*.gguf','*.safetensors','*.json','config*','tokenizer*'])"
+          volumeMounts:
+            - { name: weights, mountPath: /weights }
+      containers:
+        - name: server
+          image: {{ .image }}
+          ports: [{ containerPort: 8000 }]
+          command: ["llama-server"]
+          args:
+            - --host
+            - 0.0.0.0
+            - --port
+            - "8000"
+            - -c
+            - "{{ .contextTokens }}"
+            - -ngl
+            - "-1"
+            - -m
+            - /weights/{{ .primaryFile }}
+          volumeMounts:
+            - { name: weights, mountPath: /weights }
+          resources: {{- toYaml .resources | nindent 12 }}
+          readinessProbe: { httpGet: { path: /health, port: 8000 }, initialDelaySeconds: 60, periodSeconds: 10 }
+      volumes:
+        - { name: weights, persistentVolumeClaim: { claimName: lumynax-model-{{ .name }} } }
+---
+apiVersion: v1
+kind: Service
+metadata: { name: lumynax-model-{{ .name }} }
+spec:
+  selector: { app: lumynax-model, model: {{ .name }} }
+  ports: [{ name: http, port: 8000, targetPort: 8000 }]
+{{- end }}

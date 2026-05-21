@@ -1,0 +1,26 @@
+{
+  "lumynax-local-dev": {
+    "tenant": "local-dev",
+    "jurisdiction": "NZ",
+    "policies": ["allow-all"],
+    "rate_limit": 0,
+    "min_sovereignty_tier": null,
+    "note": "Dev/test key — replace before production."
+  },
+  "EXAMPLE-PROD-KEY-rotate-me": {
+    "tenant": "engineering",
+    "jurisdiction": "NZ",
+    "policies": ["nz-personal-sovereignty"],
+    "rate_limit": 1000,
+    "min_sovereignty_tier": 3,
+    "note": "Engineering tenant — NZ-resident models only, tier 3+."
+  },
+  "EXAMPLE-FRONTIER-KEY-rotate-me": {
+    "tenant": "research",
+    "jurisdiction": "global",
+    "policies": ["allow-all"],
+    "rate_limit": 200,
+    "min_sovereignty_tier": null,
+    "note": "Research tenant — frontier MoE access enabled."
+  }
+}

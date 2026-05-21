@@ -1,0 +1,11 @@
+{
+  "_comment": "Map model slug → backend HTTP base URL. The gateway will POST to <url>/chat/completions and /embeddings.",
+  "lumynax-coder-deepseek-v2-lite-16b-gguf":  "http://llama-deepseek-v2-lite:8000/v1",
+  "lumynax-chat-hermes-3-llama31-8b-gguf":    "http://llama-hermes-3:8000/v1",
+  "lumynax-frontier-qwen25-72b-instruct-gguf":"http://llama-qwen25-72b:8000/v1",
+  "lumynax-frontier-olmo2-32b-instruct":      "http://vllm-olmo2-32b:8000/v1",
+  "lumynax-multimodal-internvl3-78b-instruct":"http://vllm-internvl3-78b:8000/v1",
+  "lumynax-embed-bge-m3":                     "http://embed-bge-m3:8000/v1",
+  "lumynax-reranker-bge-v2-m3":               "http://reranker-bge-v2:8000/v1",
+  "lumynax-speech-whisper-large-v3-turbo":    "http://asr-whisper:8000/v1"
+}

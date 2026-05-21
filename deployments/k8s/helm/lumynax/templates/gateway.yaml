@@ -1,0 +1,90 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: lumynax-gateway-config
+  labels: { app: lumynax-gateway }
+data:
+  api-keys.json: {{ .Values.gateway_config.apiKeysJson | toJson | quote }}
+  routes.json:   {{ .Values.gateway_config.routesJson  | toJson | quote }}
+  fetch-registry.sh: |
+    #!/bin/sh
+    set -e
+    curl -fsSL "{{ .Values.gateway_config.registryUrl }}" -o /data/registry.json
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lumynax-gateway
+  labels: { app: lumynax-gateway }
+spec:
+  replicas: {{ .Values.gateway.replicas }}
+  selector: { matchLabels: { app: lumynax-gateway } }
+  template:
+    metadata:
+      labels: { app: lumynax-gateway }
+    spec:
+      initContainers:
+        - name: fetch-registry
+          image: curlimages/curl:8.10.1
+          command: ["sh", "/scripts/fetch-registry.sh"]
+          volumeMounts:
+            - { name: scripts, mountPath: /scripts }
+            - { name: data,    mountPath: /data }
+      containers:
+        - name: gateway
+          image: {{ .Values.gateway.image }}
+          imagePullPolicy: {{ .Values.gateway.imagePullPolicy }}
+          ports: [{ containerPort: 8080 }]
+          env:
+            - { name: GATEWAY_REGISTRY_PATH, value: /data/registry.json }
+            - { name: GATEWAY_API_KEYS_PATH, value: /etc/lumynax/api-keys.json }
+            - { name: GATEWAY_ROUTES_PATH,   value: /etc/lumynax/routes.json }
+            - { name: GATEWAY_AUDIT_LOG,     value: /var/log/lumynax/audit.log }
+            - { name: SEARXNG_URL,           value: "http://lumynax-searxng:8080" }
+          volumeMounts:
+            - { name: data,    mountPath: /data }
+            - { name: cfg,     mountPath: /etc/lumynax, readOnly: true }
+            - { name: audit,   mountPath: /var/log/lumynax }
+          resources: {{- toYaml .Values.gateway.resources | nindent 12 }}
+          readinessProbe: { httpGet: { path: /health, port: 8080 }, initialDelaySeconds: 5 }
+          livenessProbe:  { httpGet: { path: /health, port: 8080 }, initialDelaySeconds: 30 }
+      volumes:
+        - { name: data,    emptyDir: {} }
+        - { name: audit,   emptyDir: {} }
+        - { name: scripts, configMap: { name: lumynax-gateway-config, items: [{ key: fetch-registry.sh, path: fetch-registry.sh }] } }
+        - { name: cfg,     configMap: { name: lumynax-gateway-config, items: [{ key: api-keys.json, path: api-keys.json }, { key: routes.json, path: routes.json }] } }
+      nodeSelector: {{- toYaml .Values.nodeSelector | nindent 8 }}
+      tolerations:   {{- toYaml .Values.tolerations | nindent 8 }}
+      affinity:      {{- toYaml .Values.affinity   | nindent 8 }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lumynax-gateway
+spec:
+  type: {{ .Values.gateway.service.type }}
+  selector: { app: lumynax-gateway }
+  ports:
+    - { name: http, port: {{ .Values.gateway.service.port }}, targetPort: 8080 }
+{{- if .Values.gateway.ingress.enabled }}
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: lumynax-gateway
+  annotations: {{- toYaml .Values.gateway.ingress.annotations | nindent 4 }}
+spec:
+  ingressClassName: {{ .Values.gateway.ingress.className }}
+  {{- if .Values.gateway.ingress.tls.enabled }}
+  tls:
+    - hosts: [{{ .Values.gateway.ingress.host | quote }}]
+      secretName: {{ .Values.gateway.ingress.tls.secretName }}
+  {{- end }}
+  rules:
+    - host: {{ .Values.gateway.ingress.host }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend: { service: { name: lumynax-gateway, port: { number: {{ .Values.gateway.service.port }} } } }
+{{- end }}

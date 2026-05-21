@@ -1,0 +1,39 @@
+{{- if .Values.searxng.enabled }}
+apiVersion: v1
+kind: Secret
+metadata:
+  name: lumynax-searxng-secret
+type: Opaque
+stringData:
+  SEARXNG_SECRET: {{ .Values.searxng.secret | default "changeme-please-set-via-helm" | quote }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lumynax-searxng
+  labels: { app: lumynax-searxng }
+spec:
+  replicas: {{ .Values.searxng.replicas }}
+  selector: { matchLabels: { app: lumynax-searxng } }
+  template:
+    metadata:
+      labels: { app: lumynax-searxng }
+    spec:
+      containers:
+        - name: searxng
+          image: {{ .Values.searxng.image }}
+          ports: [{ containerPort: 8080 }]
+          envFrom:
+            - secretRef: { name: lumynax-searxng-secret }
+          resources: {{- toYaml .Values.searxng.resources | nindent 12 }}
+          readinessProbe: { httpGet: { path: /, port: 8080 }, initialDelaySeconds: 10 }
+          livenessProbe:  { httpGet: { path: /, port: 8080 }, initialDelaySeconds: 30 }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lumynax-searxng
+spec:
+  selector: { app: lumynax-searxng }
+  ports: [{ name: http, port: 8080, targetPort: 8080 }]
+{{- end }}

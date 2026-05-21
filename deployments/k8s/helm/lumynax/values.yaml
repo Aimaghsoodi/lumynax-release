@@ -1,0 +1,80 @@
+# LumynaX Helm values.
+# Tested on HPE GreenLake Kubernetes, OpenShift 4.x, vanilla K8s 1.27+.
+
+gateway:
+  image: lumynax/gateway:0.2.0
+  imagePullPolicy: IfNotPresent
+  replicas: 2
+  resources:
+    requests: { cpu: "200m", memory: "256Mi" }
+    limits:   { cpu: "1",    memory: "1Gi" }
+  service:
+    type: ClusterIP
+    port: 8080
+  ingress:
+    enabled: true
+    className: nginx
+    host: lumynax.example.internal
+    tls:
+      enabled: true
+      secretName: lumynax-tls
+    annotations:
+      cert-manager.io/cluster-issuer: "letsencrypt-prod"
+      nginx.ingress.kubernetes.io/proxy-body-size: "200m"
+      nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+
+searxng:
+  enabled: true
+  image: searxng/searxng:latest
+  replicas: 2
+  secret: ""            # set via --set searxng.secret=... or external Secret
+  resources:
+    requests: { cpu: "100m", memory: "128Mi" }
+    limits:   { cpu: "500m", memory: "512Mi" }
+
+# api-keys.json + routes.json + registry.json are mounted as ConfigMaps.
+# Override these in production via --set-file gateway.apiKeysJson=...
+gateway_config:
+  apiKeysJson: |
+    {
+      "REPLACE-WITH-A-REAL-KEY": {
+        "tenant": "default",
+        "jurisdiction": "NZ",
+        "policies": ["nz-personal-sovereignty"],
+        "rate_limit": 1000,
+        "min_sovereignty_tier": 3
+      }
+    }
+  routesJson: |
+    {
+      "lumynax-coder-deepseek-v2-lite-16b-gguf": "http://lumynax-model-deepseek-v2-lite.lumynax.svc.cluster.local:8000/v1",
+      "lumynax-chat-hermes-3-llama31-8b-gguf":   "http://lumynax-model-hermes-3.lumynax.svc.cluster.local:8000/v1"
+    }
+  registryUrl: "https://huggingface.co/AbteeXAILab/marama-route/resolve/main/configs/lumynax_model_registry.json"
+
+# Model server templates. Each item becomes its own Deployment + Service.
+modelServers:
+  - name: deepseek-v2-lite
+    image: ghcr.io/ggerganov/llama.cpp:server
+    replicas: 1
+    pvcSize: 30Gi
+    huggingfaceRepo: "AbteeXAILab/lumynax-coder-deepseek-v2-lite-16b-gguf"
+    primaryFile: "DeepSeek-Coder-V2-Lite-Instruct-Q4_K_M.gguf"
+    contextTokens: 16384
+    resources:
+      requests: { cpu: "2", memory: "16Gi" }
+      limits:   { cpu: "8", memory: "32Gi", nvidia.com/gpu: 1 }
+  - name: hermes-3
+    image: ghcr.io/ggerganov/llama.cpp:server
+    replicas: 1
+    pvcSize: 20Gi
+    huggingfaceRepo: "AbteeXAILab/lumynax-chat-hermes-3-llama31-8b-gguf"
+    primaryFile: "Hermes-3-Llama-3.1-8B-Q4_K_M.gguf"
+    contextTokens: 16384
+    resources:
+      requests: { cpu: "2", memory: "12Gi" }
+      limits:   { cpu: "8", memory: "24Gi", nvidia.com/gpu: 1 }
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
