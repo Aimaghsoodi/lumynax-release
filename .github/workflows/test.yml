@@ -1,0 +1,60 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  gateway-pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: |
+          pip install -r deployments/gateway/requirements.txt
+          pip install pytest respx httpx
+      - run: cd deployments/gateway && python -m pytest tests/ -v
+
+  cli-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install build hatchling
+      - run: python -m build --wheel tools/lumynax-cli
+      - run: python -m build --wheel tools/lumynax-mcp
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wheels
+          path: tools/*/dist/*.whl
+
+  smoke-no-gpu:
+    runs-on: ubuntu-latest
+    needs: gateway-pytest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          # Set up config from examples
+          cp deployments/gateway/config/api-keys.example.json deployments/gateway/config/api-keys.json
+          cp deployments/gateway/config/routes.example.json   deployments/gateway/config/routes.json
+          curl -fsSL https://huggingface.co/AbteeXAILab/marama-route/resolve/main/configs/lumynax_model_registry.json \
+            -o deployments/gateway/config/registry.json
+          export SEARXNG_SECRET=ci-secret-not-used-anywhere
+          # Bring up gateway + searxng only (no GPU available)
+          docker compose -f deployments/docker-compose.yml up -d gateway searxng
+          # Wait for health
+          for i in $(seq 1 60); do
+            curl -fsS http://localhost:8080/health && break
+            sleep 2
+          done
+      - run: |
+          # Smoke checks
+          curl -fsS http://localhost:8080/health | grep '"ok":true'
+          curl -fsS -H "Authorization: Bearer lumynax-local-dev" http://localhost:8080/v1/models | python -c "import json,sys; d=json.load(sys.stdin); print(f'models: {len(d[\"data\"])}'); assert len(d['data']) >= 80"
+          curl -fsS -H "Authorization: Bearer lumynax-local-dev" "http://localhost:8080/v1/route?modalities=text&requires_local=true&jurisdiction=NZ" | python -c "import json,sys; d=json.load(sys.stdin); print(f'router picked: {d[\"model\"]}'); assert 'lumynax-' in d['model']"
+      - if: always()
+        run: docker compose -f deployments/docker-compose.yml logs gateway searxng

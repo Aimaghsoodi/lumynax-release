@@ -1,0 +1,14 @@
+torch>=2.4
+transformers>=4.50
+accelerate>=1.0
+peft>=0.13
+bitsandbytes>=0.43
+trl>=0.12
+datasets>=3.0
+sentencepiece
+protobuf
+PyYAML
+huggingface_hub>=0.27
+flash-attn>=2.6 ; platform_system != "Windows"
+deepspeed>=0.14 ; platform_system != "Windows"
+tensorboard

@@ -42,25 +42,33 @@ open(os.environ["GATEWAY_API_KEYS_PATH"], "w").write(json.dumps(KEYS))
 open(os.environ["GATEWAY_ROUTES_PATH"], "w").write(json.dumps(ROUTES))
 
 from app import app
-client = TestClient(app)
+
+
+@pytest.fixture(scope="module")
+def client():
+    with TestClient(app) as c:
+        yield c
 
 
 def auth(key="valid-nz-key"):
     return {"Authorization": f"Bearer {key}"}
 
 
-def test_health():
+def test_health(client):
     r = client.get("/health")
     assert r.status_code == 200
     assert r.json()["ok"] is True
     assert r.json()["models"] == 2
 
 
-def test_models_requires_auth():
-    assert client.get("/v1/models").status_code == 401
+def test_models_requires_auth(client):
+    # FastAPI HTTPBearer returns 403 when no Authorization header is present.
+    # 401 when a bogus token is provided (rejected by our authn dependency).
+    assert client.get("/v1/models").status_code in (401, 403)
+    assert client.get("/v1/models", headers={"Authorization": "Bearer wrong"}).status_code == 401
 
 
-def test_models_lists_for_tenant():
+def test_models_lists_for_tenant(client):
     r = client.get("/v1/models", headers=auth("valid-nz-key"))
     assert r.status_code == 200
     ids = [m["id"] for m in r.json()["data"]]
@@ -69,20 +77,20 @@ def test_models_lists_for_tenant():
     assert "lumynax-frontier-test-70b" not in ids
 
 
-def test_models_global_tenant_sees_all():
+def test_models_global_tenant_sees_all(client):
     r = client.get("/v1/models", headers=auth("valid-global-key"))
     ids = [m["id"] for m in r.json()["data"]]
     assert "lumynax-chat-test-8b-gguf" in ids
     assert "lumynax-frontier-test-70b" in ids
 
 
-def test_route_picks_local_for_nz():
+def test_route_picks_local_for_nz(client):
     r = client.get("/v1/route?requires_local=true&jurisdiction=NZ", headers=auth())
     assert r.status_code == 200
     assert r.json()["model"] == "lumynax-chat-test-8b-gguf"
 
 
-def test_policy_denies_jurisdiction_mismatch():
+def test_policy_denies_jurisdiction_mismatch(client):
     r = client.post("/v1/chat/completions", headers=auth("valid-nz-key"),
                     json={"model": "lumynax-frontier-test-70b",
                           "messages": [{"role": "user", "content": "hi"}]})
@@ -90,14 +98,14 @@ def test_policy_denies_jurisdiction_mismatch():
     assert "policy denied" in r.text
 
 
-def test_model_not_found():
+def test_model_not_found(client):
     r = client.post("/v1/chat/completions", headers=auth(),
                     json={"model": "nonexistent", "messages": []})
     assert r.status_code == 404
 
 
 @respx.mock
-def test_chat_forwards_to_backend():
+def test_chat_forwards_to_backend(client):
     respx.post("http://backend-8b:8000/v1/chat/completions").mock(
         return_value=Response(200, json={
             "id": "chatcmpl-x", "choices": [{"message": {"role": "assistant", "content": "hi back"}, "finish_reason": "stop"}],
@@ -111,8 +119,7 @@ def test_chat_forwards_to_backend():
 
 
 @respx.mock
-def test_web_search_tool_loop():
-    # First upstream call returns a tool_call requesting web_search
+def test_web_search_tool_loop(client):
     respx.post("http://backend-8b:8000/v1/chat/completions").mock(side_effect=[
         Response(200, json={"choices": [{"message": {
             "role": "assistant", "tool_calls": [
@@ -135,7 +142,7 @@ def test_web_search_tool_loop():
     assert "found 3 results" in r.json()["choices"][0]["message"]["content"]
 
 
-def test_audit_log_appended(tmp_path, monkeypatch):
+def test_audit_log_appended(client, tmp_path, monkeypatch):
     # Just check the audit hash chain advances on a request
     from app import state, audit
     h0 = state["audit_last_hash"]
