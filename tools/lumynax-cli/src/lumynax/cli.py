@@ -2,7 +2,7 @@
 from __future__ import annotations
 import os, sys, subprocess
 from pathlib import Path
-from typing import Optional
+from typing import List, Optional
 
 import typer
 from rich.console import Console
@@ -32,8 +32,8 @@ def _root(version: bool = typer.Option(False, "--version", "-V", callback=_versi
     pass
 
 
-@app.command()
-def list(
+@app.command("list")
+def _list_cmd(
     tier: Optional[str] = typer.Option(None, help="frontier|multimodal|reasoning|coder|embed|moe|speech|doc|guard|chat|translate|tiny"),
     modality: Optional[str] = typer.Option(None, help="text|vision|audio"),
     max_params: Optional[float] = typer.Option(None, "--max-params-b", help="max total params (billions)"),
@@ -131,39 +131,87 @@ def run(
 
 @app.command()
 def route(
-    prompt: str,
-    modalities: str = typer.Option("text", help="comma-separated: text,vision,audio"),
-    requires_local: bool = typer.Option(False, "--local"),
-    tools: bool = typer.Option(False, "--tools"),
-    json_out: bool = typer.Option(False, "--json"),
+    prompt: Optional[str] = typer.Argument(None, help="Prompt (or '-' / stdin pipe). The router will analyze it."),
+    modalities: str = typer.Option("text", help="comma-separated: text,vision,audio (auto-detected if prompt given)"),
+    strategy: str = typer.Option("balanced", help="balanced | cheap | frontier | local-only | coder | vision | reasoning | te-reo"),
+    requires_local: bool = typer.Option(False, "--local", help="force sovereignty tier ≥ 3"),
+    tools: Optional[bool] = typer.Option(None, "--tools/--no-tools", help="require tool-calling (auto-detected by default)"),
+    json_mode: Optional[bool] = typer.Option(None, "--json-mode/--no-json-mode", help="require JSON mode (auto-detected)"),
     jurisdiction: str = typer.Option("NZ"),
+    max_params: float = typer.Option(0.0, "--max-params-b", help="max total params (B); 0 = unlimited"),
+    min_context: int = typer.Option(0, "--min-ctx", help="minimum context tokens required"),
+    prefer_family: Optional[str] = typer.Option(None, "--prefer-family"),
+    forbid: Optional[List[str]] = typer.Option(None, "--forbid", help="slug(s) to exclude; can repeat"),
+    output: str = typer.Option("pretty", "--format", "-f", help="pretty | json | slug | openai-stub"),
+    explain: bool = typer.Option(False, "--explain", help="also show prompt analysis + score breakdown"),
+    compare: int = typer.Option(0, "--compare", "-c", help="show top-N comparison table"),
+    why_not_slug: Optional[str] = typer.Option(None, "--why-not", help="explain why a specific slug was not picked"),
+    show_rejected: int = typer.Option(0, "--show-rejected", help="show N rejection reasons"),
+    gateway_url: str = typer.Option("http://localhost:8080/v1", help="for --format openai-stub"),
 ):
-    """Pick the best LumynaX model for a prompt via MaramaRoute scoring."""
+    """Pick the best LumynaX model for a prompt via MaramaRoute scoring.
+
+    The router auto-detects code, vision, audio, math, te-reo, and long-context
+    intents from your prompt. Use --strategy to bias the scoring.
+
+    Examples:
+      lumynax route "fix this Python bug"
+      lumynax route --strategy frontier "explain transformers"
+      lumynax route --strategy te-reo "translate to Maori: hello"
+      lumynax route --strategy cheap --local --max-params-b 10 "summarize this"
+      cat code.py | lumynax route -
+      lumynax route "do X" --format slug | xargs -I {} lumynax run {} -i
+    """
+    from .router import Router, Strategy
+    from .router import explain as render
+    import sys
+
+    # Stdin support
+    if prompt == "-" or (prompt is None and not sys.stdin.isatty()):
+        prompt = sys.stdin.read()
+    elif prompt is None:
+        prompt = ""
+
+    try:
+        strat = Strategy(strategy)
+    except ValueError:
+        console.print(f"[red]unknown strategy '{strategy}'[/red] — choose: {[s.value for s in Strategy]}")
+        raise typer.Exit(2)
+
     mods = [m.strip() for m in modalities.split(",") if m.strip()]
-    candidates = []
-    for m in _reg.models():
-        if requires_local and m.get("sovereignty_tier", 5) < 3: continue
-        if any(mod not in (m.get("modalities") or []) for mod in mods): continue
-        if tools and not m.get("supports_tools"): continue
-        if json_out and not m.get("supports_json"): continue
-        if jurisdiction and jurisdiction not in (m.get("residency") or []): continue
-        # score: quality*2 + sov*1.5 + (5-cost)*0.5 + local_bonus
-        q = m.get("quality_rank", 5); s = m.get("sovereignty_tier", 3); c = m.get("cost_rank", 5)
-        score = (6 - q) * 2 + s * 1.5 + (6 - c) * 0.5
-        candidates.append((score, m))
-    candidates.sort(key=lambda x: -x[0])
-    if not candidates:
-        console.print("[red]no candidate matches filters[/red]"); raise typer.Exit(1)
-    score, pick = candidates[0]
-    console.print(Panel.fit(
-        f"[bold]{pick['title']}[/bold]\n"
-        f"[cyan]{pick['repo_id']}[/cyan]\n"
-        f"score: {score:.2f}\n"
-        f"params: {pick.get('total_params_b')}B  · ctx: {pick.get('context_tokens')}\n"
-        f"runtime: {pick.get('runtime')}\n\n"
-        f"Run with: [yellow]lumynax run {pick['repo_id'].split('/')[-1]}[/yellow] -i",
-        title=f"MaramaRoute → top of {len(candidates)} candidates", border_style="yellow",
-    ))
+    router = Router(models=_reg.models())
+    d = router.route(
+        prompt=prompt,
+        modalities=mods,
+        requires_local=requires_local,
+        requires_tools=tools,
+        requires_json=json_mode,
+        jurisdiction=jurisdiction,
+        max_params_b=max_params,
+        min_context=min_context,
+        strategy=strat,
+        prefer_family=prefer_family,
+        forbid_slugs=forbid,
+    )
+
+    if why_not_slug:
+        console.print(render.why_not(d, why_not_slug))
+        raise typer.Exit(0 if d.pick else 1)
+
+    if compare > 0:
+        render.compare_top(d, n=compare)
+        raise typer.Exit(0 if d.pick else 1)
+
+    if output == "json":
+        print(render.as_json(d))
+    elif output == "slug":
+        print(render.slug_only(d))
+    elif output == "openai-stub":
+        print(render.openai_stub(d, gateway_url=gateway_url))
+    else:
+        render.pretty(d, show_analysis=explain, show_rejected=show_rejected)
+
+    raise typer.Exit(0 if d.pick else 1)
 
 
 @app.command()
