@@ -13,3 +13,4 @@ hf-stage/
 node_modules/
 .DS_Store
 Thumbs.db
+deployments/2degrees/
