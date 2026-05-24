@@ -11,6 +11,27 @@ from rich.panel import Panel
 
 from . import __version__
 from . import registry as _reg
+from . import aliases as _aliases
+from . import config as _cfg
+
+
+def _resolve_model(query: str) -> dict:
+    """Resolve a query (alias / slug / substring) to a registry entry, or exit cleanly."""
+    all_slugs = [m["repo_id"].split("/")[-1] for m in _reg.models()]
+    slug, ambig = _aliases.resolve(query, all_slugs)
+    if slug:
+        for m in _reg.models():
+            if m["repo_id"].split("/")[-1] == slug:
+                return m
+    if ambig:
+        Console().print(f"[yellow]ambiguous:[/yellow] '{query}' matches {len(ambig)} models:")
+        for s in ambig: Console().print(f"  {s}")
+        raise typer.Exit(2)
+    # Last fall-back: registry's own find
+    m = _reg.find(query)
+    if m: return m
+    Console().print(f"[red]not found:[/red] {query}")
+    raise typer.Exit(2)
 
 app = typer.Typer(
     name="lumynax",
@@ -94,41 +115,70 @@ def download(
     out_dir: Optional[Path] = typer.Option(None, "--out-dir", help="local directory (default: ./<slug>)"),
     include_weights: bool = typer.Option(True, "--weights/--no-weights", help="include weight files"),
 ):
-    """Pull a model from Hugging Face (weights + scaffold)."""
-    m = _reg.find(model_id)
-    if not m:
-        console.print(f"[red]not found:[/red] {model_id}"); raise typer.Exit(2)
-    target = out_dir or Path.cwd() / m["repo_id"].split("/")[-1]
-    target.mkdir(parents=True, exist_ok=True)
-    from huggingface_hub import snapshot_download
-    allow = None if include_weights else ["README.md","quickstart.py","requirements.txt","LICENSE*","docs/*.svg","ollama/Modelfile","release_export_manifest.json"]
-    console.print(f"[green]→[/green] downloading {m['repo_id']} to {target}")
-    snapshot_download(repo_id=m["repo_id"], local_dir=str(target), allow_patterns=allow,
-                       token=os.environ.get("HF_TOKEN"))
-    console.print(f"[green]✓[/green] done. cd {target} && pip install -r requirements.txt && python quickstart.py")
+    """Pull a model from Hugging Face (weights + scaffold). Alias of `pull`."""
+    pull([model_id], out_dir=out_dir, include_weights=include_weights)
+
+
+@app.command()
+def pull(
+    model_ids: List[str] = typer.Argument(..., help="model name(s); aliases ok ('hermes3', 'qwen-coder', etc)"),
+    out_dir: Optional[Path] = typer.Option(None, "--out-dir", help="local directory (default: ./<slug> each)"),
+    include_weights: bool = typer.Option(True, "--weights/--no-weights"),
+):
+    """Download model(s) from Hugging Face with a live progress bar."""
+    from .progress import pull_with_progress
+    for q in model_ids:
+        m = _resolve_model(q)
+        target = out_dir or Path.cwd() / m["repo_id"].split("/")[-1]
+        target.mkdir(parents=True, exist_ok=True)
+        console.print(f"[green]→[/green] pulling [cyan]{m['repo_id']}[/cyan] → {target}")
+        try:
+            pull_with_progress(m["repo_id"], target,
+                               include_weights=include_weights,
+                               token=os.environ.get("HF_TOKEN"))
+            console.print(f"[green]✓[/green] {m['repo_id'].split('/')[-1]} ready in {target}")
+        except Exception as e:
+            console.print(f"[red]✗ pull failed:[/red] {e}")
 
 
 @app.command()
 def run(
     model_id: str,
-    prompt: str = typer.Argument("Explain LumynaX in 2 bullets.", help="prompt to run"),
-    interactive: bool = typer.Option(False, "-i", "--interactive"),
-    out_dir: Optional[Path] = typer.Option(None, help="working dir (will hf-download if absent)"),
+    prompt: Optional[str] = typer.Argument(None, help="one-shot prompt (omit for REPL)"),
+    interactive: bool = typer.Option(True, "-i/--no-interactive", help="REPL mode (default unless --prompt given)"),
+    system: Optional[str] = typer.Option(None, "--system", help="system prompt"),
+    via_gateway: bool = typer.Option(True, "--gateway/--direct",
+                                     help="default: chat through the gateway (slash-cmd REPL); --direct runs the bundled quickstart.py"),
+    out_dir: Optional[Path] = typer.Option(None, "--out-dir", help="for --direct: local working dir"),
 ):
-    """Download (if needed) and run a model's quickstart.py."""
-    m = _reg.find(model_id)
-    if not m:
-        console.print(f"[red]not found:[/red] {model_id}"); raise typer.Exit(2)
-    target = out_dir or Path.cwd() / m["repo_id"].split("/")[-1]
-    if not (target / "quickstart.py").exists():
-        download.callback(model_id, out_dir=target, include_weights=True)
-    cmd = [sys.executable, "quickstart.py"]
-    if interactive: cmd.append("--interactive")
-    else: cmd += ["--prompt", prompt]
+    """Chat with a model. Default: interactive REPL via the gateway (auto-pulls + auto-serves if missing)."""
+    m = _resolve_model(model_id)
+    slug = m["repo_id"].split("/")[-1]
+
+    if not via_gateway:
+        # Legacy mode: run the model's bundled quickstart.py directly
+        target = out_dir or Path.cwd() / slug
+        if not (target / "quickstart.py").exists():
+            pull([model_id], out_dir=target, include_weights=True)
+        cmd = [sys.executable, "quickstart.py"]
+        if prompt: cmd += ["--prompt", prompt]
+        elif interactive: cmd.append("--interactive")
+        console.print(f"[green]→[/green] running {target}/quickstart.py")
+        subprocess.run(cmd, cwd=target, check=False)
+        return
+
+    # Gateway path
+    if prompt and not interactive:
+        # one-shot
+        from .repl import Session
+        s = Session(model=slug)
+        console.print(f"[green]lumynax>[/green] ", end="")
+        s.call(prompt)
+        return
+
+    from .repl import run as repl_run
+    repl_run(slug, system=system)
     console.print(f"[green]→[/green] running {target}/quickstart.py")
-    subprocess.run(cmd, cwd=target, check=False)
-
-
 @app.command()
 def route(
     prompt: Optional[str] = typer.Argument(None, help="Prompt (or '-' / stdin pipe). The router will analyze it."),
@@ -300,6 +350,195 @@ def ollama(model_id: str):
     m = _reg.find(model_id)
     if not m: console.print(f"[red]not found:[/red] {model_id}"); raise typer.Exit(2)
     print(_i.ollama(m))
+
+
+# ───────────────────── Ollama-class polish (v0.5) ────────────────────────────
+
+@app.command()
+def rm(
+    model_ids: List[str] = typer.Argument(..., help="slug(s) or alias(es) to delete"),
+    yes: bool = typer.Option(False, "-y/--no-yes", help="skip confirmation"),
+):
+    """Delete locally-downloaded model weights to free disk."""
+    import shutil
+    for q in model_ids:
+        m = _resolve_model(q)
+        slug = m["repo_id"].split("/")[-1]
+        target = Path.cwd() / slug
+        if not target.exists():
+            console.print(f"[yellow]not present:[/yellow] {slug} (looked at {target})")
+            continue
+        size = sum(f.stat().st_size for f in target.rglob("*") if f.is_file())
+        if not yes:
+            ok = typer.confirm(f"remove {target} ({size/1e9:.2f} GB)?")
+            if not ok: console.print("[dim]skipped[/dim]"); continue
+        shutil.rmtree(target)
+        console.print(f"[green]✓[/green] removed {target} (freed {size/1e9:.2f} GB)")
+
+
+@app.command()
+def ps():
+    """List model servers currently running locally via docker compose."""
+    try:
+        r = subprocess.run(["docker", "compose", "ps", "--format", "json"],
+                           capture_output=True, text=True, timeout=10)
+        if r.returncode != 0:
+            console.print("[yellow]no docker compose stack in cwd[/yellow]")
+            return
+        import json
+        rows = []
+        for line in r.stdout.splitlines():
+            try: d = json.loads(line)
+            except Exception: continue
+            svc = d.get("Service","")
+            if svc.startswith("llama-") or svc.startswith("vllm-") or svc == "gateway":
+                rows.append(d)
+        if not rows:
+            console.print("[yellow]no LumynaX services running here[/yellow]"); return
+        t = Table(title="Running services")
+        for col in ("Service","State","Health","Status"):
+            t.add_column(col, style="cyan" if col == "Service" else None)
+        for d in rows:
+            t.add_row(d.get("Service",""), d.get("State",""), d.get("Health","-"), d.get("Status","")[:60])
+        console.print(t)
+    except FileNotFoundError:
+        console.print("[red]docker not installed on PATH[/red]"); raise typer.Exit(2)
+
+
+@app.command()
+def stop(model_id: str):
+    """Stop a specific running model server (gateway stays up)."""
+    m = _resolve_model(model_id)
+    slug = m["repo_id"].split("/")[-1]
+    for prefix in ("llama-", "vllm-"):
+        svc = prefix + slug.replace("lumynax-","")[:30]
+        r = subprocess.run(["docker","compose","stop", svc], capture_output=True, text=True)
+        if r.returncode == 0:
+            console.print(f"[green]✓[/green] stopped {svc}"); return
+    console.print(f"[yellow]no running container for {slug}[/yellow]")
+
+
+@app.command()
+def aliases(
+    add: Optional[str] = typer.Option(None, "--add", help="<short>:<slug-or-alias>"),
+):
+    """Show alias → slug map; --add to persist a new one to ~/.lumynax/aliases.toml."""
+    from . import aliases as _a
+    if add:
+        if ":" not in add:
+            console.print("[red]use --add <short>:<slug>[/red]"); raise typer.Exit(2)
+        short, slug = add.split(":", 1)
+        m = _resolve_model(slug.strip())
+        real = m["repo_id"].split("/")[-1]
+        _a.add_alias(short.strip(), real)
+        console.print(f"[green]✓[/green] {short} → {real}  (saved to {_a.user_aliases_path()})")
+        return
+    t = Table(title=f"Aliases ({len(_a.all_aliases())} total)")
+    t.add_column("alias", style="cyan"); t.add_column("->"); t.add_column("slug")
+    for k, v in sorted(_a.all_aliases().items()):
+        t.add_row(k, "->", v)
+    console.print(t)
+
+
+@app.command()
+def create(
+    name: str = typer.Argument(..., help="name for the derived model (will live at ~/.lumynax/models/<name>)"),
+    file: Path = typer.Option(..., "-f", "--file", help="Modelfile path"),
+):
+    """Create a derived model from a Modelfile (Ollama-style)."""
+    from . import modelfile as _mf
+    if not file.exists():
+        console.print(f"[red]Modelfile not found:[/red] {file}"); raise typer.Exit(2)
+    try:
+        mf = _mf.parse(file.read_text(encoding="utf-8"), source_path=str(file))
+    except Exception as e:
+        console.print(f"[red]parse error:[/red] {e}"); raise typer.Exit(2)
+    # Verify base exists
+    _ = _resolve_model(mf.base)
+    out = _mf.save_derived(name, mf)
+    console.print(f"[green]✓[/green] derived model '[cyan]{name}[/cyan]' saved → {out}")
+    console.print(f"  base:  {mf.base}")
+    console.print(f"  hash:  {mf.hash()}")
+    console.print(f"  run:   lumynax run {name}")
+
+
+@app.command()
+def cp(
+    source: str = typer.Argument(..., help="existing model (alias/slug)"),
+    dest: str = typer.Argument(..., help="new derived-model name"),
+    system: Optional[str] = typer.Option(None, "--system", help="set/override system prompt"),
+    temperature: Optional[float] = typer.Option(None, "--temperature"),
+    num_ctx: Optional[int] = typer.Option(None, "--num-ctx"),
+):
+    """Copy a model to a new derived name with optional parameter overrides."""
+    from . import modelfile as _mf
+    m = _resolve_model(source)
+    base = m["repo_id"].split("/")[-1]
+    mf = _mf.Modelfile(base=base)
+    if system is not None:      mf.system = system
+    if temperature is not None: mf.parameters["temperature"] = temperature
+    if num_ctx is not None:     mf.parameters["num_ctx"] = num_ctx
+    out = _mf.save_derived(dest, mf)
+    console.print(f"[green]✓[/green] copied {base} → {dest} ({out})")
+
+
+@app.command()
+def show_modelfile(name: str):
+    """Print the Modelfile of a derived model."""
+    from . import modelfile as _mf
+    mf = _mf.load_derived(name)
+    if not mf: console.print(f"[red]no derived model:[/red] {name}"); raise typer.Exit(2)
+    from rich.syntax import Syntax
+    console.print(Syntax(mf.to_text(), "dockerfile", theme="monokai", line_numbers=False))
+
+
+@app.command()
+def config_show():
+    """Show effective config (~/.lumynax/config.toml + env)."""
+    import dataclasses
+    c = _cfg.load()
+    t = Table(title=f"Config — {_cfg.config_path()}")
+    t.add_column("key", style="cyan"); t.add_column("value")
+    for k, v in dataclasses.asdict(c).items(): t.add_row(k, str(v))
+    console.print(t)
+
+
+@app.command()
+def config_set(key: str, value: str):
+    """Set a config key in ~/.lumynax/config.toml."""
+    c = _cfg.load()
+    if not hasattr(c, key):
+        console.print(f"[red]unknown key:[/red] {key}"); raise typer.Exit(2)
+    cur = getattr(c, key)
+    new_val: object = value
+    if isinstance(cur, bool):   new_val = value.lower() in ("true","1","yes","on")
+    elif isinstance(cur, int):  new_val = int(value)
+    elif isinstance(cur, float): new_val = float(value)
+    setattr(c, key, new_val)
+    _cfg.save(c)
+    console.print(f"[green]✓[/green] {key} = {new_val}  (saved to {_cfg.config_path()})")
+
+
+@app.command()
+def completion(shell: str = typer.Argument("bash", help="bash | zsh | fish")):
+    """Emit a shell-completion script. Source it from your rc file."""
+    if shell == "bash":
+        print("# Add to ~/.bashrc:  eval \"$(_LUMYNAX_COMPLETE=bash_source lumynax)\"")
+        print('eval "$(_LUMYNAX_COMPLETE=bash_source lumynax)"')
+    elif shell == "zsh":
+        print("# Add to ~/.zshrc:  eval \"$(_LUMYNAX_COMPLETE=zsh_source lumynax)\"")
+        print('eval "$(_LUMYNAX_COMPLETE=zsh_source lumynax)"')
+    elif shell == "fish":
+        print("# Add to ~/.config/fish/completions/lumynax.fish:")
+        print('eval (env _LUMYNAX_COMPLETE=fish_source lumynax)')
+    else:
+        console.print(f"[red]unknown shell:[/red] {shell}"); raise typer.Exit(2)
+
+
+@app.command(name="version")
+def version_cmd():
+    """Print version and exit."""
+    print(f"lumynax {__version__}")
 
 
 if __name__ == "__main__":

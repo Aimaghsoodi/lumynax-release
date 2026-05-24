@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "lumynax"
-version = "0.4.0"
+version = "0.5.0"
 description = "LumynaX CLI — discover, download, route, serve (OpenAI-compatible), and integrate (OpenCode, Continue, LM Studio, vLLM, Ollama) the 98 sovereign-AI models from AbteeX AI Labs."
 readme = "README.md"
 requires-python = ">=3.10"
