@@ -1,4 +1,4 @@
-"""LumynaX CLI entry point — `lumynax <command>`."""
+"""LumynaX CLI — entry point for the `lumynax` command (Ollama-class CLI for the 98-model family)."""
 from __future__ import annotations
 import os, sys, subprocess
 from pathlib import Path
@@ -35,7 +35,12 @@ def _resolve_model(query: str) -> dict:
 
 app = typer.Typer(
     name="lumynax",
-    help="LumynaX CLI — sovereign-AI release family from AbteeX AI Labs (Aotearoa New Zealand).",
+    help=(
+        "LumynaX CLI — Ollama-class command-line for the 98-model LumynaX "
+        "sovereign-AI release family from AbteeX AI Labs (Aotearoa New Zealand).\n\n"
+        "Quick start: 'lumynax list', 'lumynax pull hermes3', 'lumynax run hermes3', "
+        "'lumynax route \"fix this bug\"', 'lumynax serve hermes3'."
+    ),
     no_args_is_help=True,
     rich_markup_mode="rich",
 )
@@ -85,11 +90,8 @@ def _list_cmd(
 
 @app.command()
 def info(model_id: str):
-    """Show full metadata for a single model."""
-    m = _reg.find(model_id)
-    if not m:
-        console.print(f"[red]not found:[/red] {model_id}")
-        raise typer.Exit(2)
+    """Show full metadata for a single model. Aliases accepted ('hermes3', 'qwen-coder', ...)."""
+    m = _resolve_model(model_id)
     console.print(Panel.fit(
         f"[bold]{m['title']}[/bold]\n"
         f"[cyan]{m['repo_id']}[/cyan]\n\n"
@@ -296,9 +298,7 @@ def opencode(
     """Emit an OpenCode provider config for a LumynaX model (JSON to stdout)."""
     from . import integrations as _i
     import json
-    m = _reg.find(model_id)
-    if not m:
-        console.print(f"[red]not found:[/red] {model_id}"); raise typer.Exit(2)
+    m = _resolve_model(model_id)
     print(json.dumps(_i.opencode(m, base_url=base_url, api_key=api_key), indent=2))
 
 
@@ -310,9 +310,7 @@ def continue_cmd(
     """Emit a Continue.dev model entry for ~/.continue/config.json."""
     from . import integrations as _i
     import json
-    m = _reg.find(model_id)
-    if not m:
-        console.print(f"[red]not found:[/red] {model_id}"); raise typer.Exit(2)
+    m = _resolve_model(model_id)
     print(json.dumps(_i.continue_dev(m, base_url=base_url), indent=2))
 
 
@@ -320,7 +318,7 @@ def continue_cmd(
 def vllm(model_id: str, port: int = 8000):
     """Emit the vLLM serve command for a LumynaX model."""
     from . import integrations as _i
-    m = _reg.find(model_id)
+    m = _resolve_model(model_id)
     if not m: console.print(f"[red]not found:[/red] {model_id}"); raise typer.Exit(2)
     print(_i.vllm_cmd(m, port=port))
 
@@ -329,7 +327,7 @@ def vllm(model_id: str, port: int = 8000):
 def llama_server_cmd(model_id: str, port: int = 8080):
     """Emit the llama.cpp `llama-server` command for a LumynaX GGUF model."""
     from . import integrations as _i
-    m = _reg.find(model_id)
+    m = _resolve_model(model_id)
     if not m: console.print(f"[red]not found:[/red] {model_id}"); raise typer.Exit(2)
     print(_i.llama_server(m, port=port))
 
@@ -338,7 +336,7 @@ def llama_server_cmd(model_id: str, port: int = 8080):
 def lm_studio_cmd(model_id: str):
     """Print LM Studio discovery instructions for a LumynaX model."""
     from . import integrations as _i
-    m = _reg.find(model_id)
+    m = _resolve_model(model_id)
     if not m: console.print(f"[red]not found:[/red] {model_id}"); raise typer.Exit(2)
     console.print(Panel.fit(_i.lm_studio(m), title=f"LM Studio · {model_id}", border_style="yellow"))
 
@@ -347,7 +345,7 @@ def lm_studio_cmd(model_id: str):
 def ollama(model_id: str):
     """Emit Ollama setup commands for a LumynaX model."""
     from . import integrations as _i
-    m = _reg.find(model_id)
+    m = _resolve_model(model_id)
     if not m: console.print(f"[red]not found:[/red] {model_id}"); raise typer.Exit(2)
     print(_i.ollama(m))
 

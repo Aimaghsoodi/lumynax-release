@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "lumynax"
 version = "0.5.0"
-description = "LumynaX CLI — discover, download, route, serve (OpenAI-compatible), and integrate (OpenCode, Continue, LM Studio, vLLM, Ollama) the 98 sovereign-AI models from AbteeX AI Labs."
+description = "LumynaX CLI — the Ollama-class command-line for the 98-model LumynaX sovereign-AI release family from AbteeX AI Labs (Aotearoa New Zealand). Discover, download, route, serve OpenAI-compatible, and integrate with OpenCode, Continue, LM Studio, vLLM, Ollama."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }

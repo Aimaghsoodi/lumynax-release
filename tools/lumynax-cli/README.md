@@ -1,4 +1,6 @@
-# lumynax — Ollama-class CLI for the LumynaX release family
+# LumynaX CLI
+
+> Ollama-class command-line for the 98-model **LumynaX** sovereign-AI release family from **AbteeX AI Labs** (Aotearoa New Zealand).
 
 ```bash
 pip install lumynax            # base

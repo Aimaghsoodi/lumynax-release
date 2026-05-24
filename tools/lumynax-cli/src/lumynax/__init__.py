@@ -1,4 +1,4 @@
-"""LumynaX CLI — discover, download, and run the sovereign-AI release family from AbteeX AI Labs."""
+"""LumynaX CLI — the Ollama-class command-line for the 98-model LumynaX sovereign-AI release family from AbteeX AI Labs (Aotearoa New Zealand)."""
 __version__ = "0.5.0"
 HF_ORG = "AbteeXAILab"
 REGISTRY_REPO = "AbteeXAILab/marama-route"
