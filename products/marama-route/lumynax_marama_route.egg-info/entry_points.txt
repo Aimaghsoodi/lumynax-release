@@ -1,2 +1,0 @@
-[console_scripts]
-marama-route = marama_route.cli:main

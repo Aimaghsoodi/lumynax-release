@@ -1,0 +1,17 @@
+{
+  "mode": "route_only",
+  "prompt_retention": "not_stored_by_default",
+  "default_timeout_seconds": 120,
+  "cache_dir": "",
+  "pull_missing": false,
+  "threads": null,
+  "context_tokens": null,
+  "backends": {
+    "example-vllm-or-nim-backend": {
+      "type": "vllm",
+      "base_url": "http://127.0.0.1:8000/v1",
+      "api_key_env": "",
+      "model": "served-model-name"
+    }
+  }
+}

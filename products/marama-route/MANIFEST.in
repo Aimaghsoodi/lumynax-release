@@ -1,0 +1,6 @@
+include README.md LICENSE requirements.txt SMOKE_TESTS.md PYPI_RELEASE.md quickstart.py product_manifest.json product_blueprint.md architecture.md gateway_contract.md
+recursive-include marama_route *.py py.typed
+recursive-include marama_route/configs *
+recursive-include marama_route/examples *
+recursive-include marama_route/integrations *
+recursive-include marama_route/schemas *

@@ -1,0 +1,15 @@
+{
+  "prompt": "Describe this image and draft a short public caption.",
+  "task_type": "multimodal",
+  "modalities": [
+    "text",
+    "image"
+  ],
+  "jurisdiction": "NZ",
+  "data_sensitivity": "public",
+  "min_context_tokens": 4096,
+  "requires_local": false,
+  "requires_tools": false,
+  "requires_json": false,
+  "max_fallbacks": 3
+}

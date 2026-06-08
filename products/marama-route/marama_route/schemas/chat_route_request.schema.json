@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://abteex.com/schemas/marama-route/chat-route-request.schema.json",
+  "title": "MaramaRoute Chat Route Request",
+  "type": "object",
+  "required": ["messages"],
+  "additionalProperties": true,
+  "properties": {
+    "model": {
+      "type": "string",
+      "default": "lumynax/auto"
+    },
+    "messages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["role", "content"],
+        "properties": {
+          "role": {
+            "type": "string"
+          },
+          "content": {}
+        },
+        "additionalProperties": true
+      }
+    },
+    "tools": {
+      "type": "array"
+    },
+    "response_format": {
+      "type": "object"
+    },
+    "route": {
+      "$ref": "#/$defs/routeOptions"
+    },
+    "routing": {
+      "$ref": "#/$defs/routeOptions"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "marama_route": {
+          "$ref": "#/$defs/routeOptions"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "routeOptions": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "jurisdiction": {
+          "type": "string",
+          "default": "NZ"
+        },
+        "data_sensitivity": {
+          "type": "string",
+          "default": "internal"
+        },
+        "task_type": {
+          "type": "string",
+          "enum": ["general", "code", "reasoning", "multimodal", "embedding"]
+        },
+        "min_context_tokens": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 4096
+        },
+        "requires_local": {
+          "type": "boolean",
+          "default": true
+        },
+        "requires_tools": {
+          "type": "boolean",
+          "default": false
+        },
+        "requires_json": {
+          "type": "boolean",
+          "default": false
+        },
+        "license_allowlist": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "max_fallbacks": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 3
+        }
+      }
+    }
+  }
+}

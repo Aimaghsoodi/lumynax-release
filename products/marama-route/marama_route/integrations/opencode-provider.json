@@ -1,0 +1,27 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "abteex-marama": {
+      "name": "AbteeX MaramaRoute",
+      "options": {
+        "baseURL": "http://127.0.0.1:8787/v1",
+        "apiKey": "{env:ABTEEX_MARAMA_API_KEY}",
+        "headers": {
+          "X-AbteeX-Route-Jurisdiction": "NZ",
+          "X-AbteeX-Route-Sensitivity": "restricted"
+        }
+      },
+      "models": {
+        "lumynax/auto": {
+          "name": "LumynaX Auto"
+        },
+        "lumynax/code": {
+          "name": "LumynaX Code"
+        },
+        "lumynax/local": {
+          "name": "LumynaX Local"
+        }
+      }
+    }
+  }
+}

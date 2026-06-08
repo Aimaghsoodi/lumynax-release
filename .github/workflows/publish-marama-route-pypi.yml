@@ -1,0 +1,27 @@
+name: publish MaramaRoute to PyPI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Build package
+        run: |
+          python -m pip install --upgrade pip build twine
+          rm -rf products/marama-route/dist products/marama-route/build products/marama-route/*.egg-info
+          python -m build products/marama-route
+          python -m twine check products/marama-route/dist/*
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: products/marama-route/dist
