@@ -84,6 +84,10 @@ MaramaRoute hpe init qwen25-7b --backend vllm
 
 Live counters:
 
+![npm downloads by month and version](https://raw.githubusercontent.com/Aimaghsoodi/lumynax-release/main/docs/marama-route-npm-downloads.svg)
+
+The npm public API exposes package downloads by day/month and per-version downloads for the previous 7 days. It does not publish historical per-version-by-month downloads, so this diagram combines monthly package totals since first publish with the current all-version split.
+
 [![npm downloads per month](https://img.shields.io/npm/dm/lumynax-marama-route.svg?label=npm%20downloads%2Fmonth&color=2ea44f)](https://www.npmjs.com/package/lumynax-marama-route)
 [![npm total downloads](https://img.shields.io/npm/dt/lumynax-marama-route.svg?label=npm%20downloads%20total&color=2ea44f)](https://www.npmjs.com/package/lumynax-marama-route)
 [![PyPI downloads](https://static.pepy.tech/badge/lumynax-marama-route)](https://pepy.tech/project/lumynax-marama-route)
