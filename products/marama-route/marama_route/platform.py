@@ -283,6 +283,23 @@ def recommend_model(
     }
 
 
+def normalize_agent_target(target: str) -> str:
+    normalized = target.strip().lower().replace("_", "-")
+    aliases = {
+        "claude": "claude-code",
+        "claude-code-cli": "claude-code",
+        "codex-cli": "codex",
+        "continue-dev": "continue",
+        "lite-llm": "litellm",
+        "lite-llm-proxy": "litellm",
+        "tabbyml": "tabby",
+        "hpe": "hpe-slurm",
+        "hpc": "hpe-slurm",
+        "slurm": "hpe-slurm",
+    }
+    return aliases.get(normalized, normalized or "generic")
+
+
 def build_agent_bridge_config(
     models: tuple[ModelEndpoint, ...],
     *,
@@ -293,7 +310,7 @@ def build_agent_bridge_config(
     cache_dir: Path | None = None,
     model_id: str = "",
 ) -> dict[str, Any]:
-    normalized = target.strip().lower().replace("_", "-")
+    normalized = normalize_agent_target(target)
     selected = _select_export_model(models, model_id)
     cache_value = str(cache_dir) if cache_dir is not None else "${MARAMA_ROUTE_CACHE:-~/.cache/abteex-ai/marama-route/models}"
     commands = {
@@ -303,12 +320,22 @@ def build_agent_bridge_config(
         "recommend": "MaramaRoute recommend --task code --sensitivity restricted --prompt-text \"Describe the task\"",
         "pull": f"MaramaRoute pull {selected.model_id}" if selected is not None else "MaramaRoute pull <model-id>",
         "chat": f"MaramaRoute chat {selected.model_id}" if selected is not None else "MaramaRoute chat <model-id>",
+        "doctor": "MaramaRoute doctor --hardware",
+        "agent_doctor": f"MaramaRoute agent doctor --target {normalized}",
+        "setup": "MaramaRoute setup --all-targets --hpe",
+        "hpe_init": f"MaramaRoute hpe init {selected.model_id if selected else '<model-id>'} --backend auto",
+        "compat_vllm": "MaramaRoute compat --target vllm --status usable",
+        "compat_nim": "MaramaRoute compat --target nim --status usable",
+        "compat_nemo": "MaramaRoute compat --target nemo --status pathway",
     }
+    selected_id = selected.model_id if selected is not None else "<model-id>"
+    agent_targets = ("generic", "claude-code", "codex", "continue", "opencode", "litellm", "tabby", "hpe-slurm")
     config: dict[str, Any] = {
         "ok": True,
         "target": normalized,
         "product": "LumynaX MaramaRoute",
         "mode": "local_command_bridge",
+        "supported_targets": list(agent_targets),
         "base_url": base_url,
         "cache_dir": cache_value,
         "default_model": model_summary(selected) if selected is not None else None,
@@ -319,7 +346,7 @@ def build_agent_bridge_config(
             "ABTEEX_MARAMA_API_KEY": "local-dev",
         },
     }
-    if normalized in {"claude-code", "claude"}:
+    if normalized == "claude-code":
         config["target"] = "claude-code"
         config["workspace_files"] = {
             "CLAUDE.md": [
@@ -332,7 +359,82 @@ def build_agent_bridge_config(
             "This export is a command bridge. It does not replace the coding agent runtime.",
             "Keep sensitive prompts on the local MaramaRoute path when project policy requires it.",
         ]
-    elif normalized in {"hpe", "hpe-slurm", "slurm", "hpc"}:
+    elif normalized == "codex":
+        config["workspace_files"] = {
+            "AGENTS.md": [
+                "# MaramaRoute",
+                "",
+                "Use MaramaRoute for LumynaX model selection, local chat, and local-live gateway work.",
+                f"Default model: `{selected_id}`",
+                f"Start gateway: `{commands['start_gateway']}`",
+                f"Pull model files: `{commands['pull']}`",
+                f"Run local chat: `{commands['chat']}`",
+            ],
+        }
+        config["notes"] = [
+            "This export gives coding tools project-local commands and policy hints.",
+            "Start the MaramaRoute gateway only when a project needs a local route API.",
+        ]
+    elif normalized == "continue":
+        config["continue_config"] = {
+            "name": "LumynaX MaramaRoute",
+            "model": selected_id,
+            "base_url": base_url,
+            "api_key_env": "ABTEEX_MARAMA_API_KEY",
+            "start_command": commands["start_gateway"],
+        }
+        config["workspace_files"] = {
+            "continue.marama-route.json": [
+                json.dumps(config["continue_config"], indent=2, sort_keys=True),
+            ],
+        }
+        config["notes"] = [
+            "Use this as the project-local Continue bridge reference.",
+            "Run the gateway command before pointing Continue at the local MaramaRoute endpoint.",
+        ]
+    elif normalized == "litellm":
+        config["litellm_config"] = {
+            "model_list": [
+                {
+                    "model_name": selected_id,
+                    "litellm_params": {
+                        "model": f"marama-route/{selected_id}",
+                        "api_base": base_url,
+                        "api_key": "os.environ/ABTEEX_MARAMA_API_KEY",
+                    },
+                },
+            ],
+            "router_settings": {
+                "routing_strategy": "simple-shuffle",
+                "num_retries": 1,
+            },
+        }
+        config["workspace_files"] = {
+            "litellm.marama-route.json": [
+                json.dumps(config["litellm_config"], indent=2, sort_keys=True),
+            ],
+        }
+        config["notes"] = [
+            "This file is a local gateway reference for LiteLLM-style proxy deployments.",
+            "Keep the MaramaRoute gateway running while the proxy sends model traffic.",
+        ]
+    elif normalized == "tabby":
+        config["tabby_config"] = {
+            "model": selected_id,
+            "base_url": base_url,
+            "start_command": commands["start_gateway"],
+            "pull_command": commands["pull"],
+        }
+        config["workspace_files"] = {
+            "tabby.marama-route.json": [
+                json.dumps(config["tabby_config"], indent=2, sort_keys=True),
+            ],
+        }
+        config["notes"] = [
+            "Use this as a Tabby workspace note for routing local coding tasks through LumynaX models.",
+            "Verify model quality with `MaramaRoute bench` before production use.",
+        ]
+    elif normalized == "hpe-slurm":
         config["target"] = "hpe-slurm"
         config["environment"].update(
             {
@@ -359,6 +461,18 @@ def build_agent_bridge_config(
         }
     elif normalized == "opencode":
         config["provider_config"] = build_opencode_provider_config(models, base_url=base_url)
+        config["workspace_files"] = {
+            "opencode.marama-route.json": [
+                json.dumps(config["provider_config"], indent=2, sort_keys=True),
+            ],
+        }
+        config["notes"] = [
+            "Drop the provider config into the workspace or user config directory used by OpenCode.",
+            "Run the MaramaRoute gateway first when using live local routing.",
+        ]
+    elif normalized not in agent_targets:
+        config["ok"] = False
+        config["error"] = f"Unsupported agent target: {target}"
     return config
 
 

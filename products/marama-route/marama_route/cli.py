@@ -56,6 +56,7 @@ from .platform import (
     build_registry_analytics,
     catalog_models,
     compare_models,
+    normalize_agent_target,
     recommend_model,
     render_hpe_apptainer_definition,
     render_hpe_gateway_config,
@@ -105,6 +106,9 @@ _DEPLOYMENT_TARGET_LABELS = {
     "nvidia_nim": "NVIDIA NIM",
     "nvidia_nemo": "NVIDIA NeMo/NEM",
 }
+_AGENT_TARGET_CHOICES = ("generic", "claude-code", "codex", "continue", "opencode", "litellm", "tabby", "hpe", "hpe-slurm")
+_AGENT_SETUP_DEFAULT_TARGETS = ("claude-code", "codex", "continue", "opencode", "litellm", "tabby")
+_AGENT_CANONICAL_TARGETS = {"generic", "claude-code", "codex", "continue", "opencode", "litellm", "tabby", "hpe-slurm"}
 
 
 class _ExitConversation(Exception):
@@ -332,28 +336,64 @@ def _doctor(args: argparse.Namespace) -> int:
             "path": str(cache_root),
             "pulled_count": pulled["count"],
         },
+        "cache_writable": _writable_dir(cache_root),
         "huggingface_hub": {
             "ok": importlib.util.find_spec("huggingface_hub") is not None,
             "hf_cli": shutil.which("hf") or shutil.which("huggingface-cli") or "",
             "token_env_present": any(os.getenv(name) for name in _HF_TOKEN_ENV_NAMES),
+            "needed_for": "pull, update-registry, and private HF access",
         },
         "llama_cpp": {
             "ok": importlib.util.find_spec("llama_cpp") is not None,
             "needed_for": "local GGUF chat and run",
+            "severity": "warning",
+        },
+        "transformers": {
+            "ok": importlib.util.find_spec("transformers") is not None,
+            "needed_for": "offline Transformers text-generation snapshots",
+            "severity": "warning",
+        },
+        "tokenizer_extras": {
+            "ok": any(importlib.util.find_spec(name) is not None for name in ("sentencepiece", "tiktoken", "tokenizers")),
+            "needed_for": "slow-tokenizer conversion and some Transformers snapshots",
+            "severity": "warning",
+        },
+        "git": {
+            "ok": shutil.which("git") is not None,
+            "executable": shutil.which("git") or "",
+            "severity": "warning",
+        },
+        "node": {
+            "ok": shutil.which("node") is not None,
+            "executable": shutil.which("node") or "",
+            "needed_for": "npm wrapper usage",
+            "severity": "warning",
+        },
+        "npm": {
+            "ok": shutil.which("npm") is not None,
+            "executable": shutil.which("npm") or "",
+            "needed_for": "npm wrapper usage",
+            "severity": "warning",
         },
     }
     if args.online:
         checks["huggingface_hub"]["whoami"] = _hf_whoami_status()
+    blocking = [name for name, item in checks.items() if not item.get("ok") and item.get("severity") != "warning"]
     result = {
-        "ok": all(bool(item.get("ok")) for item in checks.values()),
+        "ok": not blocking,
         "product": "LumynaX MaramaRoute",
         "checks": checks,
+        "blocking_checks": blocking,
         "hardware": hardware,
         "next_commands": {
+            "setup": "MaramaRoute setup --all-targets --hpe",
             "install_runtime": "python -m pip install llama-cpp-python",
+            "install_transformers_runtime": "python -m pip install transformers torch sentencepiece tiktoken tokenizers",
             "choose_model": "MaramaRoute chat",
             "pull_small_model": "MaramaRoute pull qwen25-05b",
-            "run_gateway": "MaramaRoute serve --port 8787",
+            "run_gateway": "MaramaRoute serve --live-local --port 8787",
+            "agent_doctor": "MaramaRoute agent doctor --target claude-code",
+            "hpe_init": "MaramaRoute hpe init qwen25-05b --backend auto",
         },
     }
     if args.json:
@@ -490,6 +530,231 @@ def _init_self_test(models: tuple[Any, ...], model: Any, args: argparse.Namespac
     }
     blocking = [item for item in checks.values() if not item.get("ok") and item.get("severity") != "warning"]
     return {"enabled": True, "ok": not blocking, "checks": checks}
+
+
+def _setup(args: argparse.Namespace) -> int:
+    models = load_model_registry(_registry_path(args))
+    model = _resolve_cli_model(models, args.model) if args.model else _recommended_model(models)
+    state_root = args.state_dir or default_state_root()
+    state_root.mkdir(parents=True, exist_ok=True)
+    targets = _expand_agent_targets(args.target, all_targets=args.all_targets, include_hpe=args.hpe)
+    hardware = inspect_hardware(args.cache_dir)
+    self_test = _init_self_test(models, model, args)
+    base_url = f"http://{args.host}:{args.port}/v1"
+    config = {
+        "product": "LumynaX MaramaRoute",
+        "mode": "production_setup",
+        "version": _installed_version(),
+        "state_dir": str(state_root),
+        "cache_dir": str(args.cache_dir),
+        "default_model": model.model_id,
+        "default_repo": model.repo_id,
+        "default_runtime": model.runtime,
+        "hardware": hardware,
+        "agent_targets": targets,
+        "gateway": {
+            "host": args.host,
+            "port": args.port,
+            "base_url": base_url,
+            "live_local": True,
+        },
+        "next_commands": {
+            "doctor": "MaramaRoute doctor --hardware",
+            "pull": f"MaramaRoute pull {model.model_id}",
+            "chat": f"MaramaRoute chat {model.model_id}",
+            "serve": f"MaramaRoute serve --host {args.host} --port {args.port} --live-local",
+            "agent_doctor": "MaramaRoute agent doctor --target claude-code",
+            "hpe": f"MaramaRoute hpe init {model.model_id} --backend {args.backend}",
+            "compat_vllm": "MaramaRoute compat --target vllm --status usable",
+            "compat_nim": "MaramaRoute compat --target nim --status usable",
+            "compat_nemo": "MaramaRoute compat --target nemo --status pathway",
+        },
+        "self_test": self_test,
+    }
+    config_path = state_root / "marama-route.json"
+    config_path.write_text(json.dumps(config, indent=2, sort_keys=True), encoding="utf-8")
+    set_alias("default", model.model_id, state_root)
+    set_favorite(model.model_id, state_root)
+
+    artifacts: dict[str, Any] = {
+        "config": str(config_path),
+        "state_dir": str(state_root),
+        "aliases": str(state_root / "aliases.json"),
+    }
+    agent_artifacts: dict[str, Any] = {}
+    for target in targets:
+        if target == "hpe-slurm":
+            continue
+        agent_config = build_agent_bridge_config(
+            models,
+            target=target,
+            base_url=base_url,
+            host=args.host,
+            port=args.port,
+            cache_dir=args.cache_dir,
+            model_id=model.model_id,
+        )
+        target_dir = state_root / "agents" / target
+        agent_artifacts[target] = _write_agent_workspace_files(target_dir, agent_config)
+    if agent_artifacts:
+        artifacts["agents"] = agent_artifacts
+
+    if "hpe-slurm" in targets:
+        hpe_result = _write_hpe_init_bundle(
+            state_root / "hpe",
+            model,
+            port=args.port,
+            backend=args.backend,
+            backend_port=args.backend_port,
+            backend_base_url=args.backend_base_url,
+            backend_model=args.backend_model,
+            backend_command=args.backend_command,
+            api_key_env=args.api_key_env,
+            vllm_args=args.vllm_args,
+            gpus=args.gpus,
+            memory=args.memory,
+            time_limit=args.time,
+            partition=args.partition,
+        )
+        artifacts["hpe"] = hpe_result["written"]
+
+    if args.pull:
+        pulled = pull_model(models, model.model_id, cache_root=args.cache_dir)
+        artifacts["pulled_model"] = pulled.to_dict()
+
+    result = {
+        "ok": self_test.get("ok", True),
+        "model_id": model.model_id,
+        "repo_id": model.repo_id,
+        "runtime": model.runtime,
+        "targets": targets,
+        "artifacts": artifacts,
+        "config": config,
+    }
+    print(json.dumps(result, indent=2, sort_keys=True))
+    return 0 if result["ok"] or args.allow_warnings else 2
+
+
+def _expand_agent_targets(raw_targets: Sequence[str], *, all_targets: bool, include_hpe: bool) -> list[str]:
+    selected: list[str] = []
+    raw_values: list[str] = []
+    for value in raw_targets:
+        raw_values.extend(part.strip() for part in value.split(",") if part.strip())
+    if all_targets or not raw_values:
+        raw_values.extend(_AGENT_SETUP_DEFAULT_TARGETS)
+    if include_hpe:
+        raw_values.append("hpe-slurm")
+    for value in raw_values:
+        if value.lower() == "all":
+            expanded = list(_AGENT_SETUP_DEFAULT_TARGETS)
+        else:
+            expanded = [value]
+        for item in expanded:
+            normalized = normalize_agent_target(item)
+            if normalized not in _AGENT_CANONICAL_TARGETS:
+                choices = ", ".join(_AGENT_TARGET_CHOICES)
+                raise ValueError(f"Unsupported agent target: {item}. Choices: {choices}")
+            if normalized not in selected:
+                selected.append(normalized)
+    return selected
+
+
+def _write_agent_workspace_files(target_dir: Path, config: dict[str, Any]) -> list[str]:
+    target_dir.mkdir(parents=True, exist_ok=True)
+    config_path = target_dir / "marama-route.agent.json"
+    config_path.write_text(json.dumps(config, indent=2, sort_keys=True), encoding="utf-8")
+    written = [str(config_path)]
+    workspace_files = config.get("workspace_files", {})
+    if isinstance(workspace_files, dict):
+        for name, content in workspace_files.items():
+            output_path = target_dir / Path(str(name)).name
+            if isinstance(content, list):
+                text = "\n".join(str(line) for line in content).rstrip() + "\n"
+            else:
+                text = str(content).rstrip() + "\n"
+            output_path.write_text(text, encoding="utf-8")
+            written.append(str(output_path))
+    return written
+
+
+def _write_hpe_init_bundle(
+    output_dir: Path,
+    model: Any,
+    *,
+    port: int,
+    backend: str,
+    backend_port: int = 8000,
+    backend_base_url: str = "",
+    backend_model: str = "",
+    backend_command: str = "",
+    api_key_env: str = "",
+    vllm_args: str = "",
+    gpus: int = 0,
+    memory: str = "32G",
+    time_limit: str = "02:00:00",
+    partition: str = "",
+) -> dict[str, Any]:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    backend_base = backend_base_url or f"http://127.0.0.1:{backend_port}/v1"
+    gateway_config = render_hpe_gateway_config(
+        model_id=model.model_id,
+        backend=backend,
+        model_runtime=model.runtime,
+        backend_base_url=backend_base,
+        backend_model=backend_model or model.model_id,
+        api_key_env=api_key_env,
+        cache_dir="$MARAMA_ROUTE_CACHE",
+    )
+    script = output_dir / "marama-route.slurm"
+    script.write_text(
+        render_hpe_slurm_script(
+            model_id=model.model_id,
+            repo_id=model.repo_id,
+            model_runtime=model.runtime,
+            port=port,
+            backend=backend,
+            backend_port=backend_port,
+            backend_base_url=backend_base_url,
+            backend_model=backend_model,
+            backend_command=backend_command,
+            api_key_env=api_key_env,
+            vllm_args=vllm_args,
+            gpus=gpus,
+            memory=memory,
+            time_limit=time_limit,
+            partition=partition,
+        ),
+        encoding="utf-8",
+    )
+    gateway = output_dir / "gateway.hpe.json"
+    gateway.write_text(json.dumps(gateway_config, indent=2, sort_keys=True), encoding="utf-8")
+    env = output_dir / "marama-route.env"
+    env.write_text(
+        "\n".join(
+            (
+                "MARAMA_ROUTE_CACHE=${SCRATCH:-$HOME}/marama-route/models",
+                f"MARAMA_ROUTE_PORT={port}",
+                f"MARAMA_BACKEND_PORT={backend_port}",
+                f"MARAMA_BACKEND_BASE_URL={backend_base}",
+                f"MARAMA_BACKEND_MODEL={backend_model or model.model_id}",
+                f"MARAMA_BACKEND={backend}",
+                "",
+            ),
+        ),
+        encoding="utf-8",
+    )
+    definition = output_dir / "marama-route.def"
+    definition.write_text(render_hpe_apptainer_definition(backend=backend), encoding="utf-8")
+    readme = output_dir / "README.hpe.md"
+    readme.write_text(render_hpe_readme(model_id=model.model_id, port=port, backend=backend), encoding="utf-8")
+    return {
+        "ok": True,
+        "written": [str(script), str(gateway), str(env), str(definition), str(readme)],
+        "model_id": model.model_id,
+        "repo_id": model.repo_id,
+        "backend": backend,
+        "gateway_config": gateway_config,
+    }
 
 
 def _writable_dir(path: Path) -> dict[str, Any]:
@@ -651,7 +916,6 @@ def _agent_init(args: argparse.Namespace) -> int:
     model_ref = args.model or args.model_option
     model = _resolve_cli_model(models, model_ref) if model_ref else _recommended_model(models)
     target_dir = args.output_dir.resolve()
-    target_dir.mkdir(parents=True, exist_ok=True)
     config = build_agent_bridge_config(
         models,
         target=args.target,
@@ -661,28 +925,16 @@ def _agent_init(args: argparse.Namespace) -> int:
         cache_dir=args.cache_dir,
         model_id=model.model_id,
     )
-    config_path = target_dir / "marama-route.agent.json"
-    config_path.write_text(json.dumps(config, indent=2, sort_keys=True), encoding="utf-8")
-    written = [str(config_path)]
-    if args.target == "claude-code":
-        claude_path = target_dir / "CLAUDE.md"
-        claude_path.write_text(
-            "\n".join(
-                (
-                    "# MaramaRoute",
-                    "",
-                    "Use MaramaRoute for LumynaX model selection, local chat, and local-live gateway calls.",
-                    f"Default model: `{model.model_id}`",
-                    f"Start gateway: `{config['commands']['start_gateway']}`",
-                    f"Recommend model: `{config['commands']['recommend']}`",
-                    "",
-                ),
-            ),
-            encoding="utf-8",
-        )
-        written.append(str(claude_path))
-    print(json.dumps({"ok": True, "target": args.target, "model_id": model.model_id, "written": written}, indent=2, sort_keys=True))
-    return 0
+    written = _write_agent_workspace_files(target_dir, config)
+    ok = bool(config.get("ok", True))
+    print(
+        json.dumps(
+            {"ok": ok, "target": config.get("target", args.target), "model_id": model.model_id, "written": written},
+            indent=2,
+            sort_keys=True,
+        ),
+    )
+    return 0 if ok else 2
 
 
 def _agent_doctor(args: argparse.Namespace) -> int:
@@ -701,7 +953,7 @@ def _agent_doctor(args: argparse.Namespace) -> int:
         health = _gateway_health(args.base_url)
     checks = {
         "registry": {"ok": bool(models), "count": len(models), "path": str(_registry_path(args))},
-        "target": {"ok": config.get("target") in {"generic", "claude-code", "opencode", "hpe-slurm"}, "value": config.get("target")},
+        "target": {"ok": config.get("target") in _AGENT_CANONICAL_TARGETS, "value": config.get("target")},
         "cache": {"ok": True, "path": str(args.cache_dir or default_cache_root())},
         "gateway": health,
     }
@@ -745,56 +997,22 @@ def _hpe(args: argparse.Namespace) -> int:
         cache_dir="$MARAMA_ROUTE_CACHE",
     )
     if args.hpe_action == "init":
-        script = output_dir / "marama-route.slurm"
-        script.write_text(
-            render_hpe_slurm_script(
-                model_id=model.model_id,
-                repo_id=model.repo_id,
-                model_runtime=model.runtime,
-                port=args.port,
-                backend=args.backend,
-                backend_port=args.backend_port,
-                backend_base_url=args.backend_base_url,
-                backend_model=args.backend_model,
-                backend_command=args.backend_command,
-                api_key_env=args.api_key_env,
-                vllm_args=args.vllm_args,
-                gpus=args.gpus,
-                memory=args.memory,
-                time_limit=args.time,
-                partition=args.partition,
-            ),
-            encoding="utf-8",
+        result = _write_hpe_init_bundle(
+            output_dir,
+            model,
+            port=args.port,
+            backend=args.backend,
+            backend_port=args.backend_port,
+            backend_base_url=args.backend_base_url,
+            backend_model=args.backend_model,
+            backend_command=args.backend_command,
+            api_key_env=args.api_key_env,
+            vllm_args=args.vllm_args,
+            gpus=args.gpus,
+            memory=args.memory,
+            time_limit=args.time,
+            partition=args.partition,
         )
-        gateway = output_dir / "gateway.hpe.json"
-        gateway.write_text(json.dumps(gateway_config, indent=2, sort_keys=True), encoding="utf-8")
-        env = output_dir / "marama-route.env"
-        env.write_text(
-            "\n".join(
-                (
-                    "MARAMA_ROUTE_CACHE=${SCRATCH:-$HOME}/marama-route/models",
-                    f"MARAMA_ROUTE_PORT={args.port}",
-                    f"MARAMA_BACKEND_PORT={args.backend_port}",
-                    f"MARAMA_BACKEND_BASE_URL={args.backend_base_url or f'http://127.0.0.1:{args.backend_port}/v1'}",
-                    f"MARAMA_BACKEND_MODEL={args.backend_model or model.model_id}",
-                    f"MARAMA_BACKEND={args.backend}",
-                    "",
-                ),
-            ),
-            encoding="utf-8",
-        )
-        definition = output_dir / "marama-route.def"
-        definition.write_text(render_hpe_apptainer_definition(backend=args.backend), encoding="utf-8")
-        readme = output_dir / "README.hpe.md"
-        readme.write_text(render_hpe_readme(model_id=model.model_id, port=args.port, backend=args.backend), encoding="utf-8")
-        result = {
-            "ok": True,
-            "written": [str(script), str(gateway), str(env), str(definition), str(readme)],
-            "model_id": model.model_id,
-            "repo_id": model.repo_id,
-            "backend": args.backend,
-            "gateway_config": gateway_config,
-        }
     elif args.hpe_action == "submit":
         script = output_dir / "marama-route.slurm"
         script.write_text(
@@ -1892,7 +2110,7 @@ def _print_startup_guide(models: tuple[Any, ...], cache_dir: Path | None, *, ani
             "",
             "Start here: press Enter for hardware-suitable models, or type /help any time.",
             "Offline flow: /models -> choose -> /pull -> chat. Use /switch <text> to change.",
-            "Production commands: doctor | verify --deep | serve --live-local | agent-init | hpe init",
+            "Production commands: setup | doctor | verify --deep | serve --live-local | agent-init | hpe init",
             "MaramaRoute serve --live-local --port 8787",
         ],
     )
@@ -2196,7 +2414,9 @@ def _print_doctor(result: dict[str, Any]) -> None:
         print(f"- {name}: {mark}{detail}")
     if not result["checks"]["llama_cpp"]["ok"]:
         print("Install local GGUF runtime: python -m pip install llama-cpp-python")
-    print("Next: MaramaRoute chat  |  MaramaRoute pull qwen25-05b  |  MaramaRoute serve --port 8787")
+    if not result["checks"]["tokenizer_extras"]["ok"]:
+        print("Install tokenizer extras: python -m pip install sentencepiece tiktoken tokenizers")
+    print("Next: MaramaRoute setup --all-targets --hpe  |  MaramaRoute chat  |  MaramaRoute serve --live-local --port 8787")
 
 
 def _ensure_model_ready(
@@ -2403,11 +2623,36 @@ def build_parser() -> argparse.ArgumentParser:
     init.add_argument("--host", default="127.0.0.1")
     init.add_argument("--port", type=int, default=8787)
     init.add_argument("--live-local", action=argparse.BooleanOptionalAction, default=True)
-    init.add_argument("--agent", default="", choices=["", "generic", "claude-code", "opencode", "hpe", "hpe-slurm"])
+    init.add_argument("--agent", default="", choices=("", *_AGENT_TARGET_CHOICES))
     init.add_argument("--hpe", action=argparse.BooleanOptionalAction, default=False)
     init.add_argument("--pull", action=argparse.BooleanOptionalAction, default=False)
     init.add_argument("--self-test", action=argparse.BooleanOptionalAction, default=True)
     init.set_defaults(handler=_init)
+
+    setup = subparsers.add_parser("setup", help="Create a production-ready MaramaRoute local, agent, and HPE setup.")
+    setup.add_argument("model", nargs="?", help="Optional default model id, repo id, alias, or search fragment.")
+    setup.add_argument("--registry", type=Path, default=None, help="MaramaRoute model registry JSON.")
+    setup.add_argument("--cache-dir", type=Path, default=default_cache_root(), help="Local model cache directory.")
+    setup.add_argument("--state-dir", type=Path, default=None, help="MaramaRoute state directory.")
+    setup.add_argument("--host", default="127.0.0.1")
+    setup.add_argument("--port", type=int, default=8787)
+    setup.add_argument("--target", action="append", default=[], help="Agent target. Repeat or comma-separate values; use all for every coding target.")
+    setup.add_argument("--all-targets", action=argparse.BooleanOptionalAction, default=False)
+    setup.add_argument("--hpe", action=argparse.BooleanOptionalAction, default=False)
+    setup.add_argument("--backend", choices=["auto", "local-live", "vllm", "nim", "nemo", "external"], default="auto")
+    setup.add_argument("--backend-port", type=int, default=8000)
+    setup.add_argument("--backend-base-url", default="")
+    setup.add_argument("--backend-model", default="")
+    setup.add_argument("--backend-command", default="")
+    setup.add_argument("--api-key-env", default="")
+    setup.add_argument("--vllm-args", default="")
+    setup.add_argument("--gpus", type=int, default=0)
+    setup.add_argument("--memory", default="32G")
+    setup.add_argument("--time", default="02:00:00")
+    setup.add_argument("--partition", default="")
+    setup.add_argument("--pull", action=argparse.BooleanOptionalAction, default=False)
+    setup.add_argument("--allow-warnings", action=argparse.BooleanOptionalAction, default=True)
+    setup.set_defaults(handler=_setup)
 
     hardware = subparsers.add_parser("hardware", help="Inspect local hardware and recommend runnable LumynaX models.")
     hardware.add_argument("--registry", type=Path, default=None, help="MaramaRoute model registry JSON.")
@@ -2505,7 +2750,7 @@ def build_parser() -> argparse.ArgumentParser:
         help="Emit command-bridge config for coding agents, local gateways, or HPE/Slurm jobs.",
     )
     agent.add_argument("--registry", type=Path, default=None, help="MaramaRoute model registry JSON.")
-    agent.add_argument("--target", default="generic", choices=["generic", "claude-code", "opencode", "hpe", "hpe-slurm"])
+    agent.add_argument("--target", default="generic", choices=_AGENT_TARGET_CHOICES)
     agent.add_argument("--model", default="", help="Default model id, repo id, or unique search fragment.")
     agent.add_argument("--base-url", default="http://127.0.0.1:8787/v1")
     agent.add_argument("--host", default="127.0.0.1")
@@ -2518,7 +2763,7 @@ def build_parser() -> argparse.ArgumentParser:
     agent_init.add_argument("model", nargs="?", help="Optional default model id, repo id, alias, or search fragment.")
     agent_init.add_argument("--model", dest="model_option", default="", help="Default model id, repo id, alias, or search fragment.")
     agent_init.add_argument("--registry", type=Path, default=None, help="MaramaRoute model registry JSON.")
-    agent_init.add_argument("--target", default="claude-code", choices=["generic", "claude-code", "opencode", "hpe", "hpe-slurm"])
+    agent_init.add_argument("--target", default="claude-code", choices=_AGENT_TARGET_CHOICES)
     agent_init.add_argument("--output-dir", type=Path, default=Path("."))
     agent_init.add_argument("--base-url", default="http://127.0.0.1:8787/v1")
     agent_init.add_argument("--host", default="127.0.0.1")
@@ -2528,7 +2773,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     agent_doctor = subparsers.add_parser("agent-doctor", help="Check agent bridge config and local gateway readiness.")
     agent_doctor.add_argument("--registry", type=Path, default=None, help="MaramaRoute model registry JSON.")
-    agent_doctor.add_argument("--target", default="claude-code", choices=["generic", "claude-code", "opencode", "hpe", "hpe-slurm"])
+    agent_doctor.add_argument("--target", default="claude-code", choices=_AGENT_TARGET_CHOICES)
     agent_doctor.add_argument("--model", default="", help="Default model id, repo id, alias, or search fragment.")
     agent_doctor.add_argument("--base-url", default="http://127.0.0.1:8787/v1")
     agent_doctor.add_argument("--host", default="127.0.0.1")

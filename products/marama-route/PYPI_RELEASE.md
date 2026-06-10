@@ -1,7 +1,7 @@
 # PyPI Release: LumynaX MaramaRoute
 
 Package: `lumynax-marama-route`
-Version: `0.7.18`
+Version: `0.8.0`
 
 ## Local Build
 

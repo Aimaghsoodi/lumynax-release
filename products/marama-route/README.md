@@ -95,8 +95,8 @@ MaramaRoute chat
 # Or jump straight to a model by id or search fragment.
 MaramaRoute chat qwen25-05b
 
-# Create local config, default alias, and optional agent files.
-MaramaRoute init --agent claude-code
+# Create local config, default alias, coding-agent bridge files, and HPE scaffold.
+MaramaRoute setup --all-targets --hpe
 MaramaRoute agent doctor --model qwen25-7b
 
 # Inspect registry categories before choosing a model.
@@ -105,6 +105,7 @@ MaramaRoute categories
 # Install local runtimes when you want direct generation.
 python -m pip install llama-cpp-python
 python -m pip install torch
+python -m pip install sentencepiece tiktoken tokenizers
 
 # Estimate, pull, verify, and chat.
 MaramaRoute pull qwen25-05b --estimate --remote-sizes
@@ -209,8 +210,15 @@ Use these commands before putting a machine or workspace into regular use:
 # Install, registry, cache, HF tooling, and local runtime readiness.
 MaramaRoute doctor --hardware
 
+# One-shot production bootstrap: local config, aliases, agent bridge files, and optional HPE bundle.
+MaramaRoute setup qwen25-05b --all-targets --hpe
+MaramaRoute setup qwen25-7b --target claude-code,codex,continue,opencode,litellm,tabby --hpe --backend vllm
+
 # Workspace bridge config and optional gateway health probe.
 MaramaRoute agent doctor --target claude-code --model qwen25-7b
+MaramaRoute agent doctor --target codex --model qwen25-7b
+MaramaRoute agent doctor --target continue --model qwen25-7b
+MaramaRoute agent doctor --target litellm --model qwen25-7b
 MaramaRoute agent doctor --target hpe --model qwen25-7b --base-url http://127.0.0.1:8787/v1
 
 # Exact remote size planning, local hash verification, and registry drift check.
@@ -445,9 +453,18 @@ MaramaRoute matrix
 ### Generate agent and HPE/HPC helper configs
 
 ```bash
+# One command writes MaramaRoute config, aliases, agent bridge files, and HPE scaffold.
+MaramaRoute setup qwen25-7b --all-targets --hpe --backend vllm
+
 # Command bridge JSON for coding-agent workspaces.
 MaramaRoute agent-config --target claude-code --model qwen25-7b
+MaramaRoute agent-config --target codex --model qwen25-7b
+MaramaRoute agent-config --target continue --model qwen25-7b
+MaramaRoute agent-config --target opencode --model qwen25-7b
+MaramaRoute agent-config --target litellm --model qwen25-7b
+MaramaRoute agent-config --target tabby --model qwen25-7b
 MaramaRoute agent-init --target claude-code --model qwen25-7b
+MaramaRoute agent-init --target codex --model qwen25-7b
 MaramaRoute agent init --target claude-code --model qwen25-7b
 MaramaRoute agent doctor --target claude-code --model qwen25-7b
 
