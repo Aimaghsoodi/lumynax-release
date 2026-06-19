@@ -16,131 +16,131 @@ text{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#17202a}
 <text x="68" y="144" class="tiny">2026-05-30</text>
 <rect x="264" y="116" width="163" height="32" rx="7" class="chip"/>
 <text x="276" y="136" class="tiny muted">total downloads</text>
-<text x="276" y="144" class="tiny">4,049</text>
+<text x="276" y="144" class="tiny">4,055</text>
 <rect x="437" y="116" width="142" height="32" rx="7" class="chip"/>
 <text x="449" y="136" class="tiny muted">versions</text>
 <text x="449" y="144" class="tiny">24</text>
 <rect x="589" y="116" width="205" height="32" rx="7" class="chip"/>
 <text x="601" y="136" class="tiny muted">version split</text>
-<text x="601" y="144" class="tiny">459 last 7d</text>
+<text x="601" y="144" class="tiny">214 last 7d</text>
 <text x="56" y="170" class="label">Downloads by month</text>
 <rect x="56" y="198" width="470" height="300" rx="10" fill="#fbfcfd" stroke="#d9e1e8"/>
 <line x1="104" y1="222.0" x2="502" y2="222.0" class="grid"/>
-<text x="68" y="226.0" class="tiny muted">2,862</text>
+<text x="68" y="226.0" class="tiny muted">2,868</text>
 <line x1="104" y1="281.5" x2="502" y2="281.5" class="grid"/>
-<text x="68" y="285.5" class="tiny muted">2,146</text>
+<text x="68" y="285.5" class="tiny muted">2,151</text>
 <line x1="104" y1="341.0" x2="502" y2="341.0" class="grid"/>
-<text x="68" y="345.0" class="tiny muted">1,431</text>
+<text x="68" y="345.0" class="tiny muted">1,434</text>
 <line x1="104" y1="400.5" x2="502" y2="400.5" class="grid"/>
-<text x="68" y="404.5" class="tiny muted">716</text>
+<text x="68" y="404.5" class="tiny muted">717</text>
 <line x1="104" y1="460.0" x2="502" y2="460.0" class="grid"/>
 <text x="68" y="464.0" class="tiny muted">0</text>
-<rect x="114.0" y="355.4" width="179.0" height="94.6" rx="5" class="bar"/>
-<text x="203.5" y="348.4" text-anchor="middle" class="tiny">1,187</text>
+<rect x="114.0" y="355.6" width="179.0" height="94.4" rx="5" class="bar"/>
+<text x="203.5" y="348.6" text-anchor="middle" class="tiny">1,187</text>
 <text x="203.5" y="474" text-anchor="middle" class="tiny muted">2026-05</text>
 <rect x="313.0" y="222.0" width="179.0" height="228.0" rx="5" class="bar"/>
-<text x="402.5" y="215.0" text-anchor="middle" class="tiny">2,862</text>
+<text x="402.5" y="215.0" text-anchor="middle" class="tiny">2,868</text>
 <text x="402.5" y="474" text-anchor="middle" class="tiny muted">2026-06</text>
 <line x1="114" y1="450" x2="492" y2="450" class="axis"/>
 <text x="580" y="170" class="label">All versions: downloads in the last 7 days</text>
 <rect x="580" y="198" width="540" height="490" rx="10" fill="#fbfcfd" stroke="#d9e1e8"/>
 <text x="596" y="232" class="tiny">0.4.3</text>
 <text x="664" y="232" class="tiny muted">05-30</text>
-<rect x="732" y="219" width="13.7" height="12" rx="3" class="bar2"/>
-<text x="1060" y="232" class="tiny">8</text>
+<rect x="732" y="219" width="36.5" height="12" rx="3" class="bar2"/>
+<text x="1060" y="232" class="tiny">6</text>
 <text x="596" y="253" class="tiny">0.4.4</text>
 <text x="664" y="253" class="tiny muted">05-31</text>
-<rect x="732" y="240" width="12.0" height="12" rx="3" class="bar2"/>
-<text x="1060" y="253" class="tiny">7</text>
+<rect x="732" y="240" width="24.3" height="12" rx="3" class="bar2"/>
+<text x="1060" y="253" class="tiny">4</text>
 <text x="596" y="274" class="tiny">0.4.5</text>
 <text x="664" y="274" class="tiny muted">05-31</text>
-<rect x="732" y="261" width="10.2" height="12" rx="3" class="bar2"/>
-<text x="1060" y="274" class="tiny">6</text>
+<rect x="732" y="261" width="24.3" height="12" rx="3" class="bar2"/>
+<text x="1060" y="274" class="tiny">4</text>
 <text x="596" y="295" class="tiny">0.4.6</text>
 <text x="664" y="295" class="tiny muted">05-31</text>
-<rect x="732" y="282" width="8.5" height="12" rx="3" class="bar2"/>
+<rect x="732" y="282" width="30.4" height="12" rx="3" class="bar2"/>
 <text x="1060" y="295" class="tiny">5</text>
 <text x="596" y="316" class="tiny">0.4.7</text>
 <text x="664" y="316" class="tiny muted">05-31</text>
-<rect x="732" y="303" width="10.2" height="12" rx="3" class="bar2"/>
+<rect x="732" y="303" width="36.5" height="12" rx="3" class="bar2"/>
 <text x="1060" y="316" class="tiny">6</text>
 <text x="596" y="337" class="tiny">0.4.8</text>
 <text x="664" y="337" class="tiny muted">05-31</text>
-<rect x="732" y="324" width="8.5" height="12" rx="3" class="bar2"/>
+<rect x="732" y="324" width="30.4" height="12" rx="3" class="bar2"/>
 <text x="1060" y="337" class="tiny">5</text>
 <text x="596" y="358" class="tiny">0.4.9</text>
 <text x="664" y="358" class="tiny muted">05-31</text>
-<rect x="732" y="345" width="6.8" height="12" rx="3" class="bar2"/>
+<rect x="732" y="345" width="24.3" height="12" rx="3" class="bar2"/>
 <text x="1060" y="358" class="tiny">4</text>
 <text x="596" y="379" class="tiny">0.5.0</text>
 <text x="664" y="379" class="tiny muted">05-31</text>
-<rect x="732" y="366" width="10.2" height="12" rx="3" class="bar2"/>
+<rect x="732" y="366" width="36.5" height="12" rx="3" class="bar2"/>
 <text x="1060" y="379" class="tiny">6</text>
 <text x="596" y="400" class="tiny">0.7.2</text>
 <text x="664" y="400" class="tiny muted">06-01</text>
-<rect x="732" y="387" width="5.1" height="12" rx="3" class="bar2"/>
+<rect x="732" y="387" width="18.2" height="12" rx="3" class="bar2"/>
 <text x="1060" y="400" class="tiny">3</text>
 <text x="596" y="421" class="tiny">0.7.3</text>
 <text x="664" y="421" class="tiny muted">06-01</text>
-<rect x="732" y="408" width="3.4" height="12" rx="3" class="bar2"/>
+<rect x="732" y="408" width="12.2" height="12" rx="3" class="bar2"/>
 <text x="1060" y="421" class="tiny">2</text>
 <text x="596" y="442" class="tiny">0.7.4</text>
 <text x="664" y="442" class="tiny muted">06-02</text>
-<rect x="732" y="429" width="5.1" height="12" rx="3" class="bar2"/>
+<rect x="732" y="429" width="18.2" height="12" rx="3" class="bar2"/>
 <text x="1060" y="442" class="tiny">3</text>
 <text x="596" y="463" class="tiny">0.7.5</text>
 <text x="664" y="463" class="tiny muted">06-04</text>
-<rect x="732" y="450" width="8.5" height="12" rx="3" class="bar2"/>
+<rect x="732" y="450" width="30.4" height="12" rx="3" class="bar2"/>
 <text x="1060" y="463" class="tiny">5</text>
 <text x="596" y="484" class="tiny">0.7.6</text>
 <text x="664" y="484" class="tiny muted">06-04</text>
-<rect x="732" y="471" width="10.2" height="12" rx="3" class="bar2"/>
+<rect x="732" y="471" width="36.5" height="12" rx="3" class="bar2"/>
 <text x="1060" y="484" class="tiny">6</text>
 <text x="596" y="505" class="tiny">0.7.7</text>
 <text x="664" y="505" class="tiny muted">06-04</text>
-<rect x="732" y="492" width="8.5" height="12" rx="3" class="bar2"/>
+<rect x="732" y="492" width="30.4" height="12" rx="3" class="bar2"/>
 <text x="1060" y="505" class="tiny">5</text>
 <text x="596" y="526" class="tiny">0.7.8</text>
 <text x="664" y="526" class="tiny muted">06-05</text>
-<rect x="732" y="513" width="12.0" height="12" rx="3" class="bar2"/>
+<rect x="732" y="513" width="42.5" height="12" rx="3" class="bar2"/>
 <text x="1060" y="526" class="tiny">7</text>
 <text x="596" y="547" class="tiny">0.7.9</text>
 <text x="664" y="547" class="tiny muted">06-05</text>
-<rect x="732" y="534" width="12.0" height="12" rx="3" class="bar2"/>
-<text x="1060" y="547" class="tiny">7</text>
+<rect x="732" y="534" width="30.4" height="12" rx="3" class="bar2"/>
+<text x="1060" y="547" class="tiny">5</text>
 <text x="596" y="568" class="tiny">0.7.10</text>
 <text x="664" y="568" class="tiny muted">06-05</text>
-<rect x="732" y="555" width="8.5" height="12" rx="3" class="bar2"/>
+<rect x="732" y="555" width="30.4" height="12" rx="3" class="bar2"/>
 <text x="1060" y="568" class="tiny">5</text>
 <text x="596" y="589" class="tiny">0.7.11</text>
 <text x="664" y="589" class="tiny muted">06-05</text>
-<rect x="732" y="576" width="12.0" height="12" rx="3" class="bar2"/>
-<text x="1060" y="589" class="tiny">7</text>
+<rect x="732" y="576" width="48.6" height="12" rx="3" class="bar2"/>
+<text x="1060" y="589" class="tiny">8</text>
 <text x="596" y="610" class="tiny">0.7.12</text>
 <text x="664" y="610" class="tiny muted">06-06</text>
-<rect x="732" y="597" width="54.7" height="12" rx="3" class="bar2"/>
-<text x="1060" y="610" class="tiny">32</text>
+<rect x="732" y="597" width="164.1" height="12" rx="3" class="bar2"/>
+<text x="1060" y="610" class="tiny">27</text>
 <text x="596" y="631" class="tiny">0.7.13</text>
 <text x="664" y="631" class="tiny muted">06-06</text>
-<rect x="732" y="618" width="54.7" height="12" rx="3" class="bar2"/>
-<text x="1060" y="631" class="tiny">32</text>
+<rect x="732" y="618" width="91.2" height="12" rx="3" class="bar2"/>
+<text x="1060" y="631" class="tiny">15</text>
 <text x="596" y="652" class="tiny">0.7.16</text>
 <text x="664" y="652" class="tiny muted">06-08</text>
-<rect x="732" y="639" width="49.5" height="12" rx="3" class="bar2"/>
-<text x="1060" y="652" class="tiny">29</text>
+<rect x="732" y="639" width="72.9" height="12" rx="3" class="bar2"/>
+<text x="1060" y="652" class="tiny">12</text>
 <text x="596" y="673" class="tiny">0.7.17</text>
 <text x="664" y="673" class="tiny muted">06-08</text>
-<rect x="732" y="660" width="47.8" height="12" rx="3" class="bar2"/>
-<text x="1060" y="673" class="tiny">28</text>
+<rect x="732" y="660" width="54.7" height="12" rx="3" class="bar2"/>
+<text x="1060" y="673" class="tiny">9</text>
 <text x="596" y="694" class="tiny">0.7.18</text>
 <text x="664" y="694" class="tiny muted">06-09</text>
-<rect x="732" y="681" width="95.7" height="12" rx="3" class="bar2"/>
-<text x="1060" y="694" class="tiny">56</text>
+<rect x="732" y="681" width="60.8" height="12" rx="3" class="bar2"/>
+<text x="1060" y="694" class="tiny">10</text>
 <text x="596" y="715" class="tiny">0.8.0</text>
 <text x="664" y="715" class="tiny muted">06-10</text>
 <rect x="732" y="702" width="316.0" height="12" rx="3" class="bar2"/>
-<text x="1060" y="715" class="tiny">185</text>
+<text x="1060" y="715" class="tiny">52</text>
 <rect x="56" y="712" width="1068" height="58" rx="10" class="note"/>
 <text x="74" y="736" class="small">npm publishes monthly/daily totals for the package and per-version counts for the previous 7 days only.</text>
-<text x="74" y="756" class="tiny muted">Generated 2026-06-18T08:21:25+00:00. Sources: api.npmjs.org downloads range and versions last-week endpoints.</text>
+<text x="74" y="756" class="tiny muted">Generated 2026-06-19T08:42:17+00:00. Sources: api.npmjs.org downloads range and versions last-week endpoints.</text>
 </svg>
