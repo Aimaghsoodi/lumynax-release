@@ -1,8 +1,8 @@
 {
   "first_publish_day": "2026-05-30",
-  "generated_at": "2026-06-24T06:57:54+00:00",
-  "last_day": "2026-06-24",
-  "last_week_version_downloads": 59,
+  "generated_at": "2026-06-25T06:57:46+00:00",
+  "last_day": "2026-06-25",
+  "last_week_version_downloads": 51,
   "monthly": [
     {
       "downloads": 1187,
@@ -142,13 +142,13 @@
       "version": "0.7.13"
     },
     {
-      "last_week_downloads": 4,
+      "last_week_downloads": 0,
       "published": "2026-06-08T09:56:34.844Z",
       "published_day": "2026-06-08",
       "version": "0.7.16"
     },
     {
-      "last_week_downloads": 2,
+      "last_week_downloads": 0,
       "published": "2026-06-08T10:35:44.856Z",
       "published_day": "2026-06-08",
       "version": "0.7.17"
@@ -160,7 +160,7 @@
       "version": "0.7.18"
     },
     {
-      "last_week_downloads": 14,
+      "last_week_downloads": 12,
       "published": "2026-06-10T23:17:06.975Z",
       "published_day": "2026-06-10",
       "version": "0.8.0"
