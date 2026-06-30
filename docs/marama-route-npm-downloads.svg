@@ -142,5 +142,5 @@ text{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#17202a}
 <text x="1060" y="715" class="tiny">19</text>
 <rect x="56" y="712" width="1068" height="58" rx="10" class="note"/>
 <text x="74" y="736" class="small">npm publishes monthly/daily totals for the package and per-version counts for the previous 7 days only.</text>
-<text x="74" y="756" class="tiny muted">Generated 2026-06-29T08:27:28+00:00. Sources: api.npmjs.org downloads range and versions last-week endpoints.</text>
+<text x="74" y="756" class="tiny muted">Generated 2026-06-30T07:05:00+00:00. Sources: api.npmjs.org downloads range and versions last-week endpoints.</text>
 </svg>
