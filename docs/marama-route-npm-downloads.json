@@ -1,8 +1,8 @@
 {
   "first_publish_day": "2026-05-30",
-  "generated_at": "2026-07-15T05:42:45+00:00",
-  "last_day": "2026-07-15",
-  "last_week_version_downloads": 98,
+  "generated_at": "2026-07-16T05:56:36+00:00",
+  "last_day": "2026-07-16",
+  "last_week_version_downloads": 92,
   "monthly": [
     {
       "downloads": 1187,
@@ -13,7 +13,7 @@
       "month": "2026-06"
     },
     {
-      "downloads": 217,
+      "downloads": 219,
       "month": "2026-07"
     }
   ],
@@ -23,7 +23,7 @@
     "The chart therefore shows monthly package totals plus current per-version last-week split."
   ],
   "package": "lumynax-marama-route",
-  "total_downloads": 4360,
+  "total_downloads": 4362,
   "versions": [
     {
       "last_week_downloads": 2,
@@ -50,7 +50,7 @@
       "version": "0.4.6"
     },
     {
-      "last_week_downloads": 3,
+      "last_week_downloads": 2,
       "published": "2026-05-31T10:28:15.119Z",
       "published_day": "2026-05-31",
       "version": "0.4.7"
@@ -62,7 +62,7 @@
       "version": "0.4.8"
     },
     {
-      "last_week_downloads": 4,
+      "last_week_downloads": 3,
       "published": "2026-05-31T11:03:51.933Z",
       "published_day": "2026-05-31",
       "version": "0.4.9"
@@ -92,7 +92,7 @@
       "version": "0.7.4"
     },
     {
-      "last_week_downloads": 4,
+      "last_week_downloads": 5,
       "published": "2026-06-04T07:30:36.379Z",
       "published_day": "2026-06-04",
       "version": "0.7.5"
@@ -140,25 +140,25 @@
       "version": "0.7.12"
     },
     {
-      "last_week_downloads": 6,
+      "last_week_downloads": 5,
       "published": "2026-06-06T06:19:19.920Z",
       "published_day": "2026-06-06",
       "version": "0.7.13"
     },
     {
-      "last_week_downloads": 6,
+      "last_week_downloads": 5,
       "published": "2026-06-08T09:56:34.844Z",
       "published_day": "2026-06-08",
       "version": "0.7.16"
     },
     {
-      "last_week_downloads": 8,
+      "last_week_downloads": 6,
       "published": "2026-06-08T10:35:44.856Z",
       "published_day": "2026-06-08",
       "version": "0.7.17"
     },
     {
-      "last_week_downloads": 7,
+      "last_week_downloads": 6,
       "published": "2026-06-09T07:23:37.354Z",
       "published_day": "2026-06-09",
       "version": "0.7.18"
