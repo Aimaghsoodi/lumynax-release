@@ -1,8 +1,8 @@
 {
   "first_publish_day": "2026-05-30",
-  "generated_at": "2026-07-30T06:01:02+00:00",
-  "last_day": "2026-07-30",
-  "last_week_version_downloads": 40,
+  "generated_at": "2026-07-31T06:25:27+00:00",
+  "last_day": "2026-07-31",
+  "last_week_version_downloads": 34,
   "monthly": [
     {
       "downloads": 1187,
@@ -164,7 +164,7 @@
       "version": "0.7.18"
     },
     {
-      "last_week_downloads": 14,
+      "last_week_downloads": 8,
       "published": "2026-06-10T23:17:06.975Z",
       "published_day": "2026-06-10",
       "version": "0.8.0"
