@@ -22,7 +22,7 @@ text{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#17202a}
 <text x="449" y="144" class="tiny">24</text>
 <rect x="589" y="116" width="198" height="32" rx="7" class="chip"/>
 <text x="601" y="136" class="tiny muted">version split</text>
-<text x="601" y="144" class="tiny">14 last 7d</text>
+<text x="601" y="144" class="tiny">16 last 7d</text>
 <text x="56" y="170" class="label">Downloads by month</text>
 <rect x="56" y="198" width="470" height="300" rx="10" fill="#fbfcfd" stroke="#d9e1e8"/>
 <line x1="104" y1="222.0" x2="502" y2="222.0" class="grid"/>
@@ -145,8 +145,8 @@ text{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#17202a}
 <text x="596" y="715" class="tiny">0.8.0</text>
 <text x="664" y="715" class="tiny muted">06-10</text>
 <rect x="732" y="702" width="316.0" height="12" rx="3" class="bar2"/>
-<text x="1060" y="715" class="tiny">14</text>
+<text x="1060" y="715" class="tiny">16</text>
 <rect x="56" y="712" width="1068" height="58" rx="10" class="note"/>
 <text x="74" y="736" class="small">npm publishes monthly/daily totals for the package and per-version counts for the previous 7 days only.</text>
-<text x="74" y="756" class="tiny muted">Generated 2026-08-28T15:27:50+00:00. Sources: api.npmjs.org downloads range and versions last-week endpoints.</text>
+<text x="74" y="756" class="tiny muted">Generated 2026-08-29T10:11:05+00:00. Sources: api.npmjs.org downloads range and versions last-week endpoints.</text>
 </svg>
