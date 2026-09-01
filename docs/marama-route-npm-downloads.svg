@@ -35,18 +35,21 @@ text{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#17202a}
 <text x="68" y="404.5" class="tiny muted">739</text>
 <line x1="104" y1="460.0" x2="502" y2="460.0" class="grid"/>
 <text x="68" y="464.0" class="tiny muted">0</text>
-<rect x="114.0" y="358.4" width="79.5" height="91.6" rx="5" class="bar"/>
-<text x="153.8" y="351.4" text-anchor="middle" class="tiny">1,187</text>
-<text x="153.8" y="474" text-anchor="middle" class="tiny muted">2026-05</text>
-<rect x="213.5" y="222.0" width="79.5" height="228.0" rx="5" class="bar"/>
-<text x="253.2" y="215.0" text-anchor="middle" class="tiny">2,956</text>
-<text x="253.2" y="474" text-anchor="middle" class="tiny muted">2026-06</text>
-<rect x="313.0" y="425.2" width="79.5" height="24.8" rx="5" class="bar"/>
-<text x="352.8" y="418.2" text-anchor="middle" class="tiny">322</text>
-<text x="352.8" y="474" text-anchor="middle" class="tiny muted">2026-07</text>
-<rect x="412.5" y="437.9" width="79.5" height="12.1" rx="5" class="bar"/>
-<text x="452.2" y="430.9" text-anchor="middle" class="tiny">157</text>
-<text x="452.2" y="474" text-anchor="middle" class="tiny muted">2026-08</text>
+<rect x="114.0" y="358.4" width="59.6" height="91.6" rx="5" class="bar"/>
+<text x="143.8" y="351.4" text-anchor="middle" class="tiny">1,187</text>
+<text x="143.8" y="474" text-anchor="middle" class="tiny muted">2026-05</text>
+<rect x="193.6" y="222.0" width="59.6" height="228.0" rx="5" class="bar"/>
+<text x="223.4" y="215.0" text-anchor="middle" class="tiny">2,956</text>
+<text x="223.4" y="474" text-anchor="middle" class="tiny muted">2026-06</text>
+<rect x="273.2" y="425.2" width="59.6" height="24.8" rx="5" class="bar"/>
+<text x="303.0" y="418.2" text-anchor="middle" class="tiny">322</text>
+<text x="303.0" y="474" text-anchor="middle" class="tiny muted">2026-07</text>
+<rect x="352.8" y="437.9" width="59.6" height="12.1" rx="5" class="bar"/>
+<text x="382.6" y="430.9" text-anchor="middle" class="tiny">157</text>
+<text x="382.6" y="474" text-anchor="middle" class="tiny muted">2026-08</text>
+<rect x="432.4" y="450.0" width="59.6" height="0.0" rx="5" class="bar"/>
+<text x="462.2" y="443.0" text-anchor="middle" class="tiny">0</text>
+<text x="462.2" y="474" text-anchor="middle" class="tiny muted">2026-09</text>
 <line x1="114" y1="450" x2="492" y2="450" class="axis"/>
 <text x="580" y="170" class="label">All versions: downloads in the last 7 days</text>
 <rect x="580" y="198" width="540" height="490" rx="10" fill="#fbfcfd" stroke="#d9e1e8"/>
@@ -148,5 +151,5 @@ text{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#17202a}
 <text x="1060" y="715" class="tiny">24</text>
 <rect x="56" y="712" width="1068" height="58" rx="10" class="note"/>
 <text x="74" y="736" class="small">npm publishes monthly/daily totals for the package and per-version counts for the previous 7 days only.</text>
-<text x="74" y="756" class="tiny muted">Generated 2026-08-31T09:51:53+00:00. Sources: api.npmjs.org downloads range and versions last-week endpoints.</text>
+<text x="74" y="756" class="tiny muted">Generated 2026-09-01T08:44:05+00:00. Sources: api.npmjs.org downloads range and versions last-week endpoints.</text>
 </svg>
