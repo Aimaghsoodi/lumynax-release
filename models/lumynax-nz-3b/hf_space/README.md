@@ -5,33 +5,30 @@ colorTo: blue
 sdk: gradio
 app_file: app.py
 pinned: false
-short_description: Browser demo bundle for the exported LumynaX release.
+short_description: Legacy demo for lumynax-nz-3b. Outdated; not for production.
+tags:
+- legacy
+- outdated
 ---
 
-# LumynaX NZ 3B V1 Demo
+# LumynaX NZ 3B V1 · Legacy demo
 
-Public browser demo for LumynaX from AbteeX AI Labs.
+> **Outdated research interface · Not for production**
 
-## Overview
+This Space scaffold belongs to [`AbteeXAILab/lumynax-nz-3b`](https://huggingface.co/AbteeXAILab/lumynax-nz-3b). It is no longer maintained and does not represent the current LumynaX Core experience.
 
-- zero-install text demo for LumynaX NZ 3B V1
-- public Space backed by a private Hugging Face model repo
-- tuned for practical, moderately detailed responses in the browser
+## How the model fits
 
-## What To Expect
+**LumynaX Core is the core intelligence model.** It governs the inference path, applying sovereignty controls, context, agentic planning, and inference optimisation around execution.
 
-- the first request after a cold start can take a minute or two
-- response quality is representative, but this Space is optimized for accessibility over speed
-- if you need full weights or deeper evaluation, use the private model repo directly
+```text
+Prompt  →  LumynaX Core  →  Native LumynaX model  →  Response
+```
 
-## Example Prompts
+This is a LumynaX-native release rather than an infused open-source model pack. Its release manifest does not identify external source-model weights.
 
-- Give a helpful welcome message for customers in Aotearoa New Zealand.
-- Explain in two short paragraphs what LumynaX NZ 3B V1 is and who it is for.
-- Write a concise summary of why local AI deployment matters for NZ teams.
+This interface exposes only the historical package runtime. Consult the model pack's `release_export_manifest.json` for its recorded infusion method, weights, runtime, and provenance.
 
-## Maintainer Notes
-
-This Space downloads the target model repo from Hugging Face at runtime.
-Set `LUMYNAX_MODEL_REPO_ID` if you want the Space to target a different private model repo.
-The target repo must contain the exported `merged_model/` directory.
+- [Model artifacts](https://huggingface.co/AbteeXAILab/lumynax-nz-3b)
+- [AbteeX AI Labs](https://abteex.com)
+- [Contact](mailto:aimaghsoodi@abteex.com)

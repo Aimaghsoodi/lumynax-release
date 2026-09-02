@@ -5,31 +5,35 @@ colorTo: blue
 sdk: gradio
 app_file: app.py
 pinned: false
-short_description: Private LumynaX Gemma E4B demo.
+short_description: Legacy demo for lumynax-infused-phi-4-text-gguf. Outdated; not for production.
+tags:
+- legacy
+- outdated
 ---
 
-# LumynaX Infused Phi-4 Text GGUF Demo
+# LumynaX Infused Phi-4 Text GGUF · Legacy demo
 
-Private demo for the `lumynax-infused-phi-4-text-gguf` release line.
+> **Outdated research interface · Not for production**
 
-## Supported Demo Modes
+This Space scaffold belongs to [`AbteeXAILab/lumynax-infused-phi-4-text-gguf`](https://huggingface.co/AbteeXAILab/lumynax-infused-phi-4-text-gguf). It is no longer maintained and does not represent the current LumynaX Core experience.
 
-- text with reasoning toggle
-- image understanding from upload or URL
-- audio understanding / transcription from upload or URL
+## How infusion works
 
-## Private Deployment Notes
+**LumynaX Core is the core intelligence model.** It governs the inference path and integrates selected open-source models as specialised execution layers.
 
-- this Space is intended to stay private for now
-- the backing model repo should be `AbteeXAILab/lumynax-infused-phi-4-text-gguf`
-- if that model repo is private, set an `HF_TOKEN` Space secret with read access
-- on CPU-only Hugging Face hardware this Space automatically falls back to showcase mode instead of live inference
-- if GPU hardware is later attached, the same Space switches back to live multimodal inference
-- the package chat template already hardcodes the LumynaX identity inside `merged_model/chat_template.jinja`
-- live inference for this Gemma E4B package still requires GPU-backed Space hardware; `cpu-basic` is not sufficient
+```text
+Prompt  →  LumynaX Core  →  Infused model / MoE experts  →  LumynaX Core  →  Response
+```
 
-## Important Provenance
+**LumynaX infusion** is the controlled composition of LumynaX Core with a compatible open-source model. Depending on the model family and deployment objective, the integration can operate in two ways:
 
-This demo is branded as `LumynaX Infused Phi-4 Text GGUF`, but it serves the official upstream
-`google/gemma-4-E4B-it` base weights packaged under the LumynaX release identity.
-It does not claim a private LumynaX fine-tune of the checkpoint.
+- **Routed infusion** — LumynaX Core directs inference through the selected model without modifying its weights.
+- **MoE infusion** — when required by the architecture, compatible model weights can be composed as specialised experts within a Mixture-of-Experts design.
+
+In both cases, LumynaX Core remains the primary intelligence and orchestration layer, applying sovereignty controls, context, agentic planning, and inference optimisation around model execution. Infusion does not automatically imply a weight merge; each release manifest records the method used by that pack.
+
+This interface exposes only the historical package runtime. Consult the model pack's `release_export_manifest.json` for its recorded infusion method, weights, runtime, and provenance.
+
+- [Model artifacts](https://huggingface.co/AbteeXAILab/lumynax-infused-phi-4-text-gguf)
+- [AbteeX AI Labs](https://abteex.com)
+- [Contact](mailto:aimaghsoodi@abteex.com)

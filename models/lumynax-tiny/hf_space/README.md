@@ -5,24 +5,30 @@ colorTo: blue
 sdk: gradio
 app_file: app.py
 pinned: false
-short_description: Browser demo bundle for the exported LumynaX release.
+short_description: Legacy demo for lumynax-tiny. Outdated; not for production.
+tags:
+- legacy
+- outdated
 ---
 
-# LumynaX Tiny Seed V1 Demo
+# LumynaX Tiny Seed V1 · Legacy demo
 
-This Gradio Space bundle gives LumynaX a browser-based, zero-install demo path.
+> **Outdated research interface · Not for production**
 
-## Model Repo
+This Space scaffold belongs to [`AbteeXAILab/lumynax-tiny`](https://huggingface.co/AbteeXAILab/lumynax-tiny). It is no longer maintained and does not represent the current LumynaX Core experience.
 
-The Space downloads the exported model repo from Hugging Face at runtime.
+## How the model fits
 
-- default repo id: `AbteeXAILab/lumynax-tiny`
-- override env var: `LUMYNAX_MODEL_REPO_ID`
+**LumynaX Core is the core intelligence model.** It governs the inference path, applying sovereignty controls, context, agentic planning, and inference optimisation around execution.
 
-## Expected Flow
+```text
+Prompt  →  LumynaX Core  →  Native LumynaX model  →  Response
+```
 
-1. Publish the matching exported release directory to a Hugging Face model repo.
-2. Publish this `hf_space/` directory to a Hugging Face Space repo.
-3. Set `LUMYNAX_MODEL_REPO_ID` if you want the Space to target a different model repo id.
+This is a LumynaX-native release rather than an infused open-source model pack. Its release manifest does not identify external source-model weights.
 
-The Space app expects the target model repo to contain the exported `merged_model/` directory.
+This interface exposes only the historical package runtime. Consult the model pack's `release_export_manifest.json` for its recorded infusion method, weights, runtime, and provenance.
+
+- [Model artifacts](https://huggingface.co/AbteeXAILab/lumynax-tiny)
+- [AbteeX AI Labs](https://abteex.com)
+- [Contact](mailto:aimaghsoodi@abteex.com)

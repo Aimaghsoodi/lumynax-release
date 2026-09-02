@@ -8,15 +8,39 @@ python_version: 3.11
 app_file: app.py
 pinned: false
 license: apache-2.0
-short_description: Scaffold Space for the lumynax-multimodal-qwen25-vl-72b-instruct-gguf LumynaX release.
+short_description: Legacy demo for lumynax-multimodal-qwen25-vl-72b-instruct-gguf. Outdated; not for production.
 tags:
 - abteex-ai-labs
 - lumynax
 - sovereign-ai
 - new-zealand
+- legacy
+- outdated
 ---
 
-# LumynaX Multimodal Qwen2.5 VL 72B Instruct GGUF
+# LumynaX Multimodal Qwen2.5 VL 72B Instruct GGUF · Legacy demo
 
-Scaffold Space for `AbteeXAILab/lumynax-multimodal-qwen25-vl-72b-instruct-gguf`. The actual model weights are too large to host on a free Space.
-Clone the package repo and run `quickstart.py` locally for the real inference path.
+> **Outdated research interface · Not for production**
+
+This Space scaffold belongs to [`AbteeXAILab/lumynax-multimodal-qwen25-vl-72b-instruct-gguf`](https://huggingface.co/AbteeXAILab/lumynax-multimodal-qwen25-vl-72b-instruct-gguf). It is no longer maintained and does not represent the current LumynaX Core experience.
+
+## How infusion works
+
+**LumynaX Core is the core intelligence model.** It governs the inference path and integrates selected open-source models as specialised execution layers.
+
+```text
+Prompt  →  LumynaX Core  →  Infused model / MoE experts  →  LumynaX Core  →  Response
+```
+
+**LumynaX infusion** is the controlled composition of LumynaX Core with a compatible open-source model. Depending on the model family and deployment objective, the integration can operate in two ways:
+
+- **Routed infusion** — LumynaX Core directs inference through the selected model without modifying its weights.
+- **MoE infusion** — when required by the architecture, compatible model weights can be composed as specialised experts within a Mixture-of-Experts design.
+
+In both cases, LumynaX Core remains the primary intelligence and orchestration layer, applying sovereignty controls, context, agentic planning, and inference optimisation around model execution. Infusion does not automatically imply a weight merge; each release manifest records the method used by that pack.
+
+This interface exposes only the historical package runtime. Consult the model pack's `release_export_manifest.json` for its recorded infusion method, weights, runtime, and provenance.
+
+- [Model artifacts](https://huggingface.co/AbteeXAILab/lumynax-multimodal-qwen25-vl-72b-instruct-gguf)
+- [AbteeX AI Labs](https://abteex.com)
+- [Contact](mailto:aimaghsoodi@abteex.com)

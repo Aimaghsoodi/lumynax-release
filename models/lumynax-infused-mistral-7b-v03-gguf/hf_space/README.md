@@ -5,33 +5,35 @@ colorTo: blue
 sdk: gradio
 app_file: app.py
 pinned: false
-short_description: Browser demo bundle for the exported LumynaX release.
+short_description: Legacy demo for lumynax-infused-mistral-7b-v03-gguf. Outdated; not for production.
+tags:
+- legacy
+- outdated
 ---
 
-# LumynaX Infused Mistral 7B Instruct v0.3 GGUF Demo
+# LumynaX Infused Mistral 7B Instruct v0.3 GGUF · Legacy demo
 
-Public browser demo for LumynaX from AbteeX AI Labs.
+> **Outdated research interface · Not for production**
 
-## Overview
+This Space scaffold belongs to [`AbteeXAILab/lumynax-infused-mistral-7b-v03-gguf`](https://huggingface.co/AbteeXAILab/lumynax-infused-mistral-7b-v03-gguf). It is no longer maintained and does not represent the current LumynaX Core experience.
 
-- zero-install text demo for LumynaX Infused Mistral 7B Instruct v0.3 GGUF
-- public Space backed by a private Hugging Face model repo
-- tuned for practical, moderately detailed responses in the browser
+## How infusion works
 
-## What To Expect
+**LumynaX Core is the core intelligence model.** It governs the inference path and integrates selected open-source models as specialised execution layers.
 
-- the first request after a cold start can take a minute or two
-- response quality is representative, but this Space is optimized for accessibility over speed
-- if you need full weights or deeper evaluation, use the private model repo directly
+```text
+Prompt  →  LumynaX Core  →  Infused model / MoE experts  →  LumynaX Core  →  Response
+```
 
-## Example Prompts
+**LumynaX infusion** is the controlled composition of LumynaX Core with a compatible open-source model. Depending on the model family and deployment objective, the integration can operate in two ways:
 
-- Give a helpful welcome message for customers in Aotearoa New Zealand.
-- Explain in two short paragraphs what LumynaX Infused Mistral 7B Instruct v0.3 GGUF is and who it is for.
-- Write a concise summary of why local AI deployment matters for NZ teams.
+- **Routed infusion** — LumynaX Core directs inference through the selected model without modifying its weights.
+- **MoE infusion** — when required by the architecture, compatible model weights can be composed as specialised experts within a Mixture-of-Experts design.
 
-## Maintainer Notes
+In both cases, LumynaX Core remains the primary intelligence and orchestration layer, applying sovereignty controls, context, agentic planning, and inference optimisation around model execution. Infusion does not automatically imply a weight merge; each release manifest records the method used by that pack.
 
-This Space downloads the target model repo from Hugging Face at runtime.
-Set `LUMYNAX_MODEL_REPO_ID` if you want the Space to target a different private model repo.
-If the target repo is GGUF-only and does not contain `merged_model/`, this Space stays in GGUF-only browser showcase mode and points people to the local interactive quickstart instead of surfacing a raw runtime error.
+This interface exposes only the historical package runtime. Consult the model pack's `release_export_manifest.json` for its recorded infusion method, weights, runtime, and provenance.
+
+- [Model artifacts](https://huggingface.co/AbteeXAILab/lumynax-infused-mistral-7b-v03-gguf)
+- [AbteeX AI Labs](https://abteex.com)
+- [Contact](mailto:aimaghsoodi@abteex.com)

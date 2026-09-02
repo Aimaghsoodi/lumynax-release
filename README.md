@@ -1,101 +1,48 @@
-# LumynaX Release
+# LumynaX Release Archive
 
-Public release monorepo for the AbteeX AI Labs LumynaX model family.
+> **Legacy model collection · Outdated research artifacts**
 
-This repo is the public source for MaramaRoute, SovereignCode, model scaffolds, deployment templates, Spaces, registry files, and operator docs. Model weights live on Hugging Face under `AbteeXAILab`; this repo carries the package code, manifests, compatibility metadata, and reproducible release assets.
+This repository preserves the public packaging source, manifests, runtime scaffolds, and reproducibility assets for early LumynaX model experiments. The model packs under [`models/`](models/) are no longer maintained, are not recommended for production, and do not represent the current capabilities, architecture, or safety standards of AbteeX AI Labs.
 
-[![models](https://img.shields.io/badge/models-98-e08a2c)](https://huggingface.co/AbteeXAILab)
-[![MaramaRoute npm](https://img.shields.io/npm/v/lumynax-marama-route.svg?label=marama-route%20npm&color=cb3837)](https://www.npmjs.com/package/lumynax-marama-route)
-[![MaramaRoute PyPI](https://img.shields.io/pypi/v/lumynax-marama-route.svg?label=marama-route%20PyPI&color=e08a2c)](https://pypi.org/project/lumynax-marama-route/)
-[![npm downloads](https://img.shields.io/npm/dm/lumynax-marama-route.svg?label=npm%20downloads%2Fmonth&color=2ea44f)](https://www.npmjs.com/package/lumynax-marama-route)
-[![HF downloads](https://img.shields.io/badge/dynamic/json?label=HF%20downloads&query=downloads&url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fmodels%2FAbteeXAILab%2Fmarama-route&color=ffcc00)](https://huggingface.co/AbteeXAILab/marama-route)
+## How infusion works
 
-## Start With MaramaRoute
+**LumynaX Core is the core intelligence model.** It governs the inference path and integrates selected open-source models as specialised execution layers.
 
-```bash
-npm install -g lumynax-marama-route
-MaramaRoute chat
+```text
+Prompt  →  LumynaX Core  →  Infused model / MoE experts  →  LumynaX Core  →  Response
 ```
 
-or:
+**LumynaX infusion** is the controlled composition of LumynaX Core with a compatible open-source model:
 
-```bash
-pip install lumynax-marama-route
-MaramaRoute chat
-```
+- **Routed infusion** directs inference through the selected model without modifying its weights.
+- **MoE infusion** can compose compatible model weights as specialised experts when required by the architecture.
 
-`MaramaRoute chat` opens with a help-first model picker. It does not dump all models at startup. Use `/help`, `/hardware`, `/models`, `/all`, `/vllm`, `/nim`, `/nem`, `/pull`, and `/switch <text>` inside the console.
+LumynaX Core remains the primary intelligence and orchestration layer in either configuration, applying sovereignty controls, context, agentic planning, and inference optimisation around execution. Infusion does not automatically imply a weight merge; each release manifest records the method used by its pack.
 
-## Runtime Compatibility
+## Archive scope
 
-MaramaRoute currently carries:
+| | |
+|---|---|
+| **Model packs** | 98 historical releases |
+| **Infused packs** | 96 routed model integrations |
+| **Native models** | 2 early LumynaX-native releases |
+| **Status** | Outdated and retained for research provenance only |
 
-| Category | Count | Notes |
-| --- | ---: | --- |
-| Bundled LumynaX registry entries | 98 | Searchable, selectable, pullable, and routable. |
-| Direct local chat-capable entries | 68 | GGUF/llama.cpp models that the CLI treats as direct chat models after pull. |
-| GGUF artifacts | 65 | Quantized local artifacts for `llama-cpp-python`. |
-| vLLM-compatible/candidate entries | 69 | Production deployment path; inspect per-model status before serving. |
-| NVIDIA NIM-compatible/candidate entries | 73 | Validate architecture, tokenizer, config, and layout before production. |
-| NVIDIA NeMo/NEM entries | 73 | Direct-compatible or conversion-path entries. |
+- [`models/`](models/) contains the archived model packages.
+- [`registry/`](registry/) contains historical registry metadata.
+- [`deployments/`](deployments/) and [`spaces/`](spaces/) contain experimental deployment scaffolds.
+- [Hugging Face](https://huggingface.co/AbteeXAILab) hosts the corresponding model artifacts.
 
-GGUF models are precise local-chat packages for `llama-cpp-python`. Some GGUF rows also carry vLLM, NIM, or NeMo/NEM metadata, but those labels mean deployment path, candidate support, experimental support, or conversion path. Run:
+The repository also contains experimental routing and sovereign-computing utilities. Their presence does not imply production readiness; review each package's own status and licence before use.
 
-```bash
-MaramaRoute compat
-MaramaRoute compat --target vllm
-MaramaRoute compat --target nim
-MaramaRoute compat --target nemo
-MaramaRoute compat <model-id>
-```
+## Provenance
 
-## Repository Map
+Treat each pack's `release_export_manifest.json`, `checksums.sha256`, and `LICENSE.txt` as authoritative. Source-model weights remain subject to their original licences.
 
-| Path | Purpose |
-| --- | --- |
-| [`products/marama-route`](products/marama-route/) | MaramaRoute Python package, npm-wrapped wheel, registry, CLI, docs, and dist artifacts. |
-| [`products/sovereigncode`](products/sovereigncode/) | Data Capsule policy API and audit ledger for coding-agent workflows. |
-| [`models`](models/) | LumynaX model scaffolds, manifests, quickstarts, and release docs. |
-| [`registry`](registry/) | Public model registry mirrors. |
-| [`deployments`](deployments/) | Docker, gateway, and deployment templates. |
-| [`spaces`](spaces/) | Hugging Face Space assets. |
-| [`docs`](docs/) | Architecture, compatibility, release, and operator documentation. |
+- [AbteeX AI Labs](https://abteex.com)
+- [LumynaX](https://lumynax.com)
+- [Contact](mailto:aimaghsoodi@abteex.com)
 
-## Production Checks
+---
 
-```bash
-MaramaRoute doctor --hardware
-MaramaRoute categories
-MaramaRoute pull qwen25-05b --estimate --remote-sizes
-MaramaRoute verify --deep --write-hashes
-MaramaRoute serve --live-local --port 8787
-MaramaRoute hpe init qwen25-7b --backend vllm
-```
-
-## Package Links
-
-- npm: <https://www.npmjs.com/package/lumynax-marama-route>
-- PyPI: <https://pypi.org/project/lumynax-marama-route/>
-- Hugging Face package repo: <https://huggingface.co/AbteeXAILab/marama-route>
-- Hugging Face model namespace: <https://huggingface.co/AbteeXAILab>
-- Website: <https://lumynax.com> and <https://abteex.com>
-
-## Download Stats
-
-Live counters:
-
-![npm downloads by month and version](https://raw.githubusercontent.com/Aimaghsoodi/lumynax-release/main/docs/marama-route-npm-downloads.svg)
-
-The npm public API exposes package downloads by day/month and per-version downloads for the previous 7 days. It does not publish historical per-version-by-month downloads, so this diagram combines monthly package totals since first publish with the current all-version split.
-
-[![npm downloads per month](https://img.shields.io/npm/dm/lumynax-marama-route.svg?label=npm%20downloads%2Fmonth&color=2ea44f)](https://www.npmjs.com/package/lumynax-marama-route)
-[![npm total downloads](https://img.shields.io/npm/dt/lumynax-marama-route.svg?label=npm%20downloads%20total&color=2ea44f)](https://www.npmjs.com/package/lumynax-marama-route)
-[![PyPI downloads](https://static.pepy.tech/badge/lumynax-marama-route)](https://pepy.tech/project/lumynax-marama-route)
-[![PyPI downloads per month](https://static.pepy.tech/badge/lumynax-marama-route/month)](https://pepy.tech/project/lumynax-marama-route)
-[![Hugging Face downloads](https://img.shields.io/badge/dynamic/json?label=HF%20downloads&query=downloads&url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fmodels%2FAbteeXAILab%2Fmarama-route&color=ffcc00)](https://huggingface.co/AbteeXAILab/marama-route)
-
-Primary package: <https://github.com/Aimaghsoodi/lumynax-release/tree/main/products/marama-route>
-
-## License
-
-Release scaffolds and package code are published under their package licenses. Upstream model weights retain their own licenses; check each Hugging Face model card before commercial deployment.
+**AbteeX AI Labs · Aotearoa New Zealand**
