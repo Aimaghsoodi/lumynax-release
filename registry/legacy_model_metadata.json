@@ -1,0 +1,987 @@
+{
+  "schema_version": 1,
+  "status": "legacy",
+  "description": "Canonical metadata for the archived LumynaX model collection.",
+  "models": [
+    {
+      "repo_id": "AbteeXAILab/lumynax-chat-hermes-3-llama31-8b-gguf",
+      "base_model": "NousResearch/Hermes-3-Llama-3.1-8B",
+      "pipeline_tag": "text-generation",
+      "license": "llama3.1",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-chat-yi-15-34b-gguf",
+      "base_model": "01-ai/Yi-1.5-34B-Chat",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-coder-codellama-70b-instruct-gguf",
+      "base_model": "codellama/CodeLlama-70b-Instruct-hf",
+      "pipeline_tag": "text-generation",
+      "license": "other",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-coder-codeqwen15-7b-chat-gguf",
+      "base_model": "Qwen/CodeQwen1.5-7B-Chat",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-coder-deepseek-coder-33b-gguf",
+      "base_model": "deepseek-ai/deepseek-coder-33b-instruct",
+      "pipeline_tag": "text-generation",
+      "license": "other",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-coder-deepseek-v2-lite-16b-gguf",
+      "base_model": "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "other",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-coder-qwen25-05b-instruct-gguf",
+      "base_model": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-coder-qwen25-14b-instruct-gguf",
+      "base_model": "Qwen/Qwen2.5-Coder-14B-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-coder-qwen25-15b-instruct-gguf",
+      "base_model": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-coder-qwen25-7b-instruct-gguf",
+      "base_model": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-coder-qwen25-coder-32b-gguf",
+      "base_model": "Qwen/Qwen2.5-Coder-32B-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-coder-starcoder2-15b-gguf",
+      "base_model": "bigcode/starcoder2-15b-instruct-v0.1",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-coder-yi-coder-9b-gguf",
+      "base_model": "01-ai/Yi-Coder-9B-Chat",
+      "pipeline_tag": "text-generation",
+      "license": "other",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-doc-donut-base",
+      "base_model": "naver-clova-ix/donut-base",
+      "pipeline_tag": "image-to-text",
+      "license": "mit",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-doc-layoutlmv3-base",
+      "base_model": "microsoft/layoutlmv3-base",
+      "pipeline_tag": "text-generation",
+      "license": "cc-by-nc-4.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-doc-nougat-base",
+      "base_model": "facebook/nougat-base",
+      "pipeline_tag": "image-to-text",
+      "license": "cc-by-4.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-doc-table-transformer-detection",
+      "base_model": "microsoft/table-transformer-detection",
+      "pipeline_tag": "object-detection",
+      "license": "mit",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-embed-bge-m3",
+      "base_model": "BAAI/bge-m3",
+      "pipeline_tag": "sentence-similarity",
+      "license": "mit",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-embed-e5-mistral-7b",
+      "base_model": "intfloat/e5-mistral-7b-instruct",
+      "pipeline_tag": "feature-extraction",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-embed-granite-278m-multilingual",
+      "base_model": "ibm-granite/granite-embedding-278m-multilingual",
+      "pipeline_tag": "sentence-similarity",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-embed-nomic-v2-moe",
+      "base_model": "nomic-ai/nomic-embed-text-v2-moe",
+      "pipeline_tag": "sentence-similarity",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-frontier-coder-deepseek-v25-1210-gguf",
+      "base_model": "deepseek-ai/DeepSeek-V2.5-1210",
+      "pipeline_tag": "text-generation",
+      "license": "other",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-frontier-coder-qwen3-480b-a35b-gguf",
+      "base_model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-frontier-dbrx-instruct-132b-gguf",
+      "base_model": "databricks/dbrx-instruct",
+      "pipeline_tag": "text-generation",
+      "license": "other",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "unavailable_at_audit"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-frontier-minimax-m2-230b",
+      "base_model": "MiniMaxAI/MiniMax-M2",
+      "pipeline_tag": "text-generation",
+      "license": "other",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-frontier-minimax-m25-unsloth",
+      "base_model": "MiniMaxAI/MiniMax-M2.5",
+      "pipeline_tag": "text-generation",
+      "license": "other",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-frontier-mixtral-8x22b-instruct-gguf",
+      "base_model": "mistralai/Mixtral-8x22B-Instruct-v0.1",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-frontier-olmo2-32b-instruct",
+      "base_model": "allenai/OLMo-2-0325-32B-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-frontier-phi-35-moe-instruct-gguf",
+      "base_model": "microsoft/Phi-3.5-MoE-instruct",
+      "pipeline_tag": "text-generation",
+      "license": "mit",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-frontier-phi-4-14b-gguf",
+      "base_model": "microsoft/phi-4",
+      "pipeline_tag": "text-generation",
+      "license": "mit",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-frontier-qwen25-72b-instruct-gguf",
+      "base_model": "Qwen/Qwen2.5-72B-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "other",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-frontier-qwen3-235b-a22b-instruct",
+      "base_model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-guard-text-moderation",
+      "base_model": "KoalaAI/Text-Moderation",
+      "pipeline_tag": "text-classification",
+      "license": "openrail",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-gemma-e4b",
+      "base_model": "google/gemma-4-E4B-it",
+      "pipeline_tag": "any-to-any",
+      "license": "gemma",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-gemma-e4b-text-gguf",
+      "base_model": "google/gemma-4-E4B-it",
+      "pipeline_tag": "any-to-any",
+      "license": "gemma",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-gemma4-26b-a4b-gguf",
+      "base_model": "google/gemma-4-26B-A4B-it",
+      "pipeline_tag": "image-text-to-text",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-granite31-1b-a400m-gguf",
+      "base_model": "ibm-granite/granite-3.1-1b-a400m-instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-granite33-2b-gguf",
+      "base_model": "ibm-granite/granite-3.3-2b-instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-granite33-8b-gguf",
+      "base_model": "ibm-granite/granite-3.3-8b-instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-mistral-7b-v03-gguf",
+      "base_model": "mistralai/Mistral-7B-Instruct-v0.3",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-mistral-small-text-gguf",
+      "base_model": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+      "pipeline_tag": "text-generation",
+      "license": "other",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-olmo2-1b-0425-gguf",
+      "base_model": "allenai/OLMo-2-0425-1B-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "other",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-olmo2-7b-1124-gguf",
+      "base_model": "allenai/OLMo-2-1124-7B-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-phi-4-text-gguf",
+      "base_model": "microsoft/phi-4",
+      "pipeline_tag": "text-generation",
+      "license": "mit",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-phi3-mini-4k-gguf",
+      "base_model": "microsoft/Phi-3-mini-4k-instruct",
+      "pipeline_tag": "text-generation",
+      "license": "mit",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-phi4-mini-instruct-gguf",
+      "base_model": "microsoft/Phi-4-mini-instruct",
+      "pipeline_tag": "text-generation",
+      "license": "mit",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen2-audio-7b",
+      "base_model": "Qwen/Qwen2-Audio-7B-Instruct",
+      "pipeline_tag": "audio-text-to-text",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen25-15b-instruct-gguf",
+      "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen25-3b-instruct-gguf",
+      "base_model": "Qwen/Qwen2.5-3B-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "other",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen25-7b-instruct-gguf",
+      "base_model": "Qwen/Qwen2.5-7B-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen25-omni-7b-voice",
+      "base_model": "Qwen/Qwen2.5-Omni-7B",
+      "pipeline_tag": "any-to-any",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen3-06b-gguf",
+      "base_model": "Qwen/Qwen3-0.6B",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen3-14b-gguf",
+      "base_model": "Qwen/Qwen3-14B",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen3-17b-gguf",
+      "base_model": "Qwen/Qwen3-1.7B",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen3-30b-a3b-gguf",
+      "base_model": "Qwen/Qwen3-30B-A3B",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen3-8b-gguf",
+      "base_model": "Qwen/Qwen3-8B",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen3-coder-30b-a3b-gguf",
+      "base_model": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-qwen3-text-gguf",
+      "base_model": "Qwen/Qwen3-8B",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-smollm-135m-gguf",
+      "base_model": "HuggingFaceTB/SmolLM-135M-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "other",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-smollm2-17b-gguf",
+      "base_model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-smollm2-360m-gguf",
+      "base_model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-smollm3-3b-gguf",
+      "base_model": "HuggingFaceTB/SmolLM3-3B",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-infused-zephyr-7b-beta-gguf",
+      "base_model": "HuggingFaceH4/zephyr-7b-beta",
+      "pipeline_tag": "text-generation",
+      "license": "mit",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-longctx-glm4-9b-chat-1m-gguf",
+      "base_model": "THUDM/glm-4-9b-chat-1m",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-longctx-prolong-512k-instruct",
+      "base_model": "princeton-nlp/Llama-3-8B-ProLong-512k-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "llama3",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-longctx-qwen25-7b-1m-gguf",
+      "base_model": "Qwen/Qwen2.5-7B-Instruct-1M",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-longctx-yi-9b-200k",
+      "base_model": "01-ai/Yi-9B-200K",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-math-qwen25-math-7b-gguf",
+      "base_model": "Qwen/Qwen2.5-Math-7B-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-moe-moonlight-16b-a3b-gguf",
+      "base_model": "moonshotai/Moonlight-16B-A3B-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "mit",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-moe-olmoe-1b-7b-0924-instruct-gguf",
+      "base_model": "allenai/OLMoE-1B-7B-0924-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-moe-olmoe-1b-7b-gguf",
+      "base_model": "allenai/OLMoE-1B-7B-0924-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-multimodal-aria-25b-moe",
+      "base_model": "rhymes-ai/Aria",
+      "pipeline_tag": "image-text-to-text",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-multimodal-glm46v-flash",
+      "base_model": "zai-org/GLM-4.6V-Flash",
+      "pipeline_tag": "image-text-to-text",
+      "license": "mit",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-multimodal-internvl3-78b-instruct",
+      "base_model": "OpenGVLab/InternVL3-78B-Instruct",
+      "pipeline_tag": "image-text-to-text",
+      "license": "mit",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-multimodal-kimi-vl-a3b-thinking",
+      "base_model": "moonshotai/Kimi-VL-A3B-Thinking-2506",
+      "pipeline_tag": "image-text-to-text",
+      "license": "mit",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-multimodal-llava-next-34b",
+      "base_model": "liuhaotian/llava-v1.6-34b",
+      "pipeline_tag": "image-text-to-text",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-multimodal-pixtral-large-124b",
+      "base_model": "mistralai/Pixtral-Large-Instruct-2411",
+      "pipeline_tag": "image-text-to-text",
+      "license": "other",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-multimodal-qwen25-vl-72b-instruct-gguf",
+      "base_model": "Qwen/Qwen2.5-VL-72B-Instruct",
+      "pipeline_tag": "image-text-to-text",
+      "license": "other",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-nz-3b",
+      "base_model": null,
+      "pipeline_tag": "text-generation",
+      "license": "other",
+      "infusion_method": "native",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "native"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-nz-qwen25-coder-3b-gguf",
+      "base_model": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "other",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-ocr-trocr-large-handwritten",
+      "base_model": "microsoft/trocr-large-handwritten",
+      "pipeline_tag": "image-to-text",
+      "license": "mit",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-ocr-trocr-large-printed",
+      "base_model": "microsoft/trocr-large-printed",
+      "pipeline_tag": "image-to-text",
+      "license": "mit",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-reasoning-deepseek-distill-text-gguf",
+      "base_model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+      "pipeline_tag": "text-generation",
+      "license": "other",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-reasoning-deepseek-prover-v2-671b-gguf",
+      "base_model": "deepseek-ai/DeepSeek-Prover-V2-671B",
+      "pipeline_tag": "text-generation",
+      "license": "other",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-reasoning-deepseek-r1-distill-llama-70b-gguf",
+      "base_model": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+      "pipeline_tag": "text-generation",
+      "license": "llama3.3",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-reasoning-deepseek-r1-qwen-15b-gguf",
+      "base_model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-reasoning-deepseek-r1-qwen-7b-gguf",
+      "base_model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-reasoning-glm46-355b-moe",
+      "base_model": "zai-org/GLM-4.6",
+      "pipeline_tag": "text-generation",
+      "license": "mit",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-reasoning-gpt-oss-20b-gguf",
+      "base_model": "openai/gpt-oss-20b",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-reasoning-internlm3-8b-gguf",
+      "base_model": "internlm/internlm3-8b-instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-reasoning-phi4-mini-gguf",
+      "base_model": "microsoft/Phi-4-mini-reasoning",
+      "pipeline_tag": "text-generation",
+      "license": "mit",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-reasoning-qwq-32b-gguf",
+      "base_model": "Qwen/QwQ-32B",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-reranker-bge-v2-m3",
+      "base_model": "BAAI/bge-reranker-v2-m3",
+      "pipeline_tag": "text-classification",
+      "license": "mit",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-speech-kokoro-82m-tts",
+      "base_model": "hexgrad/Kokoro-82M",
+      "pipeline_tag": "text-to-speech",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-speech-whisper-large-v3-turbo",
+      "base_model": "openai/whisper-large-v3-turbo",
+      "pipeline_tag": "automatic-speech-recognition",
+      "license": "mit",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-tiny",
+      "base_model": null,
+      "pipeline_tag": "text-generation",
+      "license": "other",
+      "infusion_method": "native",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "native"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-tiny-qwen25-05b-gguf",
+      "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "pipeline_tag": "text-generation",
+      "license": "apache-2.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    },
+    {
+      "repo_id": "AbteeXAILab/lumynax-translate-nllb-200-3b",
+      "base_model": "facebook/nllb-200-3.3B",
+      "pipeline_tag": "translation",
+      "license": "cc-by-nc-4.0",
+      "infusion_method": "routed",
+      "weight_composition_applied": false,
+      "lifecycle": "legacy",
+      "upstream_metadata_status": "verified"
+    }
+  ]
+}

@@ -33,5 +33,24 @@
   "supports_tools": false,
   "supports_json": true,
   "audit_hash_chain": "SHA-256 over canonical request + response JSON",
-  "build_date_utc": "2026-05-17T01:21:22Z"
+  "build_date_utc": "2026-05-17T01:21:22Z",
+  "lumynax_manifest_version": 3,
+  "lifecycle": {
+    "status": "legacy",
+    "maintenance": "unmaintained",
+    "production_recommended": false
+  },
+  "lumynax_infusion": {
+    "core_role": "primary_intelligence_model",
+    "method": "routed",
+    "infused_model": "KoalaAI/Text-Moderation",
+    "weight_composition_applied": false,
+    "moe_composition": "not_applied"
+  },
+  "licensing": {
+    "id": "openrail",
+    "license_file": "LICENSE.txt",
+    "source_model_repo": "KoalaAI/Text-Moderation",
+    "weights_subject_to_source_license": true
+  }
 }

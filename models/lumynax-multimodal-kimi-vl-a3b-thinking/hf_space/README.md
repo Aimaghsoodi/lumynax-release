@@ -5,7 +5,7 @@ colorTo: blue
 sdk: gradio
 app_file: app.py
 pinned: false
-short_description: Legacy demo for lumynax-multimodal-kimi-vl-a3b-thinking. Outdated; not for production.
+short_description: Legacy LumynaX demo. Outdated; not for production.
 tags:
 - legacy
 - outdated

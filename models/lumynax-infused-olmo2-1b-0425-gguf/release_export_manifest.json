@@ -84,5 +84,24 @@
     "lumynax_weight_adaptation_applied": false,
     "provider": "Hugging Face",
     "repo_id": "allenai/OLMo-2-0425-1B-Instruct"
+  },
+  "lumynax_manifest_version": 3,
+  "lifecycle": {
+    "status": "legacy",
+    "maintenance": "unmaintained",
+    "production_recommended": false
+  },
+  "lumynax_infusion": {
+    "core_role": "primary_intelligence_model",
+    "method": "routed",
+    "infused_model": "allenai/OLMo-2-0425-1B-Instruct",
+    "weight_composition_applied": false,
+    "moe_composition": "not_applied"
+  },
+  "licensing": {
+    "id": "other",
+    "license_file": "LICENSE.txt",
+    "source_model_repo": "allenai/OLMo-2-0425-1B-Instruct",
+    "weights_subject_to_source_license": true
   }
 }

@@ -84,5 +84,24 @@
     "lumynax_weight_adaptation_applied": false,
     "provider": "Hugging Face",
     "repo_id": "mistralai/Mistral-7B-Instruct-v0.3"
+  },
+  "lumynax_manifest_version": 3,
+  "lifecycle": {
+    "status": "legacy",
+    "maintenance": "unmaintained",
+    "production_recommended": false
+  },
+  "lumynax_infusion": {
+    "core_role": "primary_intelligence_model",
+    "method": "routed",
+    "infused_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "weight_composition_applied": false,
+    "moe_composition": "not_applied"
+  },
+  "licensing": {
+    "id": "apache-2.0",
+    "license_file": "LICENSE.txt",
+    "source_model_repo": "mistralai/Mistral-7B-Instruct-v0.3",
+    "weights_subject_to_source_license": true
   }
 }

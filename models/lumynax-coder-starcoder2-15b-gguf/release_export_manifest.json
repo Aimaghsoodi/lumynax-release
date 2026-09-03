@@ -31,5 +31,24 @@
   "supports_tools": true,
   "supports_json": true,
   "audit_hash_chain": "SHA-256 over canonical request + response JSON",
-  "build_date_utc": "2026-05-17T10:35:18Z"
+  "build_date_utc": "2026-05-17T10:35:18Z",
+  "lumynax_manifest_version": 3,
+  "lifecycle": {
+    "status": "legacy",
+    "maintenance": "unmaintained",
+    "production_recommended": false
+  },
+  "lumynax_infusion": {
+    "core_role": "primary_intelligence_model",
+    "method": "routed",
+    "infused_model": "bigcode/starcoder2-15b-instruct-v0.1",
+    "weight_composition_applied": false,
+    "moe_composition": "not_applied"
+  },
+  "licensing": {
+    "id": "apache-2.0",
+    "license_file": "LICENSE.txt",
+    "source_model_repo": "bigcode/starcoder2-15b-instruct-v0.1",
+    "weights_subject_to_source_license": true
+  }
 }

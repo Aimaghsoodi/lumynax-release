@@ -84,5 +84,24 @@
     "lumynax_weight_adaptation_applied": false,
     "provider": "Hugging Face",
     "repo_id": "HuggingFaceH4/zephyr-7b-beta"
+  },
+  "lumynax_manifest_version": 3,
+  "lifecycle": {
+    "status": "legacy",
+    "maintenance": "unmaintained",
+    "production_recommended": false
+  },
+  "lumynax_infusion": {
+    "core_role": "primary_intelligence_model",
+    "method": "routed",
+    "infused_model": "HuggingFaceH4/zephyr-7b-beta",
+    "weight_composition_applied": false,
+    "moe_composition": "not_applied"
+  },
+  "licensing": {
+    "id": "mit",
+    "license_file": "LICENSE.txt",
+    "source_model_repo": "HuggingFaceH4/zephyr-7b-beta",
+    "weights_subject_to_source_license": true
   }
 }

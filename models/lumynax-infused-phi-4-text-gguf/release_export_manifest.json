@@ -91,5 +91,24 @@
     "lumynax_weight_adaptation_applied": false,
     "provider": "Hugging Face",
     "repo_id": "microsoft/phi-4"
+  },
+  "lumynax_manifest_version": 3,
+  "lifecycle": {
+    "status": "legacy",
+    "maintenance": "unmaintained",
+    "production_recommended": false
+  },
+  "lumynax_infusion": {
+    "core_role": "primary_intelligence_model",
+    "method": "routed",
+    "infused_model": "microsoft/phi-4",
+    "weight_composition_applied": false,
+    "moe_composition": "not_applied"
+  },
+  "licensing": {
+    "id": "mit",
+    "license_file": "LICENSE.txt",
+    "source_model_repo": "microsoft/phi-4",
+    "weights_subject_to_source_license": true
   }
 }

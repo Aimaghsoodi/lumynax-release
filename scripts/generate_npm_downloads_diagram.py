@@ -15,23 +15,26 @@ NPM_DOWNLOADS = "https://api.npmjs.org"
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Generate an npm downloads SVG for README pages.")
+    parser = argparse.ArgumentParser(description="Collect npm download metadata; SVG output is optional.")
     parser.add_argument("--package", default=DEFAULT_PACKAGE)
-    parser.add_argument("--output", type=Path, default=Path("docs/marama-route-npm-downloads.svg"))
+    parser.add_argument("--output", type=Path, default=None, help="Optional legacy SVG output path.")
     parser.add_argument("--json-output", type=Path, default=None)
     parser.add_argument("--today", default="", help="Override end date in YYYY-MM-DD format.")
     args = parser.parse_args()
 
     today = dt.date.fromisoformat(args.today) if args.today else dt.datetime.now(dt.UTC).date()
     data = collect_download_data(args.package, today=today)
-    svg = render_svg(data)
-
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(svg, encoding="utf-8", newline="\n")
+    if args.output:
+        svg = render_svg(data)
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(svg, encoding="utf-8", newline="\n")
     if args.json_output:
         args.json_output.parent.mkdir(parents=True, exist_ok=True)
         args.json_output.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
-    print(f"wrote {args.output}")
+    if args.output:
+        print(f"wrote {args.output}")
+    if args.json_output:
+        print(f"wrote {args.json_output}")
     return 0
 
 

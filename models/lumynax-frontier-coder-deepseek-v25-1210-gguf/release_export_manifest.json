@@ -31,5 +31,24 @@
   "supports_tools": true,
   "supports_json": true,
   "audit_hash_chain": "SHA-256 over canonical request + response JSON",
-  "build_date_utc": "2026-05-17T10:35:04Z"
+  "build_date_utc": "2026-05-17T10:35:04Z",
+  "lumynax_manifest_version": 3,
+  "lifecycle": {
+    "status": "legacy",
+    "maintenance": "unmaintained",
+    "production_recommended": false
+  },
+  "lumynax_infusion": {
+    "core_role": "primary_intelligence_model",
+    "method": "routed",
+    "infused_model": "deepseek-ai/DeepSeek-V2.5-1210",
+    "weight_composition_applied": false,
+    "moe_composition": "not_applied"
+  },
+  "licensing": {
+    "id": "other",
+    "license_file": "LICENSE.txt",
+    "source_model_repo": "deepseek-ai/DeepSeek-V2.5-1210",
+    "weights_subject_to_source_license": true
+  }
 }

@@ -131,5 +131,24 @@
     "lumynax_weight_adaptation_applied": false,
     "provider": "Hugging Face",
     "repo_id": "intfloat/e5-mistral-7b-instruct"
+  },
+  "lumynax_manifest_version": 3,
+  "lifecycle": {
+    "status": "legacy",
+    "maintenance": "unmaintained",
+    "production_recommended": false
+  },
+  "lumynax_infusion": {
+    "core_role": "primary_intelligence_model",
+    "method": "routed",
+    "infused_model": "intfloat/e5-mistral-7b-instruct",
+    "weight_composition_applied": false,
+    "moe_composition": "not_applied"
+  },
+  "licensing": {
+    "id": "apache-2.0",
+    "license_file": "LICENSE.txt",
+    "source_model_repo": "intfloat/e5-mistral-7b-instruct",
+    "weights_subject_to_source_license": true
   }
 }

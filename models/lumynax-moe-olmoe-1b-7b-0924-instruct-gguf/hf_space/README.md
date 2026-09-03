@@ -8,7 +8,7 @@ python_version: 3.11
 app_file: app.py
 pinned: false
 license: apache-2.0
-short_description: Legacy demo for lumynax-moe-olmoe-1b-7b-0924-instruct-gguf. Outdated; not for production.
+short_description: Legacy LumynaX demo. Outdated; not for production.
 tags:
 - abteex-ai-labs
 - lumynax

@@ -24,7 +24,7 @@
   "context_tokens": 131072,
   "total_params_b": 72,
   "active_params_b": null,
-  "quantization": "Q4_K_M (default) \u00b7 Q5_K_M \u00b7 Q8_0",
+  "quantization": "Q4_K_M (default) · Q5_K_M · Q8_0",
   "primary_artifact": "Qwen2.5-VL-72B-Instruct-Q4_K_M.gguf",
   "package_state": "scaffold_pulls_upstream_gguf",
   "validation_status": "scaffold_verified",
@@ -32,5 +32,24 @@
   "supports_tools": true,
   "supports_json": true,
   "audit_hash_chain": "SHA-256 over canonical request + response JSON",
-  "build_date_utc": "2026-05-14T02:32:08Z"
+  "build_date_utc": "2026-05-14T02:32:08Z",
+  "lumynax_manifest_version": 3,
+  "lifecycle": {
+    "status": "legacy",
+    "maintenance": "unmaintained",
+    "production_recommended": false
+  },
+  "lumynax_infusion": {
+    "core_role": "primary_intelligence_model",
+    "method": "routed",
+    "infused_model": "Qwen/Qwen2.5-VL-72B-Instruct",
+    "weight_composition_applied": false,
+    "moe_composition": "not_applied"
+  },
+  "licensing": {
+    "id": "other",
+    "license_file": "LICENSE.txt",
+    "source_model_repo": "Qwen/Qwen2.5-VL-72B-Instruct",
+    "weights_subject_to_source_license": true
+  }
 }

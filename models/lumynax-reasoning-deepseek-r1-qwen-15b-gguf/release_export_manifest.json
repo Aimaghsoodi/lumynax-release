@@ -84,5 +84,24 @@
     "lumynax_weight_adaptation_applied": false,
     "provider": "Hugging Face",
     "repo_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
+  },
+  "lumynax_manifest_version": 3,
+  "lifecycle": {
+    "status": "legacy",
+    "maintenance": "unmaintained",
+    "production_recommended": false
+  },
+  "lumynax_infusion": {
+    "core_role": "primary_intelligence_model",
+    "method": "routed",
+    "infused_model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+    "weight_composition_applied": false,
+    "moe_composition": "not_applied"
+  },
+  "licensing": {
+    "id": "apache-2.0",
+    "license_file": "LICENSE.txt",
+    "source_model_repo": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+    "weights_subject_to_source_license": true
   }
 }

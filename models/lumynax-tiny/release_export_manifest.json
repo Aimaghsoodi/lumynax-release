@@ -63,5 +63,24 @@
     "prompt_format": "plain_completion",
     "quickstart_command": "python quickstart.py",
     "system_prompt": "You are LumynaX Tiny, the original seed model of the LumynaX family from AbteeX AI Labs. Your tokenizer and weights were trained from scratch on NZ-focused corpus data. You are the original seed line, not the larger 3B release."
+  },
+  "lumynax_manifest_version": 3,
+  "lifecycle": {
+    "status": "legacy",
+    "maintenance": "unmaintained",
+    "production_recommended": false
+  },
+  "lumynax_infusion": {
+    "core_role": "primary_intelligence_model",
+    "method": "native",
+    "infused_model": null,
+    "weight_composition_applied": false,
+    "moe_composition": "not_applied"
+  },
+  "licensing": {
+    "id": "other",
+    "license_file": "LICENSE.txt",
+    "source_model_repo": null,
+    "weights_subject_to_source_license": false
   }
 }

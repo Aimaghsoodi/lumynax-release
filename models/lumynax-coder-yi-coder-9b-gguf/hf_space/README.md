@@ -8,7 +8,7 @@ python_version: 3.11
 app_file: app.py
 pinned: false
 license: apache-2.0
-short_description: Legacy demo for lumynax-coder-yi-coder-9b-gguf. Outdated; not for production.
+short_description: Legacy LumynaX demo. Outdated; not for production.
 tags:
 - abteex-ai-labs
 - lumynax

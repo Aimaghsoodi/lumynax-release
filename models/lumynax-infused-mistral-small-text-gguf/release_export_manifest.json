@@ -91,5 +91,24 @@
     "lumynax_weight_adaptation_applied": false,
     "provider": "Hugging Face",
     "repo_id": "mistralai/Mistral-Small-3.2-24B-Instruct-2506"
+  },
+  "lumynax_manifest_version": 3,
+  "lifecycle": {
+    "status": "legacy",
+    "maintenance": "unmaintained",
+    "production_recommended": false
+  },
+  "lumynax_infusion": {
+    "core_role": "primary_intelligence_model",
+    "method": "routed",
+    "infused_model": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+    "weight_composition_applied": false,
+    "moe_composition": "not_applied"
+  },
+  "licensing": {
+    "id": "other",
+    "license_file": "LICENSE.txt",
+    "source_model_repo": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+    "weights_subject_to_source_license": true
   }
 }

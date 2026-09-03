@@ -55,5 +55,24 @@
       "default_model_repo_id": "AbteeXAILab/lumynax-infused-gemma-e4b-text-gguf"
     }
   },
-  "family": null
+  "family": null,
+  "lumynax_manifest_version": 3,
+  "lifecycle": {
+    "status": "legacy",
+    "maintenance": "unmaintained",
+    "production_recommended": false
+  },
+  "lumynax_infusion": {
+    "core_role": "primary_intelligence_model",
+    "method": "routed",
+    "infused_model": "google/gemma-4-E4B-it",
+    "weight_composition_applied": false,
+    "moe_composition": "not_applied"
+  },
+  "licensing": {
+    "id": "gemma",
+    "license_file": "LICENSE.txt",
+    "source_model_repo": "google/gemma-4-E4B-it",
+    "weights_subject_to_source_license": true
+  }
 }

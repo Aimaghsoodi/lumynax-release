@@ -33,5 +33,24 @@
   "supports_tools": true,
   "supports_json": true,
   "audit_hash_chain": "SHA-256 over canonical request + response JSON",
-  "build_date_utc": "2026-05-14T00:25:06Z"
+  "build_date_utc": "2026-05-14T00:25:06Z",
+  "lumynax_manifest_version": 3,
+  "lifecycle": {
+    "status": "legacy",
+    "maintenance": "unmaintained",
+    "production_recommended": false
+  },
+  "lumynax_infusion": {
+    "core_role": "primary_intelligence_model",
+    "method": "routed",
+    "infused_model": "zai-org/GLM-4.6",
+    "weight_composition_applied": false,
+    "moe_composition": "not_applied"
+  },
+  "licensing": {
+    "id": "mit",
+    "license_file": "LICENSE.txt",
+    "source_model_repo": "zai-org/GLM-4.6",
+    "weights_subject_to_source_license": true
+  }
 }

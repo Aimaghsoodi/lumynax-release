@@ -31,5 +31,24 @@
   "supports_tools": true,
   "supports_json": true,
   "audit_hash_chain": "SHA-256 over canonical request + response JSON",
-  "build_date_utc": "2026-05-17T10:35:20Z"
+  "build_date_utc": "2026-05-17T10:35:20Z",
+  "lumynax_manifest_version": 3,
+  "lifecycle": {
+    "status": "legacy",
+    "maintenance": "unmaintained",
+    "production_recommended": false
+  },
+  "lumynax_infusion": {
+    "core_role": "primary_intelligence_model",
+    "method": "routed",
+    "infused_model": "microsoft/Phi-3.5-MoE-instruct",
+    "weight_composition_applied": false,
+    "moe_composition": "not_applied"
+  },
+  "licensing": {
+    "id": "mit",
+    "license_file": "LICENSE.txt",
+    "source_model_repo": "microsoft/Phi-3.5-MoE-instruct",
+    "weights_subject_to_source_license": true
+  }
 }

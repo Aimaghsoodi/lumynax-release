@@ -1,0 +1,34 @@
+name: legacy archive integrity
+
+on:
+  pull_request:
+    paths:
+      - "models/**"
+      - "registry/legacy_model_metadata.json"
+      - "publishing/**"
+      - ".github/workflows/legacy-archive-integrity.yml"
+  push:
+    branches: [main]
+    paths:
+      - "models/**"
+      - "registry/legacy_model_metadata.json"
+      - "publishing/**"
+      - ".github/workflows/legacy-archive-integrity.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r publishing/requirements-legacy.txt
+      - name: Reject generated-card drift
+        run: python publishing/maintain_legacy_archive.py --check
+      - name: Validate manifests and canonical metadata
+        run: python publishing/validate_legacy_metadata.py
