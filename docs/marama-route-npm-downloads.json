@@ -1,8 +1,8 @@
 {
   "first_publish_day": "2026-05-30",
-  "generated_at": "2026-09-06T07:57:51+00:00",
-  "last_day": "2026-09-06",
-  "last_week_version_downloads": 20,
+  "generated_at": "2026-09-07T08:25:03+00:00",
+  "last_day": "2026-09-07",
+  "last_week_version_downloads": 16,
   "monthly": [
     {
       "downloads": 1187,
@@ -21,7 +21,7 @@
       "month": "2026-08"
     },
     {
-      "downloads": 7,
+      "downloads": 11,
       "month": "2026-09"
     }
   ],
@@ -31,10 +31,10 @@
     "The chart therefore shows monthly package totals plus current per-version last-week split."
   ],
   "package": "lumynax-marama-route",
-  "total_downloads": 4631,
+  "total_downloads": 4635,
   "versions": [
     {
-      "last_week_downloads": 1,
+      "last_week_downloads": 0,
       "published": "2026-05-30T23:49:10.339Z",
       "published_day": "2026-05-30",
       "version": "0.4.3"
@@ -46,7 +46,7 @@
       "version": "0.4.4"
     },
     {
-      "last_week_downloads": 1,
+      "last_week_downloads": 0,
       "published": "2026-05-31T08:18:47.255Z",
       "published_day": "2026-05-31",
       "version": "0.4.5"
@@ -64,7 +64,7 @@
       "version": "0.4.7"
     },
     {
-      "last_week_downloads": 1,
+      "last_week_downloads": 0,
       "published": "2026-05-31T10:46:05.571Z",
       "published_day": "2026-05-31",
       "version": "0.4.8"
@@ -100,7 +100,7 @@
       "version": "0.7.4"
     },
     {
-      "last_week_downloads": 1,
+      "last_week_downloads": 0,
       "published": "2026-06-04T07:30:36.379Z",
       "published_day": "2026-06-04",
       "version": "0.7.5"
